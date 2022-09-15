@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "description": "Modern, declarative framework for Node.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/northerjs/docs.git"
+  },
+  "author": "Dominik Rajkowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/northerjs/docs/issues"
+  },
+  "scripts": {
+    "build": "vitepress build .",
+    "start:dev": "vitepress dev .",
+    "start:serve": "vitepress serve ."
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.15",
+    "vue": "^3.2.39"
+  }
+}
