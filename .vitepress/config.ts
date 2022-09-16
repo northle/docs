@@ -18,6 +18,7 @@ export default {
         text: 'Basics',
         items: [
           { text: 'Directory Structure', link: '/docs/basics/directory-structure.html' },
+          { text: 'Configuration', link: '/docs/basics/configuration.html' },
         ]
       },
     ],
