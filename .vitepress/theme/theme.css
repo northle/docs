@@ -1,0 +1,57 @@
+::selection{
+  background: #34d399;
+  color: #111827;
+}
+
+:root {
+  --vp-button-alt-border: transparent;
+  --vp-button-brand-bg: #10b981;
+  --vp-button-brand-border: transparent;
+  --vp-code-line-highlight-color:#374151;
+}
+
+.dark {
+  --vp-c-bg: #111827;
+  --vp-c-bg-soft: #1f2937;
+  --vp-button-alt-bg: #1f2937;
+  --vp-c-bg-mute: #374151;
+  --vp-c-divider: #374151;
+  --vp-code-line-highlight-color: #111827;
+  --vp-code-block-bg: #253041;
+}
+
+.dark .VPNav.no-sidebar[data-v-14f22a90],
+.dark .VPNav,
+.dark .VPNavBar.has-sidebar .content[data-v-84a11e99] {
+  background: rgba(17, 24, 39, 0.692);
+}
+
+.vp-doc div[class*='language-'] {
+  background: #111827;
+}
+
+.dark .VPSidebar,
+.dark .vp-doc div[class*='language-'] {
+  background: rgba(31, 41, 55, 0.904);
+}
+
+.dark .VPSidebar {
+  z-index: 100;
+}
+
+.dark .VPNavBarTitle a {
+  z-index: 10000;
+}
+
+.VPNavBarTitle {
+  background: transparent !important;
+}
+
+.VPSwitch[data-v-5dcf7ba4],
+.VPSwitch[data-v-5dcf7ba4]:hover {
+  border-color: transparent;
+}
+
+.VPSwitch svg {
+  display: none;
+}
