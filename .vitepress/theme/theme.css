@@ -40,6 +40,7 @@ body {
   --vp-code-line-highlight-color:#282f3b;
   --vp-c-bg-mute: #e2e8f0;
   --vp-c-white-soft: #f8fafc;
+  --vp-c-gray-light-4: #e8edf3;
 }
 
 .dark {
@@ -48,11 +49,13 @@ body {
   --vp-button-alt-bg: #1f2937;
   --vp-c-bg-mute: #313a49;
   --vp-c-divider: #374151;
+  --vp-c-divider-light: #323b4b;
   --vp-code-line-highlight-color: #131b2c;
   --vp-code-block-bg: #253041;
   --vp-c-black: #111827;
   --vp-custom-block-info-bg: #19212c;
   --vp-custom-block-info-border: #202a38;
+  --vp-button-alt-hover-bg: #222d3b;
 }
 
 .dark .VPNav.no-sidebar[data-v-14f22a90],
@@ -103,4 +106,18 @@ body {
 
 [data-v-109cf3ea] {
   padding: 1px 0;
+}
+
+.VPButton {
+  border-radius: 12px !important;
+  border: none !important;
+  padding: 2px 20px !important;
+}
+
+.VPButton.brand {
+  background-image: linear-gradient(to right, #10b981, #14b8a6);
+}
+
+.tagline[data-v-89d2fc22] {
+  font-weight: normal;
 }
