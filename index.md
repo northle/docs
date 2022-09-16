@@ -18,8 +18,8 @@ features:
   - icon: 🧩
     title: Declarative
     details: Build awesome web apps with a strong architecture and scalability.
-  - icon: 🤵
-    title: Elegant
+  - icon: 📏
+    title: Elegant and Simple
     details: Elegant and simple syntax which scales well in large projects.
   - icon: ⚡️
     title: Performant

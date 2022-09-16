@@ -121,3 +121,14 @@ body {
 .tagline[data-v-89d2fc22] {
   font-weight: normal;
 }
+
+.check[data-v-5dcf7ba4] {
+  width: 14px;
+  height: 14px;
+  left: 3px;
+  top: 3px;
+}
+
+.VPSwitch[aria-checked=true] {
+  background: var(--vp-c-brand);
+}
