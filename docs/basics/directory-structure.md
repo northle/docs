@@ -8,31 +8,31 @@ Default Norther application structure consists of a few main directories. It is 
 
 ## Directories
 
-### `/client`
+### 📁 `/client`
 
 This directory is present if you're using a frontend framework template. It contains raw, uncompiled things like JavaScript files or Vue.js components.
 
-### `/dist`
+### 📁 `/dist`
 
 Your application code is compiled and stored within this directory.
 
-### `/database`
+### 📁 `/database`
 
 In this directory database migrations are created by default. You may also store SQLite database there if you find it convenient.
 
-### `/lang`
+### 📁 `/lang`
 
 This directory does not exist by default, but you can create it and host your app translation files inside it.
 
-### `/public`
+### 📁 `/public`
 
 Files inside `public` directory can then be accessed in your code from the base URL `/`. This is the place where you should put client-side things like CSS styles, JavaScript files and other assets that should be publicly accessible.
 
-### `/src`
+### 📁 `/src`
 
 The `src` directory contains your main application code. Feel free to modify and adjust it to your needs.
 
-### `/views`
+### 📁 `/views`
 
 The` views` directory contains app views rendered by your application. View files have the `.north.html` extension.
 

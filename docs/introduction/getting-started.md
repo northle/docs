@@ -4,6 +4,14 @@ title: Getting Started
 
 # Getting Started
 
+## Requirements
+
+To use Norther, your environment has to meet few requirements:
+
+| Node.js       | NPM          |
+| ------------- | ------------ |
+| 18.3.0+       | 7+           |
+
 ## Creating Project
 
 To create new Norther project you can use the NPM command:

@@ -8,7 +8,7 @@ App configuration in Norther is stored in two main files: `src/main.ts` and `.en
 
 ## Environment Settings
 
-The default Melonly project contains a `.env` file. This is the place where database credentials and environment-specific settings should be stored. Norther automatically reads all `.env` variables. The default `.env` file looks like this:
+The default Norther project contains a `.env` file. This is the place where database credentials and environment-specific settings should be stored. Norther automatically reads all `.env` variables. The default `.env` file looks like this:
 
 ```
 DEVELOPMENT=true
