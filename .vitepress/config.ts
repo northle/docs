@@ -18,11 +18,20 @@ export default {
     nav: [
       {
         text: 'Docs',
-        link: '/docs/introduction/northerjs-framework.html',
+        link: '/docs/1.x/introduction/northerjs-framework.html',
       },
       {
         text: 'Github',
         link: 'https://github.com/northerjs/norther',
+      },
+      {
+        text: 'Version',
+        items: [
+          {
+            text: '1.x alpha',
+            link: '/docs/1.x/introduction/northerjs-framework.md',
+          },
+        ]
       },
     ],
     socialLinks: [
@@ -37,11 +46,11 @@ export default {
         items: [
           {
             text: 'NortherJS Framework',
-            link: '/docs/introduction/northerjs-framework.html',
+            link: '/docs/1.x/introduction/northerjs-framework.html',
           },
           {
             text: 'Getting Started',
-            link: '/docs/introduction/getting-started.html',
+            link: '/docs/1.x/introduction/getting-started.html',
           },
         ],
       },
@@ -50,27 +59,27 @@ export default {
         items: [
           {
             text: 'Directory Structure',
-            link: '/docs/basics/directory-structure.html',
+            link: '/docs/1.x/basics/directory-structure.html',
           },
           {
             text: 'Configuration',
-            link: '/docs/basics/configuration.html',
+            link: '/docs/1.x/basics/configuration.html',
           },
           {
             text: 'Controllers and Routing',
-            link: '/docs/basics/controllers-and-routing.html',
+            link: '/docs/1.x/basics/controllers-and-routing.html',
           },
           {
             text: 'Views',
-            link: '/docs/basics/views.html',
+            link: '/docs/1.x/basics/views.html',
           },
           {
             text: 'Dependency Injection',
-            link: '/docs/basics/dependency-injection.html',
+            link: '/docs/1.x/basics/dependency-injection.html',
           },
           {
             text: 'Mail',
-            link: '/docs/basics/mail.html',
+            link: '/docs/1.x/basics/mail.html',
           },
         ],
       },
@@ -79,11 +88,11 @@ export default {
         items: [
           {
             text: 'Localization',
-            link: '/docs/advanced/localization.html',
+            link: '/docs/1.x/advanced/localization.html',
           },
           {
             text: 'Encryption and Hashing',
-            link: '/docs/advanced/encryption-and-hashing.html',
+            link: '/docs/1.x/advanced/encryption-and-hashing.html',
           },
         ],
       },
@@ -92,7 +101,7 @@ export default {
         items: [
           {
             text: 'Schema',
-            link: '/docs/database/schema.html',
+            link: '/docs/1.x/database/schema.html',
           },
         ],
       },
@@ -101,13 +110,13 @@ export default {
         items: [
           {
             text: 'App Deployment',
-            link: '/docs/deployment/app-deployment.html',
+            link: '/docs/1.x/deployment/app-deployment.html',
           },
         ],
       },
     ],
     editLink: {
-      pattern: 'https://github.com/northerjs/docs/edit/main/docs/:path',
+      pattern: 'https://github.com/northerjs/docs/1.x/edit/main/docs/1.x/:path',
       text: 'Contribute to this page',
     },
     footer: {
