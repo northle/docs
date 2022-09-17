@@ -40,6 +40,21 @@ export default {
           { text: 'Configuration', link: '/docs/basics/configuration.html' },
           { text: 'Controllers and Routing', link: '/docs/basics/controllers-and-routing.html' },
           { text: 'Views', link: '/docs/basics/views.html' },
+          { text: 'Dependency Injection', link: '/docs/basics/dependency-injection.html' },
+          { text: 'Mail', link: '/docs/basics/mail.html' },
+        ]
+      },
+      {
+        text: 'Advanced',
+        items: [
+          { text: 'Localization', link: '/docs/advanced/localization.html' },
+          { text: 'Encryption and Hashing', link: '/docs/advanced/encryption-and-hashing.html' },
+        ]
+      },
+      {
+        text: 'Deployment',
+        items: [
+          { text: 'App Deployment', link: '/docs/deployment/app-deployment.html' },
         ]
       },
     ],

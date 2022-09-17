@@ -4,7 +4,7 @@ title: Views
 
 # Views
 
-Norther comes with handy built-in view templating engine. Views is your app are placed in `/views` directory and have the `.north.html` extension.
+Norther comes with handy built-in view templating engine. Views is your app are placed in `/views` directory and have the `*.north.html` extension.
 
 ## Templates
 
@@ -43,7 +43,7 @@ return render('./views/home', {
 <h1>{message}</h1>
 ```
 
-::: tip INFO
+::: tip NOTE
 View variables are automatically escaped from HTML to prevent XSS attacks.
 :::
 
