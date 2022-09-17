@@ -33,4 +33,11 @@ $ npm run key:generate
 $ npx norther key:generate
 ```
 
+::: details USING PNPM OR YARN
+```shell
+$ pnpm run key:generate
+$ yarn key:generate
+```
+:::
+
 Now your app can be safely deployed on the web.

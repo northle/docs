@@ -17,6 +17,13 @@ $ npm run key:generate
 $ npx norther key:generate
 ```
 
+::: details USING PNPM OR YARN
+```shell
+$ pnpm run key:generate
+$ yarn key:generate
+```
+:::
+
 ## Overview
 
 To get started with encryption, you should inject `Encrypter` service:

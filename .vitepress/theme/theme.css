@@ -154,3 +154,7 @@ body {
 .link[data-v-5f79f6bb] {
   margin: 6px 0;
 }
+
+.details summary {
+  cursor: pointer;
+}

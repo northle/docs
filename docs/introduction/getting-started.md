@@ -6,7 +6,7 @@ title: Getting Started
 
 ## Requirements
 
-To use Norther, your environment has to meet few requirements:
+To use Norther, your environment has to meet version requirements:
 
 | Node.js       | NPM          |
 | ------------- | ------------ |
@@ -20,14 +20,35 @@ To create new Norther project you can use the NPM command:
 $ npm init @norther <project-name>
 ```
 
-When your project is ready you can lauch your app with `npm run start` command.
+::: details USING PNPM OR YARN
+```shell
+$ pnpm create @norther <project-name>
+$ yarn create @norther <project-name>
+```
+:::
+
+When your project is ready you can lauch your app using command:
 
 ```shell
 $ npm run start
 ```
 
+::: details USING PNPM OR YARN
+```shell
+$ pnpm run start
+$ yarn start
+```
+:::
+
 ::: tip
 If you're using Norther with a frontend framework template, you can run `npm run start:vite` instead for automatic asset compilation.
+
+::: details USING PNPM OR YARN
+```shell
+$ pnpm run start:vite
+$ yarn start:vite
+```
+:::
 :::
 
 If you don't want to open your browser automatically, you can change it in `src/main.ts` file:
