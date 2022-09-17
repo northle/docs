@@ -20,7 +20,7 @@ To create new Norther project you can use the NPM command:
 $ npm init @norther <project-name>
 ```
 
-::: details USING PNPM OR YARN
+::: details Using PNPM or Yarn
 ```shell
 $ pnpm create @norther <project-name>
 $ yarn create @norther <project-name>
@@ -33,7 +33,7 @@ When your project is ready you can lauch your app using command:
 $ npm run start
 ```
 
-::: details USING PNPM OR YARN
+::: details Using PNPM or Yarn
 ```shell
 $ pnpm run start
 $ yarn start
@@ -43,7 +43,7 @@ $ yarn start
 ::: tip
 If you're using Norther with a frontend framework template, you can run `npm run start:vite` instead for automatic asset compilation.
 
-::: details USING PNPM OR YARN
+::: details Using PNPM or Yarn
 ```shell
 $ pnpm run start:vite
 $ yarn start:vite

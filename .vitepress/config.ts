@@ -103,6 +103,10 @@ export default {
             text: 'Schema',
             link: '/docs/1.x/database/schema.html',
           },
+          {
+            text: 'Queries',
+            link: '/docs/1.x/database/queries.html',
+          },
         ],
       },
       {

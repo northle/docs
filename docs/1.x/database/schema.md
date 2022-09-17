@@ -4,7 +4,7 @@ title: Schema
 
 # Schema
 
-Norther comes with a robust database client for MySQL, MongoDB and PostgreSQL database systems by leveraging [Prisma](https://www.prisma.io).
+Norther comes with a robust database client for MySQL, MongoDB, PostgreSQL and many other database systems by using [Prisma](https://www.prisma.io).
 
 ## Configuration
 
@@ -16,7 +16,7 @@ DATABASE_URL="mysql://root:@localhost/norther"
 
 ## Database Schema
 
-First you should get familiar with the concept of database **schema representation**.
+First you should get familiar with the concept of database **schema**. Schema is your database representation in form of `schema.prisma` file. It contains data sources and table model definitions.
 
 The default schema provided in default Norther project looks like this:
 
@@ -39,3 +39,12 @@ model User {
   updatedAt DateTime @updatedAt
 }
 ```
+
+As you can see, the above schema defines one model `User` which represents a `user` table in database. The `datasource` definition sets up the database system - `mysql` in this case. Available systems are:
+
+- PostgreSQL
+- MySQL
+- SQLite
+- MongoDB
+- CockroachDB
+- Microsoft SQL Server

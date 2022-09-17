@@ -17,7 +17,7 @@ $ npm run key:generate
 $ npx norther key:generate
 ```
 
-::: details USING PNPM OR YARN
+::: details Using PNPM or Yarn
 ```shell
 $ pnpm run key:generate
 $ yarn key:generate
