@@ -70,8 +70,50 @@ class AppController {
 }
 ```
 
+::: info
+Controller route methods should be as short as possible - they are only responsible for handling web requests and returning a response. For more logic you can familiarize yourself with service classes.
+:::
+
+### URL Patterns
+
+Routes in Norther are dynamic. You may use the `:param` syntax to create a variable URL that accepts multiple values:
+
+```ts
+// Matches an example /users/admin1 route
+@Route.get('/users/:name')
+```
+
+To make a paramater optional, use the question mark:
+
+```ts
+@Route.get('/users/:name?')
+```
+
+The above route will match both `/users` and` /users/admin1` paths.
+
 You can also define RegExp pattern for route URLs:
 
 ```ts
 @Route.get('/posts/:id(^\\d+)')
+```
+
+### Response Types
+
+As we mentioned above, Norther automatically discovers response type based on the returned value from the controller.
+
+```ts
+// Type of the response: JSON
+return {
+  name: 'User',
+};
+```
+
+```ts
+// Type of the response: JSON
+return [1, 2, 3];
+```
+
+```ts
+// Type of the response: HTML
+return '<h1>Hello World</h1>';
 ```

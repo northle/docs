@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
 }
@@ -34,6 +38,7 @@ body {
 
 :root {
   --vp-c-brand: #10b981;
+  --vp-button-alt-bg: #f1f5f9;
   --vp-button-alt-border: transparent;
   --vp-button-brand-bg: #10b981;
   --vp-button-brand-border: transparent;
@@ -105,7 +110,7 @@ body {
 }
 
 [data-v-109cf3ea] {
-  padding: 1px 0;
+  padding: 0.5px 0;
 }
 
 .VPButton {
@@ -131,4 +136,21 @@ body {
 
 .VPSwitch[aria-checked=true] {
   background: var(--vp-c-brand);
+}
+
+.link.active span {
+  font-weight: 600;
+}
+
+.pager-link[data-v-43384334] {
+  background: var(--vp-button-alt-bg);
+  border: none;
+}
+
+.pager-link[data-v-43384334]:hover {
+  opacity: 0.95;
+}
+
+.link[data-v-5f79f6bb] {
+  margin: 6px 0;
 }

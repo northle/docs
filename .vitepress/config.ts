@@ -39,6 +39,7 @@ export default {
           { text: 'Directory Structure', link: '/docs/basics/directory-structure.html' },
           { text: 'Configuration', link: '/docs/basics/configuration.html' },
           { text: 'Controllers and Routing', link: '/docs/basics/controllers-and-routing.html' },
+          { text: 'Views', link: '/docs/basics/views.html' },
         ]
       },
     ],
