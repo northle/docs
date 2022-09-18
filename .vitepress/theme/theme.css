@@ -21,7 +21,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #374151;
+  background-color: #b2b9c4;
   display: block;
   border-radius: 10px;
   border: 4px solid transparent;
@@ -36,31 +36,36 @@ body {
   background: transparent;
 }
 
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #374151;
+}
+
 :root {
   --vp-c-brand: #10b981;
   --vp-button-alt-bg: #f1f5f9;
   --vp-button-alt-border: transparent;
   --vp-button-brand-bg: #10b981;
   --vp-button-brand-border: transparent;
-  --vp-code-line-highlight-color:#282f3b;
+  --vp-code-line-highlight-color: #282f3b;
   --vp-c-bg-mute: #e2e8f0;
-  --vp-c-white-soft: #f8fafc;
   --vp-c-gray-light-4: #e8edf3;
+  --vp-c-white-soft: #f8fafc;
 }
 
 .dark {
+  --vp-button-alt-bg: #1f2937;
+  --vp-button-alt-hover-bg: #222d3b;
   --vp-c-bg: #111827;
   --vp-c-bg-soft: #1f2937;
-  --vp-button-alt-bg: #1f2937;
   --vp-c-bg-mute: #313a49;
+  --vp-c-black: #111827;
   --vp-c-divider: #374151;
   --vp-c-divider-light: #252c38;
-  --vp-code-line-highlight-color: #131b2c;
+  --vp-c-text-code: #d8dfe9;
   --vp-code-block-bg: #253041;
-  --vp-c-black: #111827;
+  --vp-code-line-highlight-color: #293241;
   --vp-custom-block-info-bg: #19212c;
   --vp-custom-block-info-border: #202a38;
-  --vp-button-alt-hover-bg: #222d3b;
 }
 
 .VPNavBar.has-sidebar .content[data-v-84a11e99] {
@@ -70,7 +75,7 @@ body {
 .dark .VPNav.no-sidebar[data-v-14f22a90],
 .dark .VPNav,
 .dark .VPNavBar.has-sidebar .content[data-v-84a11e99] {
-  background: rgba(17, 24, 39, 0.69);
+  background: rgba(17, 24, 39, 0.7);
 }
 
 .vp-doc div[class*='language-'] {
@@ -79,15 +84,7 @@ body {
 
 .dark .VPSidebar,
 .dark .vp-doc div[class*='language-'] {
-  background: rgba(31, 41, 55, 0.904);
-}
-
-.dark .VPSidebar {
-  z-index: 100;
-}
-
-.dark .VPNavBarTitle a {
-  z-index: 10000;
+  background: rgba(31, 41, 55, 0.9);
 }
 
 .VPNavBarTitle {
@@ -170,4 +167,12 @@ body {
 
 [class^='language-'] code {
   font-family: 'Roboto Mono', monospace;
+}
+
+.group + .group[data-v-8f603b0e] {
+  border-color: var(--vp-c-divider);
+}
+
+.nav[data-v-8f603b0e] {
+  padding-top: 16px;
 }

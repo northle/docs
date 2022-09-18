@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /docs/introduction/getting-started.html
+      link: /docs/1.x/introduction/getting-started.html
     - theme: alt
       text: Visit GitHub
       link: https://github.com/northerjs/norther
