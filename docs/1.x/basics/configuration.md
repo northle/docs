@@ -34,7 +34,7 @@ Remember that the `.env` file should always be ignored by version control system
 
 ## Reading `.env` Variables
 
-You can retrieve environment variables using `env()` function:
+You can retrieve environment variables using `env` function:
 
 ```ts
 import { env } from '@norther/core';
@@ -43,7 +43,7 @@ console.log(env('PORT')); // 8000
 ```
 
 ::: info
-Note that `env()` function automatically casts numbers and booleans. If you read variables using `process.env` object, data will always have string type.
+Note that `env` function automatically casts numbers and booleans. If you read variables using `process.env` object, data will always have string type.
 :::
 
 ## Example `.env` File
