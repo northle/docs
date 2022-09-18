@@ -48,3 +48,20 @@ As you can see, the above schema defines one model `User` which represents a `us
 - MongoDB
 - CockroachDB
 - Microsoft SQL Server
+
+Every model definition represents a database table and its columns.
+
+## Running Migrations
+
+When you edit the schema and want to generate tables based on it, run command:
+
+```shell
+$ npm run db:migrate
+```
+
+::: details Using PNPM or Yarn
+```shell
+$ pnpm run db:migrate
+$ yarn db:migrate
+```
+:::

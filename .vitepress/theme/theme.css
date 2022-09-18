@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto+Mono:wght@400&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -170,4 +170,8 @@ body {
 
 .outline-title {
   margin-bottom: 3px;
+}
+
+[class^='language-'] code {
+  font-family: 'Roboto Mono', monospace;
 }

@@ -28,7 +28,7 @@ export class AppController {
 }
 ```
 
-Controller methods should always return some value. Melonly automatically sends proper headers based on returned data. In case of object or array, the response has the JSON type. When returned value is text or a view object, it will be rendered as HTML.
+Controller methods should always return some value. Norther automatically sends proper headers based on returned data. In case of object or array, the response has the JSON type. When returned value is text or a view object, it will be rendered as HTML.
 
 ### Registering Controllers
 
