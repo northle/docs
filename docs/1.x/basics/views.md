@@ -13,9 +13,11 @@ Norther's template engine allows you to create loops, conditionals and variable 
 The example template with conditional rendering block looks like this:
 
 ```html
-<h1>{{ title }}</h1>
+<h1>{title}</h1>
 
 <nav class="menu">
+  <a href="/">Home</a>
+
   [if logged]
     <a href="/logout">Log out</a>
   [/if]

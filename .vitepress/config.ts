@@ -45,8 +45,8 @@ export default {
         text: 'Introduction',
         items: [
           {
-            text: 'NortherJS Framework',
-            link: '/docs/1.x/introduction/northerjs-framework.html',
+            text: 'Introducing Norther',
+            link: '/docs/1.x/introduction/introducing-norther.html',
           },
           {
             text: 'Getting Started',

@@ -168,10 +168,6 @@ body {
   cursor: pointer;
 }
 
-.outline-title {
-  margin-bottom: 3px;
-}
-
 [class^='language-'] code {
   font-family: 'Roboto Mono', monospace;
 }
