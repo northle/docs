@@ -49,7 +49,8 @@ $ pnpm run start:vite
 $ yarn start:vite
 ```
 :::
-:::
+
+## Basic Configuration
 
 If you don't want to open your browser automatically, you can change it in `src/main.ts` file:
 

@@ -19,9 +19,9 @@ const server = createServer({
 });
 ```
 
-To change app locale during the request, use the `Localizator` service:
+To change app locale during the request, use the `Translator` service:
 
-```ts{6}
+```ts{1,6}
 import { Translator, Request } from '@norther/core';
 
 @Controller()
@@ -38,20 +38,11 @@ export class UserController {
 Then you'll be able to change app's locale during a request:
 
 ```ts{12}
-import { Translator } from '@norther/core';
+const userLocale = this.request.locale();
 
-@Controller()
-export class UserController {
-  // ...
-
-  public changeLocale() {
-    const browserLocale = this.request.lang();
-
-    // Set locale from list of supported ones
-    if (['de', 'en', 'fr', 'pl'].includes(browserLocale)) {
-      this.translator.setLocale(browserLocale);
-    }
-  }
+// Set locale from list
+if (['de', 'en', 'fr', 'pl'].includes(userLocale)) {
+  this.translator.setLocale(userLocale);
 }
 ```
 

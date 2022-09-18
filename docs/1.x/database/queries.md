@@ -4,7 +4,7 @@ title: Queries
 
 # Queries
 
-Querying database using Norther's Prisma service is very easy and handy.
+Querying database using Norther's [Prisma](https://www.prisma.io/docs/concepts/components/prisma-client/crud) service is very easy and handy.
 
 ## Getting Started
 

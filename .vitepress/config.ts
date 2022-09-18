@@ -94,6 +94,10 @@ export default {
             text: 'Encryption and Hashing',
             link: '/docs/1.x/advanced/encryption-and-hashing.html',
           },
+          {
+            text: 'Validation',
+            link: '/docs/1.x/advanced/validation.html',
+          },
         ],
       },
       {
