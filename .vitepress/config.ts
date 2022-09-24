@@ -18,18 +18,18 @@ export default {
     nav: [
       {
         text: 'Docs',
-        link: '/docs/1.x/introduction/northlejs-framework.html',
+        link: '/docs/1.x/introduction/northle-framework.html',
       },
       {
         text: 'Github',
-        link: 'https://github.com/northlejs/northle',
+        link: 'https://github.com/northle/project-template',
       },
       {
         text: 'Version',
         items: [
           {
             text: '1.x alpha',
-            link: '/docs/1.x/introduction/northlejs-framework.md',
+            link: '/docs/1.x/introduction/northle-framework.md',
           },
         ]
       },
@@ -37,7 +37,7 @@ export default {
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/northlejs/northle',
+        link: 'https://github.com/northle/project-template',
       },
     ],
     sidebar: [
@@ -124,7 +124,7 @@ export default {
       },
     ],
     editLink: {
-      pattern: 'https://github.com/northlejs/docs/1.x/edit/main/docs/1.x/:path',
+      pattern: 'https://github.com/northle/docs/1.x/edit/main/docs/1.x/:path',
       text: 'Contribute to this page',
     },
     footer: {

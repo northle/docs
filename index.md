@@ -13,7 +13,7 @@ hero:
       link: /docs/1.x/introduction/getting-started.html
     - theme: alt
       text: Visit GitHub
-      link: https://github.com/northlejs/northle
+      link: https://github.com/northle/project-template
 features:
   - icon: 🧩
     title: Declarative
