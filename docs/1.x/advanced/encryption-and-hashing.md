@@ -4,7 +4,7 @@ title: Encryption and Hashing
 
 # Encryption and Hashing
 
-Secure web apps require good encryption and hashing algorithms. Norther provides a simple two-way encryption interface.
+Secure web apps require good encryption and hashing algorithms. Northle provides a simple two-way encryption interface.
 
 ## Configuration
 
@@ -14,7 +14,7 @@ To provide best security, your app should have unique key for encrypting data. T
 $ npm run key:generate
 
 # or:
-$ npx norther key:generate
+$ npx northle key:generate
 ```
 
 ::: details Using PNPM or Yarn
@@ -29,7 +29,7 @@ $ yarn key:generate
 To get started with encryption, you should inject `Encrypter` service:
 
 ```ts{6}
-import { Encrypter } from '@norther/core';
+import { Encrypter } from '@northle/core';
 
 @Controller()
 export class UserController {

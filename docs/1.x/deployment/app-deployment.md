@@ -30,7 +30,7 @@ After changing the configuration, run the following command to generate new encr
 $ npm run key:generate
 
 # or:
-$ npx norther key:generate
+$ npx northle key:generate
 ```
 
 ::: details Using PNPM or Yarn

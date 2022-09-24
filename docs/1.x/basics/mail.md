@@ -4,7 +4,7 @@ title: Mail
 
 # Mail
 
-Norther provides a fluent interface for sending emails from your application.
+Northle provides a fluent interface for sending emails from your application.
 
 ## Configuration
 
@@ -22,7 +22,7 @@ MAIL_PASSWORD=
 First, we need to inject mailer to the controller or service:
 
 ```ts{5}
-import { Mailer } from '@norther/core';
+import { Mailer } from '@northle/core';
 
 @Controller()
 export class MailController {

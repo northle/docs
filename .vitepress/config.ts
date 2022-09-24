@@ -1,6 +1,6 @@
 export default {
   outDir: './dist',
-  title: 'Norther',
+  title: 'Northle',
   lang: 'en-US',
   description: 'Modern, declarative framework for Node.js',
   head: [
@@ -12,24 +12,24 @@ export default {
     ],
   ],
   themeConfig: {
-    siteTitle: 'Norther',
+    siteTitle: 'Northle',
     logo: '/logo.png',
     outlineTitle: 'Table of Contents',
     nav: [
       {
         text: 'Docs',
-        link: '/docs/1.x/introduction/northerjs-framework.html',
+        link: '/docs/1.x/introduction/northlejs-framework.html',
       },
       {
         text: 'Github',
-        link: 'https://github.com/northerjs/norther',
+        link: 'https://github.com/northlejs/northle',
       },
       {
         text: 'Version',
         items: [
           {
             text: '1.x alpha',
-            link: '/docs/1.x/introduction/northerjs-framework.md',
+            link: '/docs/1.x/introduction/northlejs-framework.md',
           },
         ]
       },
@@ -37,7 +37,7 @@ export default {
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/northerjs/norther',
+        link: 'https://github.com/northlejs/northle',
       },
     ],
     sidebar: [
@@ -45,8 +45,8 @@ export default {
         text: 'Introduction',
         items: [
           {
-            text: 'Introducing Norther',
-            link: '/docs/1.x/introduction/introducing-norther.html',
+            text: 'Introducing Northle',
+            link: '/docs/1.x/introduction/introducing-northle.html',
           },
           {
             text: 'Getting Started',
@@ -124,7 +124,7 @@ export default {
       },
     ],
     editLink: {
-      pattern: 'https://github.com/northerjs/docs/1.x/edit/main/docs/1.x/:path',
+      pattern: 'https://github.com/northlejs/docs/1.x/edit/main/docs/1.x/:path',
       text: 'Contribute to this page',
     },
     footer: {

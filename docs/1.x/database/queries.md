@@ -4,14 +4,14 @@ title: Queries
 
 # Queries
 
-Querying database using Norther's [Prisma](https://www.prisma.io/docs/concepts/components/prisma-client/crud) service is very easy and handy.
+Querying database using Northle's [Prisma](https://www.prisma.io/docs/concepts/components/prisma-client/crud) service is very easy and handy.
 
 ## Getting Started
 
 To start using database queries, you should inject `DatabaseClient` service:
 
 ```ts{1,5}
-import { DatabaseClient } from '@norther/core';
+import { DatabaseClient } from '@northle/core';
 
 @Controller()
 export class PostController {

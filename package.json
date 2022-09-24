@@ -3,12 +3,12 @@
   "description": "Modern, declarative framework for Node.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/northerjs/docs.git"
+    "url": "git+https://github.com/northlejs/docs.git"
   },
   "author": "Dominik Rajkowski",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/northerjs/docs/issues"
+    "url": "https://github.com/northlejs/docs/issues"
   },
   "scripts": {
     "build": "vitepress build .",

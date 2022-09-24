@@ -4,21 +4,21 @@ title: Schema
 
 # Schema
 
-Norther comes with a robust database client for MySQL, MongoDB, PostgreSQL and many other database systems by using [Prisma](https://www.prisma.io).
+Northle comes with a robust database client for MySQL, MongoDB, PostgreSQL and many other database systems by using [Prisma](https://www.prisma.io).
 
 ## Configuration
 
 All configuration needed for database querying is stored in the `.env` variables:
 
 ```
-DATABASE_URL="mysql://root:@localhost/norther"
+DATABASE_URL="mysql://root:@localhost/northle"
 ```
 
 ## Database Schema
 
 First you should get familiar with the concept of database **schema**. Schema is your database representation in form of `schema.prisma` file. It contains data sources and table model definitions.
 
-The default schema provided in default Norther project looks like this:
+The default schema provided in default Northle project looks like this:
 
 ```prisma
 datasource db {

@@ -6,7 +6,7 @@ title: Getting Started
 
 ## Requirements
 
-To use Norther, your environment has to meet version requirements:
+To use Northle, your environment has to meet version requirements:
 
 | Node.js       | NPM          |
 | ------------- | ------------ |
@@ -14,16 +14,16 @@ To use Norther, your environment has to meet version requirements:
 
 ## Creating Project
 
-To create new Norther project you can use the NPM command:
+To create new Northle project you can use the NPM command:
 
 ```shell
-$ npm init @norther <project-name>
+$ npm init @northle <project-name>
 ```
 
 ::: details Using PNPM or Yarn
 ```shell
-$ pnpm create @norther <project-name>
-$ yarn create @norther <project-name>
+$ pnpm create @northle <project-name>
+$ yarn create @northle <project-name>
 ```
 :::
 
@@ -41,7 +41,7 @@ $ yarn start
 :::
 
 ::: tip
-If you're using Norther with a frontend framework template, you can run `npm run start:vite` instead for automatic asset compilation.
+If you're using Northle with a frontend framework template, you can run `npm run start:vite` instead for automatic asset compilation.
 
 ::: details Using PNPM or Yarn
 ```shell

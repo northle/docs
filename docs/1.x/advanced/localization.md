@@ -4,7 +4,7 @@ title: Localization
 
 # Localization
 
-Web applications are often multi-language. Norther has many built-in localization features so you can easly support multiple languages without any additional libraries.
+Web applications are often multi-language. Northle has many built-in localization features so you can easly support multiple languages without any additional libraries.
 
 ## Setting App Locale
 
@@ -22,7 +22,7 @@ const server = createServer({
 To change app locale during the request, use the `Translator` service:
 
 ```ts{1,6}
-import { Translator, Request } from '@norther/core';
+import { Translator, Request } from '@northle/core';
 
 @Controller()
 export class UserController {
@@ -53,7 +53,7 @@ Translations are stored in `JSON` files inside `/lang` directory. It does not ex
 For example, if your app supports Polish language with English as default, just create a new `lang/pl.json` file with translations. To get translated contents, import the `trans` function and pass the default message to it:
 
 ```ts
-import { trans } from '@norther/core';
+import { trans } from '@northle/core';
 
 const message = trans('Hello World');
 ```

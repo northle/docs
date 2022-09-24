@@ -4,11 +4,11 @@ title: Configuration
 
 # Configuration
 
-App configuration in Norther is stored in two main files: `src/main.ts` and `.env`.
+App configuration in Northle is stored in two main files: `src/main.ts` and `.env`.
 
 ## Environment Settings
 
-The default Norther project contains a `.env` file. This is the place where database credentials and environment-specific settings should be stored. Norther automatically reads all `.env` variables. The default `.env` file looks like this:
+The default Northle project contains a `.env` file. This is the place where database credentials and environment-specific settings should be stored. Northle automatically reads all `.env` variables. The default `.env` file looks like this:
 
 ```
 DEVELOPMENT=true
@@ -16,7 +16,7 @@ PORT=8000
 HOST=localhost
 ENCRYPT_KEY=
 
-DATABASE_URL="mysql://root:@localhost/norther"
+DATABASE_URL="mysql://root:@localhost/northle"
 
 SESSION_LIFETIME=7 # days
 FIELD_LIMIT=10 # MB
@@ -37,7 +37,7 @@ Remember that the `.env` file should always be ignored by version control system
 You can retrieve environment variables using `env` function:
 
 ```ts
-import { env } from '@norther/core';
+import { env } from '@northle/core';
 
 console.log(env('PORT')); // 8000
 ```
@@ -55,7 +55,7 @@ Developers often use version control systems to work in teams. We should remembe
 Any other, app-specific configuration is passed into the `createServer` function in `src/main.ts` file. The file looks like this by default:
 
 ```ts
-import { createServer } from '@norther/core';
+import { createServer } from '@northle/core';
 import { AppModule } from './app/app.module';
 
 const server = createServer({

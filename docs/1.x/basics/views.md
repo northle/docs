@@ -4,11 +4,11 @@ title: Views
 
 # Views
 
-Norther comes with handy built-in view templating engine. Views is your app are placed in `/views` directory and have the `*.north.html` extension.
+Northle comes with handy built-in view templating engine. Views is your app are placed in `/views` directory and have the `*.north.html` extension.
 
 ## Templates
 
-Norther's template engine allows you to create loops, conditionals and variable interpolation.
+Northle's template engine allows you to create loops, conditionals and variable interpolation.
 
 The example template with conditional rendering block looks like this:
 
@@ -51,7 +51,7 @@ View variables are automatically escaped from HTML to prevent XSS attacks.
 
 ## Directives
 
-Norther's template engine is based on directives - a special-syntax statements used for building dynamic output.
+Northle's template engine is based on directives - a special-syntax statements used for building dynamic output.
 
 All directives like foreach loops use the square brackets and slash syntax:
 
@@ -101,7 +101,7 @@ Sometimes you may need to render data using loop, for example - to show posts li
 
 ### `raw`
 
-Sometimes you may want to left some parts of code uncompiled. For example, when you are using some frontend framework, you may want not to parse the code with template engine. That's why Norther comes with a `[raw]` directive:
+Sometimes you may want to left some parts of code uncompiled. For example, when you are using some frontend framework, you may want not to parse the code with template engine. That's why Northle comes with a `[raw]` directive:
 
 ```html
 [raw]
@@ -113,7 +113,7 @@ With this directive the above code will render `'{content}'` as normal HTML, wit
 
 ### `method`
 
-Norther lets you to use all HTTP methods in forms thanks to `[method]` directive. Just pass a method name and you'll be able to use `PUT`, `PATCH`, `DELETE` and other methods in HTML forms.
+Northle lets you to use all HTTP methods in forms thanks to `[method]` directive. Just pass a method name and you'll be able to use `PUT`, `PATCH`, `DELETE` and other methods in HTML forms.
 
 ```html
 <form action="/login" method="post">
@@ -145,7 +145,7 @@ return render('home', {
 
 ### `token`
 
-For every user session Northergenerates a unique token to protect your application from [cross-site request forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks. Anytime you define HTML forms with method other than `GET` and `HEAD`, you have to add a hidden field containing generated token. Otherwise, you won't be able to pass the form and you'll get 419 error.
+For every user session Northlegenerates a unique token to protect your application from [cross-site request forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks. Anytime you define HTML forms with method other than `GET` and `HEAD`, you have to add a hidden field containing generated token. Otherwise, you won't be able to pass the form and you'll get 419 error.
 
 To add the token field just use the `[token]` directive:
 
@@ -172,4 +172,4 @@ You can call functions inside your templates:
 
 You can also customize default error pages like `404 Not Found` or `500 Internal Server Error`.
 
-All you have to do is to create a file with error code as its name, for example: `views/errors/404.north.html`. That file should contain your custom template. When this file exists, Norther will serve it as the 404 error page. Otherwise, the default one will be served.
+All you have to do is to create a file with error code as its name, for example: `views/errors/404.north.html`. That file should contain your custom template. When this file exists, Northle will serve it as the 404 error page. Otherwise, the default one will be served.

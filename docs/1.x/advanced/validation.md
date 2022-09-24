@@ -4,14 +4,14 @@ title: Validation
 
 # Validation
 
-Your app may often need form request data validation. Norther ships with a built-in validator with many useful validation rules.
+Your app may often need form request data validation. Northle ships with a built-in validator with many useful validation rules.
 
 ## Getting Started
 
 To be able to validate request, inject the `Validator` service:
 
 ```ts{1,6}
-import { Request, Validator } from '@norther/core';
+import { Request, Validator } from '@northle/core';
 
 @Controller()
 export class PostController {

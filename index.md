@@ -6,14 +6,14 @@ hero:
   tagline: Create fast and secure web applications with awesome developer experience.
   image:
     src: /logo.png
-    alt: Norther Logo
+    alt: Northle Logo
   actions:
     - theme: brand
       text: Get Started
       link: /docs/1.x/introduction/getting-started.html
     - theme: alt
       text: Visit GitHub
-      link: https://github.com/northerjs/norther
+      link: https://github.com/northlejs/northle
 features:
   - icon: 🧩
     title: Declarative

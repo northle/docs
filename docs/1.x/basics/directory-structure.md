@@ -4,7 +4,7 @@ title: Directory Structure
 
 # Directory Structure
 
-Default Norther application structure consists of a few main directories. It is a good idea to explore them!
+Default Northle application structure consists of a few main directories. It is a good idea to explore them!
 
 ## Directories
 
