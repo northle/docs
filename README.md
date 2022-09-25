@@ -52,7 +52,7 @@ Your environment has to meet few requirements:
 To create new Northle project you can use the NPM command:
 
 ```shell
-$ npm init @northle <project-name>
+$ npm create @northle <app-name>
 ```
 
 ## 🛡️ Security
