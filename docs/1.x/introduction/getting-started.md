@@ -17,13 +17,13 @@ To use Northle, your environment has to meet version requirements:
 To create new Northle project you can use the NPM command:
 
 ```shell
-$ npm init @northle <project-name>
+$ npm create @northle <app-name>
 ```
 
 ::: details Using PNPM or Yarn
 ```shell
-$ pnpm create @northle <project-name>
-$ yarn create @northle <project-name>
+$ pnpm create @northle <app-name>
+$ yarn create @northle <app-name>
 ```
 :::
 
