@@ -4,7 +4,7 @@ title: Views
 
 # Views
 
-Northle comes with handy built-in view templating engine. Views is your app are placed in `/views` directory and have the `*.north.html` extension.
+Northle comes with handy built-in view templating engine. Views is your app are placed in `/views` directory and have the `*.html` extension.
 
 ## Templates
 
@@ -27,7 +27,7 @@ The example template with conditional rendering block looks like this:
 ## Rendering a View
 
 ```ts
-// Render the `src/app/views/login.north.html` template
+// Render the `src/app/views/login.html` template
 return render('./views/login');
 ```
 
@@ -172,4 +172,4 @@ You can call functions inside your templates:
 
 You can also customize default error pages like `404 Not Found` or `500 Internal Server Error`.
 
-All you have to do is to create a file with error code as its name, for example: `views/errors/404.north.html`. That file should contain your custom template. When this file exists, Northle will serve it as the 404 error page. Otherwise, the default one will be served.
+All you have to do is to create a file with error code as its name, for example: `views/errors/404.html`. That file should contain your custom template. When this file exists, Northle will serve it as the 404 error page. Otherwise, the default one will be served.

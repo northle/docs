@@ -34,7 +34,7 @@ The `src` directory contains your main application code. Feel free to modify and
 
 ### `📁 /views`
 
-The` views` directory contains app views rendered by your application. View files have the `.north.html` extension.
+The` views` directory contains app views rendered by your application. View files have the `.html` extension.
 
 ## Files
 
