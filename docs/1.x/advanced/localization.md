@@ -11,7 +11,7 @@ Web applications are often multi-language. Northle has many built-in localizatio
 You can set the default app locale in `src/main.ts` file:
 
 ```ts{3}
-const server = createServer({
+const server = await createServer({
   config: {
     locale: 'en',
   },

@@ -24,7 +24,7 @@ UPLOAD_LIMIT=100 # MB
 
 MAIL_HOST="smtp.gmail.com"
 MAIL_PORT=587
-MAIL_ACCOUNT=
+MAIL_ADDRESS=
 MAIL_PASSWORD=
 ```
 
@@ -58,7 +58,7 @@ Any other, app-specific configuration is passed into the `createServer` function
 import { createServer } from '@northle/core';
 import { AppModule } from './app/app.module';
 
-const server = createServer({
+const server = await createServer({
   config: {
     dev: {
       openBrowser: true,

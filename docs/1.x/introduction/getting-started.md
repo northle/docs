@@ -55,7 +55,7 @@ $ yarn start:vite
 If you don't want to open your browser automatically, you can change it in `src/main.ts` file:
 
 ```ts{4}
-const server = createServer({
+const server = await createServer({
   config: {
     dev: {
       openBrowser: false,

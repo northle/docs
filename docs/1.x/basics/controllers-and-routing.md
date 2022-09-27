@@ -35,7 +35,7 @@ Controller methods should always return some value. Northle automatically sends 
 The place where controllers are registered is the `src/main.ts` file. If you're using the CLI for generating controllers, Northle registers them for you. Every time you create a new controller manually, you have to register it in `src/main.ts` file:
 
 ```ts{4}
-const server = createServer({
+const server = await createServer({
   // ...
   modules: [
     AppModule,
