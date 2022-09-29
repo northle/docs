@@ -10,18 +10,22 @@ Northle comes with handy built-in view templating engine. Views is your app are 
 
 Northle's template engine allows you to create loops, conditionals and variable interpolation.
 
-The example template with conditional rendering block looks like this:
+An example view template may look like this:
 
 ```html
 <h1>{title}</h1>
 
-<nav class="menu">
-  <a href="/">Home</a>
+<main>
+  [each post in posts]
+    <article class="post">
+      {post.content}
+    </article>
+  [/each]
 
-  [if logged]
-    <a href="/logout">Log out</a>
+  [if !posts.length]
+    <p>There are no posts yet.</p>
   [/if]
-</nav>
+</mai>
 ```
 
 ## Rendering a View
@@ -67,17 +71,19 @@ The most basic directives you should know are conditional blocks. You may use tw
 
 ```html
 [if !posts.length]
-  <p>There are no posts yet</p>
+  <p>There are no posts yet.</p>
 [/if]
 ```
 
 ```html
-[if logged]
+[if user.isLogged]
   <a href="/logout">Log out</a>
+[else]
+  <a href="/login">Log in</a>
 [/if]
 ```
 
-They act just like `if` statements in TypeScript - when the condition is true, the content inside will be rendered.
+They act just like `if/else` statements in TypeScript - when the condition is true, the content inside will be rendered. Otherwise, the `[else]` block will show up.
 
 ### `each`
 
@@ -99,18 +105,6 @@ Sometimes you may need to render data using loop, for example - to show posts li
 [/each]
 ```
 
-### `raw`
-
-Sometimes you may want to left some parts of code uncompiled. For example, when you are using some frontend framework, you may want not to parse the code with template engine. That's why Northle comes with a `[raw]` directive:
-
-```html
-[raw]
-  {content}
-[/raw]
-```
-
-With this directive the above code will render `'{content}'` as normal HTML, without replacing it with passed variable.
-
 ### `method`
 
 Northle lets you to use all HTTP methods in forms thanks to `[method]` directive. Just pass a method name and you'll be able to use `PUT`, `PATCH`, `DELETE` and other methods in HTML forms.
@@ -126,7 +120,7 @@ Note that the form must have `method="post"` attribute set.
 
 ### `json`
 
-Sometimes you need to pass some data from backend to frontend using HTML `<script />` tag. You can accomplish that by converting data to JSON with `[json]` template directive:
+Sometimes you need to pass some data from backend to frontend using HTML `<script />` tag. You can accomplish that by converting data to JSON with `[json]` directive:
 
 ```ts
 return render('home', {
@@ -143,6 +137,12 @@ return render('home', {
 </script>
 ```
 
+To pretty-print JSON data using tabs and newlines, add boolean parameter:
+
+```ts
+[json(userData, true)];
+```
+
 ### `token`
 
 For every user session Northlegenerates a unique token to protect your application from [cross-site request forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks. Anytime you define HTML forms with method other than `GET` and `HEAD`, you have to add a hidden field containing generated token. Otherwise, you won't be able to pass the form and you'll get 419 error.
@@ -156,6 +156,29 @@ To add the token field just use the `[token]` directive:
 </form>
 ```
 
+### `raw`
+
+Sometimes you may want to left some parts of code uncompiled. For example, when you are using some frontend framework, you may want not to parse the code with template engine. That's why Northle comes with a `[raw]` directive:
+
+```html
+[raw]
+  {content}
+[/raw]
+```
+
+With this directive the above code will render `{content}` as normal HTML, without replacing it with passed variable.
+
+### `vite`
+
+Northle provides a built-in intergration with [Vite](https://vitejs.dev) asset bundler which supports HMR. You may use `[vite]` directive to add your frontend scripts and styles:
+
+```html
+<head>
+  ...
+  [vite('main.js')]
+</head>
+```
+
 ## Functions
 
 You can call functions inside your templates:
@@ -165,11 +188,11 @@ You can call functions inside your templates:
 ```
 
 ```html
-<h1>{trans('Welcome on chat app')}</h1>
+<h1>{trans('Welcome to the chat app')}</h1>
 ```
 
 ## Custom Error Pages
 
 You can also customize default error pages like `404 Not Found` or `500 Internal Server Error`.
 
-All you have to do is to create a file with error code as its name, for example: `views/errors/404.html`. That file should contain your custom template. When this file exists, Northle will serve it as the 404 error page. Otherwise, the default one will be served.
+Just create a file with error code as its name, like `views/errors/404.html`. That file should contain your custom page template. If the file exists, Northle will serve it as the `404` error page. Otherwise, the default one will be served.
