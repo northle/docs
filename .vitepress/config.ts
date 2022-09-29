@@ -114,6 +114,15 @@ export default {
         ],
       },
       {
+        text: 'Tutorial',
+        items: [
+          {
+            text: 'CRUD Application',
+            link: '/docs/1.x/tutorial/crud-application.html',
+          },
+        ],
+      },
+      {
         text: 'Deployment',
         items: [
           {
