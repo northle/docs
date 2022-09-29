@@ -50,6 +50,7 @@ body {
   --vp-c-bg-mute: #ebeef1;
   --vp-c-gray-light-4: #e8edf3;
   --vp-c-white-soft: #f8fafc;
+  --vp-font-family-mono: 'Roboto Mono', monospace;
 }
 
 :root:not(.dark) {
@@ -167,10 +168,6 @@ body {
   cursor: pointer;
 }
 
-[class^='language-'] code {
-  font-family: 'Roboto Mono', monospace;
-}
-
 .group + .group[data-v-8f603b0e] {
   border-color: var(--vp-c-divider);
 }
@@ -185,4 +182,10 @@ body {
 
 .vp-doc .header-anchor {
   margin-left: -1.1em;
+}
+
+.vp-doc :not(pre) > code {
+  margin: 0 1px;
+  padding: 3px 7px;
+  border-radius: 6px;
 }
