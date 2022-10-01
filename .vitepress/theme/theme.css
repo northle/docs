@@ -54,7 +54,7 @@ body {
   --vp-code-line-highlight-color: #2c3647;
   --vp-c-bg-mute: #ebeef1;
   --vp-c-gray-light-4: #e8edf3;
-  --vp-c-white-soft: #f8fafc;
+  --vp-c-white-soft: #f5f8fc;
   --vp-custom-block-info-bg: rgba(63, 138, 224, 0.158);
   --vp-custom-block-info-border: rgba(63, 138, 224, 0.315);
   --vp-font-family-mono: 'Roboto Mono', monospace;
@@ -224,6 +224,12 @@ body {
   opacity: 0.75;
 }
 
+@media (min-width: 2000px) {
+  .VPHero[data-v-89d2fc22] {
+    padding-top: 300px !important;
+  }
+}
+
 @media (min-width: 960px) {
   .VPSidebar[data-v-8f603b0e] {
     margin-top: 72px;
@@ -235,5 +241,15 @@ body {
 
   .VPSidebar[data-v-8f603b0e] {
     padding-top: 24px;
+  }
+
+  .VPHero[data-v-89d2fc22] {
+    padding-top: 190px;
+  }
+}
+
+@media (min-width: 768px){
+  .VPFooter[data-v-5bdef7ba] {
+    padding: 64px;
   }
 }
