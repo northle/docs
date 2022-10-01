@@ -69,7 +69,7 @@ body {
   --vp-c-divider-light: #252c38;
   --vp-c-gray-dark-4: #273141;
   --vp-c-text-code: #d8dfe9;
-  --vp-code-block-bg: #253041;
+  --vp-code-block-bg: #242d3b;
   --vp-code-line-highlight-color: #232c3a;
   --vp-custom-block-info-bg: #222a35;
   --vp-custom-block-info-border: #202a38;
@@ -91,7 +91,7 @@ body {
 
 .dark .VPSidebar,
 .dark .vp-doc div[class*='language-'] {
-  background: rgba(27, 34, 44, 0.9);
+  background: #1b222c;
 }
 
 .VPNavBarTitle {
@@ -188,6 +188,17 @@ body {
   margin: 0 1px;
   padding: 3px 7px;
   border-radius: 6px;
+}
+
+.text[data-v-2525a03f] {
+  display: none;
+}
+
+.VPNavScreenAppearance[data-v-2525a03f]::before {
+  content: 'Dark mode';
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.75;
 }
 
 @media (min-width: 960px) {
