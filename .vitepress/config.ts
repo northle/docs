@@ -114,11 +114,15 @@ export default {
         ],
       },
       {
-        text: 'Tutorial',
+        text: 'CRUD Tutorial',
         items: [
           {
-            text: 'CRUD Application',
-            link: '/docs/1.x/tutorial/crud-application.html',
+            text: 'Getting Started',
+            link: '/docs/1.x/crud-tutorial/getting-started.html',
+          },
+          {
+            text: 'Creating Todos',
+            link: '/docs/1.x/crud-tutorial/creating-todos.html',
           },
         ],
       },
