@@ -137,7 +137,7 @@ export default {
       },
     ],
     editLink: {
-      pattern: 'https://github.com/northle/docs/1.x/edit/main/docs/1.x/:path',
+      pattern: 'https://github.com/northle/docs/tree/main/:path',
       text: 'Contribute to this page',
     },
     footer: {
