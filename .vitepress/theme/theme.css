@@ -9,8 +9,8 @@ body {
 }
 
 ::selection{
-  background: #34d399;
-  color: #141a25;
+  background: #0ea5e9;
+  color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -40,6 +40,10 @@ body {
   background-color: #374151;
 }
 
+.dark ::selection {
+  color: #141a25;
+}
+
 :root {
   --vp-c-brand: #0ea5e9;
   --vp-c-brand-dark: #0284c7;
@@ -51,6 +55,8 @@ body {
   --vp-c-bg-mute: #ebeef1;
   --vp-c-gray-light-4: #e8edf3;
   --vp-c-white-soft: #f8fafc;
+  --vp-custom-block-info-bg: rgba(63, 138, 224, 0.158);
+  --vp-custom-block-info-border: rgba(63, 138, 224, 0.315);
   --vp-font-family-mono: 'Roboto Mono', monospace;
 }
 
@@ -72,8 +78,6 @@ body {
   --vp-c-text-code: #d8dfe9;
   --vp-code-block-bg: #242d3b;
   --vp-code-line-highlight-color: #232c3a;
-  --vp-custom-block-info-bg: rgba(63, 138, 224, 0.158);
-  --vp-custom-block-info-border: #202a38;
 }
 
 .VPNavBar.has-sidebar .content[data-v-84a11e99] {
@@ -97,6 +101,14 @@ body {
 
 .VPNavBarTitle {
   background: transparent !important;
+}
+
+.custom-block.details {
+  transition: opacity 0.2s ease;
+}
+
+.custom-block.details:hover {
+  opacity: 0.9;
 }
 
 .custom-block.details summary {
@@ -140,10 +152,15 @@ body {
   border-radius: 12px !important;
   border: none !important;
   padding: 2px 20px !important;
+  transition: opacity 0.2s ease !important;
 }
 
 .VPButton.brand {
   background-image: linear-gradient(to right, #3b82f6, #0ea5e9);
+}
+
+.VPButton.brand:hover {
+  opacity: 0.9;
 }
 
 .tagline[data-v-89d2fc22] {
