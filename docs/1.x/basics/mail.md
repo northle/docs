@@ -13,7 +13,7 @@ All configuration needed for mailing is stored in the `.env` variables:
 ```
 MAIL_HOST="smtp.gmail.com"
 MAIL_PORT=587
-MAIL_ACCOUNT=your_account@email.com
+MAIL_ADDRESS=your_account@email.com
 MAIL_PASSWORD=
 ```
 

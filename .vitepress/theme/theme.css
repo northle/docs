@@ -41,10 +41,11 @@ body {
 }
 
 :root {
-  --vp-c-brand: #10b981;
+  --vp-c-brand: #0ea5e9;
+  --vp-c-brand-dark: #0284c7;
+  --vp-c-brand-light: #38bdf8;
   --vp-button-alt-bg: #f1f5f9;
   --vp-button-alt-border: transparent;
-  --vp-button-brand-bg: #10b981;
   --vp-button-brand-border: transparent;
   --vp-code-line-highlight-color: #2c3647;
   --vp-c-bg-mute: #ebeef1;
@@ -71,7 +72,7 @@ body {
   --vp-c-text-code: #d8dfe9;
   --vp-code-block-bg: #242d3b;
   --vp-code-line-highlight-color: #232c3a;
-  --vp-custom-block-info-bg: #222a35;
+  --vp-custom-block-info-bg: rgba(63, 138, 224, 0.158);
   --vp-custom-block-info-border: #202a38;
 }
 
@@ -98,6 +99,10 @@ body {
   background: transparent !important;
 }
 
+.custom-block.details summary {
+  user-select: none;
+}
+
 .VPSwitch[data-v-5dcf7ba4],
 .VPSwitch[data-v-5dcf7ba4]:hover {
   border-color: transparent;
@@ -119,11 +124,12 @@ body {
 
 .outline-link {
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
 .outline-link.active {
   font-weight: 500;
+  letter-spacing: 0;
 }
 
 [data-v-109cf3ea] {
@@ -137,7 +143,7 @@ body {
 }
 
 .VPButton.brand {
-  background-image: linear-gradient(to right, #10b981, #14b8a6);
+  background-image: linear-gradient(to right, #3b82f6, #0ea5e9);
 }
 
 .tagline[data-v-89d2fc22] {

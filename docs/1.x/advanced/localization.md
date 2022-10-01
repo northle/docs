@@ -70,5 +70,5 @@ const message = trans('Hello World');
 You can also display translated text directly in view templates using `trans` function:
 
 ```html
-<h1>{{ trans('Hello World') }}</h1>
+<h1>{trans('Hello World')}</h1>
 ```

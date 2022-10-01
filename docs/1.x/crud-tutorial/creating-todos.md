@@ -19,7 +19,7 @@ export class TodoController {
 }
 ```
 
-Now let's define the `POST /todos` route:
+Now let's define `POST /todos` route:
 
 ```ts
 @Controller()
@@ -43,3 +43,34 @@ export class TodoController {
 ```
 
 You can test the route sending a `POST` request with `title` and `content` fields. If everything is correctly set up, you should see a new record in database.
+
+## Todo Creating View
+
+Finally we can add `GET /todos/create` route which will render a view with a form for adding new items:
+
+```ts
+@Controller()
+export class TodoController {
+  // ...
+
+  @Route.Get('/todos/create')
+  public create() {
+    return view('./views/create');
+  }
+}
+```
+
+The form in `src/modules/todo/views/create.html` will be very simple for now:
+
+```html
+...
+
+<form action="/todos" method="post">
+  [token]
+
+  <input type="text" name="title" placeholder="Title">
+  <input type="text" name="content" placeholder="Content">
+
+  <button>Add item</button>
+</form>
+```

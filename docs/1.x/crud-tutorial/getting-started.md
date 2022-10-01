@@ -34,12 +34,13 @@ The directory structure will look like this:
 
 We're going to define serveral routes following REST API rules:
 
-| HTTP Method   | URL           | Controller Method  | Role                       |
-| ------------- | ------------- | ------------------ | -------------------------- |
-| GET           | `/todos`      | `index`            | Return view with todo list |
-| POST          | `/todos`      | `store`            | Create and store new todo  |
-| DELETE        | `/todos/:id`  | `destroy`          | Delete todo from database  |
-| PATCH         | `/todos/:id`  | `update`           | Update todo record         |
+| HTTP Method   | URL             | Controller Method  | Role                       |
+| ------------- | --------------- | ------------------ | -------------------------- |
+| GET           | `/todos`        | `index`            | Return view with todo list |
+| POST          | `/todos`        | `store`            | Create and store new todo  |
+| GET           | `/todos/create` | `destroy`          | Render a view with form    |
+| DELETE        | `/todos/:id`    | `destroy`          | Delete todo from database  |
+| PATCH         | `/todos/:id`    | `update`           | Update todo record         |
 
 ## Todo Controller
 

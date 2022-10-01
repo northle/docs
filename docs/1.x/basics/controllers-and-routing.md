@@ -8,7 +8,9 @@ Typically, web applications are based on routes - endpoints with assigned action
 
 ## Controllers
 
-Basically, a controller is just a class with methods assigned to URLs handling incoming requests. Each controller contain methods decorated with appropriate HTTP verbs. In the controller below we have one registered route: `/`. When the user requests for that route, the request will be passed to the `index` method which renders some view.
+Basically, controller is just a class with methods assigned to URLs handling incoming requests. Each controller contain methods decorated with appropriate HTTP verbs.
+
+In the controller below we have one registered route: `GET /`. When the user requests for that route, the request will be passed to the `index` method which renders some view.
 
 Northle comes with one controller in `src/app/app.controller.ts` file by default:
 
