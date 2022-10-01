@@ -70,7 +70,7 @@ body {
   --vp-c-gray-dark-4: #273141;
   --vp-c-text-code: #d8dfe9;
   --vp-code-block-bg: #253041;
-  --vp-code-line-highlight-color: #28303d;
+  --vp-code-line-highlight-color: #232c3a;
   --vp-custom-block-info-bg: #222a35;
   --vp-custom-block-info-border: #202a38;
 }
@@ -120,6 +120,10 @@ body {
 .outline-link {
   font-weight: 400;
   letter-spacing: 0.5px;
+}
+
+.outline-link.active {
+  font-weight: 500;
 }
 
 [data-v-109cf3ea] {
@@ -172,10 +176,6 @@ body {
   border-color: var(--vp-c-divider);
 }
 
-.nav[data-v-8f603b0e] {
-  padding-top: 16px;
-}
-
 [data-v-89d2fc22] .image-src {
   transform: scale(0.8) translate(-65%, -60%);
 }
@@ -188,4 +188,18 @@ body {
   margin: 0 1px;
   padding: 3px 7px;
   border-radius: 6px;
+}
+
+@media (min-width: 960px) {
+  .VPSidebar[data-v-8f603b0e] {
+    margin-top: 72px;
+  }
+
+  .VPNavBarTitle.has-sidebar[data-v-bf706f89] {
+    border: none;
+  }
+
+  .VPSidebar[data-v-8f603b0e] {
+    padding-top: 24px;
+  }
 }
