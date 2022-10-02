@@ -60,7 +60,7 @@ export class TodoController {
 }
 ```
 
-The form in `src/modules/todo/views/create.html` will be very simple for now:
+The form in `src/todos/views/create.html` will be very simple for now:
 
 ```html
 ...

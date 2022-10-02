@@ -106,7 +106,7 @@ As we mentioned above, Northle automatically discovers response type based on th
 ```ts
 // Type of the response: JSON
 return {
-  name: 'User',
+  name: 'Bond. James Bond',
 };
 ```
 

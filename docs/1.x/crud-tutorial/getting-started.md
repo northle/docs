@@ -55,7 +55,7 @@ export class TodoController {
 }
 ```
 
-We have to register this controller in `src/modules/todo/todo.module.ts` file:
+We have to register this controller in `src/todos/todo.module.ts` file:
 
 ```ts{2,6}
 import { Module } from '@northle/core';
@@ -76,7 +76,7 @@ Then add `TodoModule` in `src/main.ts` file:
 
 ```ts{2,7}
 // ...
-import { TodoModule } from './modules/todo/todo.module';
+import { TodoModule } from './todos/todo.module';
 
 const server = await createServer({
   // ...

@@ -65,6 +65,14 @@ All directives like foreach loops use the square brackets and slash syntax:
 [/each]
 ```
 
+`[each]` directive provides an `$index` variable holding current iteration index:
+
+```html
+[each comment in comments]
+  <div>Comment number: {$index}</div>
+[/each]
+```
+
 ### `if` and `else`
 
 The most basic directives you should know are conditional blocks. You may use two directives: `if` and `else`:

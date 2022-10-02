@@ -224,6 +224,10 @@ body {
   opacity: 0.75;
 }
 
+.VPSkipLink[data-v-e400f712] {
+  color: var(--vp-c-brand);
+}
+
 @media (min-width: 2000px) {
   .VPHero[data-v-89d2fc22] {
     padding-top: 300px !important;
