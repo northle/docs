@@ -18,7 +18,7 @@ export default {
     nav: [
       {
         text: 'Docs',
-        link: '/docs/1.x/introduction/northle-framework.html',
+        link: '/docs/1.x/introduction/introducing-northle.html',
       },
       {
         text: 'Github',
@@ -29,7 +29,7 @@ export default {
         items: [
           {
             text: '1.x alpha',
-            link: '/docs/1.x/introduction/northle-framework.md',
+            link: '/docs/1.x/introduction/introducing-northle.md',
           },
         ]
       },
