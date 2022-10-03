@@ -16,19 +16,21 @@ An example view template may look like this:
 <h1>{{ title }}</h1>
 
 <main>
-  [each post in posts]
+  [each (post in posts)]
     <article class="post">
       {{ post.content }}
     </article>
   [/each]
 
-  [if !posts.length]
+  [if (!posts.length)]
     <p>There are no posts yet.</p>
   [/if]
-</mai>
+</main>
 ```
 
 ## Rendering a View
+
+To render a view use `render` function. The type returned from this function is `ViewResponse`.
 
 ```ts
 // Render the `src/app/views/login.html` template
@@ -37,13 +39,15 @@ return render('./views/login');
 
 ## Variables
 
-To render passed variables use the `{{ variable }}` syntax:
+To render passed variables use the bracket syntax:
 
 ```ts
 return render('./views/home', {
   message: 'Hello user!',
 });
 ```
+
+Then in template:
 
 ```html
 <h1>{{ message }}</h1>
@@ -53,6 +57,22 @@ return render('./views/home', {
 View variables are automatically escaped from HTML to prevent XSS attacks.
 :::
 
+### Displaying Brackets
+
+Some frontend frameworks like [Vue](https://vuejs.org) use the same bracket syntax for displaying data. To display double bracket signs put `@` inside the expression:
+
+```html
+{{@ message }}
+```
+
+Or use `[raw]` directive to display entire blocks without parsing it by view compiler:
+
+```html
+[raw]
+  <p>In Vue we use {{ message }} syntax.</p>
+[/raw]
+```
+
 ## Directives
 
 Northle's template engine is based on directives - a special-syntax statements used for building dynamic output.
@@ -60,7 +80,7 @@ Northle's template engine is based on directives - a special-syntax statements u
 All directives like foreach loops use the square brackets and slash syntax:
 
 ```html
-[each item in [1, 2, 3]]
+[each (item in [1, 2, 3])]
   <div>{{ item }}</div>
 [/each]
 ```
@@ -68,7 +88,7 @@ All directives like foreach loops use the square brackets and slash syntax:
 `[each]` directive provides an `$index` variable holding current iteration index (starting from `0`):
 
 ```html
-[each comment in comments]
+[each (comment in comments)]
   <div>Comment number: {{ $index + 1 }}</div>
 [/each]
 ```
@@ -78,13 +98,13 @@ All directives like foreach loops use the square brackets and slash syntax:
 The most basic directives you should know are conditional blocks. You may use two directives: `if` and `else`:
 
 ```html
-[if !posts.length]
+[if (!posts.length)]
   <p>There are no posts yet.</p>
 [/if]
 ```
 
 ```html
-[if user.isLogged]
+[if (user.isLogged)]
   <a href="/logout">Log out</a>
 [else]
   <a href="/login">Log in</a>
@@ -98,13 +118,13 @@ They act just like `if/else` statements in TypeScript - when the condition is tr
 Sometimes you may need to render data using loop, for example - to show posts list. You can use `[each]` template directive to iterate over array or object:
 
 ```html
-[each item in [1, 2, 3]]
+[each (item in [1, 2, 3])]
   <div>{{ item }}</div>
 [/each]
 ```
 
 ```html
-[each post in posts]
+[each (post in posts)]
   <article>
     <h2>{{ post.title }}</h2>
 
@@ -120,6 +140,7 @@ Northle lets you to use all HTTP methods in forms thanks to `[method]` directive
 ```html
 <form action="/login" method="post">
   [method('PATCH')]
+
   ...
 </form>
 ```
@@ -161,17 +182,18 @@ Northle provides support for partials. You can split your view into smaller piec
 </main>
 ```
 
-This statement will render relative-path `partials/content.html` file content inside `<main />` tag.
+This statement will render `./partials/content.html` template inside `<main />` tag.
 
 ### `token`
 
-For every user session Northlegenerates a unique token to protect your application from [cross-site request forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks. Anytime you define HTML forms with method other than `GET` and `HEAD`, you have to add a hidden field containing generated token. Otherwise, you won't be able to pass the form and you'll get 419 error.
+For every user session Northle generates a unique token to protect your application from [Cross-Site Request Forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks. Anytime you define HTML forms with method other than `GET` and `HEAD`, you have to add a hidden field containing generated token. Otherwise, you won't be able to pass the form and you'll get `419` error.
 
 To add the token field just use the `[token]` directive:
 
 ```html
 <form action="/login" method="post">
   [token]
+
   ...
 </form>
 ```
@@ -195,6 +217,7 @@ Northle provides a built-in intergration with [Vite](https://vitejs.dev) asset b
 ```html
 <head>
   ...
+
   [vite('main.js')]
 </head>
 ```
