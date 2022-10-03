@@ -42,16 +42,17 @@ html {
 }
 
 :root {
+  --vp-c-bg-mute: #ebeef1;
+  --vp-c-bg-alt: #fcfcfd;
   --vp-c-brand: #0ea5e9;
   --vp-c-brand-dark: #0284c7;
   --vp-c-brand-light: #38bdf8;
+  --vp-c-gray-light-4: #e8edf3;
+  --vp-c-white-soft: #f5f8fc;
   --vp-button-alt-bg: #f1f5f9;
   --vp-button-alt-border: transparent;
   --vp-button-brand-border: transparent;
   --vp-code-line-highlight-color: #2c3647;
-  --vp-c-bg-mute: #ebeef1;
-  --vp-c-gray-light-4: #e8edf3;
-  --vp-c-white-soft: #f5f8fc;
   --vp-custom-block-info-bg: rgba(63, 138, 224, 0.158);
   --vp-custom-block-info-border: rgba(63, 138, 224, 0.315);
   --vp-font-family-base: 'DM Sans', sans-serif;
@@ -61,6 +62,10 @@ html {
 :root:not(.dark) {
   --vp-c-green-dimm-3: rgba(63, 201, 148, 0.158);
   --vp-c-yellow-dimm-3: rgba(255, 197, 23, 0.082);
+}
+
+:root:not(.dark) .custom-block.details {
+  border-color: transparent;
 }
 
 .dark {
