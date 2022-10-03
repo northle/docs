@@ -208,7 +208,7 @@ Sometimes you may want to left some parts of code uncompiled. For example, when 
 [/raw]
 ```
 
-With this directive the above code will render `{{ content }}` as normal HTML, without replacing it with passed variable.
+With this directive the above code will render as normal HTML, without displaying `content` variable.
 
 ### `vite`
 

@@ -70,6 +70,10 @@ export default {
             link: '/docs/1.x/basics/controllers-and-routing.html',
           },
           {
+            text: 'Requests',
+            link: '/docs/1.x/basics/requests.html',
+          },
+          {
             text: 'Views',
             link: '/docs/1.x/basics/views.html',
           },
