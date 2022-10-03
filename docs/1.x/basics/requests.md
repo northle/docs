@@ -12,7 +12,7 @@ Northle supports all basic HTTP methods for handling web requests: `GET`, `POST`
 
 You can automatically inject `Request` object to controller by type-hintng it:
 
-```ts{1,4}
+```ts{1,5}
 import { Controller, Request } from '@northle/core'
 
 @Controller()

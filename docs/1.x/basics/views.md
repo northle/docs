@@ -34,7 +34,7 @@ To render a view use `render` function. The type returned from this function is 
 
 ```ts
 // Render the `src/app/views/login.html` template
-return render('./views/login');
+return view('./views/login');
 ```
 
 ## Variables
@@ -42,7 +42,7 @@ return render('./views/login');
 To render passed variables use the bracket syntax:
 
 ```ts
-return render('./views/home', {
+return view('./views/home', {
   message: 'Hello user!',
 });
 ```
@@ -152,7 +152,7 @@ Note that the form must have `method="post"` attribute set.
 Sometimes you need to pass some data from backend to frontend using HTML `<script />` tag. You can accomplish that by converting data to JSON with `[json]` directive:
 
 ```ts
-return render('home', {
+return view('home', {
   userData: {
     name: 'User',
     email: 'user@email.com',

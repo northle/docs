@@ -74,6 +74,10 @@ export default {
             link: '/docs/1.x/basics/requests.html',
           },
           {
+            text: 'Responses',
+            link: '/docs/1.x/basics/responses.html',
+          },
+          {
             text: 'Views',
             link: '/docs/1.x/basics/views.html',
           },
