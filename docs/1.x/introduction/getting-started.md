@@ -6,7 +6,7 @@ title: Getting Started
 
 ## Requirements
 
-To use Northle, your environment has to meet version requirements:
+To run Northle, your environment has to meet below requirements:
 
 | Node.js       | NPM          |
 | ------------- | ------------ |
