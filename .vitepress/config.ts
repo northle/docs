@@ -82,6 +82,10 @@ export default {
             link: '/docs/1.x/basics/views.html',
           },
           {
+            text: 'Services',
+            link: '/docs/1.x/basics/services.html',
+          },
+          {
             text: 'Dependency Injection',
             link: '/docs/1.x/basics/dependency-injection.html',
           },
