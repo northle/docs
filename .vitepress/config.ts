@@ -82,12 +82,16 @@ export default {
             link: '/docs/1.x/basics/views.html',
           },
           {
+            text: 'Dependency Injection',
+            link: '/docs/1.x/basics/dependency-injection.html',
+          },
+          {
             text: 'Services',
             link: '/docs/1.x/basics/services.html',
           },
           {
-            text: 'Dependency Injection',
-            link: '/docs/1.x/basics/dependency-injection.html',
+            text: 'Session',
+            link: '/docs/1.x/basics/session.html',
           },
           {
             text: 'Mail',
