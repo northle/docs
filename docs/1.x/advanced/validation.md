@@ -10,7 +10,7 @@ Your app may often need form request data validation. Northle ships with a built
 
 To be able to validate request, inject the `Validator` service:
 
-```ts{1,6}
+```ts{1,7}
 import { Request, Validator } from '@northle/core';
 
 @Controller()
@@ -26,7 +26,7 @@ export class PostController {
 
 ## Usage
 
-In order to check if data is valid, invoke the `assert` method. Example validation may look like this:
+In order to check if request input data is valid, invoke the `assert` method. Example validation may look like this:
 
 ```ts
 this.validator.assert({
@@ -42,6 +42,8 @@ this.validator.assert({
   },
 });
 ```
+
+If any of declared rules is not satisfied, Northle will not pass the request and `400 Bad Request` status code will be sent back along with error messages.
 
 ## Available Rules
 

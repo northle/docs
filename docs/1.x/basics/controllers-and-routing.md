@@ -55,17 +55,17 @@ import { Route } from '@northle/core'
 class AppController {
   // ...
 
-  @Route.get('/users')
+  @Route.Get('/users')
   public index() {
     // ...
   }
 
-  @Route.post('/users')
+  @Route.Post('/users')
   public store() {
     // ...
   }
 
-  @Route.delete('/users/:id')
+  @Route.Delete('/users/:id')
   public destroy() {
     // ...
   }
@@ -82,13 +82,13 @@ Routes in Northle are dynamic. You may use the `:param` syntax to create a varia
 
 ```ts
 // Matches an example /users/admin1 route
-@Route.get('/users/:name')
+@Route.Get('/users/:name')
 ```
 
 To make a paramater optional, use the question mark:
 
 ```ts
-@Route.get('/users/:name?')
+@Route.Get('/users/:name?')
 ```
 
 The above route will match both `/users` and` /users/admin1` paths.
@@ -96,7 +96,7 @@ The above route will match both `/users` and` /users/admin1` paths.
 You can also define RegExp pattern for route URLs:
 
 ```ts
-@Route.get('/posts/:id(^\\d+)')
+@Route.Get('/posts/:id(^\\d+)')
 ```
 
 ### Response Types

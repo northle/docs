@@ -54,7 +54,7 @@ return this.response.redirect('/login', {
 
 ## Headers
 
-You can easly attach response headers:
+You can easly attach response headers to the response:
 
 ```ts
 this.response.header('x-custom-header', value);
@@ -66,4 +66,66 @@ You can set cookies sent to the browser using `cookie` method:
 
 ```ts
 this.response.cookie('some-cookie', value);
+```
+
+## View Responses
+
+To render a view, use the `view` function:
+
+```ts
+import { Route, view } from '@northle/core';
+
+// ...
+
+return view('pages/dashboard');
+```
+
+This function returns a `ViewResponse` instance.
+
+## Download Responses
+
+You can easly send files to the client using the `download` function:
+
+```ts
+import { download, Route } from '@northle/core';
+
+// ...
+
+return download(path);
+```
+
+This function returns a `DownloadResponse` instance.
+
+## JSON Responses
+
+Although Northle automatically sets appropriate headers and response types based on returned data, sometimes you may want to explicitly define JSON reponse types.
+
+```ts
+import { json, Route } from '@northle/core';
+
+// ...
+
+return this.response.json({ data: users });
+```
+
+You can alternatively use `json` function:
+
+```ts
+return json({ data: users });
+```
+
+## Status Codes
+
+Sometimes you may want to set response HTTP code, for example - `204 No Content` that indicates successful data processing.
+
+```ts
+this.response.status(204);
+```
+
+For this purpose you may feel convenient to use `StatusCode` enum:
+
+```ts
+import { StatusCode } from '@northle/core';
+
+this.response.status(StatusCode.NoContent);
 ```
