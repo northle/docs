@@ -114,6 +114,10 @@ export default {
             text: 'Validation',
             link: '/docs/1.x/advanced/validation.html',
           },
+          {
+            text: 'Testing',
+            link: '/docs/1.x/advanced/testing.html',
+          },
         ],
       },
       {
