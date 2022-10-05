@@ -3,25 +3,31 @@ layout: home
 
 hero:
   text: Declarative backend framework for Node.js.
-  tagline: Create fast and secure web applications with awesome developer experience.
+  tagline: Create fast and secure web apps with awesome developer experience.
+
   image:
     src: /logo.png
     alt: Northle Logo
+
   actions:
     - theme: brand
       text: Get Started
       link: /docs/1.x/introduction/getting-started.html
+
     - theme: alt
       text: Visit GitHub
       link: https://github.com/northle/project-template
+
 features:
   - icon: 🧩
     title: Declarative
     details: Build awesome web apps with a strong architecture and scalability.
+
   - icon: 📏
-    title: Elegant and Simple
-    details: Elegant and simple syntax which scales well in large projects.
+    title: Simple and Elegant
+    details: Write code with architecture that scales well in large projects.
+
   - icon: ⚡️
     title: Performant
-    details: Don't worry about performance.
+    details: Don't worry about performance. Northle will handle it for you.
 ---
