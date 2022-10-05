@@ -41,11 +41,11 @@ Northle is a modern, declarative backend development framework for Node.js. It m
 
 ## ⚙️ Requirements
 
-Your environment has to meet few requirements:
+To run Northle, your environment has to meet below requirements:
 
-| Node.js      | NPM         |
-| -------------|-------------|
-| 18.3.0+      | 7+          |
+| Node.js       | NPM          |
+| ------------- | ------------ |
+| 18.3.0+       | 7+           |
 
 ## 🧪 Creating Project
 
