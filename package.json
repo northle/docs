@@ -11,9 +11,9 @@
     "url": "https://github.com/northle/docs/issues"
   },
   "scripts": {
-    "build": "vitepress build .",
-    "start:dev": "vitepress dev .",
-    "start:serve": "vitepress serve ."
+    "build": "vitepress build ./site",
+    "start:dev": "vitepress dev ./site",
+    "start:serve": "vitepress serve ./site"
   },
   "devDependencies": {
     "vitepress": "^1.0.0-alpha.19",
