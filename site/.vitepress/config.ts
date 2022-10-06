@@ -31,7 +31,7 @@ export default {
             text: '1.x alpha',
             link: '/docs/1.x/introduction/introducing-northle.md',
           },
-        ]
+        ],
       },
     ],
     socialLinks: [

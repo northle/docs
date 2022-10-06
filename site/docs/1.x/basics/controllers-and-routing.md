@@ -47,10 +47,10 @@ const server = await createServer({
 
 ## Routes
 
-You may declare your application routes by creating controller methods and decorating them with the proper HTTP verb decorator:
+You may declare your application routes by creating controller methods and decorating them with a proper HTTP verb decorator:
 
 ```ts
-import { Route } from '@northle/core'
+import { Route } from '@northle/core';
 
 class AppController {
   // ...
@@ -73,17 +73,19 @@ class AppController {
 ```
 
 ::: info
-Controller route methods should be as short as possible - they are only responsible for handling web requests and returning a response. For more logic you can familiarize yourself with service classes.
+Controller methods should be as short as possible - they are only responsible for handling web requests and returning a response. For more logic you can familiarize yourself with service classes.
 :::
 
 ### URL Patterns
 
-Routes in Northle are dynamic. You may use the `:param` syntax to create a variable URL that accepts multiple values:
+Routes in Northle are dynamic. That means you can use the `:param` syntax to declare a variable URL that accepts multiple values:
 
 ```ts
-// Matches an example /users/admin1 route
+// Match paths like `/users/james_bond` and `/users/andrei_sator` routes
 @Route.Get('/users/:name')
 ```
+
+### Optional Parameters
 
 To make a paramater optional, use the question mark:
 
@@ -91,31 +93,45 @@ To make a paramater optional, use the question mark:
 @Route.Get('/users/:name?')
 ```
 
-The above route will match both `/users` and` /users/admin1` paths.
+The above route will match both `/users` and `/users/luke_skywalker` paths.
 
-You can also define RegExp pattern for route URLs:
+### Regular Expressions
+
+You can also define a RegExp pattern for route URLs:
 
 ```ts
 @Route.Get('/posts/:id(^\\d+)')
 ```
 
-### Response Types
+## Response Types
 
-As we mentioned above, Northle automatically discovers response type based on the returned value from the controller.
+Northle automatically discovers response type based on the returned value from the controller.
 
 ```ts
-// Type of the response: JSON
+// JSON response (text/json)
 return {
   name: 'Bond. James Bond',
 };
 ```
 
 ```ts
-// Type of the response: JSON
+// JSON response (text/json)
 return [1, 2, 3];
 ```
 
 ```ts
-// Type of the response: HTML
+// HTML response (text/html)
 return '<h1>Hello World</h1>';
 ```
+
+```ts
+// HTML response (ViewResponse instance)
+return view('./views/profile');
+```
+
+```ts
+// Redirect response (RedirectResponse instance)
+return redirect('/login');
+```
+
+To get more information about response types visit [responses](/docs/1.x/basics/responses.html#view-responses) docs.

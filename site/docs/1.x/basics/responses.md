@@ -73,7 +73,7 @@ this.response.cookie('some-cookie', value);
 To render a view, use the `view` function:
 
 ```ts
-import { Route, view } from '@northle/core';
+import { view } from '@northle/core';
 
 // ...
 
@@ -82,37 +82,51 @@ return view('pages/dashboard');
 
 This function returns a `ViewResponse` instance.
 
-## Download Responses
-
-You can easly send files to the client using the `download` function:
-
-```ts
-import { download, Route } from '@northle/core';
-
-// ...
-
-return download(path);
-```
-
-This function returns a `DownloadResponse` instance.
-
 ## JSON Responses
 
 Although Northle automatically sets appropriate headers and response types based on returned data, sometimes you may want to explicitly define JSON reponse types.
 
 ```ts
-import { json, Route } from '@northle/core';
-
-// ...
-
 return this.response.json({ data: users });
 ```
 
 You can alternatively use `json` function:
 
 ```ts
+import { json } from '@northle/core';
+
 return json({ data: users });
 ```
+
+## Redirect Responses
+
+Although Northle automatically sets appropriate headers and response types based on returned data, sometimes you may want to explicitly define JSON reponse types.
+
+```ts
+return this.response.redirect('/login');
+```
+
+You can alternatively use `redirect` function:
+
+```ts
+import { redirect } from '@northle/core';
+
+return redirect('/login');
+```
+
+This function returns a `RedirectResponse` instance.
+
+## Download Responses
+
+You can easly send files to the client using the `download` function:
+
+```ts
+import { download } from '@northle/core';
+
+return download(path);
+```
+
+This function returns a `DownloadResponse` instance.
 
 ## Status Codes
 
