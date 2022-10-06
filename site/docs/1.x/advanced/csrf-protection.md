@@ -4,7 +4,7 @@ title: CSRF Protection
 
 # CSRF Protection
 
-[Cross-Site Request Forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) (CSRF/XSRF) is a type of exploit relying on performing some actions by attacker on behalf of currently authenticated user without knowing their credentials.
+[Cross-Site Request Forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) (CSRF / XSRF) is a type of exploit relying on performing some actions by attacker on behalf of currently authenticated user without knowing their credentials.
 
 ## How Do CSRF Attacks Work?
 
@@ -16,7 +16,7 @@ Without CSRF protection, the attacker could submit an HTML form pointing to your
 </form>
 ```
 
-In the example above, when the form is submitted, authenticated user publishes a new post without knowledge or consent.
+In the example above, when the form is submitted, authenticated user publishes a new post without their knowledge.
 
 ## Token Protection
 

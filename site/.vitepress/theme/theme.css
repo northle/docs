@@ -171,6 +171,10 @@ html {
   padding: 0.5px 0;
 }
 
+.link[data-v-5bf915fe] {
+  transition: transform 0.3s ease;
+}
+
 .VPButton {
   border-radius: 12px !important;
   border: none !important;
@@ -277,5 +281,9 @@ html {
 @media (min-width: 768px){
   .VPFooter {
     padding: 64px !important;
+  }
+
+  .link[data-v-5bf915fe]:hover {
+    transform: translateX(5px);
   }
 }
