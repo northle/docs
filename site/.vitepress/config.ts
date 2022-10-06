@@ -21,7 +21,7 @@ export default {
         link: '/docs/1.x/introduction/introducing-northle.html',
       },
       {
-        text: 'Github',
+        text: 'GitHub',
         link: 'https://github.com/northle/project-template',
       },
       {
