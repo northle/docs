@@ -119,6 +119,10 @@ export default {
             link: '/docs/1.x/advanced/csrf-protection.html',
           },
           {
+            text: 'Websockets',
+            link: '/docs/1.x/advanced/websockets.html',
+          },
+          {
             text: 'Testing',
             link: '/docs/1.x/advanced/testing.html',
           },
