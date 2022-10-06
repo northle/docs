@@ -115,6 +115,10 @@ export default {
             link: '/docs/1.x/advanced/validation.html',
           },
           {
+            text: 'CSRF Protection',
+            link: '/docs/1.x/advanced/csrf-protection.html',
+          },
+          {
             text: 'Testing',
             link: '/docs/1.x/advanced/testing.html',
           },
