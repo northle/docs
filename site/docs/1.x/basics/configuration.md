@@ -8,7 +8,7 @@ App configuration in Northle is stored in two main files: `src/main.ts` and `.en
 
 ## Environment Settings
 
-The default Northle project contains a `.env` file. This is the place where database credentials and environment-specific settings should be stored. Northle automatically reads all `.env` variables. The default `.env` file looks like this:
+Default Northle projects contain a file called `.env`. This file is the place where things like database credentials and environment-specific settings should be stored. Northle automatically reads all `.env` variables. The default `.env` file contains following variables:
 
 ```
 DEVELOPMENT=true
@@ -29,26 +29,27 @@ MAIL_PASSWORD=
 ```
 
 ::: warning
-Remember that the `.env` file should always be ignored by version control systems like Git. It contains your app credentials that shouldn't be stored in a public repository.
+The `.env` file should always be ignored by version control systems due security issues.
 :::
 
-## Reading `.env` Variables
+## Reading Environment Variables
 
-You can retrieve environment variables using `env` function:
+You can read environment variables using `env` generic function:
 
 ```ts
 import { env } from '@northle/core';
 
-console.log(env('PORT')); // 8000
+const port = env<boolean>('PORT'); // 8000
+const host = env<string | null>('HOST'); // 'localhost' or null
 ```
 
-::: info
-Note that `env` function automatically casts numbers and booleans. If you read variables using `process.env` object, data will always have string type.
+::: tip
+The `env` function automatically casts values to numbers, booleans and other types. If you read variables using `process.env` object, data will always have the string type.
 :::
 
 ## Example `.env` File
 
-Developers often use version control systems to work in teams. We should remember not to store any files like `.env` in repositories for security reasons (it contains database passwords and things like that). That's why we should exclude these files from version control and only publish an example `.env.example` file synced with the original one.
+Developers often use version control systems like Git to work in teams. You should remember not to store `.env` files in repositories for security reasons (they contain database passwords etc.). That's why we should exclude these files from version control and only publish an example `.env.example` file synced with the original one.
 
 ## App Configuration
 
@@ -72,7 +73,11 @@ const server = await createServer({
 await server.start();
 ```
 
-As you can see, we can pass configuration settings through `config` option. Available options are shown below:
+As you can see, we can pass configuration settings through `config` option.
+
+### Available Options
+
+Server options implement the following interface:
 
 ```ts
 interface ServerOptions {
