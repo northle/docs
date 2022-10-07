@@ -10,19 +10,19 @@ Default Northle application structure consists of a few main directories. It is 
 
 ### `📁 /client`
 
-This directory is present if you're using a frontend framework template. It contains raw, uncompiled things like JavaScript files or Vue.js components.
+This directory is present if you're using a frontend framework template. It contains uncompiled assets like JavaScript files or Vue.js components.
 
 ### `📁 /dist`
 
-Your application code is compiled and stored within this directory.
+Your application code is compiled into this directory. To build your app for production, run `npm run build` command.
 
 ### `📁 /database`
 
-In this directory database migrations are created by default. You may also store SQLite database there if you find it convenient.
+[Database migrations](/docs/1.x/database/schema.html) are created in this directory by default.
 
 ### `📁 /lang`
 
-This directory does not exist by default, but you can create it and host your app translation files inside it.
+This directory does not exist by default, but you can create it and host your app [translation](/docs/1.x/advanced/localization.html) files inside it.
 
 ### `📁 /public`
 
@@ -40,31 +40,49 @@ The` views` directory contains app views rendered by your application. View file
 
 ### `📄 .env`
 
-The `.env` file contains app environment-specific configuration.
+The `.env` file contains app environment-specific [configuration](/docs/1.x/basics/configuration.html#environment-settings). Note that you should ignore this file in version control systems because it stores information like your database credentials.
 
 ### `📄 .env.example`
 
-This is an example version of `.env` file that can be shared with other developers. Note that you should ignore `.env` file in version control systems like Git because it stores your database passwords etc.
+This is an example version of `.env` file that can be stored in version control system repositories.
 
 ### `📄 .eslintrc.json`
 
-This file contains configuration for [ESLint](https://eslint.org).
+The `.eslintrc.json` file contains configuration for [ESLint](https://eslint.org).
 
 ### `📄 .gitignore`
 
-This file is used by Git and explicitly specifies files that Git [should not track](https://git-scm.com/docs/gitignore).
+The `.gitignore` file is used by Git and explicitly specifies files that Git [should not track](https://git-scm.com/docs/gitignore).
 
 ### `📄 .prettierignore`
 
-This file contains a list of files that should not be formatted by [Prettier](https://prettier.io).
+The `.prettierignore` file contains a list of files that should not be formatted by [Prettier](https://prettier.io).
 
 ### `📄 .prettierrc.json`
 
-This is a [Prettier formatter](https://prettier.io) configuration file.
+The `.prettierrc.json` file is a [Prettier formatter](https://prettier.io) configuration file.
 
 ### `📄 package.json`
 
-This file stores installed packages list and your app package information.
+The `package.json` file stores installed packages list and your app package information.
+
+This file comes with several predefined scripts you can use:
+
+```json
+"scripts": {
+  "build": "tsc",
+  "db:migrate": "northle db:migrate",
+  "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write",
+  "key:generate": "northle key:generate",
+  "lint": "eslint .",
+  "postinstall": "prisma generate",
+  "start": "northle start:dev",
+  "start:dev": "northle start:dev",
+  "start:prod": "northle start:prod",
+  "test": "vitest",
+  "test:cov": "vitest run --coverage"
+},
+```
 
 ### `📄 tsconfig.json`
 
