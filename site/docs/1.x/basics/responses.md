@@ -24,16 +24,11 @@ class PostController {
 You may sent redirect response using the `redirect` method:
 
 ```ts{6}
-@Route.Get('/')
-public index(): {
-  // ...
-
-  if (!user.logged) {
-    return this.response.redirect('/login');
-  }
-
-  return view('pages/home');
+if (!user.logged) {
+  return this.response.redirect('/login');
 }
+
+return view('pages/home');
 ```
 
 You could also redirect back to the previous location:
@@ -74,8 +69,6 @@ To render a view, use the `view` function:
 
 ```ts
 import { view } from '@northle/core';
-
-// ...
 
 return view('pages/dashboard');
 ```

@@ -25,21 +25,29 @@ class PostController {
 
 You can get matched route URL parameters:
 
-```ts{3}
-@Route.Get('/users/:id')
-public show() {
-  const { id } = this.request.params;
+```ts{4,6}
+class PostController {
+  // ...
 
-  return `User id: ${id}`;
+  @Route.Get('/users/:id')
+  public show() {
+    const { id } = this.request.params;
+
+    return `User id: ${id}`;
+  }
 }
 ```
 
-Alternatively you can obtain params using method parameters:
+Alternatively you can read parameter values using method parameters:
 
-```ts{2}
-@Route.Get('/users/:id')
-public show(id: string) {
+```ts{5}
+class PostController {
   // ...
+
+  @Route.Get('/users/:id')
+  public show(id: string) {
+    // ...
+  }
 }
 ```
 
@@ -48,28 +56,32 @@ public show(id: string) {
 You can get URL query string entries as well:
 
 ```ts
-// URL: /search?name=user1
-const { name } = this.request.query;  // 'user1'
+// URL: /search?name=riddler
+const { name } = this.request.query;  // 'riddler'
 ```
 
 ## Form Input Data
 
-To retrieve and process incoming form data, use the `request.data` getter:
+To retrieve and process incoming form data, use the `request.data`:
 
-```ts
-@Route.Post('/users')
-public store() {
-  const { username, password } = this.request.data;
-
-  this.db.user.create(...);
-
+```ts{6}
+class UserController {
   // ...
+
+  @Route.Post('/users')
+  public async store() {
+    const { username, password } = this.request.data;
+
+    await this.db.user.create({
+      // ...
+    });
+  }
 }
 ```
 
 ## Headers
 
-You may easly get request headers using `header` method:
+To get request headers use `header` method:
 
 ```ts
 const header = this.request.header('x-requested-with');
@@ -77,7 +89,7 @@ const header = this.request.header('x-requested-with');
 
 ## Cookies
 
-You may want to get cookies sent by the user. Northle makes is super easy:
+To read cookies sent by the user, use `request.cookies`:
 
 ```ts
 const { darkMode } = this.request.cookies;
@@ -85,7 +97,7 @@ const { darkMode } = this.request.cookies;
 
 ## Detecting AJAX Requests
 
-You may check if request was made by AJAX (AJAX requests should have set `x-requested-with` header with `XMLHttpRequest` value).
+You may check if request was made by AJAX (AJAX requests should have set `x-requested-with` header with `XMLHttpRequest` value):
 
 ```ts
 if (!this.request.ajax()) {
@@ -95,7 +107,7 @@ if (!this.request.ajax()) {
 
 ## Locale
 
-Northle lets you to easly get user browser's locale:
+To get client's locale use the `locale` method:
 
 ```ts
 // 'en', 'pl' etc.
