@@ -254,6 +254,10 @@ html {
   background: var(--vp-c-bg-soft);
 }
 
+.vp-doc [class*='language-'] > span.lang {
+  display: none;
+}
+
 @media (min-width: 2000px) {
   .VPHero {
     padding-top: 300px !important;

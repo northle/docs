@@ -12,7 +12,7 @@ Northle's template engine allows you to create loops, conditionals and variable 
 
 An example view template may look like this:
 
-```html
+```svelte
 <h1>{{ title }}</h1>
 
 <main>
@@ -49,7 +49,7 @@ return view('./views/home', {
 
 Then in template:
 
-```html
+```svelte
 <h1>{{ message }}</h1>
 ```
 
@@ -61,13 +61,13 @@ View variables are automatically escaped from HTML to prevent XSS attacks.
 
 Some frontend frameworks like [Vue](https://vuejs.org) use the same bracket syntax for displaying data. To display double bracket signs put `@` inside the expression:
 
-```html
+```svelte
 {{@ message }}
 ```
 
 Or use `[raw]` directive to display entire blocks without parsing it by view compiler:
 
-```html
+```svelte
 [raw]
   <p>In Vue we use {{ message }} syntax.</p>
 [/raw]
@@ -79,17 +79,9 @@ Northle's template engine is based on directives - a special-syntax statements u
 
 All directives like foreach loops use the square brackets and slash syntax:
 
-```html
+```svelte
 [each (item in [1, 2, 3])]
   <div>{{ item }}</div>
-[/each]
-```
-
-`[each]` directive provides an `$index` variable holding current iteration index (starting from `0`):
-
-```html
-[each (comment in comments)]
-  <div>Comment number: {{ $index + 1 }}</div>
 [/each]
 ```
 
@@ -97,13 +89,13 @@ All directives like foreach loops use the square brackets and slash syntax:
 
 The most basic directives you should know are conditional blocks. You may use two directives: `if` and `else`:
 
-```html
+```svelte
 [if (!posts.length)]
   <p>There are no posts yet.</p>
 [/if]
 ```
 
-```html
+```svelte
 [if (user.isLogged)]
   <a href="/logout">Log out</a>
 [else]
@@ -111,25 +103,42 @@ The most basic directives you should know are conditional blocks. You may use tw
 [/if]
 ```
 
-They act just like `if/else` statements in TypeScript - when the condition is true, the content inside will be rendered. Otherwise, the `[else]` block will show up.
+They act just like `if / else` statements in TypeScript - when the condition is true, the content inside will be rendered. Otherwise, the `[else]` block will show up.
 
 ### `each`
 
-Sometimes you may need to render data using loop, for example - to show posts list. You can use `[each]` template directive to iterate over array or object:
+Sometimes you may need to render data using loop, for example - to show posts list. You can use `[each]` template directive to iterate over arrays:
 
-```html
-[each (item in [1, 2, 3])]
-  <div>{{ item }}</div>
+```svelte
+[each (post in posts)]
+  <article>{{ post.content }}</article>
 [/each]
 ```
 
-```html
-[each (post in posts)]
-  <article>
-    <h2>{{ post.title }}</h2>
+Northle lets you to iterate through objects as well:
 
-    <p>{{ post.content }}</p>
-  </article>
+```svelte
+[each (value in { name: 'James', surname: 'Bond' })]
+  <div>{{ $key }}: {{ value }}</div>
+[/each]
+```
+
+#### Additional Variables
+
+The `[each]` directive exposes several additional variables you can use:
+
+| Variable | Type               | Value                                          |
+| -------- | ------------------ | ---------------------------------------------- |
+| `$even`  | `boolean`          | `true` if iteration is even, otherwise `false` |
+| `$first` | `boolean`          | `true` if item is first, otherwise `false`     |
+| `$index` | `number`           | Current iteration index (starting from `0`)    |
+| `$key`   | `string \| number` | Current object or array key                    |
+| `$last`  | `boolean`          | `true` if item is last, otherwise `false`      |
+| `$odd`   | `boolean`          | `true` if iteration is odd, otherwise `false`  |
+
+```svelte
+[each (item in items)]
+  <div>Item no. {{ $index + 1 }}: {{ item }}</div>
 [/each]
 ```
 
@@ -137,7 +146,7 @@ Sometimes you may need to render data using loop, for example - to show posts li
 
 Northle lets you to use all HTTP methods in forms thanks to `[method]` directive. Just pass a method name and you'll be able to use `PUT`, `PATCH`, `DELETE` and other methods in HTML forms.
 
-```html
+```svelte
 <form action="/login" method="post">
   [method('PATCH')]
 
@@ -160,7 +169,7 @@ return view('home', {
 });
 ```
 
-```html
+```svelte
 <script>
   window.userData = [json(userData)];
 </script>
@@ -176,7 +185,7 @@ To pretty-print JSON data using tabs and newlines, add boolean parameter:
 
 Northle provides support for partials. You can split your view into smaller pieces using `[include]` directive:
 
-```html
+```svelte
 <main>
   [include('partials/content')]
 </main>
@@ -190,7 +199,7 @@ For every user session Northle generates a unique token to protect your applicat
 
 To add the token field just use the `[token]` directive:
 
-```html
+```svelte
 <form action="/login" method="post">
   [token]
 
@@ -202,7 +211,7 @@ To add the token field just use the `[token]` directive:
 
 Sometimes you may want to left some parts of code uncompiled. For example, when you are using some frontend framework, you may want not to parse the code with template engine. That's why Northle comes with a `[raw]` directive:
 
-```html
+```svelte
 [raw]
   {{ content }}
 [/raw]
@@ -214,7 +223,7 @@ With this directive the above code will render as normal HTML, without displayin
 
 Northle provides a built-in intergration with [Vite](https://vitejs.dev) asset bundler which supports HMR. You may use `[vite]` directive to add your frontend scripts and styles:
 
-```html
+```svelte
 <head>
   ...
 
@@ -226,13 +235,22 @@ Northle provides a built-in intergration with [Vite](https://vitejs.dev) asset b
 
 You can call functions inside your templates:
 
-```html
+```svelte
 <p>Logged user: {{ session('username') }}</p>
 ```
 
-```html
+```svelte
 <h1>{{ trans('Welcome to the chat app') }}</h1>
 ```
+
+## Constants
+
+Northle exposes few global constants you can use in your views:
+
+| Constant       | Type     | Value                     |
+| -------------- | -------- | ------------------------- |
+| `VERSION`      | `string` | Northle framework version |
+| `NODE_VERSION` | `string` | Node.js version           |
 
 ## Custom Error Pages
 
