@@ -20,15 +20,15 @@ hero:
       link: https://github.com/northle/project-template
 
 features:
-  - icon: 🧩
-    title: Declarative
-    details: Build awesome web apps with a strong architecture and scalability.
+  - icon: '🔑'
+    title: Authentication
+    details: Let users to log in with built-in authentication system.
 
-  - icon: 📏
-    title: Simple and Elegant
-    details: Write code with architecture that scales well in large projects.
+  - icon: '🧩'
+    title: View Engine
+    details: Build your app using a robust and elegant view template engine.
 
-  - icon: ⚡️
-    title: Performant
-    details: Don't worry about performance. Northle will handle it for you.
+  - icon: '⏱️'
+    title: Websockets
+    details: Create real-time data sending with websocket channels.
 ---
