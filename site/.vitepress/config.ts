@@ -11,6 +11,7 @@ export default {
       },
     ],
   ],
+  cleanUrls: 'without-subfolders',
   themeConfig: {
     siteTitle: 'Northle',
     logo: '/logo.png',
@@ -18,7 +19,7 @@ export default {
     nav: [
       {
         text: 'Docs',
-        link: '/docs/1.x/introduction/introducing-northle.html',
+        link: '/docs/1.x/introduction/introducing-northle',
       },
       {
         text: 'GitHub',
@@ -46,11 +47,11 @@ export default {
         items: [
           {
             text: 'Introducing Northle',
-            link: '/docs/1.x/introduction/introducing-northle.html',
+            link: '/docs/1.x/introduction/introducing-northle',
           },
           {
             text: 'Getting Started',
-            link: '/docs/1.x/introduction/getting-started.html',
+            link: '/docs/1.x/introduction/getting-started',
           },
         ],
       },
@@ -59,43 +60,43 @@ export default {
         items: [
           {
             text: 'Directory Structure',
-            link: '/docs/1.x/basics/directory-structure.html',
+            link: '/docs/1.x/basics/directory-structure',
           },
           {
             text: 'Configuration',
-            link: '/docs/1.x/basics/configuration.html',
+            link: '/docs/1.x/basics/configuration',
           },
           {
             text: 'Controllers and Routing',
-            link: '/docs/1.x/basics/controllers-and-routing.html',
+            link: '/docs/1.x/basics/controllers-and-routing',
           },
           {
             text: 'Requests',
-            link: '/docs/1.x/basics/requests.html',
+            link: '/docs/1.x/basics/requests',
           },
           {
             text: 'Responses',
-            link: '/docs/1.x/basics/responses.html',
+            link: '/docs/1.x/basics/responses',
           },
           {
             text: 'Views',
-            link: '/docs/1.x/basics/views.html',
+            link: '/docs/1.x/basics/views',
           },
           {
             text: 'Dependency Injection',
-            link: '/docs/1.x/basics/dependency-injection.html',
+            link: '/docs/1.x/basics/dependency-injection',
           },
           {
             text: 'Services',
-            link: '/docs/1.x/basics/services.html',
+            link: '/docs/1.x/basics/services',
           },
           {
             text: 'Session',
-            link: '/docs/1.x/basics/session.html',
+            link: '/docs/1.x/basics/session',
           },
           {
             text: 'Mail',
-            link: '/docs/1.x/basics/mail.html',
+            link: '/docs/1.x/basics/mail',
           },
         ],
       },
@@ -104,27 +105,27 @@ export default {
         items: [
           {
             text: 'Localization',
-            link: '/docs/1.x/advanced/localization.html',
+            link: '/docs/1.x/advanced/localization',
           },
           {
             text: 'Encryption and Hashing',
-            link: '/docs/1.x/advanced/encryption-and-hashing.html',
+            link: '/docs/1.x/advanced/encryption-and-hashing',
           },
           {
             text: 'Validation',
-            link: '/docs/1.x/advanced/validation.html',
+            link: '/docs/1.x/advanced/validation',
           },
           {
             text: 'CSRF Protection',
-            link: '/docs/1.x/advanced/csrf-protection.html',
+            link: '/docs/1.x/advanced/csrf-protection',
           },
           {
             text: 'Websockets',
-            link: '/docs/1.x/advanced/websockets.html',
+            link: '/docs/1.x/advanced/websockets',
           },
           {
             text: 'Testing',
-            link: '/docs/1.x/advanced/testing.html',
+            link: '/docs/1.x/advanced/testing',
           },
         ],
       },
@@ -133,11 +134,11 @@ export default {
         items: [
           {
             text: 'Schema',
-            link: '/docs/1.x/database/schema.html',
+            link: '/docs/1.x/database/schema',
           },
           {
             text: 'Queries',
-            link: '/docs/1.x/database/queries.html',
+            link: '/docs/1.x/database/queries',
           },
         ],
       },
@@ -146,11 +147,11 @@ export default {
         items: [
           {
             text: 'Getting Started',
-            link: '/docs/1.x/crud-tutorial/getting-started.html',
+            link: '/docs/1.x/crud-tutorial/getting-started',
           },
           {
             text: 'Creating Todos',
-            link: '/docs/1.x/crud-tutorial/creating-todos.html',
+            link: '/docs/1.x/crud-tutorial/creating-todos',
           },
         ],
       },
@@ -159,7 +160,7 @@ export default {
         items: [
           {
             text: 'App Deployment',
-            link: '/docs/1.x/deployment/app-deployment.html',
+            link: '/docs/1.x/deployment/app-deployment',
           },
         ],
       },
