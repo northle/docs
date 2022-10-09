@@ -16,10 +16,12 @@ layout: home
       title: 'Creator and developer',
       links: [
         {
-          icon: 'github', link: 'https://github.com/dominiq007',
+          icon: 'github',
+          link: 'https://github.com/dominiq007',
         },
         {
-          icon: 'instagram', link: 'https://www.instagram.com/dominiq_rajkowski',
+          icon: 'instagram',
+          link: 'https://www.instagram.com/dominiq_rajkowski',
         },
       ],
     },
@@ -32,11 +34,9 @@ layout: home
       Developer Team
     </template>
     <template #lead>
-      Development of Northle is currently guided by one person.
+      Northle is currently developed by one person.
     </template>
   </VPTeamPageTitle>
 
-  <VPTeamMembers
-    :members="members"
-  />
+  <VPTeamMembers :members="members" />
 </VPTeamPage>
