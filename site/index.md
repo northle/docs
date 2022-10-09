@@ -1,5 +1,6 @@
 ---
 layout: home
+title: Declarative backend framework for Node.js
 
 hero:
   text: Declarative backend framework for Node.js.
