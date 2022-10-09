@@ -16,6 +16,6 @@ Northle is currently in `alpha` stage. You can encounter some bugs and API break
 
 To run Northle, your environment has to meet below requirements:
 
-| Node.js       | NPM          |
-| ------------- | ------------ |
-| 18.3.0+       | 7+           |
+| Node.js | NPM |
+| ------- | --- |
+| 18.3.0+ | 7+  |
