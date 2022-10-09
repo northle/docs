@@ -16,6 +16,7 @@ export default {
     siteTitle: 'Northle',
     logo: '/logo.png',
     outlineTitle: 'Table of Contents',
+    outline: 'deep',
     nav: [
       {
         text: 'Docs',
