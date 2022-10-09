@@ -18,11 +18,11 @@ Your application code is compiled into this directory. To build your app for pro
 
 ### `📁 /database`
 
-[Database migrations](/docs/1.x/database/schema) are created in this directory by default.
+[Database migrations](/docs/database/schema) are created in this directory by default.
 
 ### `📁 /lang`
 
-This directory does not exist by default, but you can create it and host your app [translation](/docs/1.x/advanced/localization) files inside it.
+This directory does not exist by default, but you can create it and host your app [translation](/docs/advanced/localization) files inside it.
 
 ### `📁 /public`
 
@@ -40,7 +40,7 @@ The` views` directory contains app views rendered by your application. View file
 
 ### `📄 .env`
 
-The `.env` file contains app environment-specific [configuration](/docs/1.x/basics/configuration#environment-settings). Note that you should ignore this file in version control systems because it stores information like your database credentials.
+The `.env` file contains app environment-specific [configuration](/docs/basics/configuration#environment-settings). Note that you should ignore this file in version control systems because it stores information like your database credentials.
 
 ### `📄 .env.example`
 

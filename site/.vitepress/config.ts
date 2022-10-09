@@ -20,18 +20,18 @@ export default {
     nav: [
       {
         text: 'Docs',
-        link: '/docs/1.x/introduction/introducing-northle',
+        link: '/docs/introduction/introducing-northle',
       },
       {
         text: 'GitHub',
         link: 'https://github.com/northle/project-template',
       },
       {
-        text: 'Version',
+        text: 'More',
         items: [
           {
-            text: '1.x alpha',
-            link: '/docs/1.x/introduction/introducing-northle.md',
+            text: 'Team',
+            link: '/team',
           },
         ],
       },
@@ -48,11 +48,11 @@ export default {
         items: [
           {
             text: 'Introducing Northle',
-            link: '/docs/1.x/introduction/introducing-northle',
+            link: '/docs/introduction/introducing-northle',
           },
           {
             text: 'Getting Started',
-            link: '/docs/1.x/introduction/getting-started',
+            link: '/docs/introduction/getting-started',
           },
         ],
       },
@@ -61,43 +61,43 @@ export default {
         items: [
           {
             text: 'Directory Structure',
-            link: '/docs/1.x/basics/directory-structure',
+            link: '/docs/basics/directory-structure',
           },
           {
             text: 'Configuration',
-            link: '/docs/1.x/basics/configuration',
+            link: '/docs/basics/configuration',
           },
           {
             text: 'Controllers and Routing',
-            link: '/docs/1.x/basics/controllers-and-routing',
+            link: '/docs/basics/controllers-and-routing',
           },
           {
             text: 'Requests',
-            link: '/docs/1.x/basics/requests',
+            link: '/docs/basics/requests',
           },
           {
             text: 'Responses',
-            link: '/docs/1.x/basics/responses',
+            link: '/docs/basics/responses',
           },
           {
             text: 'Views',
-            link: '/docs/1.x/basics/views',
+            link: '/docs/basics/views',
           },
           {
             text: 'Dependency Injection',
-            link: '/docs/1.x/basics/dependency-injection',
+            link: '/docs/basics/dependency-injection',
           },
           {
             text: 'Services',
-            link: '/docs/1.x/basics/services',
+            link: '/docs/basics/services',
           },
           {
             text: 'Session',
-            link: '/docs/1.x/basics/session',
+            link: '/docs/basics/session',
           },
           {
             text: 'Mail',
-            link: '/docs/1.x/basics/mail',
+            link: '/docs/basics/mail',
           },
         ],
       },
@@ -106,27 +106,27 @@ export default {
         items: [
           {
             text: 'Localization',
-            link: '/docs/1.x/advanced/localization',
+            link: '/docs/advanced/localization',
           },
           {
             text: 'Encryption and Hashing',
-            link: '/docs/1.x/advanced/encryption-and-hashing',
+            link: '/docs/advanced/encryption-and-hashing',
           },
           {
             text: 'Validation',
-            link: '/docs/1.x/advanced/validation',
+            link: '/docs/advanced/validation',
           },
           {
             text: 'CSRF Protection',
-            link: '/docs/1.x/advanced/csrf-protection',
+            link: '/docs/advanced/csrf-protection',
           },
           {
             text: 'Websockets',
-            link: '/docs/1.x/advanced/websockets',
+            link: '/docs/advanced/websockets',
           },
           {
             text: 'Testing',
-            link: '/docs/1.x/advanced/testing',
+            link: '/docs/advanced/testing',
           },
         ],
       },
@@ -135,11 +135,11 @@ export default {
         items: [
           {
             text: 'Schema',
-            link: '/docs/1.x/database/schema',
+            link: '/docs/database/schema',
           },
           {
             text: 'Queries',
-            link: '/docs/1.x/database/queries',
+            link: '/docs/database/queries',
           },
         ],
       },
@@ -148,11 +148,11 @@ export default {
         items: [
           {
             text: 'Getting Started',
-            link: '/docs/1.x/crud-tutorial/getting-started',
+            link: '/docs/crud-tutorial/getting-started',
           },
           {
             text: 'Creating Todos',
-            link: '/docs/1.x/crud-tutorial/creating-todos',
+            link: '/docs/crud-tutorial/creating-todos',
           },
         ],
       },
@@ -161,7 +161,7 @@ export default {
         items: [
           {
             text: 'App Deployment',
-            link: '/docs/1.x/deployment/app-deployment',
+            link: '/docs/deployment/app-deployment',
           },
         ],
       },

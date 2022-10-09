@@ -134,4 +134,4 @@ return view('./views/profile');
 return redirect('/login');
 ```
 
-To get more information about response types visit [responses](/docs/1.x/basics/responses#view-responses) docs.
+To get more information about response types visit [responses](/docs/basics/responses#view-responses) docs.

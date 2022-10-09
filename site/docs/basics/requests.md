@@ -114,7 +114,7 @@ To get client's locale use the `locale` method:
 const locale = this.request.locale();
 ```
 
-Read more about [localization](/docs/1.x/advanced/localization) and language features.
+Read more about [localization](/docs/advanced/localization) and language features.
 
 ## Method Spoofing
 

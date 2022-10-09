@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /docs/1.x/introduction/getting-started
+      link: /docs/introduction/getting-started
 
     - theme: alt
       text: Visit GitHub
