@@ -4,7 +4,7 @@ title: Views
 
 # Views
 
-Northle comes with handy built-in view templating engine. Views is your app are placed in `/views` directory and have the `*.html` extension.
+Northle comes with handy built-in view template engine. View templates in your app are placed in `/views` directory and have the `*.html` extension.
 
 ## Templates
 
@@ -13,13 +13,9 @@ Northle's template engine allows you to create loops, conditionals and variable 
 An example view template may look like this:
 
 ```svelte
-<h1>{{ title }}</h1>
-
 <main>
   [each (post in posts)]
-    <article class="post">
-      {{ post.content }}
-    </article>
+    <article class="post">{{ post.content }}</article>
   [/each]
 
   [if (!posts.length)]
@@ -251,6 +247,10 @@ Northle exposes few global constants you can use in your views:
 | -------------- | -------- | ------------------------- |
 | `VERSION`      | `string` | Northle framework version |
 | `NODE_VERSION` | `string` | Node.js version           |
+
+```svelte
+<h1>This app is running on Northle v{{ VERSION }}</h1>
+```
 
 ## Custom Error Pages
 
