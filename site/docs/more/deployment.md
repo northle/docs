@@ -14,7 +14,7 @@ To deploy your application on server, it has to satisfy Node version requirement
 
 ## Configuration
 
-The most important thing you must change in confugiration is `DEVELOPMENT` option in `.env` file. By default, this option is set to `true`. It's responsible for displaying useful error messages during development.
+The most important thing you must change in confugiration is `DEVELOPMENT` option in `.env` file. By default, this option is set to `true`. It is responsible for displaying useful error messages during development.
 
 ```
 DEVELOPMENT=false

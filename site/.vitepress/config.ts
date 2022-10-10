@@ -168,6 +168,10 @@ export default {
         text: 'More',
         items: [
           {
+            text: 'Style Guide',
+            link: '/docs/more/style-guide',
+          },
+          {
             text: 'Deployment',
             link: '/docs/more/deployment',
           },
