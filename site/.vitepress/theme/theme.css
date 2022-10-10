@@ -194,12 +194,11 @@ html {
   font-weight: normal;
 }
 
-.pager-link[data-v-43384334] {
+.pager-link {
   background: var(--vp-button-alt-bg);
-  border: none;
 }
 
-.pager-link[data-v-43384334]:hover {
+.pager-link:hover {
   opacity: 0.95;
 }
 
