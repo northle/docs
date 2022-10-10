@@ -282,7 +282,7 @@ html {
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .VPFooter {
     padding: 64px !important;
   }
