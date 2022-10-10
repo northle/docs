@@ -12,7 +12,7 @@ Northle provides a built-in session management module so you don't have to insta
 
 To start using session just import it and inject from the service container:
 
-```ts
+```ts{1,5}
 import { Session } from '@northle/core';
 
 @Controller()

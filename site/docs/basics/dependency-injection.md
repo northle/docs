@@ -4,7 +4,7 @@ title: Dependency Injection
 
 # Dependency Injection
 
-Backend applications often need a solid architecture patterns to manage the codebase. Northle implements common *service container* and *dependency injection (DI)* concepts.
+Backend applications often need a solid architecture patterns to manage the codebase. Northle implements common **service container** and **dependency injection (DI)** concepts.
 
 ## Usage
 

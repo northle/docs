@@ -68,6 +68,10 @@ export default {
             link: '/docs/basics/configuration',
           },
           {
+            text: 'Modules',
+            link: '/docs/basics/modules',
+          },
+          {
             text: 'Controllers and Routing',
             link: '/docs/basics/controllers-and-routing',
           },

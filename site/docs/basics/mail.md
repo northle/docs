@@ -21,14 +21,12 @@ MAIL_PASSWORD=
 
 First, we need to inject mailer to the controller or service:
 
-```ts{5}
+```ts{1,5}
 import { Mailer } from '@northle/core';
 
 @Controller()
 export class MailController {
   constructor(private mailer: Mailer) {}
-
-  // ...
 }
 ```
 

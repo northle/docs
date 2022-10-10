@@ -4,7 +4,7 @@ title: Controllers and Routing
 
 # Controllers and Routing
 
-Typically, web applications are based on routes - endpoints with assigned actions called when user asks for the resource. Routing system in Northle is based on *controllers*.
+Typically, web applications are based on routes - endpoints with assigned actions called when user asks for the resource. Routing system in Northle is based on **controllers**.
 
 ## Controllers
 
