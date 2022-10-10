@@ -1,8 +1,8 @@
 ---
-title: App Deployment
+title: Deployment
 ---
 
-# App Deployment
+# Deployment
 
 When your app is ready for production, it may be a time to deploy it on the server. You only have to set few things before you release the app.
 

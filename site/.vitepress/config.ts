@@ -165,11 +165,11 @@ export default {
         ],
       },
       {
-        text: 'Deployment',
+        text: 'More',
         items: [
           {
-            text: 'App Deployment',
-            link: '/docs/deployment/app-deployment',
+            text: 'Deployment',
+            link: '/docs/more/deployment',
           },
         ],
       },
