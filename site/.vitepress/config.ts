@@ -109,6 +109,10 @@ export default {
             link: '/docs/advanced/localization',
           },
           {
+            text: 'HTTP Client',
+            link: '/docs/advanced/http-client',
+          },
+          {
             text: 'Encryption and Hashing',
             link: '/docs/advanced/encryption-and-hashing',
           },
