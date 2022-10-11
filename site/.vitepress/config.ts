@@ -9,6 +9,19 @@ export default {
         rel: 'icon',
         href: '/logo.png',
       },
+      'link', {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      'link', {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: true,
+      },
+      'link', {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto+Mono:wght@400&display=swap',
+      },
     ],
   ],
   cleanUrls: 'without-subfolders',
