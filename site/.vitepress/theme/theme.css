@@ -85,8 +85,8 @@
   background: rgba(255, 255, 255, 0.85) !important;
 }
 
-.dark .VPNav.no-sidebar,
 .dark .VPNav,
+.dark .VPNav.no-sidebar,
 .dark .VPNavBar.has-sidebar .content {
   background: rgba(25, 30, 39, 0.7) !important;
 }

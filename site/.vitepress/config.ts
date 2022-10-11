@@ -122,12 +122,16 @@ export default {
         text: 'Advanced',
         items: [
           {
-            text: 'Localization',
-            link: '/docs/advanced/localization',
+            text: 'Authentication',
+            link: '/docs/advanced/authentication',
           },
           {
             text: 'HTTP Client',
             link: '/docs/advanced/http-client',
+          },
+          {
+            text: 'Localization',
+            link: '/docs/advanced/localization',
           },
           {
             text: 'Encryption and Hashing',
