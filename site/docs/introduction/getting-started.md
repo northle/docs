@@ -4,6 +4,8 @@ title: Getting Started
 
 # Getting Started
 
+In this section you will learn how to create new Northle app project using NPM installer.
+
 ## Requirements
 
 To run Northle, your environment has to meet below requirements:

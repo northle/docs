@@ -12,10 +12,9 @@ This framework uses TypeScript for building apps to provide best developer exper
 Northle is currently in `alpha` stage. You can encounter some bugs and API breaking changes. The documentation is not complete yet.
 :::
 
-## Requirements
+## Prerequisites
 
-To run Northle, your environment has to meet below requirements:
+To learn Northle you will need to have a basic knowlege of:
 
-| Node.js | NPM |
-| ------- | --- |
-| 18.3.0+ | 7+  |
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org)
