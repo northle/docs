@@ -12,7 +12,8 @@
   --vp-button-alt-bg: #f1f5f9;
   --vp-button-alt-border: transparent;
   --vp-button-brand-border: transparent;
-  --vp-code-line-highlight-color: #293241;
+  --vp-code-block-bg: #1b1e27;
+  --vp-code-line-highlight-color: #29303b;
   --vp-custom-block-info-bg: rgba(178, 194, 212, 0.219);
   --vp-custom-block-info-border: rgba(178, 194, 212, 0.199);
   --vp-font-family-base: 'DM Sans', sans-serif;
@@ -92,8 +93,7 @@
 }
 
 .vp-doc div[class*='language-'] {
-  background: #191e2b;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .dark .VPSidebar,
@@ -274,6 +274,10 @@
 @media (min-width: 768px) {
   .VPFooter {
     padding: 64px !important;
+  }
+
+  .VPDoc .content-container {
+    padding-top: 20px;
   }
 
   .link[data-v-5bf915fe]:hover {
