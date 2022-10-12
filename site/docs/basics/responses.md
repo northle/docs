@@ -67,9 +67,26 @@ In order to set HTTP status code, pass it as the last parameter:
 return this.response.redirect('/login', {}, 302);
 ```
 
+### Permanent Redirects
+
+Northle gives you ability to define route that redirects from its URL to another using `@Redirect` decorator:
+
+```ts{1,8}
+import { Controller, Redirect } from '@northle/core';
+
+@Controller()
+export class AppController {
+  // ...
+
+  @Route.Get('/some-route')
+  @Redirect('https://another-website')
+  public show() {}
+}
+```
+
 ## Headers
 
-You can easly attach response headers to the response:
+In order to attach response headers to the response call the `header` method:
 
 ```ts
 this.response.header('x-custom-header', value);
@@ -77,7 +94,7 @@ this.response.header('x-custom-header', value);
 
 ## Cookies
 
-You can set cookies sent to the browser using `cookie` method:
+To send cookies to the browser, use the `cookie` method:
 
 ```ts
 this.response.cookie('some-cookie', value);
@@ -85,15 +102,13 @@ this.response.cookie('some-cookie', value);
 
 ## Rendering Views
 
-In order to render a view, use the `view` function:
+In order to render a view, use the `view` function returning a `ViewResponse` instance:
 
 ```ts
 import { view } from '@northle/core';
 
 return view('pages/dashboard');
 ```
-
-This function returns a `ViewResponse` instance.
 
 ## JSON Responses
 
