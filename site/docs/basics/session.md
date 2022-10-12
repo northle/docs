@@ -8,7 +8,7 @@ Since HTTP protocol is stateless we cannot store data between requests. On backe
 
 Northle provides a built-in session management module so you don't have to install any additional dependencies.
 
-## Accessing the Session
+## Getting Started
 
 To start using session just import it and inject from the service container:
 
