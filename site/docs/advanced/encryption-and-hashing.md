@@ -75,7 +75,7 @@ const hashedPassword = this.encrypter.hash(password);
 Note that you can only compare two hashes without the ability to decrypt hashed strings. To check if supplied string (password for example) is the same as hash, use the `compareHash` method:
 
 ```ts
-// true or false
+// `true` or `false`
 const passwordCorrect = this.encrypter.compareHash(password, hashedPassword);
 ```
 

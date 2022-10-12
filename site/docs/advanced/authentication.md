@@ -19,6 +19,22 @@ export class UserController {
 }
 ```
 
+Furthermore, you need to set up your [database schema](/docs/database/schema) which should contain `User` model with the following fields:
+
+```prisma{2,3,4}
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+
+  // ...
+}
+```
+
+The `password` column should contain [hashed](/docs/advanced/encryption-and-hashing#hashing) passwords. They are the base for authenticating users using provided plain-text passwords.
+
+Do not forget to run `npm run db:migrate` command.
+
 ## Logging In
 
 In order to log the user in, use the `login` method with provided e-mail and password sent by the client:

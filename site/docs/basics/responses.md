@@ -24,12 +24,24 @@ class PostController {
 You may sent redirect response using the `redirect` method:
 
 ```ts{6}
-if (!user.logged) {
+if (!logged) {
   return this.response.redirect('/login');
 }
 
 return view('pages/home');
 ```
+
+You can alternatively use the `redirect` function:
+
+```ts
+import { redirect } from '@northle/core';
+
+return redirect('/login');
+```
+
+This function returns a `RedirectResponse` instance.
+
+### Redirect To Previous Location
 
 You could also redirect back to the previous location:
 
@@ -37,7 +49,7 @@ You could also redirect back to the previous location:
 this.response.redirectBack();
 ```
 
-### Redirect with Variables
+### Redirect With Variables
 
 You may additionally attach some data to the redirect:
 
@@ -45,6 +57,14 @@ You may additionally attach some data to the redirect:
 return this.response.redirect('/login', {
   error: 'Invalid e-mail or password',
 });
+```
+
+### Redirect Status
+
+In order to set HTTP status code, pass it as the last parameter:
+
+```ts
+return this.response.redirect('/login', {}, 302);
 ```
 
 ## Headers
@@ -63,9 +83,9 @@ You can set cookies sent to the browser using `cookie` method:
 this.response.cookie('some-cookie', value);
 ```
 
-## View Responses
+## Rendering Views
 
-To render a view, use the `view` function:
+In order to render a view, use the `view` function:
 
 ```ts
 import { view } from '@northle/core';
@@ -91,25 +111,7 @@ import { json } from '@northle/core';
 return json({ data: users });
 ```
 
-## Redirect Responses
-
-Although Northle automatically sets appropriate headers and response types based on returned data, sometimes you may want to explicitly define JSON reponse types.
-
-```ts
-return this.response.redirect('/login');
-```
-
-You can alternatively use `redirect` function:
-
-```ts
-import { redirect } from '@northle/core';
-
-return redirect('/login');
-```
-
-This function returns a `RedirectResponse` instance.
-
-## Download Responses
+## File Downloads
 
 You can easly send files to the client using the `download` function:
 
