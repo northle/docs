@@ -1,6 +1,4 @@
 :root {
-  scroll-behavior: smooth;
-
   --vp-c-bg-mute: #ebeef1;
   --vp-c-bg-alt: #fcfcfd;
   --vp-c-brand: #0ea5e9;
@@ -66,7 +64,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  border-width: 2px;
+  border-width: 3px;
 }
 
 ::-webkit-scrollbar-track {
@@ -99,6 +97,14 @@
 .dark .VPSidebar,
 .dark .vp-doc div[class*='language-'] {
   background: #161b22;
+}
+
+.dark .vp-doc [class*='language-'] > button.copy {
+  background-color: transparent;
+}
+
+.vp-doc [class*='language-'] > button.copy:hover {
+  background-color: #252d38;
 }
 
 .VPNavBarTitle {
@@ -145,8 +151,9 @@
   top: 3px;
 }
 
-.content[data-v-3f9b8864] {
+.VPDocAsideOutline .content {
   border-width: 3px;
+  padding-left: 18px;
 }
 
 .outline-marker[data-v-3f9b8864] {
@@ -162,7 +169,6 @@
 
 .outline-link.active {
   font-weight: 500;
-  letter-spacing: 0;
 }
 
 [data-v-8b980502] {
