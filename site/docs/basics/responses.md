@@ -4,14 +4,14 @@ title: Responses
 
 # Responses
 
-Northle provides a fluent API for dealing with server responses as well. Each response is represented by `Response` object.
+Northle provides a fluent API for dealing with server responses. The framework provides several ways to return responses. Each server response is represented by `Response` object.
 
 ## Response Objects
 
-You can automatically inject `Response` object to controller by type-hintng it:
+To start using response API, inject the `Response` service by type-hinting it:
 
 ```ts{1,5}
-import { Controller, Response } from '@northle/core'
+import { Controller, Response } from '@northle/core';
 
 @Controller()
 class PostController {
@@ -19,11 +19,26 @@ class PostController {
 }
 ```
 
+## Basic Responses
+
+Northle automatically converts string data into HTML responses:
+
+```ts
+class AppController {
+  @Route.Get('/')
+  public index() {
+    return 'Hello World!';
+  }
+}
+```
+
+In addition to returning strings, you may also return arrays and objects. Northle converts objects into [JSON responses](/docs/basics/responses#json-responses).
+
 ## Redirects
 
 You may sent redirect response using the `redirect` method:
 
-```ts{6}
+```ts{2}
 if (!logged) {
   return this.response.redirect('/login');
 }
@@ -31,15 +46,13 @@ if (!logged) {
 return view('pages/home');
 ```
 
-You can alternatively use the `redirect` function:
+You can alternatively use the `redirect` function returning a `RedirectResponse` instance:
 
 ```ts
 import { redirect } from '@northle/core';
 
 return redirect('/login');
 ```
-
-This function returns a `RedirectResponse` instance.
 
 ### Redirect To Previous Location
 
@@ -64,12 +77,14 @@ return this.response.redirect('/login', {
 In order to set HTTP status code, pass it as the last parameter:
 
 ```ts
-return this.response.redirect('/login', {}, 302);
+import { StatusCode } from '@northle/core';
+
+return this.response.redirect('/login', {}, StatusCode.Found);  // HTTP 302
 ```
 
 ### Permanent Redirects
 
-Northle gives you ability to define route that redirects from its URL to another using `@Redirect` decorator:
+Northle gives you the ability to define routes redirecting from its URL to another using `@Redirect` decorator:
 
 ```ts{1,8}
 import { Controller, Redirect } from '@northle/core';
@@ -118,7 +133,7 @@ Although Northle automatically sets appropriate headers and response types based
 return this.response.json({ data: users });
 ```
 
-You can alternatively use `json` function:
+You can alternatively use the `json` function:
 
 ```ts
 import { json } from '@northle/core';
@@ -128,7 +143,7 @@ return json({ data: users });
 
 ## File Downloads
 
-You can easly send files to the client using the `download` function:
+To send files to the client, use the `download` function returning a `DownloadResponse` instance:
 
 ```ts
 import { download } from '@northle/core';
@@ -136,11 +151,9 @@ import { download } from '@northle/core';
 return download(path);
 ```
 
-This function returns a `DownloadResponse` instance.
-
 ## Status Codes
 
-Sometimes you may want to set response HTTP code, for example - `204 No Content` that indicates successful data processing.
+Sometimes you may want to set response HTTP code, for example - `204 No Content` which indicates that data has been processed and there's no response body.
 
 ```ts
 this.response.status(204);
@@ -151,5 +164,5 @@ For this purpose you may feel convenient to use `StatusCode` enum:
 ```ts
 import { StatusCode } from '@northle/core';
 
-this.response.status(StatusCode.NoContent);
+this.response.status(StatusCode.NoContent);  // HTTP 204
 ```

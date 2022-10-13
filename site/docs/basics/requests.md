@@ -4,16 +4,16 @@ title: Requests
 
 # Requests
 
-Northle provides a fluent API for dealing with web requests. Each web request is represented by `Request` object.
+Northle provides a fluent API for dealing with web requests. The framework provides several ways to return responses. Each client request is represented by `Request` object.
 
 ## Request Objects
 
 Northle supports all basic HTTP methods for handling web requests: `GET`, `POST`, `PUT`, `PATCH`, `OPTIONS`, `TRACE`, and `DELETE` along with [WebDAV](https://www.ibm.com/docs/en/i/7.1?topic=concepts-webdav) methods.
 
-You can automatically inject `Request` object to controller by type-hintng it:
+To start using response API, inject the `Request` service by type-hinting it:
 
 ```ts{1,5}
-import { Controller, Request } from '@northle/core'
+import { Controller, Request } from '@northle/core';
 
 @Controller()
 class PostController {
