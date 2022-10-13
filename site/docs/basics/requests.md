@@ -60,6 +60,22 @@ You can get URL query string entries as well:
 const { name } = this.request.query;  // 'riddler'
 ```
 
+## Headers
+
+To get request headers use `header` method:
+
+```ts
+const header = this.request.header('x-requested-with');
+```
+
+## Cookies
+
+To read cookies sent by the user, use `request.cookies`:
+
+```ts
+const { darkMode } = this.request.cookies;
+```
+
 ## Form Input Data
 
 To retrieve and process incoming form data, use the `request.data`:
@@ -77,22 +93,6 @@ class UserController {
     });
   }
 }
-```
-
-## Headers
-
-To get request headers use `header` method:
-
-```ts
-const header = this.request.header('x-requested-with');
-```
-
-## Cookies
-
-To read cookies sent by the user, use `request.cookies`:
-
-```ts
-const { darkMode } = this.request.cookies;
 ```
 
 ## Detecting AJAX Requests

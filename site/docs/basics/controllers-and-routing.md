@@ -4,15 +4,17 @@ title: Controllers and Routing
 
 # Controllers and Routing
 
-Typically, web applications are based on routes - endpoints with assigned actions called when user asks for the resource. Routing system in Northle is based on **controllers**.
+Typically, web applications are based on route mappings. Route (endpoint) is an URL with assigned action called when user asks for the URL.
+
+Routing system in Northle is based on **controller** classes.
 
 ## Controllers
 
-Basically, controller is just a class with methods assigned to URLs handling incoming requests. Each controller contain methods decorated with appropriate HTTP verbs.
+Basically, a controller is just a class with methods assigned to URLs. Each route handles incoming requests. Controllers contain methods decorated with appropriate HTTP verbs.
 
-In the controller below we have one registered route: `GET /`. When the user requests for that route, the request will be passed to the `index` method which renders some view.
+Northle comes with one controller in `src/app/app.controller.ts` file by default.
 
-Northle comes with one controller in `src/app/app.controller.ts` file by default:
+This controller has one registered route: `GET /`. When the user requests for that route, the request will be passed to the `index` method which renders a view.
 
 ```ts
 import { Controller, Request, Response, Route, view } from '@northle/core';
@@ -36,9 +38,10 @@ Controller methods should always return some value. Northle automatically sends 
 
 The place where controllers are registered is the `src/main.ts` file. If you're using the CLI for generating controllers, Northle registers them for you. Every time you create a new controller manually, you have to register it in `src/main.ts` file:
 
-```ts{4}
+```ts{5}
 const server = await createServer({
   // ...
+
   modules: [
     AppModule,
   ],
@@ -47,7 +50,7 @@ const server = await createServer({
 
 ## Routes
 
-You may declare your application routes by creating controller methods and decorating them with a proper HTTP verb decorator:
+In order to define application routes, add controller method and decorate it with a proper HTTP verb decorator:
 
 ```ts
 import { Route } from '@northle/core';
@@ -87,17 +90,15 @@ Routes in Northle are dynamic. That means you can use the `:param` syntax to dec
 
 ### Optional Parameters
 
-To make a paramater optional, use the question mark:
+To make a paramater optional, use the question mark. The following route will match both `/users` and `/users/luke_skywalker` paths:
 
 ```ts
 @Route.Get('/users/:name?')
 ```
 
-The above route will match both `/users` and `/users/luke_skywalker` paths.
-
 ### Regular Expressions
 
-You can also define a RegExp pattern for route URLs:
+You can also define a `RegExp` pattern for route URLs:
 
 ```ts
 @Route.Get('/posts/:id(^\\d+)')
