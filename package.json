@@ -16,7 +16,7 @@
     "start:serve": "vitepress serve ./site"
   },
   "devDependencies": {
-    "vitepress": "^1.0.0-alpha.19",
+    "vitepress": "^1.0.0-alpha.20",
     "vue": "^3.2.40"
   }
 }
