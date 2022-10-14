@@ -26,7 +26,7 @@ export class MovieController {
 To fetch some data from an endpoint use one of available HTTP methods (`get`, `patch`, `post`, `put`, `options`, `trace`, `head`, and `delete`):
 
 ```ts{3}
-const apiUrl = 'https://some-api.com/videos';
+const apiUrl = 'https://movie-api.com/movies';
 
 const movies = await this.http.get<Movie[]>(apiUrl);
 ```

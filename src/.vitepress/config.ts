@@ -116,6 +116,10 @@ export default {
             text: 'Mail',
             link: '/docs/basics/mail',
           },
+          {
+            text: 'HTTP Client',
+            link: '/docs/basics/http-client',
+          },
         ],
       },
       {
@@ -124,10 +128,6 @@ export default {
           {
             text: 'Authentication',
             link: '/docs/advanced/authentication',
-          },
-          {
-            text: 'HTTP Client',
-            link: '/docs/advanced/http-client',
           },
           {
             text: 'Localization',

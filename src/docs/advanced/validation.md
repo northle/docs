@@ -10,7 +10,7 @@ Your app probably need some kind of form request data validation. Northle ships 
 
 ## Getting Started
 
-To be able to validate request, inject the `Validator` service:
+To be able to validate request, inject the `Validator` service into controller:
 
 ```ts{1,7}
 import { Request, Validator } from '@northle/core';
@@ -26,7 +26,7 @@ export class PostController {
 }
 ```
 
-## Usage
+## Validation Data
 
 In order to check if request input data is valid, invoke the `assert` method. Example validation may look like this:
 
