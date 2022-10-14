@@ -28,7 +28,7 @@ export default {
   themeConfig: {
     siteTitle: 'Northle',
     logo: '/logo.png',
-    outlineTitle: 'Table of Contents',
+    outlineTitle: 'Table of contents',
     outline: 'deep',
     nav: [
       {
