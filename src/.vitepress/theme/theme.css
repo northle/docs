@@ -202,6 +202,10 @@
   margin: 6px 0;
 }
 
+.link.active .link-text {
+  font-weight: 700;
+}
+
 .details summary {
   cursor: pointer;
 }

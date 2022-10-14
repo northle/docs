@@ -60,7 +60,11 @@
     }
 
     .aside-container {
-      padding-top: 136px !important;
+      top: 42px !important;
+    }
+
+    .aside-content .spacer {
+      display: none !important;
     }
   }
 </style>
