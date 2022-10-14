@@ -6,6 +6,8 @@ title: Responses
 
 Northle provides a fluent API for dealing with server responses. The framework provides several ways to return responses. Each server response is represented by `Response` object.
 
+![Request Lifecycle](./assets/http-lifecycle.png)
+
 ## Response Objects
 
 To start using response API, inject the `Response` service by type-hinting it:

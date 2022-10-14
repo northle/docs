@@ -6,6 +6,8 @@ title: Requests
 
 Northle provides a fluent API for dealing with web requests. The framework provides several ways to return responses. Each client request is represented by `Request` object.
 
+![Request Lifecycle](./assets/http-lifecycle.png)
+
 ## Request Objects
 
 Northle supports all basic HTTP methods for handling web requests: `GET`, `POST`, `PUT`, `PATCH`, `OPTIONS`, `TRACE`, and `DELETE` along with [WebDAV](https://www.ibm.com/docs/en/i/7.1?topic=concepts-webdav) methods.
