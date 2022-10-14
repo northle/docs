@@ -6,6 +6,8 @@ title: Modules
 
 The most basic piece of Northle application are modules. Module is a simple class responsible for organizing code and dividing it into smaller chunks. Each module should represent one app feature.
 
+![Modules Scheme](./assets/modules.png)
+
 ## Module Structure
 
 Each module has a similar structure:

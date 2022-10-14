@@ -8,6 +8,8 @@ Typically, web applications are based on route mappings. Route, or  an endpoint 
 
 Routing system in Northle is based on **controller** classes.
 
+![Routing Scheme](./assets/routing.png)
+
 ## Controllers
 
 Basically, a controller is just a class with methods assigned to URLs. Each route handles incoming requests. Controllers contain methods decorated with appropriate HTTP verbs.
