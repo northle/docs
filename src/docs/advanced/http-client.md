@@ -6,6 +6,8 @@ title: HTTP Client
 
 Web applications often need to fetch some data by HTTP requests. Northle ships with a handy `HTTP Client` service that helps creating API requests.
 
+![HTTP Client Scheme](./assets/http-client.png)
+
 ## Get Started
 
 To get started with the client, import and inject `HttpClient` service to the controller or other service:

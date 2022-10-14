@@ -4,7 +4,9 @@ title: Validation
 
 # Validation
 
-Your app may often need form request data validation. Northle ships with a built-in validator with many useful validation rules.
+Your app probably need some kind of form request data validation. Northle ships with a built-in validator with many useful validation rules.
+
+![Validation Scheme](./assets/validation.png)
 
 ## Getting Started
 
