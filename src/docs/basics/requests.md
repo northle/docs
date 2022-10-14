@@ -10,8 +10,6 @@ Northle provides a fluent API for dealing with web requests. The framework provi
 
 ## Request Objects
 
-Northle supports all basic HTTP methods for handling web requests: `GET`, `POST`, `PUT`, `PATCH`, `OPTIONS`, `TRACE`, and `DELETE` along with [WebDAV](https://www.ibm.com/docs/en/i/7.1?topic=concepts-webdav) methods.
-
 To start using response API, inject the `Request` service by type-hinting it:
 
 ```ts{1,5}
@@ -23,9 +21,31 @@ class PostController {
 }
 ```
 
+## Request Methods
+
+Northle supports all available HTTP verbs for handling web requests along with [WebDAV](https://www.ibm.com/docs/en/i/7.1?topic=concepts-webdav) methods.
+
+| HTTP Method   | Role                          |
+| ------------- | ----------------------------- |
+| COPY          | Copy the resource             |
+| DELETE        | Delete the resource           |
+| GET           | Get the resource content      |
+| HEAD          | Get request headers           |
+| LOCK          | Lock the resource             |
+| MKCOL         | Create resource collection    |
+| MOVE          | Move the resource             |
+| OPTIONS       | Get server options            |
+| POST          | Post a resource               |
+| PROPFIND      | Find resource property        |
+| PROPPATCH     | Edit resource property        |
+| PATCH         | Update the resource partially |
+| PUT           | Update the resource           |
+| TRACE         | Perform a trace call          |
+| UNLOCK        | Unlock the resource           |
+
 ## Route Parameters
 
-You can get matched route URL parameters:
+To get matched route URL parameters, use `request.params` property:
 
 ```ts{4,6}
 class PostController {
@@ -40,7 +60,7 @@ class PostController {
 }
 ```
 
-Alternatively you can read parameter values using method parameters:
+Alternatively you can read parameter values using method params:
 
 ```ts{5}
 class PostController {
@@ -55,7 +75,7 @@ class PostController {
 
 ## Query String Params
 
-You can get URL query string entries as well:
+In order to get URL query string entries, use the `request.query` property:
 
 ```ts
 // URL: /search?name=riddler
@@ -64,7 +84,7 @@ const { name } = this.request.query;  // 'riddler'
 
 ## Headers
 
-To get request headers use `header` method:
+To get request headers, use the `header` method:
 
 ```ts
 const header = this.request.header('x-requested-with');
@@ -72,7 +92,7 @@ const header = this.request.header('x-requested-with');
 
 ## Cookies
 
-To read cookies sent by the user, use `request.cookies`:
+To read cookies sent by the user, use the `request.cookies` property:
 
 ```ts
 const { darkMode } = this.request.cookies;
@@ -80,7 +100,7 @@ const { darkMode } = this.request.cookies;
 
 ## Form Input Data
 
-To retrieve and process incoming form data, use the `request.data`:
+To retrieve and process incoming form data, use the `request.data` property:
 
 ```ts{6}
 class UserController {
