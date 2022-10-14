@@ -6,7 +6,7 @@ title: Configuration
 
 App configuration in Northle is stored in two main files: `src/main.ts` and `.env`.
 
-## Environment Settings
+## Environment Configuration
 
 Default Northle projects contain a file called `.env`. This file is the place where things like database credentials and environment-specific settings should be stored. Northle automatically reads all `.env` variables. The default `.env` file contains following variables:
 
@@ -32,30 +32,30 @@ MAIL_PASSWORD=
 The `.env` file should always be ignored by version control systems due security issues.
 :::
 
-## Reading Environment Variables
+## Reading Environment Data
 
 You can read environment variables using `env` generic function:
 
 ```ts
 import { env } from '@northle/core';
 
-const port = env<boolean>('PORT'); // 8000
-const host = env<string | null>('HOST'); // 'localhost' or null
+const port = env<boolean>('PORT');  // 8000
+const host = env<string | null>('HOST');  // 'localhost' or null
 ```
 
 ::: tip
 The `env` function automatically casts values to numbers, booleans and other types. If you read variables using `process.env` object, data will always have the string type.
 :::
 
-## Example `.env` File
+### Example `.env` File
 
 Developers often use version control systems like Git to work in teams. You should remember not to store `.env` files in repositories for security reasons (they contain database passwords etc.). That's why we should exclude these files from version control and only publish an example `.env.example` file synced with the original one.
 
 ## App Configuration
 
-Any other, app-specific configuration is passed into the `createServer` function in `src/main.ts` file. The file looks like this by default:
+Any other, app-specific configuration is passed into the `createServer` function in `src/main.ts` file. The configuration looks like this by default:
 
-```ts
+```ts{4-9}
 import { createServer } from '@northle/core';
 import { AppModule } from './app/app.module';
 
@@ -65,15 +65,14 @@ const server = await createServer({
       openBrowser: true,
     },
   },
-  modules: [
-    AppModule,
-  ],
+
+  // ...
 });
 
 await server.start();
 ```
 
-As you can see, we can pass configuration settings through `config` option.
+To customize app settings, pass configuration options through the `config` entry.
 
 ### Available Options
 
