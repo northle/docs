@@ -4,7 +4,7 @@ title: Controllers and Routing
 
 # Controllers and Routing
 
-Typically, web applications are based on route mappings. Route (endpoint) is an URL with assigned action called when user asks for the URL.
+Typically, web applications are based on route mappings. Route, or  an endpoint is an URL with assigned function called when user asks for the URL.
 
 Routing system in Northle is based on **controller** classes.
 
@@ -36,21 +36,38 @@ Controller methods should always return some value. Northle automatically sends 
 
 ### Registering Controllers
 
-The place where controllers are registered is the `src/main.ts` file. If you're using the CLI for generating controllers, Northle registers them for you. Every time you create a new controller manually, you have to register it in `src/main.ts` file:
+The place where every controller is registered is a [module](/docs/basics/modules). Every time you create a new controller manually, you need to import it into a module:
 
-```ts{5}
+```ts{2,6}
+import { Module } from '@northle/core';
+import { PostController } from './post.controller';
+
+@Module({
+  controllers: [
+    PostController,
+  ],
+})
+export class PostModule {}
+```
+
+Then register it in `src/main.ts` file:
+
+```ts{1,8}
+import { PostModule } from './posts/post.module';
+
 const server = await createServer({
   // ...
 
   modules: [
     AppModule,
+    PostModule,
   ],
 });
 ```
 
 ## Routes
 
-In order to define application routes, add controller method and decorate it with a proper HTTP verb decorator:
+In order to declare application routes, add new controller method and decorate it with a proper HTTP verb decorator:
 
 ```ts
 import { Route } from '@northle/core';
@@ -75,7 +92,7 @@ class AppController {
 }
 ```
 
-::: info
+::: info NOTE
 Controller methods should be as short as possible - they are only responsible for handling web requests and returning a response. For more logic you can familiarize yourself with service classes.
 :::
 
@@ -84,7 +101,7 @@ Controller methods should be as short as possible - they are only responsible fo
 Routes in Northle are dynamic. That means you can use the `:param` syntax to declare a variable URL that accepts multiple values:
 
 ```ts
-// Match paths like `/users/james_bond` and `/users/andrei_sator` routes
+// Match paths like `/users/james_bond` or `/users/andrei_sator`
 @Route.Get('/users/:name')
 ```
 
@@ -98,10 +115,14 @@ To make a paramater optional, use the question mark. The following route will ma
 
 ### Regular Expressions
 
-You can also define a `RegExp` pattern for route URLs:
+You can also define a `RegExp` pattern for route parameters:
 
 ```ts
+// This route will accept only numeric params
 @Route.Get('/posts/:id(^\\d+)')
+
+// This route will accept IDs in form `aaa-bbb`
+@Route.Get('/users/:id(^\\d{3}-\\d{3})')
 ```
 
 ## Response Types
@@ -135,4 +156,4 @@ return view('./views/profile');
 return redirect('/login');
 ```
 
-To get more information about response types visit [responses](/docs/basics/responses#view-responses) docs.
+To get more information about response types, visit the [responses](/docs/basics/responses) section.
