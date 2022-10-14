@@ -18,20 +18,28 @@
 </template>
 
 <style>
-  :root {
-    --vp-banner-height: 24px;
-  }
-
   .Layout {
-    padding-top: 24px;
+    padding-top: 32px;
   }
 
-  .VPNav {
-    top: 24px !important;
+  .VPLocalNav {
+    top: 32px !important;
+  }
+
+  .VPContent {
+    padding-top: 82px !important;
+  }
+
+  .VPSidebar {
+    top: 32px !important;
+  }
+
+  .VPNavScreen {
+    top: 32px !important;
   }
 
   .banner {
-    height: 24px;
+    height: 32px;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,9 +49,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
     font-weight: 500;
     font-size: 14px;
     z-index: 100;
+  }
+
+  @media (min-width: 768px) {
+    .VPNav {
+      top: 32px !important;
+    }
+
+    .aside-container {
+      padding-top: 136px !important;
+    }
   }
 </style>
