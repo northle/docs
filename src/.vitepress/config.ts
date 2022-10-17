@@ -36,6 +36,7 @@ export default {
       {
         text: 'Docs',
         link: '/docs/introduction/introducing-northle',
+        activeMatch: '/docs/',
       },
       {
         text: 'GitHub',

@@ -207,6 +207,10 @@
   transition: transform 0.3s ease;
 }
 
+.VPNavBarMenuLink.active {
+  font-weight: 600;
+}
+
 .VPButton {
   border-radius: 10px !important;
   border: none !important;
