@@ -10,6 +10,7 @@ Modern applications often need an established two-way server connection for rece
 
 First though, you should be introduced to a concept of broadcasting channels. Channel is a single class used for transmitting events with authorization logic.
 
+::: code src/chat/chat.channel.ts
 ```ts
 import { Authorizer, Channel } from '@northle/core';
 
@@ -20,6 +21,7 @@ export class ChatChannel implements Authorizer {
   }
 }
 ```
+:::
 
 String argument passed to decorator is channel name with dynamic parameter. The `passesUser` method is used to determine whether authenticated user is authorized to join the channel on the client side.
 
@@ -27,6 +29,7 @@ String argument passed to decorator is channel name with dynamic parameter. The 
 
 Emitting events on the server side can be done using `Broadcaster` service:
 
+::: code src/chat/chat.controller.ts
 ```ts{1,5}
 import { Controller, Broadcaster } from '@northle/core';
 
@@ -35,6 +38,7 @@ export class ChatController {
   constructor(private broadcaster: Broadcaster) {}
 }
 ```
+:::
 
 To emit events with some payload use `emit` method:
 
@@ -46,6 +50,7 @@ this.broadcaster.emit('message', `chat/${chatId}`);
 
 We can create an example chat app. Let's define some routes:
 
+::: code src/chat/chat.controller.ts
 ```ts
 @Controller()
 export class ChatController {
@@ -66,19 +71,23 @@ export class ChatController {
   }
 }
 ```
+:::
 
 ## Receiving Events in Browser
 
 Now we are able to receive broadcasts on the client side using [socket.io](https://socket.io) library. The example implementation you can see below:
 
+::: code src/chat/views/index.html
 ```html
-<h1>Chat</h1>
+<main>
+  <h1>Chat app</h1>
 
-<form id="chat-form">
-  <input type="text" name="message" placeholder="Enter your message...">
+  <form id="chat-form">
+    <input type="text" name="message" placeholder="Enter your message...">
 
-  <button>Send</button>
-</form>
+    <button>Send</button>
+  </form>
+</main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.min.js"></script>
 
@@ -104,6 +113,7 @@ Now we are able to receive broadcasts on the client side using [socket.io](https
   });
 </script>
 ```
+:::
 
 Open the browser's console and write something. Incoming messages should be logged to console.
 

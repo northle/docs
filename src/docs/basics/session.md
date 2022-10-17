@@ -14,6 +14,7 @@ Northle provides a built-in session management system so you don't have to insta
 
 To start using session just import it and inject from the service container:
 
+::: code src/users/user.controller.ts
 ```ts{1,5}
 import { Session } from '@northle/core';
 
@@ -22,6 +23,7 @@ export class UserController {
   constructor(private session: Session) {}
 }
 ```
+:::
 
 Then you'll be able to use the session object in your controller.
 

@@ -10,17 +10,21 @@ Web applications are often multi-language. Northle has many built-in localizatio
 
 You can set the default app locale in `src/main.ts` file:
 
+::: code src/main.ts
 ```ts{3}
 const server = await createServer({
   config: {
     locale: 'en',
   },
+
   // ...
 });
 ```
+:::
 
 To change app locale during the request, use the `Translator` service:
 
+::: code src/users/user.controller.ts
 ```ts{1,6}
 import { Translator, Request } from '@northle/core';
 
@@ -34,9 +38,11 @@ export class UserController {
   // ...
 }
 ```
+:::
 
 Then you'll be able to change app's locale during a request:
 
+::: code src/users/user.controller.ts
 ```ts{12}
 const userLocale = this.request.locale();
 
@@ -45,6 +51,7 @@ if (['de', 'en', 'fr', 'pl'].includes(userLocale)) {
   this.translator.setLocale(userLocale);
 }
 ```
+:::
 
 ## Translations
 
@@ -58,17 +65,20 @@ import { trans } from '@northle/core';
 const message = trans('Hello World');
 ```
 
+::: code lang/pl.json
 ```json
-// lang/pl.json
 {
   "Hello World": "Witaj Świecie"
 }
 ```
+:::
 
 ## View Translations
 
 You can also display translated text directly in view templates using `trans` function:
 
+::: code src/app/views/home.html
 ```html
 <h1>{trans('Hello World')}</h1>
 ```
+:::

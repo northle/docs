@@ -18,6 +18,7 @@ Northle comes with one controller in `src/app/app.controller.ts` file by default
 
 This controller has one registered route: `GET /`. When the user requests for that route, the request will be passed to the `index` method which renders a view.
 
+::: code src/app/app.controller.ts
 ```ts
 import { Controller, Request, Response, Route, view } from '@northle/core';
 
@@ -33,6 +34,7 @@ export class AppController {
   }
 }
 ```
+:::
 
 Controller methods should always return some value. Northle automatically sends proper headers based on returned data. In case of object or array, the response has the JSON type. When returned value is text or a view object, it will be rendered as HTML.
 
@@ -40,6 +42,7 @@ Controller methods should always return some value. Northle automatically sends 
 
 The place where every controller is registered is a [module](/docs/basics/modules). Every time you create a new controller manually, you need to import it into a module:
 
+::: code src/posts/post.module.ts
 ```ts{2,6}
 import { Module } from '@northle/core';
 import { PostController } from './post.controller';
@@ -51,9 +54,11 @@ import { PostController } from './post.controller';
 })
 export class PostModule {}
 ```
+:::
 
 Then register it in `src/main.ts` file:
 
+::: code src/main.ts
 ```ts{1,8}
 import { PostModule } from './posts/post.module';
 
@@ -66,11 +71,13 @@ const server = await createServer({
   ],
 });
 ```
+:::
 
 ## Routes
 
 In order to declare application routes, add new controller method and decorate it with a proper HTTP verb decorator:
 
+::: code src/app/app.controller.ts
 ```ts
 import { Route } from '@northle/core';
 
@@ -93,6 +100,7 @@ class AppController {
   }
 }
 ```
+:::
 
 ::: info NOTE
 Controller methods should be as short as possible - they are only responsible for handling web requests and returning a response. For more logic you can familiarize yourself with service classes.

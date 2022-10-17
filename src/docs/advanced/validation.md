@@ -12,11 +12,12 @@ Your app probably need some kind of form request data validation. Northle ships 
 
 To be able to validate request, inject the `Validator` service into controller:
 
+::: code src/users/user.controller.ts
 ```ts{1,7}
 import { Request, Validator } from '@northle/core';
 
 @Controller()
-export class PostController {
+export class UserController {
   constructor(
     private request: Request,
     private validator: Validator,
@@ -25,11 +26,13 @@ export class PostController {
   // ...
 }
 ```
+:::
 
 ## Validation Data
 
 In order to check if request input data is valid, invoke the `assert` method. Example validation may look like this:
 
+::: code src/users/user.controller.ts
 ```ts
 this.validator.assert({
   name: {
@@ -44,6 +47,7 @@ this.validator.assert({
   },
 });
 ```
+:::
 
 If any of declared rules is not satisfied, Northle will not pass the request and `400 Bad Request` status code will be sent back along with error messages.
 

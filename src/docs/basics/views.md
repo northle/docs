@@ -4,7 +4,7 @@ title: Views
 
 # Views
 
-Northle comes with handy built-in view template engine. View templates in your app are placed in `/views` directory and have the `*.html` extension.
+Northle comes with handy built-in view template engine. View templates in your app are placed in `/views` directories inside modules and have the `*.html` extension.
 
 ## Templates
 
@@ -12,6 +12,7 @@ Northle's template engine allows you to create loops, conditionals and variable 
 
 An example view template may look like this:
 
+::: code src/posts/views/some-view.html
 ```svelte
 <main>
   [each (post in posts)]
@@ -23,6 +24,7 @@ An example view template may look like this:
   [/if]
 </main>
 ```
+:::
 
 ## Rendering a View
 
@@ -156,6 +158,7 @@ Note that the form must have `method="post"` attribute set.
 
 Sometimes you need to pass some data from backend to frontend using HTML `<script />` tag. You can accomplish that by converting data to JSON with `[json]` directive:
 
+::: code src/posts/post.controller.ts
 ```ts
 return view('home', {
   userData: {
@@ -164,28 +167,35 @@ return view('home', {
   },
 });
 ```
+:::
 
+::: code src/posts/views/index.html
 ```svelte
 <script>
   window.userData = [json(userData)];
 </script>
 ```
+:::
 
 To pretty-print JSON data using tabs and newlines, add boolean parameter:
 
+::: code src/posts/views/index.html
 ```ts
 [json(userData, true)];
 ```
+:::
 
 ### `include`
 
 Northle provides support for partials. You can split your view into smaller pieces using `[include]` directive:
 
+::: code src/posts/views/index.html
 ```svelte
 <main>
   [include('partials/content')]
 </main>
 ```
+:::
 
 This statement will render `./partials/content.html` template inside `<main />` tag.
 
@@ -195,6 +205,7 @@ For every user session Northle generates a unique token to protect your applicat
 
 To add the token field just use the `[token]` directive:
 
+::: code src/posts/views/upload.html
 ```svelte
 <form action="/login" method="post">
   [token]
@@ -202,6 +213,7 @@ To add the token field just use the `[token]` directive:
   ...
 </form>
 ```
+:::
 
 ### `raw`
 

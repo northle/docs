@@ -10,6 +10,7 @@ Backend applications often need a solid architecture patterns to manage the code
 
 In order to use dependency injection, all you need to do is type-hinting the constructor of class which uses the injected service. Then mark both classes with `@Service` decorator to make them injectable:
 
+::: code src/posts/post.service.ts
 ```ts
 import { Service } from '@northle/core';
 
@@ -18,18 +19,21 @@ export class PostService {
   // ...
 }
 ```
+:::
 
+::: code src/users/user.service.ts
 ```ts
 import { Service } from '@northle/core';
 import { PostService } from '../posts/post.service';
 
 @Service()
-export class OtherService {
+export class UserService {
   constructor(private postService: PostService) {}
 
   // ...
 }
 ```
+:::
 
 Northle automatically resolves type-hinted dependencies and passes them to your class.
 
@@ -41,16 +45,18 @@ Controllers with `@Controller` decorator are automatically injectable.
 
 Alternatively, you may use the `inject` function instead of type-hinting dependencies:
 
+::: code src/users/user.service.ts
 ```ts
 import { inject, Service } from '@northle/core';
 import { PostService } from '../posts/post.service';
 
 @Service()
-export class OtherService {
+export class UserService {
   private postService = inject(PostService);
 
   // ...
 }
 ```
+:::
 
 The result will be the same but here you don't need to specify types in constructor.

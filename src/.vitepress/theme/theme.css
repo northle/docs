@@ -95,12 +95,40 @@
 }
 
 .dark .VPSidebar,
-.dark .vp-doc div[class*='language-'] {
+.dark .vp-doc div[class*='language-'],
+.dark .snippet-file {
   background: #161b22;
 }
 
 .dark .vp-doc [class*='language-'] > button.copy {
   background-color: transparent;
+}
+
+.snippet-file {
+  background: var(--vp-code-block-bg);
+  color: #99a0b3;
+  padding: 12px 24px;
+  border-radius: 10px 10px 0 0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  font-family: var(--vp-font-family-mono);
+}
+
+.snippet-file + [class*='language-'] {
+  margin-top: 0 !important;
+  border-top-left-radius: 0!important;
+  border-top-right-radius: 0!important;
+}
+
+.snippet-file + [class*='language-'] pre {
+  padding-top: 0;
+}
+
+.snippet-file svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
 }
 
 .vp-doc [class*='language-'] > button.copy:hover {

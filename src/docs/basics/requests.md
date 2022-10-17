@@ -12,6 +12,7 @@ Northle provides a fluent API for dealing with web requests. The framework provi
 
 To start using response API, inject the `Request` service by type-hinting it:
 
+::: code src/posts/post.controller.ts
 ```ts{1,5}
 import { Controller, Request } from '@northle/core';
 
@@ -20,6 +21,7 @@ class PostController {
   constructor(private request: Request) {}
 }
 ```
+::
 
 ## Request Methods
 
@@ -47,6 +49,7 @@ Northle supports all available HTTP verbs for handling web requests along with [
 
 To get matched route URL parameters, use `request.params` property:
 
+::: code src/posts/post.controller.ts
 ```ts{4,6}
 class PostController {
   // ...
@@ -59,9 +62,11 @@ class PostController {
   }
 }
 ```
+:::
 
 Alternatively you can read parameter values using method params:
 
+::: code src/posts/post.controller.ts
 ```ts{5}
 class PostController {
   // ...
@@ -72,6 +77,7 @@ class PostController {
   }
 }
 ```
+:::
 
 ## Query String Params
 
@@ -102,6 +108,7 @@ const { darkMode } = this.request.cookies;
 
 To retrieve and process incoming form data, use the `request.data` property:
 
+::: code src/users/user.controller.ts
 ```ts{6}
 class UserController {
   // ...
@@ -116,6 +123,7 @@ class UserController {
   }
 }
 ```
+:::
 
 ## Detecting AJAX Requests
 
@@ -144,6 +152,7 @@ When you're building a RESTful API, you may encounter a problem - HTML forms don
 
 Northle lets you to use these methods thanks to `[method]` template directive. Just pass a method name and you'll be able to use methods like `PATCH` and `DELETE` in HTML forms (it's called method spoofing):
 
+::: code src/posts/views/upload.html
 ```html
 <form action="/login" method="post">
   [method('PATCH')]
@@ -151,6 +160,7 @@ Northle lets you to use these methods thanks to `[method]` template directive. J
   ...
 </form>
 ```
+:::
 
 ::: tip NOTE
 Note that the form must include `method="post"` attribute to work.

@@ -10,6 +10,7 @@ Northle strongly encourages you to write clean code separated into small parts (
 
 Service class is just an injectable class with methods are responsible for transforming some data. The most basic service may look like this:
 
+::: code src/users/user.service.ts
 ```ts
 import { Service } from '@northle/core';
 
@@ -20,11 +21,13 @@ export class UserService {
   }
 }
 ```
+:::
 
 ## Using Services
 
 Since the class has been declared as injectable, we can type-hint the controller constructor to get injected services:
 
+::: code src/users/user.controller.ts
 ```ts{5}
 import { UserService } from './user.service';
 
@@ -35,9 +38,11 @@ export class UserController {
   // ...
 }
 ```
+:::
 
 Injected services will be automatically available in the controller:
 
+::: code src/users/user.controller.ts
 ```ts{7}
 @Controller()
 export class UserController {
@@ -49,3 +54,4 @@ export class UserController {
   }
 }
 ```
+:::

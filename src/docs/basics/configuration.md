@@ -10,6 +10,7 @@ App configuration in Northle is stored in two main files: `src/main.ts` and `.en
 
 Default Northle projects contain a file called `.env`. This file is the place where things like database credentials and environment-specific settings should be stored. Northle automatically reads all `.env` variables. The default `.env` file contains following variables:
 
+::: code .env
 ```
 DEVELOPMENT=true
 PORT=8000
@@ -27,6 +28,7 @@ MAIL_PORT=587
 MAIL_ADDRESS=
 MAIL_PASSWORD=
 ```
+:::
 
 ::: warning
 The `.env` file should always be ignored by version control systems due security issues.
@@ -55,6 +57,7 @@ Developers often use version control systems like Git to work in teams. You shou
 
 Any other, app-specific configuration is passed into the `createServer` function in `src/main.ts` file. The configuration looks like this by default:
 
+::: code src/main.ts
 ```ts{4-9}
 import { createServer } from '@northle/core';
 import { AppModule } from './app/app.module';
@@ -71,6 +74,7 @@ const server = await createServer({
 
 await server.start();
 ```
+:::
 
 To customize app settings, pass configuration options through the `config` entry.
 

@@ -12,6 +12,7 @@ Northle provides a fluent API for dealing with server responses. The framework p
 
 To start using response API, inject the `Response` service by type-hinting it:
 
+::: code src/posts/post.controller.ts
 ```ts{1,5}
 import { Controller, Response } from '@northle/core';
 
@@ -20,19 +21,22 @@ class PostController {
   constructor(private response: Response) {}
 }
 ```
+:::
 
 ## Basic Responses
 
 Northle automatically converts string data into HTML responses:
 
+::: code src/posts/post.controller.ts
 ```ts
-class AppController {
+class PostController {
   @Route.Get('/')
   public index() {
     return 'Hello World!';
   }
 }
 ```
+:::
 
 In addition to returning strings, you may also return arrays and objects. Northle converts objects into [JSON responses](/docs/basics/responses#json-responses).
 
@@ -88,6 +92,7 @@ return this.response.redirect('/login', {}, StatusCode.Found);  // HTTP 302
 
 Northle gives you the ability to define routes redirecting from its URL to another using `@Redirect` decorator:
 
+::: code src/app/app.controller.ts
 ```ts{1,8}
 import { Controller, Redirect } from '@northle/core';
 
@@ -100,6 +105,7 @@ export class AppController {
   public show() {}
 }
 ```
+:::
 
 ## Headers
 

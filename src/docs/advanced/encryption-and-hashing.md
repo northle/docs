@@ -25,7 +25,8 @@ $ yarn key:generate
 
 To get started with encryption, you should inject `Encrypter` service:
 
-```ts{6}
+::: code src/users/user.controller.ts
+```ts{1,6}
 import { Encrypter } from '@northle/core';
 
 @Controller()
@@ -38,23 +39,24 @@ export class UserController {
   // ...
 }
 ```
+:::
 
 ## Encryption
 
 To encrypt a string, use the `encrypt` method:
 
+::: code src/users/user.service.ts
 ```ts{8}
-@Controller()
-export class UserController {
-  // ...
-
-  public encryptUsername() {
-    const name = this.request.body.name;
+@Service()
+export class UserService {
+  public encryptUsername(): string {
+    const { name } = this.request.body;
 
     return this.encrypter.encrypt(name);
   }
 }
 ```
+:::
 
 ## Decryption
 

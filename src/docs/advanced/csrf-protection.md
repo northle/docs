@@ -10,11 +10,13 @@ title: CSRF Protection
 
 Without CSRF protection, the attacker could submit an HTML form pointing to your application.
 
+::: code src/posts/views/upload.html
 ```html
 <form action="..." method="post">
   <input type="text" name="body" value="Malicious data">
 </form>
 ```
+:::
 
 In the example above, when the form is submitted, authenticated user publishes a new post without their knowledge.
 
@@ -24,6 +26,7 @@ To prevent CSRF attacks, Northle generates a unique token for every user session
 
 To add the token field to your template, just use the `[token]` directive:
 
+::: code src/posts/views/upload.html
 ```html
 <form action="..." method="post">
   [token]
@@ -31,5 +34,6 @@ To add the token field to your template, just use the `[token]` directive:
   ...
 </form>
 ```
+:::
 
 When this token is present, an unauthorized user is not able to do anything without your permissions.
