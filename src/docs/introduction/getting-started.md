@@ -56,6 +56,7 @@ $ yarn start:vite
 
 If you don't want to open your browser automatically, you can change it in `src/main.ts` file:
 
+::: code src/main.ts
 ```ts{4}
 const server = await createServer({
   config: {
@@ -65,3 +66,4 @@ const server = await createServer({
   },
 });
 ```
+:::
