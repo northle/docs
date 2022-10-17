@@ -8,61 +8,61 @@ Default Northle application structure consists of a few main directories. It is 
 
 ## Directories
 
-### `📁 /client`
+### `/client`
 
 This directory is present if you're using a frontend framework template. It contains uncompiled assets like JavaScript files or Vue.js components.
 
-### `📁 /dist`
+### `/dist`
 
 Your application code is compiled into this directory. To build your app for production, run `npm run build` command.
 
-### `📁 /database`
+### `/database`
 
 [Database migrations](/docs/database/schema) are created in this directory by default.
 
-### `📁 /lang`
+### `/lang`
 
 This directory does not exist by default, but you can create it and host your app [translation](/docs/advanced/localization) files inside it.
 
-### `📁 /public`
+### `/public`
 
 Files inside `public` directory can then be accessed in your code from the base URL `/`. This is the place where you should put client-side things like CSS styles, JavaScript files and other assets that should be publicly accessible.
 
-### `📁 /src`
+### `/src`
 
 The `src` directory contains your main application code. Feel free to modify and adjust it to your needs.
 
-### `📁 /views`
+### `/views`
 
 The` views` directory contains app views rendered by your application. View files have the `.html` extension.
 
 ## Files
 
-### `📄 .env`
+### `.env`
 
 The `.env` file contains app environment-specific [configuration](/docs/basics/configuration#environment-settings). Note that you should ignore this file in version control systems because it stores information like your database credentials.
 
-### `📄 .env.example`
+### `.env.example`
 
 This is an example version of `.env` file that can be stored in version control system repositories.
 
-### `📄 .eslintrc.json`
+### `.eslintrc.json`
 
 The `.eslintrc.json` file contains configuration for [ESLint](https://eslint.org).
 
-### `📄 .gitignore`
+### `.gitignore`
 
 The `.gitignore` file is used by Git and explicitly specifies files that Git [should not track](https://git-scm.com/docs/gitignore).
 
-### `📄 .prettierignore`
+### `.prettierignore`
 
 The `.prettierignore` file contains a list of files that should not be formatted by [Prettier](https://prettier.io).
 
-### `📄 .prettierrc.json`
+### `.prettierrc.json`
 
 The `.prettierrc.json` file is a [Prettier formatter](https://prettier.io) configuration file.
 
-### `📄 package.json`
+### `package.json`
 
 The `package.json` file stores installed packages list and your app package information.
 
@@ -84,10 +84,10 @@ This file comes with several predefined scripts you can use:
 },
 ```
 
-### `📄 tsconfig.json`
+### `tsconfig.json`
 
 This file is responsible for TypeScript [configuration](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 
-### `📄 vitest.config.ts`
+### `vitest.config.ts`
 
 This file contans configuration for [Vitest](https://vitest.dev) test runner.

@@ -17,6 +17,7 @@ Each module has a similar structure:
 import { Module } from '@northle/core';
 
 @Module({
+  imports: [],
   controllers: [],
   socketChannels: [],
 })
@@ -24,19 +25,28 @@ export class PostModule {}
 ```
 :::
 
+### `imports`
+
+The `imports` field declares other modules that are included.
+
+### `controllers`
+
 The `controllers` field defines a list of HTTP [controllers](/docs/basics/controllers-and-routing) associated with the module. This is required for proper route registering.
+
+### `socketChannels`
 
 Likewise, the `socketChannels` array declares websocket [channels](/docs/advanced/websockets).
 
 Therefore, every time you create new controller or socket channel, you have to import and declare these classes in the proper field, for example:
 
 ::: code src/chat/chat.module.ts
-```ts{2,3,7,10}
+```ts{2,3,8,11}
 import { Module } from '@northle/core';
 import { ChatController } from './chat.controller';
 import { ChatChannel } from './chat.channel';
 
 @Module({
+  imports: [],
   controllers: [
     ChatController,
   ],
