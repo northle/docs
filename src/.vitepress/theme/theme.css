@@ -205,6 +205,7 @@
 
 .link[data-v-5bf915fe] {
   transition: transform 0.3s ease;
+  padding: 3px 0;
 }
 
 .VPNavBarMenuLink.active {
@@ -279,8 +280,8 @@
 }
 
 .VPMenu {
-  min-width: 160px !important;
   box-shadow: var(--vp-shadow-2) !important;
+  border-radius: 10px !important;
 }
 
 .link[data-v-19086799]:hover {

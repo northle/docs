@@ -1,16 +1,13 @@
 <script lang="ts" setup>
   import DefaultTheme from 'vitepress/theme';
-  import { ref } from 'vue';
 
   const { Layout } = DefaultTheme;
-
-  const showBanner = ref(true);
 </script>
 
 <template>
   <Layout>
     <template #layout-top>
-      <aside class="banner" v-if="showBanner">
+      <aside class="banner">
         <p>Northle is currently in the alpha stage.</p>
       </aside>
     </template>
@@ -46,6 +43,10 @@
 
   .VPNavScreen {
     top: 32px !important;
+  }
+
+  .VPSkipLink {
+    top: 48px !important;
   }
 
   .banner {
