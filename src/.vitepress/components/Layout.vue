@@ -14,6 +14,16 @@
         <p>Northle is currently in the alpha stage.</p>
       </aside>
     </template>
+
+    <template #home-features-before>
+      <div class="intro">
+        <div class="container vp-doc">
+          <div class="language-shell">
+            <pre><code><span class="line">$ npm create chat-app</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </template>
   </Layout>
 </template>
 
@@ -54,6 +64,26 @@
     z-index: 100;
   }
 
+  .intro {
+    padding: 0 24px;
+    margin-bottom: 30px;
+  }
+
+  .intro .container {
+    max-width: 1152px;
+    margin: 0 auto;
+  }
+
+  .intro .language-shell {
+    width: 228px;
+  }
+
+  @media (min-width: 960px) {
+    .intro {
+      padding: 0 64px;
+    }
+  }
+
   @media (min-width: 768px) {
     .VPNav {
       top: 32px !important;
@@ -65,6 +95,12 @@
 
     .aside-content .spacer {
       display: none !important;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .intro {
+      padding: 0 48px;
     }
   }
 </style>
