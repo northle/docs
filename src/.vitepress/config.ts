@@ -1,4 +1,4 @@
-import Container from 'markdown-it-container'
+import Container from 'markdown-it-container';
 
 export default {
   outDir: './dist',
