@@ -199,7 +199,7 @@ export default {
     ],
     editLink: {
       pattern: 'https://github.com/northle/docs/tree/main/:path',
-      text: 'Contribute to this page',
+      text: 'Suggest changes',
     },
     footer: {
       message: 'Released under the MIT License.',
