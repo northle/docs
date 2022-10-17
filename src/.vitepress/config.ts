@@ -198,7 +198,7 @@ export default {
       },
     ],
     editLink: {
-      pattern: 'https://github.com/northle/docs/tree/main/:path',
+      pattern: 'https://github.com/northle/docs/tree/main/src/:path',
       text: 'Suggest changes',
     },
     footer: {
@@ -208,10 +208,10 @@ export default {
   },
   markdown: {
     theme: 'one-dark-pro',
-    config: (md) => {
+    config: (markdown: any) => {
       const pattern = /^code\s+(.*)$/;
 
-      md.use(Container, 'code', {
+      markdown.use(Container, 'code', {
         validate: (params: string) => params.trim().match(pattern),
         render: (tokens: any[], id: string) => {
           const match = tokens[id].info.trim().match(pattern);
