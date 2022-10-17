@@ -10,6 +10,7 @@ Now we are ready to start building our application. Let's begin with giving user
 
 At the beginning, inject `DatabaseClient` to the controller:
 
+::: code src/todos/todo.controller.ts
 ```ts{1,5}
 import { DatabaseClient, Request } from '@northle/core';
 
@@ -18,9 +19,11 @@ export class TodoController {
   constructor(private db: DatabaseClient, private request: Request) {}
 }
 ```
+:::
 
 Now let's define `POST /todos` route:
 
+::: code src/todos/todo.controller.ts
 ```ts
 @Controller()
 export class TodoController {
@@ -41,6 +44,7 @@ export class TodoController {
   }
 }
 ```
+:::
 
 You can test the route sending a `POST` request with `title` and `content` fields. If everything is correctly set up, you should see a new record in database.
 
@@ -48,6 +52,7 @@ You can test the route sending a `POST` request with `title` and `content` field
 
 Finally we can add `GET /todos/create` route which will render a view with a form for adding new items:
 
+::: code src/todos/todo.controller.ts
 ```ts
 @Controller()
 export class TodoController {
@@ -59,9 +64,11 @@ export class TodoController {
   }
 }
 ```
+:::
 
 The form in `src/todos/views/create.html` will be very simple for now:
 
+::: code src/todos/views/create.html
 ```html
 ...
 
@@ -74,3 +81,4 @@ The form in `src/todos/views/create.html` will be very simple for now:
   <button>Add item</button>
 </form>
 ```
+:::

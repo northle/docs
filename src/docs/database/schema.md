@@ -10,9 +10,11 @@ Northle comes with a robust database client for MySQL, MongoDB, PostgreSQL and m
 
 All configuration needed for database querying is stored in the `.env` variables:
 
+::: code .env
 ```
 DATABASE_URL="mysql://root:@localhost/northle"
 ```
+:::
 
 ## Database Schema
 
@@ -20,6 +22,7 @@ First you should get familiar with the concept of database **schema**. Schema is
 
 The default schema provided in default Northle project looks like this:
 
+::: code database/schema.prisma
 ```prisma
 datasource db {
   url      = env("DATABASE_URL")
@@ -39,6 +42,7 @@ model User {
   updatedAt DateTime @updatedAt
 }
 ```
+:::
 
 As you can see, the above schema defines one model `User` which represents a `user` table in database. The `datasource` definition sets up the database system - `mysql` in this case. Available systems are:
 
@@ -55,6 +59,7 @@ Every model definition represents a database table and its columns.
 
 You can mark column as optional by using the `?` sign:
 
+::: code database/schema.prisma
 ```prisma{4}
 model Post {
   id      Int     @id @default(autoincrement())
@@ -62,11 +67,13 @@ model Post {
   content String?
 }
 ```
+:::
 
 ## Relationships
 
 You can obtain related models as arrays by using `[]` syntax:
 
+::: code database/schema.prisma
 ```prisma{5}
 model User {
   id    Int     @id @default(autoincrement())
@@ -75,6 +82,7 @@ model User {
   posts Post[]
 }
 ```
+:::
 
 ## Running Migrations
 
@@ -95,6 +103,7 @@ $ yarn db:migrate
 
 Since MongoDB has a different architecture and is non-relational, the schema definitions differ a bit.
 
+::: code database/schema.prisma
 ```prisma{2,8}
 model User {
   id  String @id @default(auto()) @map("_id") @db.ObjectId
@@ -106,5 +115,6 @@ model Post {
   postId String? @db.ObjectId
 }
 ```
+:::
 
 When you're using MongoDB, you should remember that IDs have a `String` type and you have to explicitly map them to `ObjectId` `'_id'`.

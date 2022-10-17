@@ -25,7 +25,7 @@ The directory structure will look like this:
 ```
 /src
   /modules
-    /todo
+    /todos
       todo.controller.ts
       todo.module.ts
 ```
@@ -46,6 +46,7 @@ We're going to define serveral routes following REST API rules:
 
 Let's begin with creating `TodoController`:
 
+::: code src/todos/todo.controller.ts
 ```ts
 import { Controller, Request, Route, view } from '@northle/core';
 
@@ -54,9 +55,11 @@ export class TodoController {
   constructor(private request: Request) {}
 }
 ```
+:::
 
 We have to register this controller in `src/todos/todo.module.ts` file:
 
+::: code src/todos/todo.module.ts
 ```ts{2,6}
 import { Module } from '@northle/core';
 import { TodoController } from './todo.controller';
@@ -71,9 +74,11 @@ export class TodoModule {
   constructor() {}
 }
 ```
+:::
 
 Then add `TodoModule` in `src/main.ts` file:
 
+::: code src/main.ts
 ```ts{2,7}
 // ...
 import { TodoModule } from './todos/todo.module';
@@ -85,11 +90,13 @@ const server = await createServer({
   ],
 });
 ```
+:::
 
 ## Setting Up Database
 
 Then we could prepare database scheme with migrations:
 
+::: code database/schema.prisma
 ```prisma{10-16}
 datasource db {
   url      = env("DATABASE_URL")
@@ -108,6 +115,7 @@ model Todo {
   updatedAt DateTime @updatedAt
 }
 ```
+:::
 
 After that, run command:
 

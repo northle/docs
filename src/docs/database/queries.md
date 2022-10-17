@@ -10,6 +10,7 @@ Querying database using Northle's [Prisma](https://www.prisma.io/docs/concepts/c
 
 To start using database queries, you should inject `DatabaseClient` service:
 
+::: code src/posts/post.controller.ts
 ```ts{1,5}
 import { DatabaseClient } from '@northle/core';
 
@@ -20,11 +21,13 @@ export class PostController {
   // ...
 }
 ```
+:::
 
 ## Select Queries
 
 The most common type of database queries is the `select` query. You can select data from your table using `user` object and the `findUnique` method:
 
+::: code src/posts/post.controller.ts
 ```ts
 const user = await this.db.user.findUnique({
   where: {
@@ -32,6 +35,7 @@ const user = await this.db.user.findUnique({
   },
 });
 ```
+:::
 
 The result will look like this:
 
@@ -46,6 +50,7 @@ The result will look like this:
 
 You can specify what columns you want to receive with `select` object:
 
+::: code src/posts/post.controller.ts
 ```ts{5-8}
 const user = await this.db.user.findUnique({
   where: {
@@ -57,11 +62,13 @@ const user = await this.db.user.findUnique({
   },
 });
 ```
+:::
 
 ## Creating Records
 
 You can create new records using the `create` method:
 
+::: code src/posts/post.controller.ts
 ```ts
 const user = await this.db.user.create({
   data: {
@@ -71,11 +78,13 @@ const user = await this.db.user.create({
   },
 });
 ```
+:::
 
 ## Updating Records
 
 Updating records is easy:
 
+::: code src/posts/post.controller.ts
 ```ts
 await this.db.user.update({
   where: {
@@ -86,11 +95,13 @@ await this.db.user.update({
   },
 });
 ```
+:::
 
 ## Deleting Records
 
 Use `delete` or `deleteMany` method to delete records:
 
+::: code src/posts/post.controller.ts
 ```ts
 await this.db.user.deleteMany({
   where: {
@@ -100,11 +111,13 @@ await this.db.user.deleteMany({
   },
 });
 ```
+:::
 
 ## Aggregation
 
 With Prisma database client you can count records, aggregate number fields, and select distinct field values.
 
+::: code src/posts/post.controller.ts
 ```ts
 const aggregations = await this.db.user.aggregate({
   avg: {
@@ -115,6 +128,7 @@ const aggregations = await this.db.user.aggregate({
   },
 });
 ```
+:::
 
 The result will have the following form:
 
@@ -133,6 +147,7 @@ The result will have the following form:
 
 When you define schema relationships you can easly obtain related records.
 
+::: code database/schema.prisma
 ```prisma
 model Post {
   id       Int  @id @default(autoincrement())
@@ -147,9 +162,11 @@ model User {
   posts Post[]
 }
 ```
+:::
 
 To return related records, you can write:
 
+::: code src/posts/post.controller.ts
 ```ts{4-8}
 const users = await this.db.user.findMany({
   select: {
@@ -162,3 +179,4 @@ const users = await this.db.user.findMany({
   },
 });
 ```
+:::
