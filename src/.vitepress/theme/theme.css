@@ -208,14 +208,16 @@
 }
 
 .VPButton {
-  border-radius: 12px !important;
+  border-radius: 10px !important;
   border: none !important;
   padding: 2px 20px !important;
   transition: opacity 0.2s ease !important;
+  font-weight: 400 !important;
 }
 
 .VPButton.brand {
   background-image: linear-gradient(to right, #3b82f6, #0ea5e9);
+  box-shadow: 0 0 30px rgba(20, 105, 170, 0.4);
 }
 
 .VPButton.brand:hover {
@@ -243,7 +245,7 @@
 }
 
 .VPHome .image-src {
-  filter: drop-shadow(0 0 30px rgba(20, 105, 170, 0.4));
+  filter: drop-shadow(0 0 30px rgba(20, 105, 170, 0.5));
 }
 
 .vp-doc .header-anchor {
