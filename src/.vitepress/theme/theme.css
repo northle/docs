@@ -186,19 +186,21 @@
 
 .outline-marker[data-v-3f9b8864] {
   width: 3px;
-  height: 26px;
+  height: 28px;
   left: -3px;
   border-radius: 5px;
 }
 
 .outline-title {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
+  font-weight: 500 !important;
 }
 
 .outline-link {
   font-weight: 400;
   letter-spacing: 0.4px;
   padding: 3px 0;
+  font-size: 14px;
 }
 
 .outline-link.active {
