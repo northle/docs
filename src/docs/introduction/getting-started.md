@@ -14,7 +14,7 @@ To run Northle, your environment has to meet below requirements:
 | ------- | --- |
 | 18.3.0+ | 7+  |
 
-## Creating Project
+## Creating a project
 
 To create new Northle project you can use the NPM command:
 
@@ -52,7 +52,7 @@ $ yarn start:vite
 ```
 :::
 
-## Basic Configuration
+## Basic configuration
 
 If you don't want to open your browser automatically, you can change it in `src/main.ts` file:
 

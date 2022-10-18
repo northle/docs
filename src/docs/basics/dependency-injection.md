@@ -6,7 +6,7 @@ title: Dependency Injection
 
 Backend applications often need a solid architecture patterns to manage the codebase. Northle implements common **service container** and **dependency injection (DI)** concepts.
 
-## Basic Usage
+## Basic usage
 
 In order to use dependency injection, all you need to do is type-hinting the constructor of class which uses the injected service. Then mark both classes with `@Service` decorator to make them injectable:
 
@@ -41,7 +41,7 @@ Northle automatically resolves type-hinted dependencies and passes them to your 
 Controllers with `@Controller` decorator are automatically injectable.
 :::
 
-## `inject` Function
+## `inject` function
 
 Alternatively, you may use the `inject` function instead of type-hinting dependencies:
 

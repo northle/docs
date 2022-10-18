@@ -6,7 +6,7 @@ title: Services
 
 Northle strongly encourages you to write clean code separated into small parts (modules, controllers, and services). We believe that controllers should be only responsible for handling requests and responses. All business logic should be placed in service classes.
 
-## Creating Services
+## Creating services
 
 Service class is just an injectable class with methods are responsible for transforming some data. The most basic service may look like this:
 
@@ -23,7 +23,7 @@ export class UserService {
 ```
 :::
 
-## Using Services
+## Using services
 
 Since the class has been declared as injectable, we can type-hint the controller constructor to get injected services:
 

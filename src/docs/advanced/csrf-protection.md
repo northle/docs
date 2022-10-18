@@ -6,7 +6,7 @@ title: CSRF Protection
 
 [Cross-Site Request Forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) (CSRF / XSRF) is a type of exploit relying on performing some actions by attacker on behalf of currently authenticated user without knowing their credentials.
 
-## How Do CSRF Attacks Work?
+## How do CSRF attacks work?
 
 Without CSRF protection, the attacker could submit an HTML form pointing to your application.
 
@@ -20,7 +20,7 @@ Without CSRF protection, the attacker could submit an HTML form pointing to your
 
 In the example above, when the form is submitted, authenticated user publishes a new post without their knowledge.
 
-## Token Protection
+## Token protection
 
 To prevent CSRF attacks, Northle generates a unique token for every user session to protect your application. Anytime you define forms with method other than `GET` and `HEAD`, you have to add a hidden field containing generated token. Otherwise, you won't be able to pass the form and you will get `419 Invalid Token` error.
 

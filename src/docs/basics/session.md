@@ -10,7 +10,7 @@ Northle provides a built-in session management system so you don't have to insta
 
 ![Session Scheme](./assets/session.png)
 
-## Getting Started
+## Getting started
 
 To start using session just import it and inject from the service container:
 
@@ -27,7 +27,7 @@ export class UserController {
 
 Then you'll be able to use the session object in your controller.
 
-## Storing Data
+## Storing data
 
 To save a variable to the session, use the `set` method:
 
@@ -37,7 +37,7 @@ const user = await this.db.user.findUnique(id);
 this.session.set('email', user.email);
 ```
 
-## Flash Data
+## Flash data
 
 In order to set temporary data which is deleted when you access it, use the `flash` method:
 
@@ -45,7 +45,7 @@ In order to set temporary data which is deleted when you access it, use the `fla
 this.session.flash('error', 'Invalid e-mail or password');
 ```
 
-## Retrieving Data
+## Retrieving data
 
 For obtaining saved session data you have a `session.data` object available:
 
@@ -69,7 +69,7 @@ import { flash } from '@northle/core';
 const error = flash('error');
 ```
 
-## Deleting Data
+## Deleting data
 
 To remove items from the session, call `delete` method:
 
@@ -77,7 +77,7 @@ To remove items from the session, call `delete` method:
 this.session.delete('email');
 ```
 
-## Destroying Session
+## Destroying session
 
 Sometimes you need to clear all session entries and completely unset the session, for example for logging out the user. In order to do that, use the `destroy` method:
 

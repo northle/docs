@@ -6,7 +6,7 @@ title: Testing
 
 Testing your application is very important. Northle ships with [Vitest](https://vitest.dev) testing package installed by default. Test files end with `.test.ts` extension.
 
-## Running Tests
+## Running tests
 
 Run `npm test` command to see test results:
 

@@ -16,7 +16,7 @@ DATABASE_URL="mysql://root:@localhost/northle"
 ```
 :::
 
-## Database Schema
+## Database schema
 
 First you should get familiar with the concept of database **schema**. Schema is your database representation in form of `schema.prisma` file. It contains data sources and table model definitions.
 
@@ -84,7 +84,7 @@ model User {
 ```
 :::
 
-## Running Migrations
+## Running migrations
 
 When you edit the schema and want to generate tables based on it, run command:
 
@@ -99,7 +99,7 @@ $ yarn db:migrate
 ```
 :::
 
-## MongoDB Notes
+## MongoDB notes
 
 Since MongoDB has a different architecture and is non-relational, the schema definitions differ a bit.
 

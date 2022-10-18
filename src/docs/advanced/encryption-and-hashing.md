@@ -81,7 +81,7 @@ Note that you can only compare two hashes without the ability to decrypt hashed 
 const passwordCorrect = this.encrypter.compareHash(password, hashedPassword);
 ```
 
-## UUID Generation
+## UUID generation
 
 The `Encrypter` service can generate unique UUID as well:
 

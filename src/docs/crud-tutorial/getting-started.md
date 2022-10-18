@@ -6,7 +6,7 @@ title: Getting Started | CRUD Tutorial
 
 In this section we will create a working Create-Read-Update-Delete (CRUD) todo app.
 
-## Project Setup
+## Project setup
 
 First, create a brand new project using command line tool:
 
@@ -16,7 +16,7 @@ $ cd todo-app
 $ npm start
 ```
 
-## Todo Module
+## Todo module
 
 When we have the project structure set up, it is the time for creating `todo` module with a controller.
 
@@ -30,7 +30,7 @@ The directory structure will look like this:
       todo.module.ts
 ```
 
-## The Plan
+## The plan
 
 We're going to define serveral routes following REST API rules:
 
@@ -42,7 +42,7 @@ We're going to define serveral routes following REST API rules:
 | DELETE        | `/todos/:id`    | `destroy`          | Delete todo from database  |
 | PATCH         | `/todos/:id`    | `update`           | Update todo record         |
 
-## Todo Controller
+## Todo controller
 
 Let's begin with creating `TodoController`:
 
@@ -92,7 +92,7 @@ const server = await createServer({
 ```
 :::
 
-## Setting Up Database
+## Setting up database
 
 Then we could prepare database scheme with migrations:
 

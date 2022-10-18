@@ -6,7 +6,7 @@ title: Queries
 
 Querying database using Northle's [Prisma](https://www.prisma.io/docs/concepts/components/prisma-client/crud) service is very easy and handy.
 
-## Getting Started
+## Getting started
 
 To start using database queries, you should inject `DatabaseClient` service:
 
@@ -23,7 +23,7 @@ export class PostController {
 ```
 :::
 
-## Select Queries
+## Select queries
 
 The most common type of database queries is the `select` query. You can select data from your table using `user` object and the `findUnique` method:
 
@@ -64,7 +64,7 @@ const user = await this.db.user.findUnique({
 ```
 :::
 
-## Creating Records
+## Creating records
 
 You can create new records using the `create` method:
 
@@ -80,7 +80,7 @@ const user = await this.db.user.create({
 ```
 :::
 
-## Updating Records
+## Updating records
 
 Updating records is easy:
 
@@ -97,7 +97,7 @@ await this.db.user.update({
 ```
 :::
 
-## Deleting Records
+## Deleting records
 
 Use `delete` or `deleteMany` method to delete records:
 

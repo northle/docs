@@ -19,7 +19,7 @@ MAIL_PASSWORD=
 ```
 :::
 
-## Sending Emails
+## Sending emails
 
 First, we need to inject mailer to the controller or service:
 

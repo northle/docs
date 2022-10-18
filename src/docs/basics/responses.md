@@ -8,7 +8,7 @@ Northle provides a fluent API for dealing with server responses. The framework p
 
 ![Request Lifecycle](./assets/http-lifecycle.png)
 
-## Response Objects
+## Response objects
 
 To start using response API, inject the `Response` service by type-hinting it:
 
@@ -23,7 +23,7 @@ class PostController {
 ```
 :::
 
-## Basic Responses
+## Basic responses
 
 Northle automatically converts string data into HTML responses:
 
@@ -60,7 +60,7 @@ import { redirect } from '@northle/core';
 return redirect('/login');
 ```
 
-### Redirect To Previous Location
+### Redirect to previous location
 
 You could also redirect back to the previous location:
 
@@ -68,7 +68,7 @@ You could also redirect back to the previous location:
 this.response.redirectBack();
 ```
 
-### Redirect With Variables
+### Redirect with variables
 
 You may additionally attach some data to the redirect:
 
@@ -78,7 +78,7 @@ return this.response.redirect('/login', {
 });
 ```
 
-### Redirect Status
+### Redirect status
 
 In order to set HTTP status code, pass it as the last parameter:
 
@@ -88,7 +88,7 @@ import { StatusCode } from '@northle/core';
 return this.response.redirect('/login', {}, StatusCode.Found);  // HTTP 302
 ```
 
-### Permanent Redirects
+### Permanent redirects
 
 Northle gives you the ability to define routes redirecting from its URL to another using `@Redirect` decorator:
 
@@ -123,7 +123,7 @@ To send cookies to the browser, use the `cookie` method:
 this.response.cookie('some-cookie', value);
 ```
 
-## Rendering Views
+## Rendering views
 
 In order to render a view, use the `view` function returning a `ViewResponse` instance:
 
@@ -133,7 +133,7 @@ import { view } from '@northle/core';
 return view('pages/dashboard');
 ```
 
-## JSON Responses
+## JSON responses
 
 Although Northle automatically sets appropriate headers and response types based on returned data, sometimes you may want to explicitly define JSON reponse types.
 
@@ -149,7 +149,7 @@ import { json } from '@northle/core';
 return json({ data: users });
 ```
 
-## File Downloads
+## File downloads
 
 To send files to the client, use the `download` function returning a `DownloadResponse` instance:
 
@@ -159,7 +159,7 @@ import { download } from '@northle/core';
 return download(path);
 ```
 
-## Status Codes
+## Status codes
 
 Sometimes you may want to set response HTTP code, for example - `204 No Content` which indicates that data has been processed and there's no response body.
 

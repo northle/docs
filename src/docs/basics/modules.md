@@ -8,7 +8,7 @@ The most basic piece of Northle application are modules. Module is a simple clas
 
 ![Modules Scheme](./assets/modules.png)
 
-## Module Structure
+## Module structure
 
 Each module has a similar structure:
 
@@ -58,7 +58,7 @@ export class ChatModule {}
 ```
 :::
 
-## Module Registration
+## Module registration
 
 Every module should be registered in the `src/main.ts` file like so:
 

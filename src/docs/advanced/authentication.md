@@ -6,7 +6,7 @@ title: Authentication
 
 Nowadays, many applications let their users to authenticate and log in using password. Building the auth system from scratch may be complex and risky. That's why Northle provides a robust, built-in auth system.
 
-## Getting Started
+## Getting started
 
 To start using auth system you need to inject the `Authenticator` service:
 
@@ -39,7 +39,7 @@ The `password` column should contain [hashed](/docs/advanced/encryption-and-hash
 
 Do not forget to run `npm run db:migrate` command.
 
-## Logging In
+## Logging in
 
 In order to log the user in, use the `login` method with provided e-mail and password sent by the client:
 
@@ -59,7 +59,7 @@ return redirectBack({
 ```
 :::
 
-## Logging Out
+## Logging out
 
 To log user out, you need to call `logout` method:
 
@@ -67,7 +67,7 @@ To log user out, you need to call `logout` method:
 this.authenticator.logout();
 ```
 
-## Determining If User Is Authenticated
+## Determining if user is authenticated
 
 To determine if a client is the authenticated user, you may use the `check` method:
 

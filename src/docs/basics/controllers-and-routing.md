@@ -38,7 +38,7 @@ export class AppController {
 
 Controller methods should always return some value. Northle automatically sends proper headers based on returned data. In case of object or array, the response has the JSON type. When returned value is text or a view object, it will be rendered as HTML.
 
-### Registering Controllers
+### Registering controllers
 
 The place where every controller is registered is a [module](/docs/basics/modules). Every time you create a new controller manually, you need to import it into a module:
 
@@ -106,7 +106,7 @@ class AppController {
 Controller methods should be as short as possible - they are only responsible for handling web requests and returning a response. For more logic you can familiarize yourself with service classes.
 :::
 
-### URL Patterns
+### URL patterns
 
 Routes in Northle are dynamic. That means you can use the `:param` syntax to declare a variable URL that accepts multiple values:
 
@@ -115,7 +115,7 @@ Routes in Northle are dynamic. That means you can use the `:param` syntax to dec
 @Route.Get('/users/:name')
 ```
 
-### Optional Parameters
+### Optional parameters
 
 To make a paramater optional, use the question mark. The following route will match both `/users` and `/users/luke_skywalker` paths:
 
@@ -123,7 +123,7 @@ To make a paramater optional, use the question mark. The following route will ma
 @Route.Get('/users/:name?')
 ```
 
-### Regular Expressions
+### Regular expressions
 
 You can also define a `RegExp` pattern for route parameters:
 
@@ -135,7 +135,7 @@ You can also define a `RegExp` pattern for route parameters:
 @Route.Get('/users/:id(^\\d{3}-\\d{3})')
 ```
 
-## Response Types
+## Response types
 
 Northle automatically discovers response type based on the returned value from the controller.
 

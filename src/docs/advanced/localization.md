@@ -6,7 +6,7 @@ title: Localization
 
 Web applications are often multi-language. Northle has many built-in localization features so you can easly support multiple languages without any additional libraries.
 
-## Setting App Locale
+## Setting app locale
 
 You can set the default app locale in `src/main.ts` file:
 
@@ -73,7 +73,7 @@ const message = trans('Hello World');
 ```
 :::
 
-## View Translations
+## View translations
 
 You can also display translated text directly in view templates using `trans` function:
 

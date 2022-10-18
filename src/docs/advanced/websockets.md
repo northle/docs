@@ -6,7 +6,7 @@ title: Websockets
 
 Modern applications often need an established two-way server connection for receiving real-time data. The best option for that purpose is using Websocket connection. Northle provides a powerful channel API for dealing with websockets.
 
-## Broadcasting Channels
+## Broadcasting channels
 
 First though, you should be introduced to a concept of broadcasting channels. Channel is a single class used for transmitting events with authorization logic.
 
@@ -25,7 +25,7 @@ export class ChatChannel implements Authorizer {
 
 String argument passed to decorator is channel name with dynamic parameter. The `passesUser` method is used to determine whether authenticated user is authorized to join the channel on the client side.
 
-## Emitting Events on Server
+## Emitting events on server
 
 Emitting events on the server side can be done using `Broadcaster` service:
 
@@ -46,7 +46,7 @@ To emit events with some payload use `emit` method:
 this.broadcaster.emit('message', `chat/${chatId}`);
 ```
 
-## Creating Chat App
+## Creating chat app
 
 We can create an example chat app. Let's define some routes:
 
@@ -73,7 +73,7 @@ export class ChatController {
 ```
 :::
 
-## Receiving Events in Browser
+## Receiving events in browser
 
 Now we are able to receive broadcasts on the client side using [socket.io](https://socket.io) library. The example implementation you can see below:
 

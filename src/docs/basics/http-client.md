@@ -8,7 +8,7 @@ Web applications often need to fetch some data by HTTP requests. Northle ships w
 
 ![HTTP Client Scheme](./assets/http-client.png)
 
-## Get Started
+## Get started
 
 To get started with the client, import and inject `HttpClient` service to the controller or other service:
 
@@ -23,7 +23,7 @@ export class MovieController {
 ```
 :::
 
-## Making Requests
+## Making requests
 
 To fetch some data from an endpoint use one of available HTTP methods (`get`, `patch`, `post`, `put`, `options`, `trace`, `head`, and `delete`):
 

@@ -8,7 +8,7 @@ Your app probably need some kind of form request data validation. Northle ships 
 
 ![Validation Scheme](./assets/validation.png)
 
-## Getting Started
+## Getting started
 
 To be able to validate request, inject the `Validator` service into controller:
 
@@ -28,7 +28,7 @@ export class UserController {
 ```
 :::
 
-## Validation Data
+## Validation data
 
 In order to check if request input data is valid, invoke the `assert` method. Example validation may look like this:
 
@@ -51,7 +51,7 @@ this.validator.assert({
 
 If any of declared rules is not satisfied, Northle will not pass the request and `400 Bad Request` status code will be sent back along with error messages.
 
-## Available Rules
+## Available rules
 
 Below you have listed all available validator rules:
 

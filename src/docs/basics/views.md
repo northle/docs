@@ -26,7 +26,7 @@ An example view template may look like this:
 ```
 :::
 
-## Rendering a View
+## Rendering a view
 
 To render a view use `render` function. The type returned from this function is `ViewResponse`.
 
@@ -55,7 +55,7 @@ Then in template:
 View variables are automatically escaped from HTML to prevent XSS attacks.
 :::
 
-### Displaying Brackets
+### Displaying brackets
 
 Some frontend frameworks like [Vue](https://vuejs.org) use the same bracket syntax for displaying data. To display double bracket signs put `@` inside the expression:
 
@@ -121,7 +121,7 @@ Northle lets you to iterate through objects as well:
 [/each]
 ```
 
-#### Additional Variables
+#### Additional variables
 
 The `[each]` directive exposes several additional variables you can use:
 
@@ -264,7 +264,7 @@ Northle exposes few global constants you can use in your views:
 <h1>This app is running on Northle v{{ VERSION }}</h1>
 ```
 
-## Custom Error Pages
+## Custom error pages
 
 You can also customize default error pages like `404 Not Found` or `500 Internal Server Error`.
 

@@ -8,7 +8,7 @@ Northle provides a fluent API for dealing with web requests. The framework provi
 
 ![Request Lifecycle](./assets/http-lifecycle.png)
 
-## Request Objects
+## Request objects
 
 To start using response API, inject the `Request` service by type-hinting it:
 
@@ -23,7 +23,7 @@ class PostController {
 ```
 ::
 
-## Request Methods
+## Request methods
 
 Northle supports all available HTTP verbs for handling web requests along with [WebDAV](https://www.ibm.com/docs/en/i/7.1?topic=concepts-webdav) methods.
 
@@ -45,7 +45,7 @@ Northle supports all available HTTP verbs for handling web requests along with [
 | TRACE         | Perform a trace call          |
 | UNLOCK        | Unlock the resource           |
 
-## Route Parameters
+## Route parameters
 
 To get matched route URL parameters, use `request.params` property:
 
@@ -79,7 +79,7 @@ class PostController {
 ```
 :::
 
-## Query String Params
+## Query string params
 
 In order to get URL query string entries, use the `request.query` property:
 
@@ -104,7 +104,7 @@ To read cookies sent by the user, use the `request.cookies` property:
 const { darkMode } = this.request.cookies;
 ```
 
-## Form Input Data
+## Form input data
 
 To retrieve and process incoming form data, use the `request.data` property:
 
@@ -125,7 +125,7 @@ class UserController {
 ```
 :::
 
-## Detecting AJAX Requests
+## Detecting AJAX requests
 
 You may check if request was made by AJAX (AJAX requests should have set `x-requested-with` header with `XMLHttpRequest` value):
 
@@ -146,7 +146,7 @@ const locale = this.request.locale();
 
 Read more about [localization](/docs/advanced/localization) and language features.
 
-## Method Spoofing
+## Method spoofing
 
 When you're building a RESTful API, you may encounter a problem - HTML forms don't support HTTP methods other than `GET` and `POST`.
 
