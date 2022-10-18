@@ -1,8 +1,8 @@
 ---
-title: Controllers and Routing
+title: Controllers and Routes
 ---
 
-# Controllers and Routing
+# Controllers and Routes
 
 Typically, web applications are based on route mappings. Route, or  an endpoint is an URL with assigned function called when user asks for the URL.
 

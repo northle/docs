@@ -88,8 +88,8 @@ export default {
             link: '/docs/basics/modules',
           },
           {
-            text: 'Controllers and Routing',
-            link: '/docs/basics/controllers-and-routing',
+            text: 'Controllers and Routes',
+            link: '/docs/basics/controllers-and-routes',
           },
           {
             text: 'Requests',
