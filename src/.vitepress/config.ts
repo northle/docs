@@ -192,8 +192,8 @@ export default {
         text: 'More',
         items: [
           {
-            text: 'Style Guide',
-            link: '/docs/more/style-guide',
+            text: 'Best Practices',
+            link: '/docs/more/best-practices',
           },
           {
             text: 'Deployment',

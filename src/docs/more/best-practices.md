@@ -1,12 +1,20 @@
 ---
-title: Style Guide
+title: Best Practices
 ---
 
-# Style Guide
+# Best Practices
 
-Northle comes with some common rules for writing and organising code. We encourage you to follow our conventions if you find them suitable.
+Northle comes with some common rules and practices for writing and organising code. We encourage you to follow our conventions if you find them suitable.
 
-## Naming
+## Security
+
+- Use the latest version of Northle
+- Do not modify framework's source code
+- Always protect your apps from [CSRF attacks](/docs/advanced/csrf-protection)
+
+## Naming conventions
+
+We prefer the following rules for naming things:
 
 | Kind             | Convention                           | Example               |
 | ---------------- | ------------------------------------ | --------------------- |
