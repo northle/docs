@@ -182,6 +182,10 @@ export default {
             text: 'Creating Todos',
             link: '/docs/crud-tutorial/creating-todos',
           },
+          {
+            text: 'Reading Todos',
+            link: '/docs/crud-tutorial/reading-todos',
+          },
         ],
       },
       {

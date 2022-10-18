@@ -69,7 +69,7 @@ export class TodoController {
 The form in `src/todos/views/create.html` will be very simple for now:
 
 ::: code src/todos/views/create.html
-```html
+```svelte
 ...
 
 <form action="/todos" method="post">
