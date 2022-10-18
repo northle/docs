@@ -48,7 +48,7 @@ export class TodoController {
 
 You can test the route sending a `POST` request with `title` and `content` fields. If everything is correctly set up, you should see a new record in database.
 
-## Todo Creating View
+## Todo Form View
 
 Finally we can add `GET /todos/create` route which will render a view with a form for adding new items:
 
