@@ -40,7 +40,7 @@ export default {
       },
       {
         text: 'GitHub',
-        link: 'https://github.com/northle/project-template',
+        link: 'https://github.com/northle',
       },
       {
         text: 'More',
@@ -55,7 +55,7 @@ export default {
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/northle/project-template',
+        link: 'https://github.com/northle',
       },
     ],
     sidebar: [
