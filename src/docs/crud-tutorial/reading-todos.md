@@ -20,7 +20,7 @@ export class TodoController {
   public async index() {
     const todos = await this.db.todo.findMany();
 
-    return view('./views/index.html', {
+    return view('./views/index', {
       todos,
     });
   }
