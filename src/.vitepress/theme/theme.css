@@ -14,6 +14,7 @@
   --vp-code-line-highlight-color: #29303b;
   --vp-custom-block-info-bg: rgba(162, 191, 224, 0.164);
   --vp-custom-block-info-border: rgba(178, 194, 212, 0.199);
+  --vp-custom-block-tip-code-bg: #d4efff;
   --vp-custom-block-tip-border: #e8f6ff;
   --vp-custom-block-tip-bg: #e8f6ff;
   --vp-custom-block-tip-text: #0a92e0;
@@ -45,6 +46,7 @@
   --vp-code-line-highlight-color: #1d232c;
   --vp-custom-block-info-bg: rgba(114, 131, 151, 0.158);
   --vp-custom-block-info-border: rgba(114, 131, 151, 0.103);
+  --vp-custom-block-tip-code-bg: rgb(0, 72, 112, 0.25);
   --vp-custom-block-tip-border: #002c44;
   --vp-custom-block-tip-bg: rgb(0, 72, 112, 0.25);
   --vp-custom-block-tip-text: #9ddbff;
@@ -144,6 +146,10 @@
 
 .VPNavBarTitle {
   background: transparent !important;
+}
+
+.custom-block {
+  border-radius: 10px;
 }
 
 .custom-block.details {
