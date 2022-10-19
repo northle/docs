@@ -42,7 +42,7 @@ $ yarn start
 ```
 :::
 
-::: tip
+::: tip INFO
 If you're using Northle with a frontend framework template, you can run `npm run start:vite` instead for automatic asset compilation.
 
 ::: details Using PNPM or Yarn
