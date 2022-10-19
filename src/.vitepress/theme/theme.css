@@ -232,6 +232,10 @@
 
 .VPNavBarMenuLink.active {
   font-weight: 600;
+  background: var(--vp-c-bg-mute);
+  height: 38px;
+  border-radius: 8px;
+  align-self: center;
 }
 
 .VPButton {
