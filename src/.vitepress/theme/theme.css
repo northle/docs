@@ -89,14 +89,15 @@
   background: #38bdf8;
 }
 
+.VPNav,
 .VPNavBar.has-sidebar .content {
-  background: rgba(255, 255, 255, 0.85) !important;
+  background: #fff !important;
 }
 
 .dark .VPNav,
 .dark .VPNav.no-sidebar,
 .dark .VPNavBar.has-sidebar .content {
-  background: rgba(25, 30, 39, 0.7) !important;
+  background: #171c24 !important;
 }
 
 .vp-doc div[class*='language-'] {
@@ -106,7 +107,7 @@
 .dark .VPSidebar,
 .dark .vp-doc div[class*='language-'],
 .dark .snippet-file {
-  background: #161b22;
+  background: #14181f;
 }
 
 .dark .vp-doc [class*='language-'] > button.copy {
@@ -232,10 +233,14 @@
 
 .VPNavBarMenuLink.active {
   font-weight: 600;
-  background: var(--vp-c-bg-mute);
+  background: var(--vp-c-bg-soft);
   height: 38px;
   border-radius: 8px;
   align-self: center;
+}
+
+.dark .VPNavBarMenuLink.active {
+  background: var(--vp-c-bg-mute);
 }
 
 .VPButton {
@@ -323,6 +328,14 @@
 
 .vp-doc [class*='language-'] > span.lang {
   display: none;
+}
+
+.pager-link {
+  border-radius: 10px !important;
+}
+
+.pager-link:hover .title {
+  color: var(--vp-c-brand) !important;
 }
 
 @media (min-width: 2000px) {
