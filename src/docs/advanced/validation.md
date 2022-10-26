@@ -13,14 +13,14 @@ Your app probably need some kind of form request data validation. Northle ships 
 To be able to validate request, inject the `Validator` service into controller:
 
 ::: code src/users/user.controller.ts
-```ts{1,7}
-import { Request, Validator } from '@northle/core';
+```ts
+import { Request, Validator } from '@northle/core'; // [!code ++]
 
 @Controller()
 export class UserController {
   constructor(
     private request: Request,
-    private validator: Validator,
+    private validator: Validator, // [!code ++]
   ) {}
 
   // ...

@@ -30,12 +30,12 @@ String argument passed to decorator is channel name with dynamic parameter. The 
 Emitting events on the server side can be done using `Broadcaster` service:
 
 ::: code src/chat/chat.controller.ts
-```ts{1,5}
-import { Controller, Broadcaster } from '@northle/core';
+```ts
+import { Controller, Broadcaster } from '@northle/core'; // [!code ++]
 
 @Controller()
 export class ChatController {
-  constructor(private broadcaster: Broadcaster) {}
+  constructor(private broadcaster: Broadcaster) {} // [!code ++]
 }
 ```
 :::

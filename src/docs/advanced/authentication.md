@@ -11,12 +11,12 @@ Nowadays, many applications let their users to authenticate and log in using pas
 To start using auth system you need to inject the `Authenticator` service:
 
 ::: code src/users/user.controller.ts
-```ts{1,5}
-import { Authenticator } from '@northle/core';
+```ts
+import { Authenticator } from '@northle/core'; // [!code ++]
 
 @Controller()
 export class UserController {
-  constructor(private authenticator: Authenticator) {}
+  constructor(private authenticator: Authenticator) {} // [!code ++]
 }
 ```
 :::

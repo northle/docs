@@ -30,10 +30,12 @@ An example view template may look like this:
 
 To render a view use `render` function. The type returned from this function is `ViewResponse`.
 
+::: code src/auth/auth.controller.ts
 ```ts
-// Render the `src/app/views/login.html` template
+// Render the `src/auth/views/login.html` template
 return view('./views/login');
 ```
+:::
 
 ## Variables
 

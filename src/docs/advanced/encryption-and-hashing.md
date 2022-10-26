@@ -26,13 +26,13 @@ $ yarn key:generate
 To get started with encryption, you should inject `Encrypter` service:
 
 ::: code src/users/user.controller.ts
-```ts{1,6}
-import { Encrypter } from '@northle/core';
+```ts
+import { Encrypter } from '@northle/core'; // [!code ++]
 
 @Controller()
 export class UserController {
   constructor(
-    private encrypter: Encrypter,
+    private encrypter: Encrypter, // [!code ++]
     private request: Request,
   ) {}
 
@@ -46,7 +46,7 @@ export class UserController {
 To encrypt a string, use the `encrypt` method:
 
 ::: code src/users/user.service.ts
-```ts{8}
+```ts{6}
 @Service()
 export class UserService {
   public encryptUsername(): string {

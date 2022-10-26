@@ -29,7 +29,7 @@ To add the token field to your template, just use the `[token]` directive:
 ::: code src/posts/views/upload.html
 ```html
 <form action="..." method="post">
-  [token]
+  [token] // [!code ++]
 
   ...
 </form>
