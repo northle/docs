@@ -25,19 +25,21 @@ export class PostModule {}
 ```
 :::
 
-### `imports`
+### Imports
 
-The `imports` field declares other modules that are included.
+The `imports` field imports other modules into current one.
 
-### `controllers`
+### Controllers
 
-The `controllers` field defines a list of HTTP [controllers](/docs/basics/controllers-and-routing) associated with the module. This is required for proper route registering.
+The `controllers` field defines a list of [controllers](/docs/basics/controllers-and-routing) associated with the module. This is required for proper route registering.
 
-### `socketChannels`
+### Socket channels
 
 Likewise, the `socketChannels` array declares websocket [channels](/docs/advanced/websockets).
 
-Therefore, every time you create new controller or socket channel, you have to import and declare these classes in the proper field, for example:
+### Importing controllers and channels
+
+Every time you create new controller or a socket channel, you have to import and declare these classes in the proper field, for example:
 
 ::: code src/chat/chat.module.ts
 ```ts
