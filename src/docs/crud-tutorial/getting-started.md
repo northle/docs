@@ -24,10 +24,13 @@ The directory structure will look like this:
 
 ```
 /src
-  /modules
-    /todos
-      todo.controller.ts
-      todo.module.ts
+|_ /todos
+  |_ /views
+    |_ create.html
+    |_ index.html
+  |_ todo.controller.ts
+  |_ todo.module.ts
+|_ main.ts
 ```
 
 ## The plan
@@ -60,13 +63,13 @@ export class TodoController {
 We have to register this controller in `src/todos/todo.module.ts` file:
 
 ::: code src/todos/todo.module.ts
-```ts{2,6}
+```ts
 import { Module } from '@northle/core';
-import { TodoController } from './todo.controller';
+import { TodoController } from './todo.controller'; // [!code ++]
 
 @Module({
   controllers: [
-    TodoController,
+    TodoController, // [!code ++]
   ],
   channels: [],
 })
@@ -79,14 +82,14 @@ export class TodoModule {
 Then add `TodoModule` in `src/main.ts` file:
 
 ::: code src/main.ts
-```ts{2,7}
+```ts
 // ...
-import { TodoModule } from './todos/todo.module';
+import { TodoModule } from './todos/todo.module'; // [!code ++]
 
 const server = await createServer({
   // ...
   modules: [
-    TodoModule,
+    TodoModule, // [!code ++]
   ],
 });
 ```
@@ -97,7 +100,7 @@ const server = await createServer({
 Then we could prepare database scheme with migrations:
 
 ::: code database/schema.prisma
-```prisma{10-16}
+```prisma
 datasource db {
   url      = env("DATABASE_URL")
   provider = "mysql"
@@ -107,13 +110,13 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Todo {
-  id        Int      @id @default(autoincrement())
-  title     String
-  content   String   @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
+model Todo { // [!code ++]
+  id        Int      @id @default(autoincrement()) // [!code ++]
+  title     String // [!code ++]
+  content   String   @unique // [!code ++]
+  createdAt DateTime @default(now()) // [!code ++]
+  updatedAt DateTime @updatedAt // [!code ++]
+} // [!code ++]
 ```
 :::
 

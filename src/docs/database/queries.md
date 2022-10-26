@@ -11,12 +11,12 @@ Querying database using Northle's [Prisma](https://www.prisma.io/docs/concepts/c
 To start using database queries, you should inject `DatabaseClient` service:
 
 ::: code src/posts/post.controller.ts
-```ts{1,5}
-import { DatabaseClient } from '@northle/core';
+```ts
+import { DatabaseClient } from '@northle/core'; // [!code ++]
 
 @Controller()
 export class PostController {
-  constructor(private db: DatabaseClient) {}
+  constructor(private db: DatabaseClient) {} // [!code ++]
 
   // ...
 }
@@ -51,15 +51,15 @@ The result will look like this:
 You can specify what columns you want to receive with `select` object:
 
 ::: code src/posts/post.controller.ts
-```ts{5-8}
+```ts
 const user = await this.db.user.findUnique({
   where: {
     id: 1,
   },
-  select: {
-    name: true,
-    email: true,
-  },
+  select: { // [!code ++]
+    name: true, // [!code ++]
+    email: true, // [!code ++]
+  }, // [!code ++]
 });
 ```
 :::
@@ -167,15 +167,15 @@ model User {
 To return related records, you can write:
 
 ::: code src/posts/post.controller.ts
-```ts{4-8}
+```ts
 const users = await this.db.user.findMany({
   select: {
     name: true,
-    posts: {
-      select: {
-        title: true,
-      },
-    },
+    posts: { // [!code ++]
+      select: { // [!code ++]
+        title: true, // [!code ++]
+      }, // [!code ++]
+    }, // [!code ++]
   },
 });
 ```

@@ -11,12 +11,12 @@ Now we are ready to start building our application. Let's begin with giving user
 At the beginning, inject `DatabaseClient` to the controller:
 
 ::: code src/todos/todo.controller.ts
-```ts{1,5}
-import { DatabaseClient, Request } from '@northle/core';
+```ts
+import { DatabaseClient, Request } from '@northle/core'; // [!code ++]
 
 @Controller()
 export class TodoController {
-  constructor(private db: DatabaseClient, private request: Request) {}
+  constructor(private db: DatabaseClient, private request: Request) {} // [!code ++]
 }
 ```
 :::
