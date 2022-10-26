@@ -231,6 +231,10 @@
   padding: 3px 0;
 }
 
+.vp-doc [class*='language-'] code .diff::before {
+  left: 0.6rem;
+}
+
 .VPNavBarMenuLink.active {
   font-weight: 600;
   background: var(--vp-c-bg-soft);
