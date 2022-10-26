@@ -22,7 +22,7 @@ In the example above, when the form is submitted, authenticated user publishes a
 
 ## Token protection
 
-To prevent CSRF attacks, Northle generates a unique token for every user session to protect your application. Anytime you define forms with method other than `GET` and `HEAD`, you have to add a hidden field containing generated token. Otherwise, you won't be able to pass the form and you will get `419 Invalid Token` error.
+To prevent CSRF attacks, Northle generates a unique token for every user session to protect your application. Anytime you define forms with method other than `GET` and `HEAD`, you have to add a hidden field containing generated token. Otherwise, you won't be able to pass the form and you will get `419 Token Expired` error.
 
 To add the token field to your template, just use the `[token]` directive:
 
