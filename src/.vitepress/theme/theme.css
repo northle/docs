@@ -334,12 +334,25 @@
   display: none;
 }
 
+.prev-next {
+  border: none !important;
+}
+
 .pager-link {
   border-radius: 10px !important;
+  background: var(--vp-c-bg-soft);
+}
+
+.pager-link:not(:hover) {
+  border-color: transparent;
 }
 
 .pager-link:hover .title {
   color: var(--vp-c-brand) !important;
+}
+
+.pager-link .desc {
+  margin-bottom: 4px;
 }
 
 @media (min-width: 2000px) {
