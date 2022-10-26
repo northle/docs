@@ -60,7 +60,7 @@ Developers often use version control systems like Git to work in teams. You shou
 Any other, app-specific configuration is passed into the `createServer` function in `src/main.ts` file. The configuration looks like this by default:
 
 ::: code src/main.ts
-```ts{4-9}
+```ts{4-12}
 import { createServer } from '@northle/core';
 import { AppModule } from './app/app.module';
 

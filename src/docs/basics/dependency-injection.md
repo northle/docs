@@ -12,9 +12,9 @@ In order to use dependency injection, all you need to do is type-hinting the con
 
 ::: code src/posts/post.service.ts
 ```ts
-import { Service } from '@northle/core';
+import { Service } from '@northle/core'; // [!code ++]
 
-@Service()
+@Service() // [!code ++]
 export class PostService {
   // ...
 }
@@ -47,12 +47,12 @@ Alternatively, you may use the `inject` function instead of type-hinting depende
 
 ::: code src/users/user.service.ts
 ```ts
-import { inject, Service } from '@northle/core';
+import { inject, Service } from '@northle/core'; // [!code ++]
 import { PostService } from '../posts/post.service';
 
 @Service()
 export class UserService {
-  private postService = inject(PostService);
+  private postService = inject(PostService); // [!code ++]
 
   // ...
 }

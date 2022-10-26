@@ -13,12 +13,12 @@ Northle provides a fluent API for dealing with server responses. The framework p
 To start using response API, inject the `Response` service by type-hinting it:
 
 ::: code src/posts/post.controller.ts
-```ts{1,5}
-import { Controller, Response } from '@northle/core';
+```ts
+import { Controller, Response } from '@northle/core'; // [!code ++]
 
 @Controller()
 class PostController {
-  constructor(private response: Response) {}
+  constructor(private response: Response) {} // [!code ++]
 }
 ```
 :::
@@ -93,15 +93,15 @@ return this.response.redirect('/login', {}, StatusCode.Found);  // HTTP 302
 Northle gives you the ability to define routes redirecting from its URL to another using `@Redirect` decorator:
 
 ::: code src/app/app.controller.ts
-```ts{1,8}
-import { Controller, Redirect } from '@northle/core';
+```ts
+import { Controller, Redirect } from '@northle/core'; // [!code ++]
 
 @Controller()
 export class AppController {
   // ...
 
   @Route.Get('/some-route')
-  @Redirect('https://another-website')
+  @Redirect('https://another-website') // [!code ++]
   public show() {}
 }
 ```

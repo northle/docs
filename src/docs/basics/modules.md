@@ -40,18 +40,18 @@ Likewise, the `socketChannels` array declares websocket [channels](/docs/advance
 Therefore, every time you create new controller or socket channel, you have to import and declare these classes in the proper field, for example:
 
 ::: code src/chat/chat.module.ts
-```ts{2,3,8,11}
+```ts
 import { Module } from '@northle/core';
-import { ChatController } from './chat.controller';
-import { ChatChannel } from './chat.channel';
+import { ChatController } from './chat.controller'; // [!code ++]
+import { ChatChannel } from './chat.channel'; // [!code ++]
 
 @Module({
   imports: [],
   controllers: [
-    ChatController,
+    ChatController, // [!code ++]
   ],
   socketChannels: [
-    ChatChannel,
+    ChatChannel, // [!code ++]
   ],
 })
 export class ChatModule {}
@@ -63,16 +63,16 @@ export class ChatModule {}
 Every module should be registered in the `src/main.ts` file like so:
 
 ::: code src/main.ts
-```ts{1,2,8,9}
-import { AppModule } from './app/app.module';
-import { ChatModule } from './chat/chat.module';
+```ts
+import { AppModule } from './app/app.module'; // [!code ++]
+import { ChatModule } from './chat/chat.module'; // [!code ++]
 
 const server = await createServer({
   // ...
 
   modules: [
-    AppModule,
-    ChatModule,
+    AppModule, // [!code ++]
+    ChatModule, // [!code ++]
   ],
 });
 ```

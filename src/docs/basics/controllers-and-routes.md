@@ -43,13 +43,13 @@ Controller methods should always return some value. Northle automatically sends 
 The place where every controller is registered is a [module](/docs/basics/modules). Every time you create a new controller manually, you need to import it into a module:
 
 ::: code src/posts/post.module.ts
-```ts{2,6}
+```ts
 import { Module } from '@northle/core';
-import { PostController } from './post.controller';
+import { PostController } from './post.controller'; // [!code ++]
 
 @Module({
   controllers: [
-    PostController,
+    PostController, // [!code ++]
   ],
 })
 export class PostModule {}
@@ -59,15 +59,15 @@ export class PostModule {}
 Then register it in `src/main.ts` file:
 
 ::: code src/main.ts
-```ts{1,8}
-import { PostModule } from './posts/post.module';
+```ts
+import { PostModule } from './posts/post.module'; // [!code ++]
 
 const server = await createServer({
   // ...
 
   modules: [
     AppModule,
-    PostModule,
+    PostModule, // [!code ++]
   ],
 });
 ```

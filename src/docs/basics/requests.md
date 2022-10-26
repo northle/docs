@@ -13,12 +13,12 @@ Northle provides a fluent API for dealing with web requests. The framework provi
 To start using response API, inject the `Request` service by type-hinting it:
 
 ::: code src/posts/post.controller.ts
-```ts{1,5}
-import { Controller, Request } from '@northle/core';
+```ts
+import { Controller, Request } from '@northle/core'; // [!code ++]
 
 @Controller()
 class PostController {
-  constructor(private request: Request) {}
+  constructor(private request: Request) {} // [!code ++]
 }
 ```
 ::

@@ -24,12 +24,12 @@ MAIL_PASSWORD=
 First, we need to inject mailer to the controller or service:
 
 ::: code src/mail/mail.controller.ts
-```ts{1,5}
-import { Mailer } from '@northle/core';
+```ts
+import { Mailer } from '@northle/core'; // [!code ++]
 
 @Controller()
 export class MailController {
-  constructor(private mailer: Mailer) {}
+  constructor(private mailer: Mailer) {} // [!code ++]
 }
 ```
 :::
@@ -37,18 +37,18 @@ export class MailController {
 To send an email, use mailer's `send` method:
 
 ::: code src/mail/mail.controller.ts
-```ts{7-11}
+```ts
 @Controller()
 export class MailController {
   // ...
 
   @Route.Post('/send')
   public async sendEmail() {
-    await this.mailer.send({
-      to: 'recipient@email.com',
-      subject: 'Test email',
-      text: 'This is a test email.',
-    });
+    await this.mailer.send({ // [!code ++]
+      to: 'recipient@email.com', // [!code ++]
+      subject: 'Test email', // [!code ++]
+      text: 'This is a test email.', // [!code ++]
+    }); // [!code ++]
   }
 }
 ```

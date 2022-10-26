@@ -13,12 +13,12 @@ Web applications often need to fetch some data by HTTP requests. Northle ships w
 To get started with the client, import and inject `HttpClient` service to the controller or other service:
 
 ::: code src/movies/movie.controller.ts
-```ts{1,5}
-import { HttpClient } from '@northle/core';
+```ts
+import { HttpClient } from '@northle/core'; // [!code ++]
 
 @Controller()
 export class MovieController {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {} // [!code ++]
 }
 ```
 :::
