@@ -14,7 +14,7 @@ You can set the default app locale in `src/main.ts` file:
 ```ts
 const server = await createServer({
   config: {
-    locale: 'en', // [!code ++]
+    locale: 'en',// [!code ++]
   },
 
   // ...
@@ -26,12 +26,12 @@ To change app locale during the request, use the `Translator` service:
 
 ::: code src/users/user.controller.ts
 ```ts
-import { Translator, Request } from '@northle/core'; // [!code ++]
+import { Translator, Request } from '@northle/core';// [!code ++]
 
 @Controller()
 export class UserController {
   constructor(
-    private translator: Translator, // [!code ++]
+    private translator: Translator,// [!code ++]
     private request: Request,
   ) {}
 

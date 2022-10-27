@@ -12,11 +12,11 @@ At the beginning, inject `DatabaseClient` to the controller:
 
 ::: code src/todos/todo.controller.ts
 ```ts
-import { DatabaseClient, Request } from '@northle/core'; // [!code ++]
+import { DatabaseClient, Request } from '@northle/core';// [!code ++]
 
 @Controller()
 export class TodoController {
-  constructor(private db: DatabaseClient, private request: Request) {} // [!code ++]
+  constructor(private db: DatabaseClient, private request: Request) {}// [!code ++]
 }
 ```
 :::

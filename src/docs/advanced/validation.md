@@ -14,13 +14,13 @@ To be able to validate request, inject the `Validator` service into controller:
 
 ::: code src/users/user.controller.ts
 ```ts
-import { Request, Validator } from '@northle/core'; // [!code ++]
+import { Request, Validator } from '@northle/core';// [!code ++]
 
 @Controller()
 export class UserController {
   constructor(
     private request: Request,
-    private validator: Validator, // [!code ++]
+    private validator: Validator,// [!code ++]
   ) {}
 
   // ...

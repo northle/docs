@@ -65,11 +65,11 @@ We have to register this controller in `src/todos/todo.module.ts` file:
 ::: code src/todos/todo.module.ts
 ```ts
 import { Module } from '@northle/core';
-import { TodoController } from './todo.controller'; // [!code ++]
+import { TodoController } from './todo.controller';// [!code ++]
 
 @Module({
   controllers: [
-    TodoController, // [!code ++]
+    TodoController,// [!code ++]
   ],
   channels: [],
 })
@@ -84,12 +84,12 @@ Then add `TodoModule` in `src/main.ts` file:
 ::: code src/main.ts
 ```ts
 // ...
-import { TodoModule } from './todos/todo.module'; // [!code ++]
+import { TodoModule } from './todos/todo.module';// [!code ++]
 
 const server = await createServer({
   // ...
   modules: [
-    TodoModule, // [!code ++]
+    TodoModule,// [!code ++]
   ],
 });
 ```
@@ -110,13 +110,13 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Todo { // [!code ++]
-  id        Int      @id @default(autoincrement()) // [!code ++]
-  title     String // [!code ++]
-  content   String   @unique // [!code ++]
-  createdAt DateTime @default(now()) // [!code ++]
-  updatedAt DateTime @updatedAt // [!code ++]
-} // [!code ++]
+model Todo {// [!code ++]
+  id        Int      @id @default(autoincrement())// [!code ++]
+  title     String// [!code ++]
+  content   String   @unique// [!code ++]
+  createdAt DateTime @default(now())// [!code ++]
+  updatedAt DateTime @updatedAt// [!code ++]
+}// [!code ++]
 ```
 :::
 

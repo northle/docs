@@ -25,11 +25,11 @@ First, we need to inject mailer to the controller or service:
 
 ::: code src/mail/mail.controller.ts
 ```ts
-import { Mailer } from '@northle/core'; // [!code ++]
+import { Mailer } from '@northle/core';// [!code ++]
 
 @Controller()
 export class MailController {
-  constructor(private mailer: Mailer) {} // [!code ++]
+  constructor(private mailer: Mailer) {}// [!code ++]
 }
 ```
 :::
@@ -44,11 +44,11 @@ export class MailController {
 
   @Route.Post('/send')
   public async sendEmail() {
-    await this.mailer.send({ // [!code ++]
-      to: 'recipient@email.com', // [!code ++]
-      subject: 'Test email', // [!code ++]
-      text: 'This is a test email.', // [!code ++]
-    }); // [!code ++]
+    await this.mailer.send({// [!code ++]
+      to: 'recipient@email.com',// [!code ++]
+      subject: 'Test email',// [!code ++]
+      text: 'This is a test email.',// [!code ++]
+    });// [!code ++]
   }
 }
 ```

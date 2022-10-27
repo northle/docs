@@ -12,11 +12,11 @@ To start using database queries, you should inject `DatabaseClient` service:
 
 ::: code src/posts/post.controller.ts
 ```ts
-import { DatabaseClient } from '@northle/core'; // [!code ++]
+import { DatabaseClient } from '@northle/core';// [!code ++]
 
 @Controller()
 export class PostController {
-  constructor(private db: DatabaseClient) {} // [!code ++]
+  constructor(private db: DatabaseClient) {}// [!code ++]
 
   // ...
 }
@@ -56,10 +56,10 @@ const user = await this.db.user.findUnique({
   where: {
     id: 1,
   },
-  select: { // [!code ++]
-    name: true, // [!code ++]
-    email: true, // [!code ++]
-  }, // [!code ++]
+  select: {// [!code ++]
+    name: true,// [!code ++]
+    email: true,// [!code ++]
+  },// [!code ++]
 });
 ```
 :::
@@ -171,11 +171,11 @@ To return related records, you can write:
 const users = await this.db.user.findMany({
   select: {
     name: true,
-    posts: { // [!code ++]
-      select: { // [!code ++]
-        title: true, // [!code ++]
-      }, // [!code ++]
-    }, // [!code ++]
+    posts: {// [!code ++]
+      select: {// [!code ++]
+        title: true,// [!code ++]
+      },// [!code ++]
+    },// [!code ++]
   },
 });
 ```

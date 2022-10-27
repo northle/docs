@@ -14,11 +14,11 @@ To get started with the client, import and inject `HttpClient` service to the co
 
 ::: code src/movies/movie.controller.ts
 ```ts
-import { HttpClient } from '@northle/core'; // [!code ++]
+import { HttpClient } from '@northle/core';// [!code ++]
 
 @Controller()
 export class MovieController {
-  constructor(private http: HttpClient) {} // [!code ++]
+  constructor(private http: HttpClient) {}// [!code ++]
 }
 ```
 :::

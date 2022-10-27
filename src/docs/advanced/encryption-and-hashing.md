@@ -27,12 +27,12 @@ To get started with encryption, you should inject `Encrypter` service:
 
 ::: code src/users/user.controller.ts
 ```ts
-import { Encrypter } from '@northle/core'; // [!code ++]
+import { Encrypter } from '@northle/core';// [!code ++]
 
 @Controller()
 export class UserController {
   constructor(
-    private encrypter: Encrypter, // [!code ++]
+    private encrypter: Encrypter,// [!code ++]
     private request: Request,
   ) {}
 

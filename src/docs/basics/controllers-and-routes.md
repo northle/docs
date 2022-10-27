@@ -45,11 +45,11 @@ The place where every controller is registered is a [module](/docs/basics/module
 ::: code src/posts/post.module.ts
 ```ts
 import { Module } from '@northle/core';
-import { PostController } from './post.controller'; // [!code ++]
+import { PostController } from './post.controller';// [!code ++]
 
 @Module({
   controllers: [
-    PostController, // [!code ++]
+    PostController,// [!code ++]
   ],
 })
 export class PostModule {}
@@ -60,14 +60,14 @@ Then register it in `src/main.ts` file:
 
 ::: code src/main.ts
 ```ts
-import { PostModule } from './posts/post.module'; // [!code ++]
+import { PostModule } from './posts/post.module';// [!code ++]
 
 const server = await createServer({
   // ...
 
   modules: [
     AppModule,
-    PostModule, // [!code ++]
+    PostModule,// [!code ++]
   ],
 });
 ```

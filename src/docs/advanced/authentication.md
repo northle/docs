@@ -12,11 +12,11 @@ To start using auth system you need to inject the `Authenticator` service:
 
 ::: code src/users/user.controller.ts
 ```ts
-import { Authenticator } from '@northle/core'; // [!code ++]
+import { Authenticator } from '@northle/core';// [!code ++]
 
 @Controller()
 export class UserController {
-  constructor(private authenticator: Authenticator) {} // [!code ++]
+  constructor(private authenticator: Authenticator) {}// [!code ++]
 }
 ```
 :::

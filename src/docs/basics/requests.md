@@ -14,11 +14,11 @@ To start using response API, inject the `Request` service by type-hinting it:
 
 ::: code src/posts/post.controller.ts
 ```ts
-import { Controller, Request } from '@northle/core'; // [!code ++]
+import { Controller, Request } from '@northle/core';// [!code ++]
 
 @Controller()
 class PostController {
-  constructor(private request: Request) {} // [!code ++]
+  constructor(private request: Request) {}// [!code ++]
 }
 ```
 ::

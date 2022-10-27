@@ -31,11 +31,11 @@ Emitting events on the server side can be done using `Broadcaster` service:
 
 ::: code src/chat/chat.controller.ts
 ```ts
-import { Controller, Broadcaster } from '@northle/core'; // [!code ++]
+import { Controller, Broadcaster } from '@northle/core';// [!code ++]
 
 @Controller()
 export class ChatController {
-  constructor(private broadcaster: Broadcaster) {} // [!code ++]
+  constructor(private broadcaster: Broadcaster) {}// [!code ++]
 }
 ```
 :::

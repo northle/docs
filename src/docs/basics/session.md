@@ -16,11 +16,11 @@ To start using session just import it and inject from the service container:
 
 ::: code src/users/user.controller.ts
 ```ts
-import { Session } from '@northle/core'; // [!code ++]
+import { Session } from '@northle/core';// [!code ++]
 
 @Controller()
 export class UserController {
-  constructor(private session: Session) {} // [!code ++]
+  constructor(private session: Session) {}// [!code ++]
 }
 ```
 :::

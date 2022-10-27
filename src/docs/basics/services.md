@@ -12,9 +12,9 @@ Service class is just an injectable class with methods are responsible for trans
 
 ::: code src/users/user.service.ts
 ```ts
-import { Service } from '@northle/core'; // [!code ++]
+import { Service } from '@northle/core';// [!code ++]
 
-@Service() // [!code ++]
+@Service()// [!code ++]
 export class UserService {
   public getMessage(): string {
     return 'Hello World!';
@@ -29,11 +29,11 @@ Since the class has been declared as injectable, we can type-hint the controller
 
 ::: code src/users/user.controller.ts
 ```ts{5}
-import { UserService } from './user.service'; // [!code ++]
+import { UserService } from './user.service';// [!code ++]
 
 @Controller()
 export class UserController {
-  constructor(private userService: UserService) {} // [!code ++]
+  constructor(private userService: UserService) {}// [!code ++]
 
   // ...
 }

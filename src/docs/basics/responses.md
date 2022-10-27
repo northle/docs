@@ -14,11 +14,11 @@ To start using response API, inject the `Response` service by type-hinting it:
 
 ::: code src/posts/post.controller.ts
 ```ts
-import { Controller, Response } from '@northle/core'; // [!code ++]
+import { Controller, Response } from '@northle/core';// [!code ++]
 
 @Controller()
 class PostController {
-  constructor(private response: Response) {} // [!code ++]
+  constructor(private response: Response) {}// [!code ++]
 }
 ```
 :::
@@ -94,14 +94,14 @@ Northle gives you the ability to define routes redirecting from its URL to anoth
 
 ::: code src/app/app.controller.ts
 ```ts
-import { Controller, Redirect } from '@northle/core'; // [!code ++]
+import { Controller, Redirect } from '@northle/core';// [!code ++]
 
 @Controller()
 export class AppController {
   // ...
 
   @Route.Get('/some-route')
-  @Redirect('https://another-website') // [!code ++]
+  @Redirect('https://another-website')// [!code ++]
   public show() {}
 }
 ```
