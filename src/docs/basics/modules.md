@@ -60,10 +60,9 @@ export class ChatModule {}
 ```
 :::
 
+## Registering modules
 
-## Module registration
-
-Every module should be registered in the `src/main.ts` file like so:
+Every module should be registered in the `src/main.ts` file in `modules` section like so:
 
 ::: code src/main.ts
 ```ts
