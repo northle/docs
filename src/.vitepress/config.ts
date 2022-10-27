@@ -133,6 +133,10 @@ export default {
             link: '/docs/advanced/authentication',
           },
           {
+            text: 'Authorization',
+            link: '/docs/advanced/authorization',
+          },
+          {
             text: 'Localization',
             link: '/docs/advanced/localization',
           },
