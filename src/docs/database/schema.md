@@ -80,12 +80,18 @@ model Post {
 You can obtain related models as arrays by using `[]` syntax:
 
 ::: code database/schema.prisma
-```prisma{5}
+```prisma
 model User {
   id    Int    @id @default(autoincrement())
   name  String
   email String @unique
-  posts Post[]
+  posts Post[]// [!code ++]
+}
+
+model Post {
+  id       Int  @id @default(autoincrement())
+  author   User @relation(fields: [authorId], references: [id])// [!code ++]
+  authorId Int// [!code ++]
 }
 ```
 :::
@@ -118,9 +124,9 @@ model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId// [!code ++]
 }
 
-model Post {
+model Comment {
   id     String  @id @default(auto()) @map("_id") @db.ObjectId
-  posts  Post[]  @relation(fields: [postId], references: [id])
+  post   Post    @relation(fields: [postId], references: [id])
   postId Int// [!code --]
   postId String? @db.ObjectId// [!code ++]
 }

@@ -151,15 +151,15 @@ When you define schema relationships you can easly obtain related records.
 ```prisma
 model Post {
   id       Int  @id @default(autoincrement())
-  author   User @relation(fields: [authorId], references: [id])
-  authorId Int
+  author   User @relation(fields: [authorId], references: [id])// [!code ++]
+  authorId Int// [!code ++]
 }
 
 model User {
   id    Int     @id @default(autoincrement())
   name  String
   email String  @unique
-  posts Post[]
+  posts Post[]// [!code ++]
 }
 ```
 :::
