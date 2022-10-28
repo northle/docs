@@ -82,9 +82,9 @@ You can obtain related models as arrays by using `[]` syntax:
 ::: code database/schema.prisma
 ```prisma{5}
 model User {
-  id    Int     @id @default(autoincrement())
+  id    Int    @id @default(autoincrement())
   name  String
-  email String  @unique
+  email String @unique
   posts Post[]
 }
 ```
@@ -109,18 +109,20 @@ $ yarn db:migrate
 
 Since MongoDB has a different architecture and is non-relational, the schema definitions differ a bit.
 
+When you're using MongoDB, you should remember that IDs have a `String` type and you have to explicitly map them to `ObjectId` `'_id'`.
+
 ::: code database/schema.prisma
-```prisma{2,8}
+```prisma
 model User {
-  id  String @id @default(auto()) @map("_id") @db.ObjectId
+  id Int    @id @default(autoincrement())// [!code --]
+  id String @id @default(auto()) @map("_id") @db.ObjectId// [!code ++]
 }
 
 model Post {
   id     String  @id @default(auto()) @map("_id") @db.ObjectId
   posts  Post[]  @relation(fields: [postId], references: [id])
-  postId String? @db.ObjectId
+  postId Int// [!code --]
+  postId String? @db.ObjectId// [!code ++]
 }
 ```
 :::
-
-When you're using MongoDB, you should remember that IDs have a `String` type and you have to explicitly map them to `ObjectId` `'_id'`.
