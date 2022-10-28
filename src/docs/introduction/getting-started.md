@@ -4,7 +4,7 @@ title: Getting Started
 
 # Getting Started
 
-In this section you will learn how to a create new Northle app project using NPM command.
+In this section you will learn how to create a new Northle app project using `NPM` command.
 
 ## Requirements
 

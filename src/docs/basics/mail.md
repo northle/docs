@@ -34,7 +34,7 @@ export class MailController {
 ```
 :::
 
-In order to send an email, use thr `send` method:
+In order to send an email, use the `send` method:
 
 ::: code src/mail/mail.controller.ts
 ```ts
