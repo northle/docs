@@ -27,23 +27,23 @@ class PostController {
 
 Northle supports all available HTTP verbs for handling web requests along with [WebDAV](https://www.ibm.com/docs/en/i/7.1?topic=concepts-webdav) methods.
 
-| HTTP Method   | Role                          |
-| ------------- | ----------------------------- |
-| COPY          | Copy the resource             |
-| DELETE        | Delete the resource           |
-| GET           | Get the resource content      |
-| HEAD          | Get request headers           |
-| LOCK          | Lock the resource             |
-| MKCOL         | Create resource collection    |
-| MOVE          | Move the resource             |
-| OPTIONS       | Get server options            |
-| POST          | Post a resource               |
-| PROPFIND      | Find resource property        |
-| PROPPATCH     | Edit resource property        |
-| PATCH         | Update the resource partially |
-| PUT           | Update the resource           |
-| TRACE         | Perform a trace call          |
-| UNLOCK        | Unlock the resource           |
+| HTTP Method | Role                          |
+| ----------- | ----------------------------- |
+| `COPY`      | Copy the resource             |
+| `DELETE`    | Delete the resource           |
+| `GET`       | Get the resource content      |
+| `HEAD`      | Get request headers           |
+| `LOCK`      | Lock the resource             |
+| `MKCOL`     | Create resource collection    |
+| `MOVE`      | Move the resource             |
+| `OPTIONS`   | Get server options            |
+| `POST`      | Post a resource               |
+| `PROPFIND`  | Find resource property        |
+| `PROPPATCH` | Edit resource property        |
+| `PATCH`     | Update the resource partially |
+| `PUT`       | Update the resource           |
+| `TRACE`     | Perform a trace call          |
+| `UNLOCK`    | Unlock the resource           |
 
 ## Route parameters
 
