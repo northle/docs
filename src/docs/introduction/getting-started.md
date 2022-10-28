@@ -4,7 +4,7 @@ title: Getting Started
 
 # Getting Started
 
-In this section you will learn how to create new Northle app project using NPM installer.
+In this section you will learn how to a create new Northle app project using NPM command.
 
 ## Requirements
 
@@ -54,14 +54,14 @@ $ yarn start:vite
 
 ## Basic configuration
 
-If you don't want to open your browser automatically, you can change it in `src/main.ts` file:
+If you don't want to open your browser automatically, you can change the config in the `src/main.ts` file:
 
 ::: code src/main.ts
-```ts{4}
+```ts
 const server = await createServer({
   config: {
     dev: {
-      openBrowser: false,
+      openBrowser: false,// [!code ++]
     },
   },
 });

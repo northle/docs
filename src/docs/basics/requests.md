@@ -21,7 +21,7 @@ class PostController {
   constructor(private request: Request) {}// [!code ++]
 }
 ```
-::
+:::
 
 ## Request methods
 

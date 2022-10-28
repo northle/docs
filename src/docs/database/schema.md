@@ -8,13 +8,26 @@ Northle comes with a robust database client for MySQL, MongoDB, PostgreSQL and m
 
 ## Configuration
 
-All configuration needed for database querying is stored in the `.env` variables:
+The configuration for database services is stored in the `.env` file:
 
 ::: code .env
 ```
+# ...
+
 DATABASE_URL="mysql://root:@localhost/northle"
 ```
 :::
+
+You should adjust the database URL and provide valid credentials. The URL should look like this for following systems:
+
+| System               | URL scheme                                                                         |
+| -------------------- | ---------------------------------------------------------------------------------- |
+| PostgreSQL           | `postgresql://USER:PASSWORD@HOST:PORT/DATABASE`                                    |
+| MySQL                | `mysql://USER:PASSWORD@HOST:PORT/DATABASE`                                         |
+| SQLite               | `file:./FILE_PATH.db`                                                              |
+| MongoDB              | `mongodb://USER:PASSWORD@HOST/DATABASE`                                            |
+| CockroachDB          | `postgresql://USER:PASSWORD@HOST:PORT/DATABASE`                                    |
+| Microsoft SQL Server | `sqlserver://HOST:PORT;database=DATABASE;user=USER;password=PASSWORD;encrypt=true` |
 
 ## Database schema
 
@@ -44,16 +57,9 @@ model User {
 ```
 :::
 
-As you can see, the above schema defines one model `User` which represents a `user` table in database. The `datasource` definition sets up the database system - `mysql` in this case. Available systems are:
+As you can see, the above schema defines one model `User` which represents a `user` table in database. The `datasource` definition sets up the database system - `mysql` in this case. 
 
-- PostgreSQL
-- MySQL
-- SQLite
-- MongoDB
-- CockroachDB
-- Microsoft SQL Server
-
-Every model definition represents a database table and its columns.
+Every model definition represents a database table along with its columns and relationships.
 
 ## Optional fields
 

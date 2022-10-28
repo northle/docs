@@ -8,7 +8,7 @@ Northle provides a fluent interface for sending emails from your application.
 
 ## Configuration
 
-All configuration needed for mailing is stored in the `.env` variables:
+The configuration for mail services is stored in the `.env` variables:
 
 ::: code .env
 ```
@@ -21,7 +21,7 @@ MAIL_PASSWORD=
 
 ## Sending emails
 
-First, we need to inject mailer to the controller or service:
+First, you need to inject `Mailer` to your controller or a service:
 
 ::: code src/mail/mail.controller.ts
 ```ts
@@ -34,7 +34,7 @@ export class MailController {
 ```
 :::
 
-To send an email, use mailer's `send` method:
+In order to send an email, use thr `send` method:
 
 ::: code src/mail/mail.controller.ts
 ```ts

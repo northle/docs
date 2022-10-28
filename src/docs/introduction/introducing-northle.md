@@ -4,7 +4,7 @@ title: Introducing Northle
 
 # Introducing Northle
 
-Northle is a modern, declarative backend development framework for Node.js. It makes it easy to create fast and secure web applications with awesome developer experience.
+Northle (pronounced `/nɑrθl/`) is a modern, declarative backend development framework for Node.js. It makes it easy to create fast and secure web applications with awesome developer experience.
 
 ::: warning
 Northle is currently in `alpha` stage. Altough it is already suitable for creating apps, you may encounter some bugs and API breaking changes. The documentation is not complete yet.

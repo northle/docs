@@ -45,6 +45,14 @@ In order to set temporary data which is deleted when you access it, use the `fla
 this.session.flash('error', 'Invalid e-mail or password');
 ```
 
+You can retrieve flashed data with the `flash` function:
+
+```ts
+import { flash } from '@northle/core';
+
+const error = flash('error');
+```
+
 ## Retrieving data
 
 For obtaining saved session data you have a `session.data` object available:
