@@ -157,6 +157,10 @@ export default {
             link: '/docs/advanced/websockets',
           },
           {
+            text: 'Utilities',
+            link: '/docs/advanced/utilities',
+          },
+          {
             text: 'Testing',
             link: '/docs/advanced/testing',
           },
