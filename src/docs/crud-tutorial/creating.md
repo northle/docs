@@ -1,8 +1,8 @@
 ---
-title: Creating Todos | CRUD Tutorial
+title: Creating | CRUD Tutorial
 ---
 
-# Creating Todos | CRUD Tutorial
+# Creating | CRUD Tutorial
 
 Now we are ready to start building our application. Let's begin with giving users the ability to create new todos.
 

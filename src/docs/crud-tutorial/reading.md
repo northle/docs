@@ -1,8 +1,8 @@
 ---
-title: Reading Todos | CRUD Tutorial
+title: Reading | CRUD Tutorial
 ---
 
-# Reading Todos | CRUD Tutorial
+# Reading | CRUD Tutorial
 
 In the previous chapter we added a functionality to add new todos. Now we are ready to retrieve and show them.
 

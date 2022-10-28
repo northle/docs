@@ -187,12 +187,12 @@ export default {
             link: '/docs/crud-tutorial/getting-started',
           },
           {
-            text: 'Creating Todos',
-            link: '/docs/crud-tutorial/creating-todos',
+            text: 'Creating',
+            link: '/docs/crud-tutorial/creating',
           },
           {
-            text: 'Reading Todos',
-            link: '/docs/crud-tutorial/reading-todos',
+            text: 'Reading',
+            link: '/docs/crud-tutorial/reading',
           },
         ],
       },
