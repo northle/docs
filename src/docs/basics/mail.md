@@ -8,7 +8,7 @@ Northle provides a fluent interface for sending emails from your application.
 
 ## Configuration
 
-The configuration for mail services is stored in the `.env` variables:
+The configuration required by mail service is stored in the `.env` variables:
 
 ::: code .env
 ```

@@ -4,7 +4,7 @@ title: Getting Started
 
 # Getting Started
 
-In this section you will learn how to create a new Northle app project using `NPM` command.
+In this section you will learn how to create a new Northle app project using a single `NPM` command.
 
 ## Requirements
 
@@ -29,7 +29,9 @@ $ yarn create @northle <app-name>
 ```
 :::
 
-When your project is ready you can lauch your app using command:
+The installator will ask you few things at the beginning. You may choose to add a frontend framework like [React](https://reactjs.org), [Vue](https://vuejs.org) or [Svelte](https://svelte.dev) to your app automatically.
+
+When your project is ready you can lauch your app using the following command:
 
 ```shell
 $ npm run start
@@ -54,15 +56,15 @@ $ yarn start:vite
 
 ## Basic configuration
 
-If you don't want to open your browser automatically, you can change the config in the `src/main.ts` file:
+If you don't want to open your browser on server start, you can change this in the `src/main.ts` file config:
 
 ::: code src/main.ts
 ```ts
 const server = await createServer({
   config: {
-    dev: {
+    dev: {// [!code ++]
       openBrowser: false,// [!code ++]
-    },
+    },// [!code ++]
   },
 });
 ```

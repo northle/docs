@@ -4,15 +4,13 @@ title: Session
 
 # Session
 
-Since HTTP protocol is stateless, we cannot share data between requests. On backend there is a term of **session** - a mechanism which can store user information that we can access on multiple requests.
-
-Northle provides a built-in session management system so you don't have to install any additional dependencies.
+Since HTTP protocol is stateless, we cannot simply share data between requests. Using Northle we have a mechanism of **session**. Using session you are able to store user information that we can access and share with multiple requests.
 
 ![Session Scheme](./assets/session.png)
 
 ## Getting started
 
-To start using session just import it and inject from the service container:
+To start using session just import the `Session` service and inject it to the controller or service:
 
 ::: code src/users/user.controller.ts
 ```ts
@@ -29,28 +27,12 @@ Then you'll be able to use the session object in your controller.
 
 ## Storing data
 
-To save a variable to the session, use the `set` method:
+To save a variable to the session, use the `set` method. You only have to provide name for your piece of data and its value:
 
 ```ts
 const user = await this.db.user.findUnique(id);
 
 this.session.set('email', user.email);
-```
-
-## Flash data
-
-In order to set temporary data which is deleted when you access it, use the `flash` method:
-
-```ts
-this.session.flash('error', 'Invalid e-mail or password');
-```
-
-You can retrieve flashed data with the `flash` function:
-
-```ts
-import { flash } from '@northle/core';
-
-const error = flash('error');
 ```
 
 ## Retrieving data
@@ -83,6 +65,22 @@ To remove items from the session, call `delete` method:
 
 ```ts
 this.session.delete('email');
+```
+
+## Flash data
+
+In order to set temporary data which is deleted when you access it, use the `flash` method:
+
+```ts
+this.session.flash('error', 'Invalid e-mail or password');
+```
+
+You can retrieve flashed data with the `flash` function:
+
+```ts
+import { flash } from '@northle/core';
+
+const error = flash('error');
 ```
 
 ## Destroying session

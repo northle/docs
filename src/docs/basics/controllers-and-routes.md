@@ -140,29 +140,29 @@ You can also define a `RegExp` pattern for route parameters:
 Northle automatically discovers response type based on the returned value from the controller.
 
 ```ts
-// JSON response (text/json)
+// JSON response (text/json) MIME type
 return {
   name: 'Bond. James Bond',
 };
 ```
 
 ```ts
-// JSON response (text/json)
+// JSON response (text/json) MIME type
 return [1, 2, 3];
 ```
 
 ```ts
-// HTML response (text/html)
+// HTML response (text/html) MIME type
 return '<h1>Hello World</h1>';
 ```
 
 ```ts
-// HTML response (ViewResponse instance)
+// HTML response
 return view('./views/profile');
 ```
 
 ```ts
-// Redirect response (RedirectResponse instance)
+// Redirect response
 return redirect('/login');
 ```
 
