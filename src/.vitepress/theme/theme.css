@@ -195,12 +195,12 @@
 }
 
 .VPDocAsideOutline .content {
-  border-width: 3px;
+  border-width: 2px;
   padding-left: 18px;
 }
 
 .outline-marker[data-v-3f9b8864] {
-  width: 3px;
+  width: 4px;
   height: 22px;
   left: -3px;
   border-radius: 5px;
@@ -210,11 +210,13 @@
 .outline-title {
   margin-bottom: 4px;
   font-weight: 500 !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
 }
 
 .outline-link {
   font-weight: 400;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
   padding: 2px 0;
   font-size: 14px;
 }
@@ -228,9 +230,8 @@
   padding: 0.5px 0;
 }
 
-.link[data-v-5bf915fe] {
-  transition: transform 0.3s ease;
-  padding: 3px 0;
+.VPSidebarGroup .title-text {
+  font-size: 15px !important;
 }
 
 .vp-doc [class*='language-'] code .diff::before {
@@ -278,6 +279,20 @@
 
 .link[data-v-5f79f6bb] {
   margin: 6px 0;
+}
+
+.nav .link {
+  transition: transform 0.3s ease;
+  padding: 4px 9px !important;
+}
+
+.nav .link.active {
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+}
+
+.dark .nav .link.active {
+  background: var(--vp-c-bg-mute);
 }
 
 .link.active .link-text {
@@ -400,7 +415,7 @@ html:not(.dark) .vp-doc :not(pre) > code {
     padding-top: 20px;
   }
 
-  .link[data-v-5bf915fe]:hover {
+  .nav .link:not(.active):hover {
     transform: translateX(5px);
   }
 }
