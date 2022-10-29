@@ -237,6 +237,10 @@
   left: 0.6rem;
 }
 
+.vp-doc :is(h1, h2) {
+  font-weight: 500;
+}
+
 .VPNavBarMenuLink.active {
   font-weight: 600;
   background: var(--vp-c-bg-soft);
@@ -303,9 +307,15 @@
 
 .vp-doc :not(pre) > code {
   margin: 0 1px;
+  color: var(--vp-c-brand-light);
   padding: 3px 7px;
   border-radius: 6px;
   transition: none;
+}
+
+html:not(.dark) .vp-doc :not(pre) > code {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-brand);
 }
 
 .VPNavScreenAppearance .text {
