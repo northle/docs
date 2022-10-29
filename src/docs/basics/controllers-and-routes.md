@@ -102,7 +102,7 @@ class AppController {
 ```
 :::
 
-::: info NOTE
+::: tip NOTE
 Controller methods should be as short as possible - they are only responsible for handling web requests and returning a response. For more logic you can familiarize yourself with service classes.
 :::
 

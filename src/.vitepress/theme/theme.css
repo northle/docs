@@ -92,6 +92,7 @@
 .VPNav,
 .VPNavBar.has-sidebar .content {
   background: #fff !important;
+  border-bottom: 1px solid var(--vp-c-divider-light);
 }
 
 .dark .VPNav,
@@ -112,6 +113,7 @@
 
 .dark .vp-doc [class*='language-'] > button.copy {
   background-color: transparent;
+  border-radius: 8px;
 }
 
 .snippet-file {
@@ -133,7 +135,7 @@
 }
 
 .snippet-file + [class*='language-'] pre {
-  padding-top: 0;
+  padding-top: 2px;
 }
 
 .snippet-file svg {
@@ -199,18 +201,18 @@
   padding-left: 18px;
 }
 
-.outline-marker[data-v-3f9b8864] {
-  width: 4px;
-  height: 22px;
-  left: -3px;
-  border-radius: 5px;
-  margin-top: 4px;
+.outline-marker {
+  width: 3px !important;
+  height: 22px !important;
+  left: -3px !important;
+  border-radius: 5px !important;
+  margin-top: 4px !important;
 }
 
 .outline-title {
   margin-bottom: 4px;
   font-weight: 500 !important;
-  font-size: 14px !important;
+  font-size: 15px !important;
   letter-spacing: 0 !important;
 }
 
@@ -287,7 +289,7 @@
 }
 
 .nav .link.active {
-  background: var(--vp-c-bg-soft);
+  background: #ebf5fa;
   border-radius: 8px;
 }
 
@@ -329,7 +331,7 @@
 }
 
 html:not(.dark) .vp-doc :not(pre) > code {
-  background: var(--vp-c-bg-soft);
+  background: #edf6fa;
   color: var(--vp-c-brand);
 }
 
