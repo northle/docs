@@ -1,8 +1,8 @@
 ---
-title: Getting Started | CRUD Tutorial
+title: 'CRUD Tutorial: Getting Started'
 ---
 
-# Getting Started | CRUD Tutorial
+# CRUD Tutorial: Getting Started
 
 In this section we will create a working Create-Read-Update-Delete (CRUD) todo app.
 
@@ -47,7 +47,12 @@ We're going to define serveral routes following REST API rules:
 
 ## Todo controller
 
-Let's begin with creating `TodoController`:
+Let's begin with creating `TodoModule` along with `TodoController`:
+
+```shell
+$ north make module todos
+$ north make module controller todos/todo
+```
 
 ::: code src/todos/todo.controller.ts
 ```ts
@@ -79,7 +84,7 @@ export class TodoModule {
 ```
 :::
 
-Then add `TodoModule` in `src/main.ts` file:
+Then we should import `TodoModule` into `src/main.ts` file:
 
 ::: code src/main.ts
 ```ts

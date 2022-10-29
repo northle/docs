@@ -1,8 +1,8 @@
 ---
-title: Creating | CRUD Tutorial
+title: 'CRUD Tutorial: Reading'
 ---
 
-# Creating | CRUD Tutorial
+# CRUD Tutorial: Creating
 
 Now we are ready to start building our application. Let's begin with giving users the ability to create new todos.
 
@@ -29,19 +29,19 @@ Now let's define `POST /todos` route:
 export class TodoController {
   // ...
 
-  @Route.Post('/todos')
-  public async store() {
-    const { title, content } = this.request.input;
+  @Route.Post('/todos')// [!code ++]
+  public async store() {// [!code ++]
+    const { title, content } = this.request.input;// [!code ++]
 
-    const todo = await this.db.todo.create({
-      data: {
-        title,
-        content,
-      },
-    });
+    const todo = await this.db.todo.create({// [!code ++]
+      data: {// [!code ++]
+        title,// [!code ++]
+        content,// [!code ++]
+      },// [!code ++]
+    });// [!code ++]
 
-    return todo;
-  }
+    return todo;// [!code ++]
+  }// [!code ++]
 }
 ```
 :::
@@ -58,10 +58,10 @@ Finally we can add `GET /todos/create` route which will render a view with a for
 export class TodoController {
   // ...
 
-  @Route.Get('/todos/create')
-  public create() {
-    return view('./views/create');
-  }
+  @Route.Get('/todos/create')// [!code ++]
+  public create() {// [!code ++]
+    return view('./views/create');// [!code ++]
+  }// [!code ++]
 }
 ```
 :::

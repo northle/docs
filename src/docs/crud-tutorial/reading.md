@@ -1,8 +1,8 @@
 ---
-title: Reading | CRUD Tutorial
+title: 'CRUD Tutorial: Reading'
 ---
 
-# Reading | CRUD Tutorial
+# CRUD Tutorial: Reading
 
 In the previous chapter we added a functionality to add new todos. Now we are ready to retrieve and show them.
 
@@ -16,14 +16,14 @@ Let's define the `GET /todos` route:
 export class TodoController {
   // ...
 
-  @Route.Get('/todos')
-  public async index() {
-    const todos = await this.db.todo.findMany();
+  @Route.Get('/todos')// [!code ++]
+  public async index() {// [!code ++]
+    const todos = await this.db.todo.findMany();// [!code ++]
 
-    return view('./views/index', {
-      todos,
-    });
-  }
+    return view('./views/index', {// [!code ++]
+      todos,// [!code ++]
+    });// [!code ++]
+  }// [!code ++]
 }
 ```
 :::
