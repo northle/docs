@@ -90,7 +90,7 @@ return this.response.redirect('/login', {}, StatusCode.Found);  // HTTP 302
 
 ### Permanent redirects
 
-Northle gives you the ability to define routes redirecting from its URL to another using `@Redirect` decorator:
+Northle gives you the ability to define routes redirecting from its URL to another using the `Redirect` decorator:
 
 ::: code src/app/app.controller.ts
 ```ts

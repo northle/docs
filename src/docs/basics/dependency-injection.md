@@ -4,11 +4,11 @@ title: Dependency Injection
 
 # Dependency Injection
 
-Backend applications often need a solid architecture patterns to manage the codebase. Northle implements common **service container** and **dependency injection (DI)** concepts.
+Backend applications often need a solid architecture patterns to manage class dependencies. Northle provides a common **dependency injection (DI)** concept implementation.
 
 ## Basic usage
 
-In order to use dependency injection, all you need to do is type-hinting the constructor of class which uses the injected service. Then mark both classes with `@Service` decorator to make them injectable:
+In order to use dependency injection, all you need to do is type-hinting the constructor of class that uses the injected service. Then mark both classes with `Service` decorator to make them injectable:
 
 ::: code src/posts/post.service.ts
 ```ts
@@ -24,11 +24,11 @@ export class PostService {
 ::: code src/users/user.service.ts
 ```ts
 import { Service } from '@northle/core';
-import { PostService } from '../posts/post.service';
+import { PostService } from '../posts/post.service';// [!code ++]
 
 @Service()
 export class UserService {
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService) {}// [!code ++]
 
   // ...
 }
@@ -38,19 +38,19 @@ export class UserService {
 Northle automatically resolves type-hinted dependencies and passes them to your class.
 
 ::: tip NOTE
-Controllers with `@Controller` decorator are automatically injectable.
+Controllers with the `Controller` decorator are automatically injectable.
 :::
 
 ## `inject` function
 
-Alternatively, you may use the `inject` function instead of type-hinting dependencies:
+Alternatively, you may use the `inject` function instead of type-hinting dependencies. If you prefer the `inject` function and you're using only this method, there's no need to add the `Service` decorator:
 
 ::: code src/users/user.service.ts
 ```ts
 import { inject, Service } from '@northle/core';// [!code ++]
 import { PostService } from '../posts/post.service';
 
-@Service()
+@Service()// [!code --]
 export class UserService {
   private postService = inject(PostService);// [!code ++]
 
@@ -59,4 +59,4 @@ export class UserService {
 ```
 :::
 
-The result will be the same but here you don't need to specify types in constructor.
+The result is the same but this way you don't need to specify types in the constructor.
