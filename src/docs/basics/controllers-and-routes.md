@@ -79,8 +79,9 @@ In order to declare application routes, add new controller method and decorate i
 
 ::: code src/app/app.controller.ts
 ```ts
-import { Route } from '@northle/core';
+import { Controller, Route } from '@northle/core';
 
+@Controller()
 class AppController {
   // ...
 
@@ -134,6 +135,26 @@ You can also define a `RegExp` pattern for route parameters:
 // This route will accept IDs in form `aaa-bbb`
 @Route.Get('/users/:id(^\\d{3}-\\d{3})')
 ```
+
+## Error handler routes
+
+A typical Northle application often returns errors like `404 Not Found` or `500 Internal Server Error`. The framework exposes a simple API for custom error handling logic.
+
+You can customize the `404` page by adding a special `Error` route:
+
+::: code src/app/app.controller.ts
+```ts
+@Controller()
+class AppController {
+  // ...
+
+  @Route.Error(404)// [!code ++]
+  public notFound() {// [!code ++]
+    return view('./views/404');// [!code ++]
+  }// [!code ++]
+}
+```
+:::
 
 ## Response types
 
