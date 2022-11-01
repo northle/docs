@@ -43,7 +43,7 @@ export class MailController {
   // ...
 
   @Route.Post('/send')
-  public async sendEmail() {
+  public async send() {
     await this.mailer.send({// [!code ++]
       to: 'recipient@email.com',// [!code ++]
       subject: 'Test email',// [!code ++]
@@ -51,5 +51,38 @@ export class MailController {
     });// [!code ++]
   }
 }
+```
+:::
+
+## HTML emails
+
+Northle provides a simple way to send HTML emails using [view templates](/docs/basics/views). 
+
+::: code src/mail/mail.controller.ts
+```ts
+@Controller()
+export class MailController {
+  // ...
+
+  @Route.Post('/send')
+  public async send() {
+    await this.mailer.send({
+      to: 'recipient@email.com',
+      subject: 'Test email',
+      view: './views/emails/test',// [!code ++]
+      data: {// [!code ++]
+        message: 'Test!',// [!code ++]
+      },// [!code ++]
+    });
+  }
+}
+```
+:::
+
+::: code src/mail/views/emails/test.html
+```svelte
+<div>
+  <p>{{ message }}</p>
+</div>
 ```
 :::
