@@ -54,18 +54,17 @@ $ yarn start:vite
 ```
 :::
 
-## Basic configuration
+## Opening browser
 
-If you don't want to open your browser on server start, you can change this in the `src/main.ts` file config:
+If you don't want to open your browser on server start, you can change this in `package.json` scripts. Just remove the `--open` flag:
 
-::: code src/main.ts
+::: code package.json
 ```ts
-const server = await createServer({
-  config: {
-    dev: {// [!code ++]
-      openBrowser: false,// [!code ++]
-    },// [!code ++]
-  },
-});
+"scripts": {
+  "start": "app start:dev --open",// [!code --]
+  "start": "app start:dev",// [!code ++]
+  "start:dev": "app start:dev --open",// [!code --]
+  "start:dev": "app start:dev",// [!code ++]
+}
 ```
 :::
