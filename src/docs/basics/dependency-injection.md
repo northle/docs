@@ -60,3 +60,7 @@ export class UserService {
 :::
 
 The result is the same but this way you don't need to specify types in the constructor.
+
+## Circular dependencies
+
+Northle's dependency injection system does **not** support circular dependencies (services dependent on each other). Situation like this is a very bad practice so the framework should not resolve circular dependencies.
