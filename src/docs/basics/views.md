@@ -28,12 +28,24 @@ An example view template may look like this:
 
 ## Rendering a view
 
-To render a view use `render` function. The type returned from this function is `ViewResponse`.
+To render a view (return it from a controller), use the `render` function:
 
 ::: code src/auth/auth.controller.ts
 ```ts
-// Render the `src/auth/views/login.html` template
+// Render the `src/auth/views/login.html` view
 return view('./views/login');
+```
+:::
+
+You can specify view path as relative or absolute:
+
+::: code src/app/app.controller.ts
+```ts
+// Render the `src/app/views/home.html` view
+return view('./views/home');
+
+// Render the `views/home.html` view
+return view('/home');
 ```
 :::
 
