@@ -116,6 +116,10 @@ export default {
             link: '/docs/basics/session',
           },
           {
+            text: 'Middleware',
+            link: '/docs/basics/middleware',
+          },
+          {
             text: 'Mail',
             link: '/docs/basics/mail',
           },
