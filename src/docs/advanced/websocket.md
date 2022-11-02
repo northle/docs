@@ -1,10 +1,10 @@
 ---
-title: Websockets
+title: WebSocket
 ---
 
-# Websockets
+# WebSocket
 
-Modern applications often need an established two-way server connection for receiving real-time data. The best option for that purpose is using Websocket connection. Northle provides a powerful channel API for dealing with websockets.
+Modern applications often need an established two-way server connection for receiving real-time data. The best option for that purpose is using WebSocket connection. Northle provides a powerful channel API for dealing with WebSockets.
 
 ## Broadcasting channels
 

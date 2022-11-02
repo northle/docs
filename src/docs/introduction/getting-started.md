@@ -34,6 +34,7 @@ The installator will ask you few things at the beginning. You may choose to add 
 When your project is ready you can lauch your app using the following command:
 
 ```shell
+$ cd <app-name>
 $ npm run start
 ```
 
@@ -59,7 +60,7 @@ $ yarn start:vite
 If you don't want to open your browser on server start, you can change this in `package.json` scripts. Just remove the `--open` flag:
 
 ::: code package.json
-```ts
+```json
 "scripts": {
   "start": "app start:dev --open",// [!code --]
   "start": "app start:dev",// [!code ++]

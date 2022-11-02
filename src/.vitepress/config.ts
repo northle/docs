@@ -157,8 +157,8 @@ export default {
             link: '/docs/advanced/csrf-protection',
           },
           {
-            text: 'Websockets',
-            link: '/docs/advanced/websockets',
+            text: 'WebSocket',
+            link: '/docs/advanced/websocket',
           },
           {
             text: 'Utilities',

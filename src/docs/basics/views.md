@@ -283,3 +283,5 @@ Northle exposes few global constants you can use in your views:
 You can also customize default error pages like `404 Not Found` or `500 Internal Server Error`.
 
 Just create a file with error code as its name, like `views/errors/404.html`. That file should contain your custom page template. If the file exists, Northle will serve it as the `404` error page. Otherwise, the default one will be served.
+
+Alternatively you can create your own erro logic with [route handlers](/docs/basics/controllers-and-routes#error-handler-routes).
