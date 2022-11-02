@@ -88,16 +88,16 @@ Server options implement the following interface:
 interface ServerOptions {
   config?: {
     contentSecurityPolicy?: Record<string, string | string[]> | boolean;
-    envFile?: string;
-    locale?: string;
-    logger?: boolean;
     cors?: {
       allowedHeaders?: string | string[];
       methods?: string | string[];
-      origin: string | boolean | RegExp | string[] | RegExp[];
+      origin: boolean | string | string[] | RegExp | RegExp[];
       credentials: boolean;
       maxAge: Integer;
     };
+    env?: string;
+    locale?: string;
+    logger?: boolean;
   };
   modules: Constructor[];
 }
