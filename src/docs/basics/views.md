@@ -77,7 +77,7 @@ Some frontend frameworks like [Vue](https://vuejs.org) use the same bracket synt
 {{@ message }}
 ```
 
-Or use `[raw]` directive to display entire blocks without parsing it by view compiler:
+Or use the `[raw]` directive to render entire blocks without parsing them by view compiler:
 
 ```svelte
 [raw]
@@ -108,14 +108,14 @@ The most basic directives you should know are conditional blocks. You may use tw
 ```
 
 ```svelte
-[if (user.isLogged)]
+[if (isUserLogged)]
   <a href="/logout">Log out</a>
 [else]
   <a href="/login">Log in</a>
 [/if]
 ```
 
-They act just like `if / else` statements in TypeScript - when the condition is true, the content inside will be rendered. Otherwise, the `[else]` block will show up.
+They act just like `if-else` statements in TypeScript - when the condition is true, the content inside will be rendered. Otherwise, the `[else]` block will show up.
 
 ### `each`
 

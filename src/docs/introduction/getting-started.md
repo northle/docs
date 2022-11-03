@@ -31,7 +31,7 @@ $ yarn create @northle <app-name>
 
 The installator will ask you few things at the beginning. You may choose to add a frontend framework like [React](https://reactjs.org), [Vue](https://vuejs.org) or [Svelte](https://svelte.dev) to your app automatically.
 
-When your project is ready you can lauch your app using the following command:
+When your project is ready you can lauch your app using the following commands:
 
 ```shell
 $ cd <app-name>
@@ -40,6 +40,8 @@ $ npm run start
 
 ::: details Using PNPM or Yarn
 ```shell
+$ cd <app-name>
+
 $ pnpm run start
 $ yarn start
 ```

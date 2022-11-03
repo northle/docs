@@ -109,7 +109,7 @@ const server = await createServer({
   config: {
     cors: {
       allowedHeaders: ['x-some-header'],
-      maxAge: 1000,
+      credentials: false,
       origin: false,
     },
   },
