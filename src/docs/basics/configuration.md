@@ -8,7 +8,7 @@ App configuration in Northle is stored in two main files: `src/main.ts` and `.en
 
 ## Environment configuration
 
-Default Northle projects contain a file called `.env`. This file is the place where things like database credentials and environment-specific settings should be stored. Northle automatically reads all `.env` variables. The default `.env` file contains following variables:
+A default Northle project contains a file called `.env`. This file is the place where things like database credentials and environment-specific settings should be stored. Northle automatically reads all `.env` variables. The default `.env` file contains following variables:
 
 ::: code .env
 ```
@@ -57,48 +57,110 @@ Developers often use version control systems like Git to work in teams. You shou
 
 ## App configuration
 
-Any other, app-specific configuration is passed into the `createServer` function in `src/main.ts` file. The configuration looks like this by default:
+Any other, app-specific configuration is passed into the `createServer` function in `src/main.ts` file. The configuration looks like this:
 
 ::: code src/main.ts
-```ts{4-12}
+```ts{8-10}
 import { createServer } from '@northle/core';
 import { AppModule } from './app/app.module';
 
 const server = await createServer({
+  modules: [
+    AppModule,
+  ],
   config: {
-    dev: {
-      openBrowser: true,
-    },
+    env: '.env',
   },
-
-  // ...
 });
 
 await server.start();
 ```
 :::
 
-To customize app settings, pass configuration options through the `config` entry.
+To customize app settings, pass configuration options through the `config` field.
 
-### Available options
+### Content Security Policy
 
-Server options implement the following interface:
+You can easly adjust Content Security Policy (CSP) settings:
 
-```ts
-interface ServerOptions {
-  config?: {
-    contentSecurityPolicy?: Record<string, string | string[]> | boolean;
-    cors?: {
-      allowedHeaders?: string | string[];
-      methods?: string | string[];
-      origin: boolean | string | string[] | RegExp | RegExp[];
-      credentials: boolean;
-      maxAge: Integer;
-    };
-    env?: string;
-    locale?: string;
-    logger?: boolean;
-  };
-  modules: Constructor[];
-}
+::: code src/main.ts
+```ts{5-7}
+const server = await createServer({
+  // ...
+
+  config: {
+    contentSecurityPolicy: {
+      'script-src-attr': `'unsafe-inline'`,
+    },
+  },
+});
 ```
+:::
+
+### CORS
+
+You can modify CORS config as well:
+
+::: code src/main.ts
+```ts{5-9}
+const server = await createServer({
+  // ...
+
+  config: {
+    cors: {
+      allowedHeaders: ['x-some-header'],
+      maxAge: 1000,
+      origin: false,
+    },
+  },
+});
+```
+:::
+
+### Env file name
+
+Backend apps are environment-dependent, so you can split your `.env` file into `.env.production` etc. You can specify env config file name using the `env` option:
+
+::: code src/main.ts
+```ts{5}
+const server = await createServer({
+  // ...
+
+  config: {
+    env: '.env',  // '.env.development' etc.
+  },
+});
+```
+:::
+
+### Locale
+
+To set a default app locale, use the `locale` option:
+
+::: code src/main.ts
+```ts{5}
+const server = await createServer({
+  // ...
+
+  config: {
+    locale: 'pl',
+  },
+});
+```
+:::
+
+### Logger
+
+You can disable console logs with setting the `logger` option to `false`:
+
+::: code src/main.ts
+```ts{5}
+const server = await createServer({
+  // ...
+
+  config: {
+    logger: env<boolean>('DEVELOPMENT'),
+  },
+});
+```
+:::

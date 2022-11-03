@@ -20,16 +20,16 @@ This controller has one registered route: `GET /`. When the user requests for th
 
 ::: code src/app/app.controller.ts
 ```ts
-import { Controller, Request, Response, Route, view } from '@northle/core';
+import { Controller, Request, Route, view } from '@northle/core';
 
 @Controller()
 export class AppController {
-  constructor(private request: Request, private response: Response) {}
+  constructor(private request: Request) {}
 
   @Route.Get('/')
   public index() {
     return view('./views/home', {
-      message: 'Hello Northle!',
+      message: 'Welcome',
     });
   }
 }
