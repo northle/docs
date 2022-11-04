@@ -4,15 +4,15 @@ title: Queries
 
 # Queries
 
-Querying database using Northle's [Prisma](https://www.prisma.io/docs/concepts/components/prisma-client/crud) service is very easy and handy.
+Making queries to the database using integrated [Prisma](https://www.prisma.io/docs/concepts/components/prisma-client/crud) service is very easy.
 
 ## Getting started
 
-To start using database queries, you should inject `DatabaseClient` service:
+To start using database client services, inject the `DatabaseClient` service:
 
 ::: code src/posts/post.controller.ts
 ```ts
-import { DatabaseClient } from '@northle/core';// [!code ++]
+import { Controller, DatabaseClient } from '@northle/core';// [!code ++]
 
 @Controller()
 export class PostController {
@@ -25,7 +25,7 @@ export class PostController {
 
 ## Select queries
 
-The most common type of database queries is the `select` query. You can select data from your table using `user` object and the `findUnique` method:
+The most common type of database query is the `select` clause. For example, you can select data from the `users` table using the `user` model object and the `findUnique` method:
 
 ::: code src/posts/post.controller.ts
 ```ts
@@ -48,7 +48,7 @@ The result will look like this:
 }
 ```
 
-You can specify what columns you want to receive with `select` object:
+You can specify what columns you want to receive with passing the `select` conditions:
 
 ::: code src/posts/post.controller.ts
 ```ts
@@ -82,7 +82,7 @@ const user = await this.db.user.create({
 
 ## Updating records
 
-Updating records is easy:
+To update records, call the `update` or `updateMany` method:
 
 ::: code src/posts/post.controller.ts
 ```ts
@@ -97,11 +97,30 @@ await this.db.user.update({
 ```
 :::
 
+You may also update or create record if does not exist using `upsert`:
+
+::: code src/posts/post.controller.ts
+```ts
+await this.db.post.upsert({
+  where: {
+    title: 'Hello',
+  },
+  update: {
+    title: 'Welcome',
+  },
+  create: {
+    title: 'Welcome',
+    content: 'Hello Northle',
+  },
+});
+```
+:::
+
 ## Deleting records
 
 Use `delete` or `deleteMany` method to delete records:
 
-::: code src/posts/post.controller.ts
+::: code src/users/user.controller.ts
 ```ts
 await this.db.user.deleteMany({
   where: {
@@ -117,31 +136,18 @@ await this.db.user.deleteMany({
 
 With Prisma database client you can count records, aggregate number fields, and select distinct field values.
 
-::: code src/posts/post.controller.ts
+::: code src/users/user.controller.ts
 ```ts
-const aggregations = await this.db.user.aggregate({
+const { avg, count } = await this.db.user.aggregate({
   avg: {
-    age: true,
+    age: true,  // Get the average age
   },
   count: {
-    name: true,
+    name: true,  // Count user names
   },
 });
 ```
 :::
-
-The result will have the following form:
-
-```ts
-{
-  avg: {
-    age: 32,
-  },
-  count: {
-    name: 15,
-  },
-}
-```
 
 ## Relationships
 
@@ -166,7 +172,7 @@ model User {
 
 To return related records, you can write:
 
-::: code src/posts/post.controller.ts
+::: code src/users/user.controller.ts
 ```ts
 const users = await this.db.user.findMany({
   select: {
@@ -180,3 +186,9 @@ const users = await this.db.user.findMany({
 });
 ```
 :::
+
+In order to access related results, use object properties:
+
+```ts
+const { posts } = users;
+```
