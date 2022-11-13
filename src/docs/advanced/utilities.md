@@ -24,3 +24,32 @@ import { readJson } from '@northle/core';
 
 const data = await readJson(path);
 ```
+
+## Utility services
+
+Northle provides an utility `Logger` service that helps you debug your app with console messages.
+
+```ts{1,5,9}
+import { Logger, Service } from '@northle/core';
+
+@Service()
+export class UserService {
+  constructor(private logger: Logger) {}
+
+  public getUserInfo(user: User): void {
+    if (!user.info) {
+      this.logger.warn('Cannot get user information');
+    }
+
+    // ...
+  }
+}
+```
+
+You can also use this service's counterpart functions:
+
+```ts
+import { logInfo } from '@northle/core';
+
+logInfo(message);
+```
