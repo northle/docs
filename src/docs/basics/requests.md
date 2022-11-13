@@ -45,9 +45,9 @@ Northle supports all available HTTP verbs for handling web requests along with [
 | `TRACE`     | Perform a trace call          |
 | `UNLOCK`    | Unlock the resource           |
 
-## Route parameters
+## Route params
 
-To get matched route URL parameters, use `request.params` property:
+To get matched route URL parameters, use `params` property:
 
 ::: code src/posts/post.controller.ts
 ```ts{4,6}
@@ -79,13 +79,16 @@ class PostController {
 ```
 :::
 
-## Query string params
+## Query params
 
-In order to get URL query string entries, use the `request.query` property:
+In order to get URL query string entries, use the `queryString` property:
 
 ```ts
 // URL: /search?name=riddler
-const { name } = this.request.query;  // 'riddler'
+const { name } = this.request.queryString;  // 'riddler'
+
+// or
+const name = this.request.query('name');
 ```
 
 ## Headers
@@ -98,15 +101,18 @@ const header = this.request.header('x-requested-with');
 
 ## Cookies
 
-To read cookies sent by the user, use the `request.cookies` property:
+To read cookies sent by the user, use the `cookies` property:
 
 ```ts
 const { darkMode } = this.request.cookies;
+
+// or
+const darkMode = this.request.cookie('darkMode');
 ```
 
-## Form input data
+## Form data
 
-To retrieve and process incoming form data, use the `request.data` property:
+To retrieve and process incoming form data, use the `body` property:
 
 ::: code src/users/user.controller.ts
 ```ts{6}
@@ -115,7 +121,7 @@ class UserController {
 
   @Route.Post('/users')
   public async store() {
-    const { username, password } = this.request.data;
+    const { username, password } = this.request.body;
 
     await this.db.user.create({
       // ...
@@ -125,7 +131,49 @@ class UserController {
 ```
 :::
 
-## Detecting AJAX requests
+Alternatively, you may use the `input` function:
+
+```ts
+const name = this.request.input('username');
+```
+
+### Typed forms
+
+You can also provide an interface to define the shape of form request body:
+
+::: code src/users/user.controller.ts
+```ts{7,8}
+interface RegistrationForm {
+  username?: string;
+  email: string;
+  password: string;
+}
+
+const data = this.request.form<RegistrationForm>();
+const name = data.username ?? 'User';  // data.name: string | undefined
+```
+:::
+
+## Files
+
+Accessing files in Northle is simple. The framework provides a handy file upload and storage API:
+
+::: code src/users/user.controller.ts
+```ts{6}
+class UserController {
+  // ...
+
+  @Route.Post('/users')
+  public async store() {
+    const { avatar } = this.request.files;
+
+    await avatar?.[0]?.store('uploads/avatars', `${username}-avatar.jpg`);
+  }
+}
+```
+:::
+
+## Detecting AJAX
 
 You may check if request was made by AJAX (AJAX requests should have set `x-requested-with` header with `XMLHttpRequest` value):
 
@@ -165,3 +213,7 @@ Northle lets you to use these methods thanks to `[method]` template directive. J
 ::: tip NOTE
 Note that the form must include `method="post"` attribute to work.
 :::
+
+## Making requests
+
+Northle lets you make HTTP requests within your app using the [HttpClient](/docs/basics/http-client) service.

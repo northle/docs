@@ -57,6 +57,10 @@ $ yarn start:vite
 ```
 :::
 
+::: warning
+The local HTTP server may slow down when you have bad internet speed.
+:::
+
 ## Opening browser
 
 If you don't want to open your browser on server start, you can change this in `package.json` scripts. Just remove the `--open` flag:
