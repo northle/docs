@@ -350,6 +350,16 @@ html:not(.dark) .vp-doc :not(pre) > code {
   color: var(--vp-c-brand) !important;
 }
 
+.edit-link-button {
+  border: 1px dashed var(--vp-c-brand) !important;
+  padding: 2px 10px;
+  border-radius: 8px;
+}
+
+.edit-link-button:hover {
+  background: var(--vp-c-bg-soft);
+}
+
 .VPMenu {
   box-shadow: var(--vp-shadow-2) !important;
   border-radius: 10px !important;
@@ -419,5 +429,9 @@ html:not(.dark) .vp-doc :not(pre) > code {
 
   .nav .link:not(.active):hover {
     transform: translateX(5px);
+  }
+
+  .edit-info {
+    justify-content: flex-end !important;
   }
 }
