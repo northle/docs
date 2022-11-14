@@ -29,7 +29,9 @@ export class AuthMiddleware implements MiddlewareHandler {
 ```
 :::
 
-For example, you can create a middleware that redirects back unauthenticated users. This may be useful when you want to create a protected route that should be accessible only when user is logged in.
+Middleware is called by the `handle` method before a controller action.
+
+For example, you can create a middleware that redirects back unauthenticated users. This may be useful when you want to create a protected route that should be accessible only when user is logged in:
 
 ::: code src/auth/auth.middleware.ts
 ```ts

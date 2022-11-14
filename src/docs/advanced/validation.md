@@ -69,6 +69,7 @@ Below you have listed all available validator rules:
 | `ip`              | `boolean`        | The field must be a valid IP address                                                                           |
 | `ipv4`            | `boolean`        | The field must be a valid IPv4 address                                                                         |
 | `length`          | `Integer`        | The field must have a length of the given value                                                                |
+| `lowercase`       | `boolean`        | The field must have a value that is an lowercased string                                                       |
 | `max`             | `Integer`        | The field must be less than or equal to given value                                                            |
 | `maxLength`       | `Integer`        | The field must have a length less than or equal to given value                                                 |
 | `min`             | `Integer`        | The field must be greater than or equal to given value                                                         |
@@ -80,4 +81,5 @@ Below you have listed all available validator rules:
 | `required`        | `boolean`        | The field must be present and not empty                                                                        |
 | `sameAs`          | `string`         | The field must be same as the given value                                                                      |
 | `startsWith`      | `string`         | The field must start with the given value                                                                      |
+| `uppercase`       | `boolean`        | The field must have a value that is an uppercased string                                                       |
 | `username`        | `boolean`        | The field must be a valid username and must not start with a number. Allowed characters are: `[a-zA-Z0-9 _-]`) |

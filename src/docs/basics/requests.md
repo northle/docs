@@ -202,7 +202,7 @@ Northle automatically generates [nonce](https://developer.mozilla.org/en-US/docs
 const nonce = this.request.nonce();
 ```
 
-The framework provides a handy `nonce` view function for rendering nonce scripts:
+The framework provides a handy `nonce` view function for rendering script nonces:
 
 ```svelte
 <script nonce="{{ nonce() }}"></script>
@@ -215,7 +215,7 @@ When you're building a RESTful API, you may encounter a problem - HTML forms don
 Northle lets you to use these methods thanks to `[method]` template directive. Just pass a method name and you'll be able to use methods like `PATCH` and `DELETE` in HTML forms (it's called method spoofing):
 
 ::: code src/posts/views/upload.html
-```html
+```html{2}
 <form action="/login" method="post">
   [method('PATCH')]
 
