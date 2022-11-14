@@ -194,6 +194,20 @@ const locale = this.request.locale();
 
 Read more about [localization](/docs/advanced/localization) and language features.
 
+## Nonce
+
+Northle automatically generates [nonce](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/nonce) string on every request. You can obtain it with the `nonce` method:
+
+```ts
+const nonce = this.request.nonce();
+```
+
+The framework provides a handy `nonce` view function for rendering nonce scripts:
+
+```svelte
+<script nonce="{{ nonce() }}"></script>
+```
+
 ## Method spoofing
 
 When you're building a RESTful API, you may encounter a problem - HTML forms don't support HTTP methods other than `GET` and `POST`.

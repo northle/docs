@@ -49,7 +49,10 @@ export class UserService {
 You can also use this service's counterpart functions:
 
 ```ts
-import { logInfo } from '@northle/core';
+import { log, logError, logInfo, logWarning } from '@northle/core';
 
+log(message);
+logError(message);
 logInfo(message);
+logWarning(message);
 ```
