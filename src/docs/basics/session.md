@@ -69,18 +69,37 @@ this.session.delete('email');
 
 ## Flash data
 
-In order to set temporary data which is deleted when you access it, use the `flash` method:
+In order to store data which is available only for the next request, use the `flash` method:
 
 ```ts
 this.session.flash('error', 'Invalid e-mail or password');
 ```
 
-You can retrieve flashed data with the `flash` function:
+You can read flashed data with the `flash` function or method:
 
 ```ts
 import { flash } from '@northle/core';
 
+const error = this.session.flash('error');
+
+// or
 const error = flash('error');
+```
+
+## Increment and decrement data
+
+Session system in Northle provides a simple way to increment and decrement session value:
+
+```ts
+const { pageViews } = this.session.data;  // 0
+
+this.session.increment('pageViews');
+
+const incremented = this.session.data.pageViews;  // 1
+```
+
+```ts
+this.session.decrement('pageViews');
 ```
 
 ## Destroying session
