@@ -1,6 +1,6 @@
 {
   "private": true,
-  "description": "Modern, declarative framework for Node.js",
+  "description": "Modern and declarative framework for Node.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/northle/docs.git"
