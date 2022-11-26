@@ -4,7 +4,7 @@ export default {
   outDir: './dist',
   title: 'Northle',
   lang: 'en-US',
-  description: 'Modern, declarative framework for Node.js',
+  description: 'Modern and declarative framework for Node.js',
   head: [
     [
       'link', {

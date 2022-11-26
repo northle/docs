@@ -32,19 +32,19 @@
 }
 
 .dark {
-  --vp-button-alt-bg: #212831;
-  --vp-button-alt-hover-bg: #1f2630;
-  --vp-c-bg: #0e1118;
-  --vp-c-bg-soft: #161a20;
-  --vp-c-bg-mute: #212630;
+  --vp-button-alt-bg: #18181b;
+  --vp-button-alt-hover-bg: #1b1b1f;
+  --vp-c-bg: #0c0c0e;
+  --vp-c-bg-soft: #1b1b20;
+  --vp-c-bg-mute: #141418;
   --vp-c-black: #12151b;
   --vp-c-divider: #2a313b;
   --vp-c-divider-light: #202630;
   --vp-c-gray-dark-4: #273141;
   --vp-c-text-code: #d8dfe9;
-  --vp-code-block-bg: #242d3b;
+  --vp-code-block-bg: #141418;
   --vp-code-line-highlight-color: #1d232c;
-  --vp-custom-block-info-bg: rgba(114, 131, 151, 0.158);
+  --vp-custom-block-info-bg: rgba(87, 109, 134, 0.158);
   --vp-custom-block-info-border: rgba(114, 131, 151, 0.103);
   --vp-custom-block-tip-code-bg: rgb(0, 72, 112, 0.25);
   --vp-custom-block-tip-border: #002c44;
@@ -98,17 +98,17 @@
 .dark .VPNav,
 .dark .VPNav.no-sidebar,
 .dark .VPNavBar.has-sidebar .content {
-  background: #171c24 !important;
+  background: #141418 !important;
 }
 
 .vp-doc div[class*='language-'] {
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .dark .VPSidebar,
 .dark .vp-doc div[class*='language-'],
 .dark .snippet-file {
-  background: #14181f;
+  background: #141418;
 }
 
 .dark .vp-doc [class*='language-'] > button.copy {
@@ -120,7 +120,7 @@
   background: var(--vp-code-block-bg);
   color: #99a0b3;
   padding: 12px 24px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px 8px 0 0;
   font-size: 13px;
   display: flex;
   align-items: center;
@@ -153,7 +153,7 @@
 }
 
 .custom-block {
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .custom-block.details {
@@ -256,20 +256,75 @@
 }
 
 .VPButton {
-  border-radius: 10px !important;
-  border: none !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--vp-c-divider-light) !important;
   padding: 2px 20px !important;
   transition: opacity 0.2s ease !important;
-  font-weight: 400 !important;
+  background: var(--vp-c-bg) !important;
+  color: inherit !important;
 }
 
 .VPButton.brand {
-  background-image: linear-gradient(to right, #3b82f6, #0ea5e9);
-  box-shadow: 0 0 30px rgba(20, 105, 170, 0.4);
+  background: linear-gradient(to right, #3b82f6, #0ea5e9) !important;
+  box-shadow: 0 0 30px rgba(41, 138, 212, 0.6);
+  border-color: transparent !important;
+  position: relative;
+  color: #fff !important;
+  z-index: 100;
 }
 
-.VPButton.brand:hover {
+.VPButton.brand::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  background: #111;
+  border-radius: 7px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  z-index: -1;
+}
+
+.VPButton:hover {
   opacity: 0.9;
+}
+
+.VPFeature, .box {
+  border: 1px solid var(--vp-c-divider-light) !important;
+}
+
+.box {
+  position: relative;
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  padding: 22px !important;
+  z-index: 100;
+}
+
+.box:hover {
+  background: linear-gradient(to right, #3b82f6, #0ea5e9);
+}
+
+.box:hover::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  background: var(--vp-c-bg-mute);
+  border-radius: 7px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  z-index: -1;
+}
+
+.box .title {
+  font-size: 20px;
+}
+
+.box .details {
+  padding-top: 12px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .VPHero .tagline {
@@ -293,7 +348,7 @@
 }
 
 .dark .nav .link.active {
-  background: var(--vp-c-bg-mute);
+  background: var(--vp-c-bg-soft);
 }
 
 .link.active .link-text {
@@ -350,8 +405,8 @@ html:not(.dark) .vp-doc :not(pre) > code {
 }
 
 .edit-link-button {
-  border: 1px dashed var(--vp-c-brand) !important;
-  padding: 2px 12px;
+  border: 1px solid var(--vp-c-divider-light) !important;
+  padding: 3px 14px;
   border-radius: 8px;
 }
 
@@ -377,8 +432,7 @@ html:not(.dark) .vp-doc :not(pre) > code {
 }
 
 .pager-link {
-  border-radius: 10px !important;
-  background: var(--vp-c-bg-soft);
+  background: var(--vp-c-bg-mute);
 }
 
 .pager-link:not(:hover) {
