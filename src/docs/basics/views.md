@@ -97,26 +97,6 @@ All directives like foreach loops use the square brackets and slash syntax:
 [/each]
 ```
 
-### `if` and `else`
-
-The most basic directives you should know are conditional blocks. You may use two directives: `if` and `else`:
-
-```svelte
-[if (!posts.length)]
-  <p>There are no posts yet.</p>
-[/if]
-```
-
-```svelte
-[if (isUserLogged)]
-  <a href="/logout">Log out</a>
-[else]
-  <a href="/login">Log in</a>
-[/if]
-```
-
-They act just like `if-else` statements in TypeScript - when the condition is true, the content inside will be rendered. Otherwise, the `[else]` block will show up.
-
 ### `each`
 
 Sometimes you may need to render data using loop, for example - to show posts list. You can use `[each]` template directive to iterate over arrays:
@@ -154,11 +134,49 @@ The `[each]` directive exposes several additional variables you can use:
 [/each]
 ```
 
+### `if` and `else`
+
+The most basic directives you should know are conditional blocks. You may use two directives: `if` and `else`:
+
+```svelte
+[if (!posts.length)]
+  <p>There are no posts yet.</p>
+[/if]
+```
+
+```svelte
+[if (isUserLogged)]
+  <a href="/logout">Log out</a>
+[else]
+  <a href="/login">Log in</a>
+[/if]
+```
+
+They act just like `if-else` statements in TypeScript - when the condition is true, the content inside will be rendered. Otherwise, the `[else]` block will show up.
+
+### `error`
+
+When you're using form [validation](/docs/advanced/validation), you can display eventual error messages using the `[error]` directive:
+
+```svelte{6-8}
+<form action="/users" method="post">
+  ...
+
+  <input type="text" name="username">
+
+  [error('username')]
+    Username is invalid.
+  [/error]
+</form>
+```
+
+Note that the form must have `method="post"` attribute set.
+
 ### `method`
 
 Northle lets you to use all HTTP methods in forms thanks to `[method]` directive. Just pass a method name and you'll be able to use `PUT`, `PATCH`, `DELETE` and other methods in HTML forms.
 
-```svelte
+```svelte{2}
 <form action="/login" method="post">
   [method('PATCH')]
 
@@ -220,7 +238,7 @@ For every user session Northle generates a unique token to protect your applicat
 To add the token field just use the `[token]` directive:
 
 ::: code src/posts/views/upload.html
-```svelte
+```svelte{2}
 <form action="/login" method="post">
   [token]
 
