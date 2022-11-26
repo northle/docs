@@ -447,6 +447,35 @@ html:not(.dark) .vp-doc :not(pre) > code {
   margin-bottom: 4px;
 }
 
+table {
+  border-radius: 8px;
+  border: 0;
+}
+
+thead {
+  border-radius: 8px;
+}
+
+thead tr,
+thead th {
+  border-top: 0 !important;
+}
+
+thead th:last-child {
+  border-top: 0 !important;
+  border-top-right-radius: 8px;
+}
+
+th, td {
+  padding: 11px 18px !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+tr:last-child td {
+  border-bottom: 0 !important;
+}
+
 @media (min-width: 2000px) {
   .VPHero {
     padding-top: 290px !important;
