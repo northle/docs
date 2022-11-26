@@ -230,4 +230,4 @@ Note that the form must include `method="post"` attribute to work.
 
 ## Making requests
 
-Northle lets you make HTTP requests within your app using the [HttpClient](/docs/basics/http-client) service.
+Northle lets you execute HTTP requests within your app using the [HttpClient](/docs/basics/http-client) service.

@@ -6,7 +6,7 @@ title: Views
 
 Northle comes with handy built-in view template engine. View templates in your app are placed in `/views` directories inside modules and have the `*.html` extension.
 
-## Templates
+## Template engine
 
 Northle's template engine allows you to create loops, conditionals and variable interpolation.
 
@@ -49,7 +49,7 @@ return view('/home');
 ```
 :::
 
-## Variables
+## Data variables
 
 To render passed variables use the bracket syntax:
 
@@ -235,11 +235,13 @@ Northle provides support for partials. You can split your view into smaller piec
 ```
 :::
 
-This statement will render `./partials/content.html` template inside `<main />` tag.
+This statement will render `./partials/content.html` template inside the `<main>` tag.
 
 ### `token`
 
-For every user session Northle generates a unique token to protect your application from [Cross-Site Request Forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks. Anytime you define HTML forms with method other than `GET` and `HEAD`, you have to add a hidden field containing generated token. Otherwise, you won't be able to pass the form and you'll get `419` error.
+For every user session Northle generates a unique token to protect your application from [Cross-Site Request Forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks.
+
+Anytime you define HTML forms with method other than `GET` and `HEAD`, you need to add a hidden field containing generated token. Otherwise, you won't be able to pass the form and you'll get the `419 Invalid Token` error.
 
 To add the token field just use the `[token]` directive:
 
