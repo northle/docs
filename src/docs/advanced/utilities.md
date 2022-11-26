@@ -27,6 +27,8 @@ const data = await readJson(path);
 
 ## Utility services
 
+### Logger
+
 Northle provides an utility `Logger` service that helps you debug your app with console messages.
 
 ```ts{1,5,9}
@@ -55,4 +57,20 @@ log(message);
 logError(message);
 logInfo(message);
 logWarning(message);
+```
+
+## Hooks
+
+The framework comes with an alternative API for using services: React-inspired **hooks**.
+
+```ts{1,5}
+import { useSession } from '@northle/core';
+
+// ...
+
+const [session, setSession] = useSession();
+
+const name = session('username');
+
+setSession('email', email);
 ```

@@ -10,7 +10,7 @@
       <div class="intro">
         <div class="container">
           <h2>
-            Focused on <span class="text-gradient">developer experience</span>
+            Focused on developer <span class="text-gradient">experience</span>
           </h2>
         </div>
       </div>

@@ -73,7 +73,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  border-width: 3px;
+  border-width: 2px;
 }
 
 ::-webkit-scrollbar-track {
@@ -81,7 +81,7 @@
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background-color: #2f3641;
+  background-color: #2c3038;
 }
 
 .dark ::selection {

@@ -25,7 +25,7 @@ export class UserService {
 
 ## Using services
 
-Since the class has been declared as `Injectable`, you can inject it into other controller constructor:
+Since the class has been declared as injectable `Service`, you can inject it into other controller constructor:
 
 ::: code src/users/user.controller.ts
 ```ts{9}
