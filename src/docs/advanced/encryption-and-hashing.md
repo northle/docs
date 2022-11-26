@@ -14,7 +14,7 @@ To provide best security, your app should have unique key for encrypting data. T
 $ npm run key:generate
 ```
 
-::: details Using PNPM or Yarn
+::: details Using pnpm or Yarn
 ```shell
 $ pnpm run key:generate
 $ yarn key:generate

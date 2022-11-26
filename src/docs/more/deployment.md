@@ -30,7 +30,7 @@ After changing the configuration, run the following command to generate new encr
 $ npm run key:generate
 ```
 
-::: details Using PNPM or Yarn
+::: details Using pnpm or Yarn
 ```shell
 $ pnpm run key:generate
 $ yarn key:generate

@@ -144,8 +144,12 @@
   margin-right: 8px;
 }
 
+.vp-doc [class*='language-'] > button.copy {
+  top: 2px !important;
+}
+
 .vp-doc [class*='language-'] > button.copy:hover {
-  background-color: #252d38;
+  background-color: var(--vp-c-bg-soft);
 }
 
 .VPNavBarTitle {

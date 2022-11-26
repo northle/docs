@@ -131,7 +131,7 @@ After that, run command:
 $ npm run db:migrate
 ```
 
-::: details Using PNPM or Yarn
+::: details Using pnpm or Yarn
 ```shell
 $ pnpm run db:migrate
 $ yarn db:migrate

@@ -22,7 +22,7 @@ To create new Northle project you can use the NPM command:
 $ npm create @northle <app-name>
 ```
 
-::: details Using PNPM or Yarn
+::: details Using pnpm or Yarn
 ```shell
 $ pnpm create @northle <app-name>
 $ yarn create @northle <app-name>
@@ -38,7 +38,7 @@ $ cd <app-name>
 $ npm run start
 ```
 
-::: details Using PNPM or Yarn
+::: details Using pnpm or Yarn
 ```shell
 $ cd <app-name>
 
@@ -50,7 +50,7 @@ $ yarn start
 ::: tip INFO
 If you're using Northle with a frontend framework template, you can run `npm run start:vite` instead for automatic asset compilation.
 
-::: details Using PNPM or Yarn
+::: details Using pnpm or Yarn
 ```shell
 $ pnpm run start:vite
 $ yarn start:vite

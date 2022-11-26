@@ -12,8 +12,6 @@ The configuration for database services is stored in the `.env` file:
 
 ::: code .env
 ```txt{3}
-# ...
-
 DATABASE_URL="mysql://root:@localhost/northle"
 ```
 :::
@@ -115,7 +113,7 @@ When you edit the schema and want to generate tables based on it, run the `db:mi
 $ npm run db:migrate
 ```
 
-::: details Using PNPM or Yarn
+::: details Using pnpm or Yarn
 ```shell
 $ pnpm run db:migrate
 $ yarn db:migrate
