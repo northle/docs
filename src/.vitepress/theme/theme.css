@@ -247,6 +247,10 @@
   font-weight: 500;
 }
 
+.VPNavBarTitle .title {
+  font-size: 18px !important;
+}
+
 .VPNavBarMenuLink.active {
   font-weight: 600;
   background: var(--vp-c-bg-soft);
@@ -334,7 +338,12 @@
 .VPHero .tagline {
   font-weight: normal;
   font-size: 20px;
-  padding-top: 18px;
+  padding-top: 28px;
+  line-height: 1.5;
+}
+
+.VPNavBarMenuLink, .VPNavBarMenuGroup {
+  opacity: 0.9;
 }
 
 .link[data-v-5f79f6bb] {
