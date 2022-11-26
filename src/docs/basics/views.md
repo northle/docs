@@ -12,7 +12,7 @@ Northle's template engine allows you to create loops, conditionals and variable 
 
 An example view template may look like this:
 
-::: code src/posts/views/some-view.html
+::: code src/posts/views/index.html
 ```svelte
 <main>
   [each (post in posts)]
@@ -145,7 +145,7 @@ The most basic directives you should know are conditional blocks. You may use tw
 ```
 
 ```svelte
-[if (isUserLogged)]
+[if (isUserAuthenticated)]
   <a href="/logout">Log out</a>
 [else]
   <a href="/login">Log in</a>
@@ -156,9 +156,11 @@ They act just like `if-else` statements in TypeScript - when the condition is tr
 
 ### `error`
 
-When you're using form [validation](/docs/advanced/validation), you can display eventual error messages using the `[error]` directive:
+When you're using form [validation](/docs/advanced/validation), you can display eventual error messages using the `[error]` directive.
 
-```svelte{6-8}
+It accepts two forms: with custom content and empty (Northle will automatically return error message, e.g. "Field 'email' must be longer than 6 characters").
+
+```svelte{6-8,12}
 <form action="/users" method="post">
   ...
 
@@ -167,6 +169,10 @@ When you're using form [validation](/docs/advanced/validation), you can display 
   [error('username')]
     Username is invalid.
   [/error]
+
+  <input type="email" name="email">
+
+  [error('email')]
 </form>
 ```
 
