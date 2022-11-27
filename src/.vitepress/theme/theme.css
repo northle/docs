@@ -134,8 +134,8 @@
 
 .snippet-file + [class*='language-'] {
   margin-top: 0 !important;
-  border-top-left-radius: 0!important;
-  border-top-right-radius: 0!important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
 
 .snippet-file + [class*='language-'] pre {
@@ -185,7 +185,7 @@
   transition: opacity 0.2s ease !important;
 }
 
-.VPSwitch[aria-checked=true] {
+.VPSwitch[aria-checked='true'] {
   background: var(--vp-c-brand);
 }
 
@@ -283,7 +283,11 @@
 }
 
 .VPButton.brand {
-  background: linear-gradient(to right, var(--vp-c-brand-dark), var(--vp-c-brand)) !important;
+  background: linear-gradient(
+    to right,
+    var(--vp-c-brand-dark),
+    var(--vp-c-brand)
+  ) !important;
   box-shadow: 0 0 30px rgba(41, 58, 212, 0.6);
   border-color: transparent !important;
   position: relative;
@@ -307,7 +311,8 @@
   opacity: 0.9;
 }
 
-.VPFeature, .box {
+.VPFeature,
+.box {
   border: 1px solid var(--vp-c-divider-light) !important;
 }
 
@@ -352,7 +357,8 @@
   line-height: 1.5;
 }
 
-.VPNavBarMenuLink, .VPNavBarMenuGroup {
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup {
   opacity: 0.9;
 }
 
@@ -489,7 +495,8 @@ thead th:last-child {
   border-top-right-radius: 8px;
 }
 
-th, td {
+th,
+td {
   padding: 11px 18px !important;
   border-left: 0 !important;
   border-right: 0 !important;
