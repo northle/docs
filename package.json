@@ -12,6 +12,8 @@
   },
   "scripts": {
     "build": "vitepress build ./src",
+    "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write",
+    "lint": "eslint .",
     "start:dev": "vitepress dev ./src",
     "start:serve": "vitepress serve ./src"
   },
