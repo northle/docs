@@ -2,7 +2,7 @@
   --vp-c-bg-mute: #ebeef1;
   --vp-c-bg-alt: #fcfcfd;
   --vp-c-brand: #818cf8;
-  --vp-c-brand-dark: #8b5cf6;
+  --vp-c-brand-dark: #6366f1;
   --vp-c-brand-light: #a5b4fc;
   --vp-c-divider-light: #edeef1;
   --vp-c-gray-light-4: #e8edf3;
@@ -54,7 +54,7 @@
 }
 
 ::selection {
-  background: #0ea5e9;
+  background: #818cf8;
   color: #fff;
 }
 
@@ -87,7 +87,6 @@
 
 .dark ::selection {
   color: #141a25;
-  background: #38bdf8;
 }
 
 .VPNav,
@@ -280,7 +279,7 @@
 
 .VPButton.brand {
   background: linear-gradient(to right, var(--vp-c-brand-dark), var(--vp-c-brand)) !important;
-  box-shadow: 0 0 30px rgba(41, 138, 212, 0.6);
+  box-shadow: 0 0 30px rgba(41, 58, 212, 0.6);
   border-color: transparent !important;
   position: relative;
   color: #fff !important;
@@ -388,7 +387,7 @@
 }
 
 .VPHome .image-src {
-  filter: drop-shadow(0 0 30px rgba(20, 105, 170, 0.5));
+  filter: drop-shadow(0 0 30px rgba(20, 48, 170, 0.5));
 }
 
 .vp-doc .header-anchor {
