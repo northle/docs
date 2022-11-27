@@ -1,9 +1,9 @@
 :root {
   --vp-c-bg-mute: #ebeef1;
   --vp-c-bg-alt: #fcfcfd;
-  --vp-c-brand: #0ea5e9;
-  --vp-c-brand-dark: #0284c7;
-  --vp-c-brand-light: #38bdf8;
+  --vp-c-brand: #818cf8;
+  --vp-c-brand-dark: #8b5cf6;
+  --vp-c-brand-light: #a5b4fc;
   --vp-c-divider-light: #edeef1;
   --vp-c-gray-light-4: #e8edf3;
   --vp-c-white-soft: #f5f8fc;
@@ -14,10 +14,11 @@
   --vp-code-line-highlight-color: #29303b;
   --vp-custom-block-info-bg: rgba(162, 191, 224, 0.164);
   --vp-custom-block-info-border: rgba(178, 194, 212, 0.199);
-  --vp-custom-block-tip-code-bg: #d4efff;
-  --vp-custom-block-tip-border: #e8f6ff;
-  --vp-custom-block-tip-bg: #e8f6ff;
-  --vp-custom-block-tip-text: #0a92e0;
+  --vp-custom-block-tip-code-bg: #d4dfff;
+  --vp-custom-block-tip-border: #e8ecff;
+  --vp-custom-block-tip-bg: #e8ebff;
+  --vp-custom-block-tip-code-bg: #dce1ff;
+  --vp-custom-block-tip-text: #0a43e0;
   --vp-font-family-base: 'DM Sans', sans-serif;
   --vp-font-family-mono: 'Roboto Mono', monospace;
 }
@@ -46,10 +47,10 @@
   --vp-code-line-highlight-color: #1d232c;
   --vp-custom-block-info-bg: rgba(87, 109, 134, 0.158);
   --vp-custom-block-info-border: rgba(114, 131, 151, 0.103);
-  --vp-custom-block-tip-code-bg: rgb(0, 72, 112, 0.25);
-  --vp-custom-block-tip-border: #002c44;
-  --vp-custom-block-tip-bg: rgb(0, 72, 112, 0.25);
-  --vp-custom-block-tip-text: #9ddbff;
+  --vp-custom-block-tip-code-bg: rgba(0, 11, 112, 0.25);
+  --vp-custom-block-tip-border: #3f47969d;
+  --vp-custom-block-tip-bg: rgba(79, 86, 187, 0.171);
+  --vp-custom-block-tip-text: #9dacff;
 }
 
 ::selection {
@@ -65,15 +66,15 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #bfc5ce;
+  background-color: #ced0e2;
   display: block;
   border-radius: 10px;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  border-width: 2px;
+  border-width: 1px;
 }
 
 ::-webkit-scrollbar-track {
@@ -114,6 +115,10 @@
 .dark .vp-doc [class*='language-'] > button.copy {
   background-color: transparent;
   border-radius: 8px;
+}
+
+.tip code {
+  background: var(--vp-custom-block-tip-code-bg) !important;
 }
 
 .snippet-file {
@@ -251,16 +256,17 @@
   font-size: 18px !important;
 }
 
+.dark .VPNavBarMenuLink.active {
+  color: var(--vp-c-brand-light) !important;
+  background: var(--vp-c-bg-soft);
+}
+
 .VPNavBarMenuLink.active {
   font-weight: 600;
-  background: var(--vp-c-bg-soft);
+  background: #f2f3fa;
   height: 38px;
   border-radius: 8px;
   align-self: center;
-}
-
-.dark .VPNavBarMenuLink.active {
-  background: var(--vp-c-bg-mute);
 }
 
 .VPButton {
@@ -273,7 +279,7 @@
 }
 
 .VPButton.brand {
-  background: linear-gradient(to right, #3b82f6, #0ea5e9) !important;
+  background: linear-gradient(to right, var(--vp-c-brand-dark), var(--vp-c-brand)) !important;
   box-shadow: 0 0 30px rgba(41, 138, 212, 0.6);
   border-color: transparent !important;
   position: relative;
@@ -310,7 +316,7 @@
 }
 
 .box:hover {
-  background: linear-gradient(to right, #3b82f6, #0ea5e9);
+  background: linear-gradient(to right, var(--vp-c-brand-dark), var(--vp-c-brand));
 }
 
 .box:hover::after {
@@ -356,7 +362,7 @@
 }
 
 .nav .link.active {
-  background: #ebf5fa;
+  background: #ebedfa;
   border-radius: 8px;
 }
 

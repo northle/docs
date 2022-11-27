@@ -47,7 +47,7 @@ $ yarn start
 ```
 :::
 
-::: tip INFO
+::: tip
 If you're using Northle with a frontend framework template, you can run `npm run start:vite` instead for automatic asset compilation.
 
 ::: details Using pnpm or Yarn
@@ -58,7 +58,7 @@ $ yarn start:vite
 :::
 
 ::: warning
-The local HTTP server may slow down when you have bad internet speed.
+The development server may slow down when you have bad internet connection speed.
 :::
 
 ## Opening browser

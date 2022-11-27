@@ -40,7 +40,7 @@ export class UserService {
 
   public getUserInfo(user: User): void {
     if (!user.info) {
-      this.logger.warn('Cannot get user information');
+      this.logger.warn('Cannot retrieve user information');
     }
 
     // ...
