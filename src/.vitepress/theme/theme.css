@@ -176,6 +176,11 @@
   user-select: none;
 }
 
+.logo {
+  width: 28px;
+  height: auto !important;
+}
+
 .VPSwitch {
   transition: opacity 0.2s ease !important;
 }
