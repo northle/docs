@@ -1,6 +1,5 @@
 <div align="center">
-  <img src=".github/logo-full-dark.png#gh-dark-mode-only" width="310">
-  <img src=".github/logo-full-light.png#gh-light-mode-only" width="310">
+  <img src=".github/logo-full.png" width="310">
 
   <h1>Northle JS</h1>
 
