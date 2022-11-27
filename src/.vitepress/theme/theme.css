@@ -66,11 +66,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ced0e2;
   display: block;
-  border-radius: 10px;
   border: 2px solid transparent;
+  border-radius: 10px;
   background-clip: padding-box;
+  background-color: #ced0e2;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -91,8 +91,8 @@
 
 .VPNav,
 .VPNavBar.has-sidebar .content {
-  background: #fff !important;
   border-bottom: 1px solid var(--vp-c-divider-light);
+  background: #fff !important;
 }
 
 .dark .VPNav,
@@ -112,8 +112,8 @@
 }
 
 .dark .vp-doc [class*='language-'] > button.copy {
-  background-color: transparent;
   border-radius: 8px;
+  background-color: transparent;
 }
 
 .tip code {
@@ -121,21 +121,21 @@
 }
 
 .snippet-file {
-  background: var(--vp-code-block-bg);
-  color: #99a0b3;
-  padding: 12px 24px;
-  border-radius: 8px 8px 0 0;
-  font-size: 13px;
   display: flex;
   align-items: center;
+  border-radius: 8px 8px 0 0;
+  background: var(--vp-code-block-bg);
+  padding: 12px 24px;
+  color: #99a0b3;
+  font-size: 13px;
   font-family: var(--vp-font-family-mono);
   user-select: none;
 }
 
 .snippet-file + [class*='language-'] {
   margin-top: 0 !important;
-  border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
 }
 
 .snippet-file + [class*='language-'] pre {
@@ -143,9 +143,9 @@
 }
 
 .snippet-file svg {
+  margin-right: 8px;
   width: 18px;
   height: 18px;
-  margin-right: 8px;
 }
 
 .vp-doc [class*='language-'] > button.copy {
@@ -203,10 +203,10 @@
 }
 
 .VPSwitch .check {
+  top: 3px;
+  left: 3px;
   width: 14px;
   height: 14px;
-  left: 3px;
-  top: 3px;
 }
 
 .VPDocAsideOutline .content {
@@ -215,10 +215,10 @@
 }
 
 .outline-marker {
-  width: 3px !important;
-  height: 22px !important;
   left: -3px !important;
   margin-top: 4px !important;
+  width: 3px !important;
+  height: 22px !important;
 }
 
 .outline-title {
@@ -229,15 +229,15 @@
 }
 
 .outline-link {
-  font-weight: 400;
-  letter-spacing: 0.2px;
   padding: 2px 0;
+  font-weight: 400;
   font-size: 14px;
+  letter-spacing: 0.2px;
 }
 
 .outline-link.active {
-  font-weight: 500;
   color: var(--vp-c-brand) !important;
+  font-weight: 500;
 }
 
 [data-v-8b980502] {
@@ -261,50 +261,50 @@
 }
 
 .dark .VPNavBarMenuLink.active {
-  color: var(--vp-c-brand-light) !important;
   background: var(--vp-c-bg-soft);
+  color: var(--vp-c-brand-light) !important;
 }
 
 .VPNavBarMenuLink.active {
-  font-weight: 600;
+  align-self: center;
+  border-radius: 8px;
   background: #f2f3fa;
   height: 38px;
-  border-radius: 8px;
-  align-self: center;
+  font-weight: 600;
 }
 
 .VPButton {
-  border-radius: 8px !important;
-  border: 1px solid var(--vp-c-divider-light) !important;
-  padding: 2px 20px !important;
   transition: opacity 0.2s ease !important;
+  border: 1px solid var(--vp-c-divider-light) !important;
+  border-radius: 8px !important;
   background: var(--vp-c-bg) !important;
+  padding: 2px 20px !important;
   color: inherit !important;
 }
 
 .VPButton.brand {
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 0 30px rgba(41, 58, 212, 0.6);
+  border-color: transparent !important;
   background: linear-gradient(
     to right,
     var(--vp-c-brand-dark),
     var(--vp-c-brand)
   ) !important;
-  box-shadow: 0 0 30px rgba(41, 58, 212, 0.6);
-  border-color: transparent !important;
-  position: relative;
   color: #fff !important;
-  z-index: 100;
 }
 
 .VPButton.brand::after {
-  content: '';
   position: absolute;
-  left: 1px;
   top: 1px;
-  background: #111;
+  left: 1px;
+  z-index: -1;
   border-radius: 7px;
+  background: #111;
   width: calc(100% - 2px);
   height: calc(100% - 2px);
-  z-index: -1;
+  content: '';
 }
 
 .VPButton:hover {
@@ -318,10 +318,10 @@
 
 .box {
   position: relative;
+  z-index: 100;
   border-radius: 8px;
   background: var(--vp-c-bg);
   padding: 22px !important;
-  z-index: 100;
 }
 
 .box:hover {
@@ -329,15 +329,15 @@
 }
 
 .box:hover::after {
-  content: '';
   position: absolute;
-  left: 2px;
   top: 2px;
-  background: var(--vp-c-bg-mute);
+  left: 2px;
+  z-index: -1;
   border-radius: 7px;
+  background: var(--vp-c-bg-mute);
   width: calc(100% - 4px);
   height: calc(100% - 4px);
-  z-index: -1;
+  content: '';
 }
 
 .box .title {
@@ -351,9 +351,9 @@
 }
 
 .VPHero .tagline {
+  padding-top: 28px;
   font-weight: normal;
   font-size: 20px;
-  padding-top: 28px;
   line-height: 1.5;
 }
 
@@ -372,8 +372,8 @@
 }
 
 .nav .link.active {
-  background: #ebedfa;
   border-radius: 8px;
+  background: #ebedfa;
 }
 
 .dark .nav .link.active {
@@ -406,11 +406,11 @@
 }
 
 .vp-doc :not(pre) > code {
-  margin: 0 1px;
-  color: var(--vp-c-brand-light);
-  padding: 3px 7px;
-  border-radius: 6px;
   transition: none;
+  margin: 0 1px;
+  border-radius: 6px;
+  padding: 3px 7px;
+  color: var(--vp-c-brand-light);
 }
 
 html:not(.dark) .vp-doc :not(pre) > code {
@@ -423,10 +423,10 @@ html:not(.dark) .vp-doc :not(pre) > code {
 }
 
 .VPNavScreenAppearance::before {
-  content: 'Dark mode';
-  font-size: 0.75rem;
-  font-weight: 500;
   opacity: 0.75;
+  content: 'Dark mode';
+  font-weight: 500;
+  font-size: 0.75rem;
 }
 
 .VPSkipLink {
@@ -435,8 +435,8 @@ html:not(.dark) .vp-doc :not(pre) > code {
 
 .edit-link-button {
   border: 1px solid var(--vp-c-divider-light) !important;
-  padding: 3px 14px;
   border-radius: 8px;
+  padding: 3px 14px;
 }
 
 .edit-link-button:hover {
@@ -477,8 +477,8 @@ html:not(.dark) .vp-doc :not(pre) > code {
 }
 
 table {
-  border-radius: 8px;
   border: 0;
+  border-radius: 8px;
 }
 
 thead {
@@ -497,9 +497,9 @@ thead th:last-child {
 
 th,
 td {
-  padding: 11px 18px !important;
-  border-left: 0 !important;
   border-right: 0 !important;
+  border-left: 0 !important;
+  padding: 11px 18px !important;
 }
 
 tr:last-child td {

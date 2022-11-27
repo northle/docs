@@ -18,20 +18,20 @@ const { Layout } = DefaultTheme;
 
 <style scoped>
 .intro {
-  padding: 0 24px;
   margin-bottom: 30px;
+  padding: 0 24px;
 }
 
 .container {
-  max-width: 1152px;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 20px;
+  max-width: 1152px;
 }
 
 h2 {
-  font-size: 2.4rem;
   font-weight: 500;
+  font-size: 2.4rem;
   line-height: 1.2;
 }
 
