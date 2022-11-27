@@ -16,7 +16,13 @@
     "start:serve": "vitepress serve ./src"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "@types/markdown-it-container": "^2.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "eslint": "^8.28.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "prettier": "^2.8.0",
     "vitepress": "^1.0.0-alpha.29",
     "vue": "^3.2.45"
   },
