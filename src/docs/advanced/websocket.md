@@ -16,26 +16,26 @@ import { Authorizer, Channel } from '@northle/core';
 
 @Channel('chat/:id')
 export class ChatChannel implements Authorizer {
-  public passesUser(): boolean {
+  public pass(): boolean {
     return true;
   }
 }
 ```
 :::
 
-String argument passed to decorator is channel name with dynamic parameter. The `passesUser` method is used to determine whether authenticated user is authorized to join the channel on the client side.
+String argument passed to decorator is channel name with dynamic parameter. The `pass` method is used to determine whether authenticated user is authorized to join the channel on the client side.
 
 ## Emitting events on server
 
-Emitting events on the server side can be done using `Broadcaster` service:
+Emitting events on the server side can be done using `SocketEmitter` service:
 
 ::: code src/chat/chat.controller.ts
 ```ts
-import { Controller, Broadcaster } from '@northle/core';// [!code ++]
+import { Controller, SocketEmitter } from '@northle/core';// [!code ++]
 
 @Controller()
 export class ChatController {
-  constructor(private broadcaster: Broadcaster) {}// [!code ++]
+  constructor(private socketEmitter: SocketEmitter) {}// [!code ++]
 }
 ```
 :::
@@ -43,7 +43,7 @@ export class ChatController {
 To emit events with some payload use `emit` method:
 
 ```ts
-this.broadcaster.emit('message', `chat/${chatId}`);
+this.socketEmitter.emit('message', `chat/${chatId}`, message);
 ```
 
 ## Creating chat app
@@ -54,7 +54,7 @@ We can create an example chat app. Let's define some routes:
 ```ts
 @Controller()
 export class ChatController {
-  constructor(private broadcaster: Broadcaster) {}
+  constructor(private socketEmitter: SocketEmitter) {}
 
   @Route.Get('/chat')
   public index() {
@@ -63,9 +63,9 @@ export class ChatController {
 
   @Route.Post('/chat')
   public store() {
-    const { message } = this.request.data;
+    const { message } = this.request.body;
 
-    this.broadcaster.emit('message', 'chat/1', message);
+    this.socketEmitter.emit('message', 'chat/1', message);
 
     return null;
   }
@@ -82,20 +82,20 @@ Now we are able to receive broadcasts on the client side using [socket.io](https
 <main>
   <h1>Chat app</h1>
 
-  <form id="chat-form">
+  <form id="chat">
     <input type="text" name="message" placeholder="Enter your message...">
 
     <button>Send</button>
   </form>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
 
 <script>
   const socket = io();
   const chatId = 1;
 
-  const form = document.querySelector('#chat-form');
+  const form = document.querySelector('#chat');
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();

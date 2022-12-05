@@ -45,7 +45,7 @@ In order to log the user in, use the `login` method with provided e-mail and pas
 
 ::: code src/users/user.controller.ts
 ```ts{3}
-const { email, password } = this.request.data;
+const { email, password } = this.request.body;
 
 if (this.authenticator.login(email, password)) {
   // User is authenticated here
@@ -64,7 +64,7 @@ return redirectBack({
 To log user out, you need to call `logout` method:
 
 ```ts
-this.authenticator.logout();
+await this.authenticator.logout();
 ```
 
 ## Determining if user is authenticated

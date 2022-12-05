@@ -149,9 +149,16 @@ interface RegistrationForm {
   password: string;
 }
 
-const data = this.request.form<RegistrationForm>();
-const name = data.username ?? 'User';  // data.name: string | undefined
+const form = this.request.form<RegistrationForm>();
+
+// form.name: string | undefined
+
+const name = form.username ?? 'User';
 ```
+:::
+
+::: warning
+Form data is always type of `string` or `undefined`, so typed forms should be used only for defining shape of data and optional fields.
 :::
 
 ## Files
@@ -193,20 +200,6 @@ const locale = this.request.locale();
 ```
 
 Read more about [localization](/docs/advanced/localization) and language features.
-
-## Nonce
-
-Northle automatically generates [nonce](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/nonce) string on every request. You can obtain it with the `nonce` method:
-
-```ts
-const nonce = this.request.nonce();
-```
-
-The framework provides a handy `nonce` view function for rendering script nonces:
-
-```svelte
-<script nonce="{{ nonce() }}"></script>
-```
 
 ## Method spoofing
 

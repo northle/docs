@@ -232,7 +232,6 @@
   padding: 2px 0;
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.2px;
 }
 
 .outline-link.active {
@@ -241,7 +240,7 @@
 }
 
 [data-v-8b980502] {
-  padding: 0.5px 0;
+  padding: 1px 0;
 }
 
 .VPSidebarGroup .title-text {

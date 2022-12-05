@@ -174,3 +174,17 @@ import { StatusCode } from '@northle/core';
 
 this.response.status(StatusCode.NoContent);  // HTTP 204
 ```
+
+## Nonce
+
+Northle automatically generates [nonce](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/nonce) string on every request. You can obtain it with the `nonce` method:
+
+```ts
+const nonce = this.response.nonce();
+```
+
+The framework provides a handy `nonce` view function for rendering script nonces:
+
+```svelte
+<script nonce="{{ nonce() }}"></script>
+```
