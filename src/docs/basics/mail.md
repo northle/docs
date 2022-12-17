@@ -23,12 +23,12 @@ MAIL_PASSWORD=
 
 First, you need to inject `Mailer` to your controller or a service:
 
-::: code src/mail/mail.controller.ts
+::: code src/emails/email.controller.ts
 ```ts
 import { Mailer } from '@northle/core';// [!code ++]
 
 @Controller()
-export class MailController {
+export class EmailController {
   constructor(private mailer: Mailer) {}// [!code ++]
 }
 ```
@@ -36,10 +36,10 @@ export class MailController {
 
 In order to send an email, use the `send` method:
 
-::: code src/mail/mail.controller.ts
+::: code src/emails/email.controller.ts
 ```ts
 @Controller()
-export class MailController {
+export class EmailController {
   // ...
 
   @Route.Post('/send')
@@ -58,10 +58,10 @@ export class MailController {
 
 Northle provides a simple way to send HTML emails using [view templates](/docs/basics/views). 
 
-::: code src/mail/mail.controller.ts
+::: code src/emails/email.controller.ts
 ```ts
 @Controller()
-export class MailController {
+export class EmailController {
   // ...
 
   @Route.Post('/send')
@@ -69,7 +69,7 @@ export class MailController {
     await this.mailer.send({
       to: 'recipient@email.com',
       subject: 'Test email',
-      view: './views/emails/test',// [!code ++]
+      view: './views/test',// [!code ++]
       data: {// [!code ++]
         message: 'Test!',// [!code ++]
       },// [!code ++]
@@ -79,7 +79,7 @@ export class MailController {
 ```
 :::
 
-::: code src/mail/views/emails/test.html
+::: code src/emails/views/test.html
 ```svelte
 <div>
   <p>{{ message }}</p>

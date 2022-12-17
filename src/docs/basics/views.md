@@ -267,6 +267,54 @@ Sometimes you may want to left some parts of code uncompiled. For example, when 
 
 With this directive the above code will render as normal HTML, without displaying `content` variable.
 
+### `switch`
+
+Just like `switch` statements in JavaScript and TypeScript, you can use them in your views:
+
+```svelte
+[switch(role)]
+  [case('user')]
+    <p>You are a user</p>
+  [/case]
+
+  [case('admin')]
+    <p>You are an admin</p>
+  [/case]
+
+  [case('moderator')]
+    <p>You are a moderator</p>
+  [/case]
+
+  [default]
+    <p>We don't know what's your role</p>
+  [/default]
+[/switch]
+```
+
+### `stack` and `push`
+
+You can push view blocks to named stacks which will be rendered anywhere in your template.
+
+```svelte
+<head>
+  ...
+
+  [stack('scripts')]
+</head>
+```
+
+```svelte
+[push('scripts')]
+  <script src="/bundle.js"></script>
+[/push]
+
+<!-- Somewhere else: -->
+
+[push('scripts')]
+  <script src="/app.js"></script>
+[/push]
+```
+
 ### `vite`
 
 Northle provides a built-in intergration with [Vite](https://vitejs.dev) asset bundler which supports HMR. You may use `[vite]` directive to add your frontend scripts and styles:
@@ -302,6 +350,14 @@ Northle exposes few global constants you can use in your views:
 
 ```svelte
 <h1>This app is running on Northle v{{ VERSION }}</h1>
+```
+
+## Comments
+
+To add a comment that will not be renderer in a view, use the following syntax:
+
+```svelte
+{{-- This is a comment --}}
 ```
 
 ## Custom error pages

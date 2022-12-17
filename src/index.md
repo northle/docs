@@ -17,7 +17,7 @@ hero:
 
     - theme: alt
       text: Visit GitHub
-      link: https://github.com/northle/project-template
+      link: https://github.com/northle/app-template
 
 features:
   - icon: '🔑'

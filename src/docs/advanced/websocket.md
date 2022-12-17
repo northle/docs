@@ -14,7 +14,7 @@ First though, you should be introduced to a concept of broadcasting channels. Ch
 ```ts
 import { Authorizer, Channel } from '@northle/core';
 
-@Channel('chat/:id')
+@Channel('chats/:id')
 export class ChatChannel implements Authorizer {
   public pass(): boolean {
     return true;
@@ -43,7 +43,7 @@ export class ChatController {
 To emit events with some payload use `emit` method:
 
 ```ts
-this.socketEmitter.emit('message', `chat/${chatId}`, message);
+this.socketEmitter.emit('message', `chats/${chatId}`, message);
 ```
 
 ## Creating chat app
@@ -65,7 +65,7 @@ export class ChatController {
   public store() {
     const { message } = this.request.body;
 
-    this.socketEmitter.emit('message', 'chat/1', message);
+    this.socketEmitter.emit('message', 'chats/1', message);
 
     return null;
   }
@@ -108,7 +108,7 @@ Now we are able to receive broadcasts on the client side using [socket.io](https
     });
   });
 
-  socket.on(`chat/${chatId}/message`, (message) => {
+  socket.on(`chats/${chatId}/message`, (message) => {
     console.log(`Message: ${message}`);
   });
 </script>
