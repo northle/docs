@@ -1,48 +1,21 @@
 :root {
-  --vp-c-bg-mute: #ebeef1;
+  --vp-c-bg: #0c0c0e;
+  --vp-c-bg-soft: #1b1b20;
+  --vp-c-bg-mute: #141418;
   --vp-c-bg-alt: #fcfcfd;
   --vp-c-brand: #818cf8;
   --vp-c-brand-dark: #6366f1;
   --vp-c-brand-light: #a5b4fc;
-  --vp-c-divider-light: #edeef1;
-  --vp-c-gray-light-4: #e8edf3;
-  --vp-c-white-soft: #f5f8fc;
-  --vp-button-alt-bg: #f1f5f9;
-  --vp-button-alt-border: transparent;
-  --vp-button-brand-border: transparent;
-  --vp-code-block-bg: #1b1e27;
-  --vp-code-line-highlight-color: #29303b;
-  --vp-custom-block-info-bg: rgba(162, 191, 224, 0.164);
-  --vp-custom-block-info-border: rgba(178, 194, 212, 0.199);
-  --vp-custom-block-tip-code-bg: #d4dfff;
-  --vp-custom-block-tip-border: #e8ecff;
-  --vp-custom-block-tip-bg: #e8ebff;
-  --vp-custom-block-tip-code-bg: #dce1ff;
-  --vp-custom-block-tip-text: #0a43e0;
-  --vp-font-family-base: 'DM Sans', sans-serif;
-  --vp-font-family-mono: 'Roboto Mono', monospace;
-}
-
-:root:not(.dark) {
-  --vp-c-green-dimm-3: rgba(63, 201, 148, 0.158);
-  --vp-c-yellow-dimm-3: rgba(255, 197, 23, 0.082);
-}
-
-:root:not(.dark) .custom-block.details {
-  border-color: transparent;
-}
-
-.dark {
-  --vp-button-alt-bg: #18181b;
-  --vp-button-alt-hover-bg: #1b1b1f;
-  --vp-c-bg: #0c0c0e;
-  --vp-c-bg-soft: #1b1b20;
-  --vp-c-bg-mute: #141418;
   --vp-c-black: #12151b;
   --vp-c-divider: #2a313b;
-  --vp-c-divider-light: #202630;
+  --vp-c-divider-light: #1b2029;
   --vp-c-gray-dark-4: #273141;
+  --vp-c-gray-light-4: #e8edf3;
   --vp-c-text-code: #d8dfe9;
+  --vp-c-white-soft: #f5f8fc;
+  --vp-button-alt-bg: #18181b;
+  --vp-button-alt-border: transparent;
+  --vp-button-brand-border: transparent;
   --vp-code-block-bg: #141418;
   --vp-code-line-highlight-color: #1d232c;
   --vp-custom-block-info-bg: rgba(87, 109, 134, 0.158);
@@ -51,11 +24,13 @@
   --vp-custom-block-tip-border: #3f47969d;
   --vp-custom-block-tip-bg: rgba(79, 86, 187, 0.171);
   --vp-custom-block-tip-text: #9dacff;
+  --vp-font-family-base: 'DM Sans', sans-serif;
+  --vp-font-family-mono: 'Roboto Mono', monospace;
 }
 
 ::selection {
   background: #818cf8;
-  color: #fff;
+  color: #141a25;
 }
 
 ::-webkit-scrollbar {
@@ -70,7 +45,7 @@
   border: 2px solid transparent;
   border-radius: 10px;
   background-clip: padding-box;
-  background-color: #ced0e2;
+  background-color: #2c3038;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -81,23 +56,10 @@
   background: transparent;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background-color: #2c3038;
-}
-
-.dark ::selection {
-  color: #141a25;
-}
-
 .VPNav,
+.VPNav.no-sidebar,
 .VPNavBar.has-sidebar .content {
   border-bottom: 1px solid var(--vp-c-divider-light);
-  background: #fff !important;
-}
-
-.dark .VPNav,
-.dark .VPNav.no-sidebar,
-.dark .VPNavBar.has-sidebar .content {
   background: #141418 !important;
 }
 
@@ -105,13 +67,13 @@
   border-radius: 8px;
 }
 
-.dark .VPSidebar,
-.dark .vp-doc div[class*='language-'],
-.dark .snippet-file {
-  background: #141418;
+.VPSidebar,
+.vp-doc div[class*='language-'],
+.snippet-file {
+  background: #141418 !important;
 }
 
-.dark .vp-doc [class*='language-'] > button.copy {
+.vp-doc [class*='language-'] > button.copy {
   border-radius: 8px;
   background-color: transparent;
 }
@@ -259,15 +221,11 @@
   font-size: 18px !important;
 }
 
-.dark .VPNavBarMenuLink.active {
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-brand-light) !important;
-}
-
 .VPNavBarMenuLink.active {
   align-self: center;
   border-radius: 8px;
-  background: #f2f3fa;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-brand) !important;
   height: 38px;
   font-weight: 600;
 }
@@ -372,10 +330,6 @@
 
 .nav .link.active {
   border-radius: 8px;
-  background: #ebedfa;
-}
-
-.dark .nav .link.active {
   background: var(--vp-c-bg-soft);
 }
 
@@ -412,20 +366,9 @@
   color: var(--vp-c-brand-light);
 }
 
-html:not(.dark) .vp-doc :not(pre) > code {
-  background: #edf6fa;
-  color: var(--vp-c-brand);
-}
-
-.VPNavScreenAppearance .text {
-  display: none;
-}
-
-.VPNavScreenAppearance::before {
-  opacity: 0.75;
-  content: 'Dark mode';
-  font-weight: 500;
-  font-size: 0.75rem;
+.VPNavBarAppearance,
+.VPNavScreenAppearance {
+  display: none !important;
 }
 
 .VPSkipLink {

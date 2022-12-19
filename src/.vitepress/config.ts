@@ -1,6 +1,7 @@
 import Container from 'markdown-it-container';
 
 export default {
+  appearance: 'dark',
   outDir: './dist',
   title: 'Northle',
   lang: 'en-US',
