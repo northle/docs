@@ -7,16 +7,24 @@ title: Introducing Northle
 Northle (pronounced `/nɑrθl/`) is a modern and declarative backend framework for Node.js. It makes it easy to create fast and secure web applications with awesome developer experience.
 
 ::: warning
-Northle is currently in the `alpha` stage. Although it is already suitable for creating apps, you may still encounter some bugs and breaking changes. The documentation is ~`95%` complete.
+Northle is currently in the `alpha` stage. Although it is already suitable for creating apps, you may still encounter some bugs and breaking changes.
 :::
 
 ## Philosophy
 
-Northle provides a strong **architecture** which makes it easier to create highly scalable and easy-to-maintain apps.
+Northle provides a strong **architecture** which makes it easier to create highly scalable apps.
 
-The framework uses [TypeScript](https://www.typescriptlang.org) to provide best developer experience. We believe that this language is the best option for Node.js development. With TypeScript you can create secure and bug-free web apps.
+The framework uses [TypeScript](https://www.typescriptlang.org) to provide best developer experience. We believe that this language is the best option for secure Node.js app development. Northle provides:
 
-Also, we managed to provide a pleasant and dependency-free [installation](/docs/introduction/getting-started#creating-project) process. You don't need to install any global packages or CLIs to start building Northle app.
+- [Modular](/docs/basics/modules) HTTP architecture
+- [Dependency Injection](/docs/basics/dependency-injection)
+- Type-safety
+- [View templates](/docs/basics/views) engine
+- [Database client](/docs/basics/database/schema)
+- [Validation](/docs/basics/validation) and [session](/docs/basics/session) services
+- [Authentication](/docs/basics/authentication) system
+- Real-time [WebSocket](/docs/basics/websockets) integration
+- Dependency-free [installation](/docs/introduction/getting-started#creating-project) process
 
 ## Prerequisites
 
