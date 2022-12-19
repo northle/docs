@@ -6,6 +6,7 @@
   --vp-c-brand: #818cf8;
   --vp-c-brand-dark: #6366f1;
   --vp-c-brand-light: #a5b4fc;
+  --vp-c-brand-semilight: #8b96f7;
   --vp-c-black: #12151b;
   --vp-c-divider: #2a313b;
   --vp-c-divider-light: #1b2029;
@@ -122,6 +123,14 @@
   background: transparent !important;
 }
 
+.VPNavBarTitle .title {
+  font-size: 19px !important;
+}
+
+.VPNavBarTitle .title:hover {
+  opacity: 0.85;
+}
+
 .custom-block {
   border-radius: 8px;
 }
@@ -217,10 +226,6 @@
   font-weight: 500;
 }
 
-.VPNavBarTitle .title {
-  font-size: 18px !important;
-}
-
 .tabs label {
   line-height: 44px !important;
 }
@@ -237,6 +242,21 @@
   color: var(--vp-c-brand) !important;
   height: 38px;
   font-weight: 600;
+}
+
+.VPSocialLink {
+  color: var(--vp-c-text-1) !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.VPSocialLink:hover {
+  opacity: 0.9;
+}
+
+.VPSocialLink svg {
+  width: 22px !important;
+  height: 22px !important;
 }
 
 .VPButton {
@@ -372,7 +392,7 @@
   margin: 0 1px;
   border-radius: 6px;
   padding: 3px 7px;
-  color: var(--vp-c-brand-light);
+  color: var(--vp-c-brand-semilight);
 }
 
 .VPNavBarAppearance,
