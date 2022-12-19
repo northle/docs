@@ -10,11 +10,28 @@ In this section we will create a working Create-Read-Update-Delete (CRUD) todo a
 
 First, create a brand new project using command line tool:
 
-```shell
+::: code-group
+```shell [npm]
 $ npm create @northle todo-app
+
 $ cd todo-app
 $ npm start
 ```
+
+```shell [pnpm]
+$ pnpm create @northle todo-app
+
+$ cd todo-app
+$ pnpm start
+```
+
+```shell [yarn]
+$ yarn create @northle todo-app
+
+$ cd todo-app
+$ yarn start
+```
+:::
 
 ## Todo module
 
@@ -24,26 +41,27 @@ The directory structure will look like this:
 
 ```
 /src
-|_ /todos
-  |_ /views
-    |_ create.html
-    |_ index.html
-  |_ todo.controller.ts
-  |_ todo.module.ts
-|_ main.ts
+|  /todos
+|  |  /views
+|  |  |  create.html
+|  |  |  index.html
+|  |  todo.controller.ts
+|  |  todo.module.ts
+|  main.ts
 ```
 
 ## The plan
 
 We're going to define serveral routes following REST API rules:
 
-| HTTP Method   | URL             | Controller Method  | Role                       |
-| ------------- | --------------- | ------------------ | -------------------------- |
-| GET           | `/todos`        | `index`            | Return view with todo list |
-| POST          | `/todos`        | `store`            | Create and store new todo  |
-| GET           | `/todos/create` | `destroy`          | Render a view with form    |
-| DELETE        | `/todos/:id`    | `destroy`          | Delete todo from database  |
-| PATCH         | `/todos/:id`    | `update`           | Update todo record         |
+| HTTP Method   | URL              | Controller Method  | Role                         |
+| ------------- | ---------------- | ------------------ | ---------------------------- |
+| GET           | `/todos`         | `index`            | Return view with todo list   |
+| GET           | `/todos/create`  | `create`           | Render a view with todo form |
+| POST          | `/todos`         | `store`            | Create and store new todo    |
+| GET           | `/todos/:id/edit`| `edit`             | Render a view with edit form |
+| PATCH         | `/todos/:id`     | `update`           | Update todo record           |
+| DELETE        | `/todos/:id`     | `destroy`          | Delete todo from database    |
 
 ## Todo controller
 
@@ -51,7 +69,7 @@ Let's begin with creating `TodoModule` along with `TodoController`:
 
 ```shell
 $ north make module todos
-$ north make module controller todos/todo
+$ north make controller todo
 ```
 
 ::: code src/todos/todo.controller.ts

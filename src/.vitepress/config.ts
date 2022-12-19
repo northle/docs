@@ -189,23 +189,6 @@ export default {
         ],
       },
       {
-        text: 'CRUD Tutorial',
-        items: [
-          {
-            text: 'Getting Started',
-            link: '/docs/crud-tutorial/getting-started',
-          },
-          {
-            text: 'Creating',
-            link: '/docs/crud-tutorial/creating',
-          },
-          {
-            text: 'Reading',
-            link: '/docs/crud-tutorial/reading',
-          },
-        ],
-      },
-      {
         text: 'More',
         items: [
           {
@@ -215,6 +198,27 @@ export default {
           {
             text: 'Deployment',
             link: '/docs/more/deployment',
+          },
+        ],
+      },
+      {
+        text: 'Tutorial',
+        items: [
+          {
+            text: 'Getting Started',
+            link: '/docs/tutorial/getting-started',
+          },
+          {
+            text: 'Creating',
+            link: '/docs/tutorial/creating',
+          },
+          {
+            text: 'Reading',
+            link: '/docs/tutorial/reading',
+          },
+          {
+            text: 'Updating',
+            link: '/docs/tutorial/updating',
           },
         ],
       },
