@@ -127,13 +127,16 @@ model Todo {// [!code ++]
 
 After that, run command:
 
-```shell
+::: code-group
+```shell [npm]
 $ npm run db:migrate
 ```
 
-::: details Using pnpm or Yarn
-```shell
+```shell [pnpm]
 $ pnpm run db:migrate
+```
+
+```shell [yarn]
 $ yarn db:migrate
 ```
 :::

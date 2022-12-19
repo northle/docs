@@ -26,13 +26,16 @@ In production, this option should always be set to `false`. Otherwise, sensitive
 
 After changing the configuration, run the following command to generate new encryption key:
 
-```shell
+::: code-group
+```shell [npm]
 $ npm run key:generate
 ```
 
-::: details Using pnpm or Yarn
-```shell
+```shell [pnpm]
 $ pnpm run key:generate
+```
+
+```shell [yarn]
 $ yarn key:generate
 ```
 :::

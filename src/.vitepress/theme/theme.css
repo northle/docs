@@ -221,6 +221,15 @@
   font-size: 18px !important;
 }
 
+.tabs label {
+  line-height: 44px !important;
+}
+
+.vp-code-group input:checked + label::after {
+  height: 3px;
+  border-radius: 5px;
+}
+
 .VPNavBarMenuLink.active {
   align-self: center;
   border-radius: 8px;

@@ -16,15 +16,18 @@ To run Northle, your environment has to meet below requirements:
 
 ## Creating a project
 
-To create new Northle project you can use the NPM command:
+To create new Northle project you can use the `NPM` command:
 
-```shell
+::: code-group
+```shell [npm]
 $ npm create @northle <app-name>
 ```
 
-::: details Using pnpm or Yarn
-```shell
+```shell [pnpm]
 $ pnpm create @northle <app-name>
+```
+
+```shell [yarn]
 $ yarn create @northle <app-name>
 ```
 :::
@@ -33,27 +36,20 @@ The installator will ask you few things at the beginning. You may choose to add 
 
 When your project is ready you can lauch your app using the following commands:
 
-```shell
+::: code-group
+```shell [npm]
 $ cd <app-name>
-$ npm run start
+$ npm start
 ```
 
-::: details Using pnpm or Yarn
-```shell
+```shell [pnpm]
 $ cd <app-name>
+$ pnpm start
+```
 
-$ pnpm run start
+```shell [yarn]
+$ cd <app-name>
 $ yarn start
-```
-:::
-
-::: tip
-If you're using Northle with a frontend framework template, you can run `npm run start:vite` instead for automatic asset compilation.
-
-::: details Using pnpm or Yarn
-```shell
-$ pnpm run start:vite
-$ yarn start:vite
 ```
 :::
 

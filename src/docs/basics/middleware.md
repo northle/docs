@@ -11,7 +11,7 @@ HTTP middleware is an useful mechanism in web apps. It is responsible for filter
 To create a middleware, you can leverage the CLI:
 
 ```shell
-$ north make middleware auth/auth
+$ north make middleware auth
 ```
 
 ::: code src/auth/auth.middleware.ts

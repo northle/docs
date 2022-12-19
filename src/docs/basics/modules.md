@@ -35,7 +35,7 @@ The `controllers` field defines a list of [controllers](/docs/basics/controllers
 
 ### Socket channels
 
-Likewise, the `socketChannels` array declares websocket [channels](/docs/advanced/websockets).
+Likewise, the `socketChannels` array declares websocket [channels](/docs/advanced/websocket).
 
 ### Importing controllers and channels
 
