@@ -8,7 +8,7 @@ Secure web apps require good encryption and hashing algorithms. Northle provides
 
 ## Configuration
 
-To provide best security, your app should have unique key for encrypting data. The `ENCRYPTION_KEY` is stored in `.env` file and it's generated automatically when you're creating new project. You can regenerate it using CLI command:
+To provide best security, your app should have unique key for encrypting data. The `ENCRYPT_KEY` is stored in the `.env` file and it's generated automatically when you're creating new project. You can regenerate it using CLI command:
 
 ```shell
 $ npm run key:generate
