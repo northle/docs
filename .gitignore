@@ -5,6 +5,7 @@
 /.yarn/cache
 /dist
 /node_modules
+/src/.vitepress/cache
 *.log
 *.map
 *.sln
