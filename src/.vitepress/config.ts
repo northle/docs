@@ -220,6 +220,10 @@ export default {
             text: 'Updating',
             link: '/docs/tutorial/updating',
           },
+          {
+            text: 'Deleting',
+            link: '/docs/tutorial/deleting',
+          },
         ],
       },
     ],

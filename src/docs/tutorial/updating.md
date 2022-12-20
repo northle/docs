@@ -4,11 +4,11 @@ title: 'CRUD Tutorial: Updating'
 
 # CRUD Tutorial: Updating
 
-Previously we added a todo reading. Now we can update todos in our app.
+Previously we added a todo updating feature. Now we can add ability to delete todos in our app.
 
 ## Routes
 
-Let's define the `GET /todos/:id/edit` and `PATCH /todos/:id`:
+Let's define the `GET /todos/:id/delete` and `DELETE /todos/:id`:
 
 ::: code src/todos/todo.controller.ts
 ```ts
@@ -16,34 +16,40 @@ Let's define the `GET /todos/:id/edit` and `PATCH /todos/:id`:
 export class TodoController {
   // ...
 
-  @Route.Get('/todos/:id/edit')// [!code ++]
-  public async edit(id: string) {// [!code ++]
-    const todo = await this.db.todo.findOne(id);// [!code ++]
+  @Route.Get('/todos/:id/delete')// [!code ++]
+  public async delete(id: string) {// [!code ++]
+    return view('./views/delete');// [!code ++]
+  }// [!code ++]
 
-    return view('./views/edit', {// [!code ++]
-      todo,// [!code ++]
+  @Route.Delete('/todos/:id')// [!code ++]
+  public async destroy(id: string) {// [!code ++]
+    const { title, content } = this.request.input;// [!code ++]
+
+    const todo = await this.db.todo.delete({// [!code ++]
+      where: {// [!code ++]
+        id,// [!code ++]
+      },// [!code ++]
     });// [!code ++]
+
+    return todo;// [!code ++]
   }// [!code ++]
 }
 ```
 :::
 
-## Edit view
+## Delete form view
 
-The `src/todos/views/edit.html` view will render the edit form:
+The `src/todos/views/delete.html` view will render the edit form:
 
-::: code src/todos/views/edit.html
+::: code src/todos/views/delete.html
 ```svelte
 ...
 
-<form action="/todos" method="post">
-  [method('PATCH')]
+<form action="/todos/{{ $request.params.id }}" method="post">
+  [method('DELETE')]
   [token]
 
-  <input type="text" name="title" placeholder="Title">
-  <input type="text" name="content" placeholder="Content">
-
-  <button>Edit</button>
+  <button>Delete</button>
 </form>
 ```
 :::
