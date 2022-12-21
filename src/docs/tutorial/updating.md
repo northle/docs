@@ -18,7 +18,13 @@ export class TodoController {
 
   @Route.Get('/todos/:id/edit')// [!code ++]
   public async edit(id: string) {// [!code ++]
-    return view('./views/edit');// [!code ++]
+    const todo = await this.db.todo.findUnique({// [!code ++]
+      where: {// [!code ++]
+        id,// [!code ++]
+      },// [!code ++]
+    });// [!code ++]
+
+    return view('./views/edit', { todo });// [!code ++]
   }// [!code ++]
 
   @Route.Patch('/todos/:id')// [!code ++]
@@ -53,10 +59,21 @@ The `src/todos/views/edit.html` view will render the edit form:
   [method('PATCH')]
   [token]
 
-  <input type="text" name="title" placeholder="Title">
-  <input type="text" name="content" placeholder="Content">
+  <input
+    type="text"
+    name="title"
+    placeholder="Title"
+    value="{{ todo.title }}"
+  >
 
-  <button>Edit</button>
+  <input
+    type="text"
+    name="content"
+    placeholder="Content"
+    value="{{ todo.content }}"
+  >
+
+  <button>Edit todo</button>
 </form>
 ```
 :::

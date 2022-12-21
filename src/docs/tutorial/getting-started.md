@@ -52,7 +52,7 @@ The directory structure will look like this:
 
 ## The plan
 
-We're going to define serveral routes following REST API rules:
+We're going to define serveral routes following the REST API naming convention:
 
 | HTTP Method   | URL                 | Controller Method  | Role                           |
 | ------------- | ------------------- | ------------------ | ------------------------------ |
@@ -60,7 +60,7 @@ We're going to define serveral routes following REST API rules:
 | GET           | `/todos/create`     | `create`           | Render a view with todo form   |
 | POST          | `/todos`            | `store`            | Create and store new todo      |
 | GET           | `/todos/:id/edit`   | `edit`             | Render a view with edit form   |
-| GET           | `/todos/:id/delete` | `delete`           | Render a view with delete form |
+| GET           | `/todos/:id/remove` | `remove`           | Render a view with delete form |
 | PATCH         | `/todos/:id`        | `update`           | Update todo record             |
 | DELETE        | `/todos/:id`        | `destroy`          | Delete todo from database      |
 

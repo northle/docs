@@ -16,9 +16,15 @@ Let's define the `GET /todos/:id/delete` and `DELETE /todos/:id`:
 export class TodoController {
   // ...
 
-  @Route.Get('/todos/:id/delete')// [!code ++]
-  public async delete(id: string) {// [!code ++]
-    return view('./views/delete');// [!code ++]
+  @Route.Get('/todos/:id/remove')// [!code ++]
+  public async remove(id: string) {// [!code ++]
+    const todo = await this.db.todo.findUnique({// [!code ++]
+      where: {// [!code ++]
+        id,// [!code ++]
+      },// [!code ++]
+    });// [!code ++]
+
+    return view('./views/delete', { todo });// [!code ++]
   }// [!code ++]
 
   @Route.Delete('/todos/:id')// [!code ++]
@@ -39,17 +45,19 @@ export class TodoController {
 
 ## Delete form view
 
-The `src/todos/views/delete.html` view will render the edit form:
+The view `src/todos/views/delete.html` will be responsible for rendering the deletion form:
 
 ::: code src/todos/views/delete.html
 ```svelte
 ...
 
+<h1>Delete: {{ todo.title }}</h1>
+
 <form action="/todos/{{ $request.params.id }}" method="post">
   [method('DELETE')]
   [token]
 
-  <button>Delete</button>
+  <button>Delete todo</button>
 </form>
 ```
 :::
