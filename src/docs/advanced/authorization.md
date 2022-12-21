@@ -11,7 +11,7 @@ Along with authentication, Northle ships with additional security API for author
 To create new gate, the best option is to use CLI:
 
 ```shell
-$ north make gate posts/post
+$ northle make gate posts/post
 ```
 
 This command will generate a brand new gate in `src/posts/post.gate.ts` file.

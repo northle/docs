@@ -69,8 +69,8 @@ We're going to define serveral routes following the REST API naming convention:
 Let's begin with creating `TodoModule` along with `TodoController`:
 
 ```shell
-$ north make module todos
-$ north make controller todo
+$ northle make module todos
+$ northle make controller todo
 ```
 
 ::: code src/todos/todo.controller.ts

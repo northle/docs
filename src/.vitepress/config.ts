@@ -132,6 +132,10 @@ export default {
             text: 'HTTP Client',
             link: '/docs/basics/http-client',
           },
+          {
+            text: 'CLI',
+            link: '/docs/basics/cli',
+          },
         ],
       },
       {
