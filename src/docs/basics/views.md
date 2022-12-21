@@ -272,28 +272,30 @@ With this directive the above code will render as normal HTML, without displayin
 Just like `switch` statements in JavaScript and TypeScript, you can use them in your views:
 
 ```svelte
-[switch(role)]
-  [case('user')]
-    <p>You are a user</p>
-  [/case]
+<div class="user-role">
+  [switch (role)]
+    [case ('user')]
+      <p>You are a user</p>
+    [/case]
 
-  [case('admin')]
-    <p>You are an admin</p>
-  [/case]
+    [case ('admin')]
+      <p>You are an administrator</p>
+    [/case]
 
-  [case('moderator')]
-    <p>You are a moderator</p>
-  [/case]
+    [case ('moderator')]
+      <p>You are a moderator</p>
+    [/case]
 
-  [default]
-    <p>We don't know what's your role</p>
-  [/default]
-[/switch]
+    [default]
+      <p>Invalid role</p>
+    [/default]
+  [/switch]
+</div>
 ```
 
 ### `stack` and `push`
 
-You can push view blocks to named stacks which will be rendered anywhere in your template.
+You can push view blocks to named stacks which will be rendered anywhere in your template using `stack` and `push` directives:
 
 ```svelte
 <head>
@@ -305,7 +307,7 @@ You can push view blocks to named stacks which will be rendered anywhere in your
 
 ```svelte
 [push('scripts')]
-  <script src="/bundle.js"></script>
+  <script src="/lib.js"></script>
 [/push]
 
 <!-- Somewhere else: -->
@@ -317,13 +319,13 @@ You can push view blocks to named stacks which will be rendered anywhere in your
 
 ### `vite`
 
-Northle provides a built-in intergration with [Vite](https://vitejs.dev) asset bundler which supports HMR. You may use `[vite]` directive to add your frontend scripts and styles:
+Northle provides a built-in intergration with [Vite](https://vitejs.dev) asset bundler which supports HMR. You may use `[vite]` directive to add your frontend scripts (it accepts TypeScript as well) and CSS styles:
 
 ```svelte
 <head>
   ...
 
-  [vite('main.js')]
+  [vite('main.ts')]
 </head>
 ```
 

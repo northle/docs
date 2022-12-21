@@ -29,6 +29,7 @@ $ yarn global add @northle/cli
 To generate new file, run the `make` command followed by type and name of the file:
 
 ```shell
+# Create `src/posts/post.controller.ts` file
 $ northle make controller post
 ```
 
