@@ -4,13 +4,13 @@ title: Modules
 
 # Modules
 
-The most basic piece of Northle application are modules. Module is a simple class responsible for organizing code and dividing it into smaller chunks. Each module should represent one app feature.
+The most basic pieces of Northle apps are modules. Module is a simple chunk of code in a separate directory in the `src/` folder. Each module should have a corresponding `.module.ts` file and represent single app feature part.
 
 ![Modules Scheme](./assets/modules.png)
 
 ## Module structure
 
-Each module has a similar structure:
+Each module file has a similar structure:
 
 ::: code src/posts/post.module.ts
 ```ts

@@ -50,3 +50,11 @@ To create a new project, run the `new` command:
 ```shell
 $ northle new my-app
 ```
+
+## Updating framework
+
+To easly update the framework, run the `update` command:
+
+```shell
+$ northle update
+```

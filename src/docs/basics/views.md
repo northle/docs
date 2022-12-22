@@ -333,15 +333,15 @@ Northle provides a built-in intergration with [Vite](https://vitejs.dev) asset b
 
 You can use functions inside your templates. Northle provides several global functions that you can call in a view:
 
-| Function    | Return type      | Return value                                                  |
-| ----------- | ---------------- | ------------------------------------------------------------- |
-| `csrfToken` | `string \| null` | CSRF protection [token](/docs/advanced/csrf-protection)       |
-| `flash`     | `string \| null` | Session [flash data](/docs/basics/session#flash-data)         |
-| `nonce`     | `string`         | Request generated [nonce](/docs/basics/requests#nonce) string |
-| `oldInput`  | `string`         | Previous request form data                                    |
-| `range`     | `number[]`       | Range of numbers                                              |
-| `session`   | `string`         | [Session](/docs/basics/session) data                          |
-| `trans`     | `string`         | Localization [translations](/docs/advanced/localization)      |
+| Function     | Return type      | Return value                                                  |
+| ------------ | ---------------- | ------------------------------------------------------------- |
+| `csrfToken`  | `string \| null` | CSRF protection [token](/docs/advanced/csrf-protection)       |
+| `flash<T>`   | `T \| null`      | Session [flash data](/docs/basics/session#flash-data)         |
+| `nonce`      | `string`         | Request generated [nonce](/docs/basics/requests#nonce) string |
+| `oldInput`   | `string`         | Previous request form data                                    |
+| `range`      | `number[]`       | Range of numbers                                              |
+| `session<T>` | `T \| null`      | [Session](/docs/basics/session) data                          |
+| `trans`      | `string`         | Localization [translations](/docs/advanced/localization)      |
 
 For example:
 
