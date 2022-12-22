@@ -331,7 +331,19 @@ Northle provides a built-in intergration with [Vite](https://vitejs.dev) asset b
 
 ## Functions
 
-You can call functions inside your templates:
+You can use functions inside your templates. Northle provides several global functions that you can call in a view:
+
+| Function    | Return type      | Return value                                                  |
+| ----------- | ---------------- | ------------------------------------------------------------- |
+| `csrfToken` | `string \| null` | CSRF protection [token](/docs/advanced/csrf-protection)       |
+| `flash`     | `string \| null` | Session [flash data](/docs/basics/session#flash-data)         |
+| `nonce`     | `string`         | Request generated [nonce](/docs/basics/requests#nonce) string |
+| `oldInput`  | `string`         | Previous request form data                                    |
+| `range`     | `number[]`       | Range of numbers                                              |
+| `session`   | `string`         | [Session](/docs/basics/session) data                          |
+| `trans`     | `string`         | Localization [translations](/docs/advanced/localization)      |
+
+For example:
 
 ```svelte
 <p>Logged user: {{ session('username') }}</p>
@@ -345,13 +357,13 @@ You can call functions inside your templates:
 
 Northle exposes few global constants you can use in your views:
 
-| Constant       | Type     | Value                     |
-| -------------- | -------- | ------------------------- |
-| `VERSION`      | `string` | Northle framework version |
-| `NODE_VERSION` | `string` | Node.js version           |
+| Constant          | Type     | Value                     |
+| ----------------- | -------- | ------------------------- |
+| `NODE_VERSION`    | `string` | Node.js version           |
+| `NORTHLE_VERSION` | `string` | Northle framework version |
 
 ```svelte
-<h1>This app is running on Northle v{{ VERSION }}</h1>
+<h1>This app is running on Northle v{{ NORTHLE_VERSION }}</h1>
 ```
 
 ## Comments
