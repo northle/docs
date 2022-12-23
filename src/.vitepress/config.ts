@@ -78,63 +78,63 @@ export default {
         ],
       },
       {
-        text: 'Basics',
+        text: 'Essentials',
         items: [
           {
             text: 'Directory Structure',
-            link: '/docs/basics/directory-structure',
+            link: '/docs/essentials/directory-structure',
           },
           {
             text: 'Configuration',
-            link: '/docs/basics/configuration',
+            link: '/docs/essentials/configuration',
           },
           {
             text: 'Modules',
-            link: '/docs/basics/modules',
+            link: '/docs/essentials/modules',
           },
           {
             text: 'Controllers and Routes',
-            link: '/docs/basics/controllers-and-routes',
+            link: '/docs/essentials/controllers-and-routes',
           },
           {
             text: 'Requests',
-            link: '/docs/basics/requests',
+            link: '/docs/essentials/requests',
           },
           {
             text: 'Responses',
-            link: '/docs/basics/responses',
+            link: '/docs/essentials/responses',
           },
           {
             text: 'Views',
-            link: '/docs/basics/views',
+            link: '/docs/essentials/views',
           },
           {
             text: 'Dependency Injection',
-            link: '/docs/basics/dependency-injection',
+            link: '/docs/essentials/dependency-injection',
           },
           {
             text: 'Services',
-            link: '/docs/basics/services',
+            link: '/docs/essentials/services',
           },
           {
             text: 'Session',
-            link: '/docs/basics/session',
+            link: '/docs/essentials/session',
           },
           {
             text: 'Middleware',
-            link: '/docs/basics/middleware',
+            link: '/docs/essentials/middleware',
           },
           {
             text: 'Mail',
-            link: '/docs/basics/mail',
+            link: '/docs/essentials/mail',
           },
           {
             text: 'HTTP Client',
-            link: '/docs/basics/http-client',
+            link: '/docs/essentials/http-client',
           },
           {
             text: 'CLI',
-            link: '/docs/basics/cli',
+            link: '/docs/essentials/cli',
           },
         ],
       },

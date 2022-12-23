@@ -56,7 +56,7 @@ export class EmailController {
 
 ## HTML emails
 
-Northle provides a simple way to send HTML emails using [view templates](/docs/basics/views). 
+Northle provides a simple way to send HTML emails using [view templates](/docs/essentials/views). 
 
 ::: code src/emails/email.controller.ts
 ```ts

@@ -31,7 +31,7 @@ The `imports` field imports other modules into current one.
 
 ### Controllers
 
-The `controllers` field defines a list of [controllers](/docs/basics/controllers-and-routes) associated with the module. This is required for proper route registering.
+The `controllers` field defines a list of [controllers](/docs/essentials/controllers-and-routes) associated with the module. This is required for proper route registering.
 
 ### Socket channels
 

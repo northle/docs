@@ -244,6 +244,11 @@
   font-weight: 600;
 }
 
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup {
+  opacity: 0.9;
+}
+
 .VPSocialLink {
   color: var(--vp-c-text-1) !important;
   width: 40px !important;
@@ -343,11 +348,6 @@
   line-height: 1.5;
 }
 
-.VPNavBarMenuLink,
-.VPNavBarMenuGroup {
-  opacity: 0.9;
-}
-
 .link[data-v-5f79f6bb] {
   margin: 6px 0;
 }
@@ -408,10 +408,11 @@
   border: 1px solid var(--vp-c-divider-light) !important;
   border-radius: 8px;
   padding: 3px 14px;
+  transition: all .1s ease !important;
 }
 
 .edit-link-button:hover {
-  background: var(--vp-c-bg-soft);
+  border-color: var(--vp-c-brand-dark) !important;
 }
 
 .VPMenu {

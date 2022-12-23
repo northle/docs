@@ -45,7 +45,7 @@ Controller methods should always return some value. Northle automatically sends 
 
 ### Registering controllers
 
-The place where every controller is registered is a [module](/docs/basics/modules). Every time you create a new controller manually, you need to import it into a module:
+The place where every controller is registered is a [module](/docs/essentials/modules). Every time you create a new controller manually, you need to import it into a module:
 
 ::: code src/posts/post.module.ts
 ```ts
@@ -192,4 +192,4 @@ return view('./views/profile');
 return redirect('/login');
 ```
 
-To get more information about response types, visit the [responses](/docs/basics/responses) section.
+To get more information about response types, visit the [responses](/docs/essentials/responses) section.

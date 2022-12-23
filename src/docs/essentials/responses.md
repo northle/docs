@@ -38,7 +38,7 @@ class PostController {
 ```
 :::
 
-In addition to returning strings, you may also return arrays and objects. Northle converts objects into [JSON responses](/docs/basics/responses#json-responses).
+In addition to returning strings, you may also return arrays and objects. Northle converts objects into [JSON responses](/docs/essentials/responses#json-responses).
 
 ## Redirects
 

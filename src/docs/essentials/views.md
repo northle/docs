@@ -336,11 +336,11 @@ You can use functions inside your templates. Northle provides several global fun
 | Function     | Return type      | Return value                                                  |
 | ------------ | ---------------- | ------------------------------------------------------------- |
 | `csrfToken`  | `string \| null` | CSRF protection [token](/docs/advanced/csrf-protection)       |
-| `flash<T>`   | `T \| null`      | Session [flash data](/docs/basics/session#flash-data)         |
-| `nonce`      | `string`         | Request generated [nonce](/docs/basics/requests#nonce) string |
+| `flash<T>`   | `T \| null`      | Session [flash data](/docs/essentials/session#flash-data)         |
+| `nonce`      | `string`         | Request generated [nonce](/docs/essentials/requests#nonce) string |
 | `oldInput`   | `string`         | Previous request form data                                    |
 | `range`      | `number[]`       | Range of numbers                                              |
-| `session<T>` | `T \| null`      | [Session](/docs/basics/session) data                          |
+| `session<T>` | `T \| null`      | [Session](/docs/essentials/session) data                          |
 | `trans`      | `string`         | Localization [translations](/docs/advanced/localization)      |
 
 For example:
@@ -380,4 +380,4 @@ You can also customize default error pages like `404 Not Found` or `500 Internal
 
 Just create a file with error code as its name, like `views/errors/404.html`. That file should contain your custom page template. If the file exists, Northle will serve it as the `404` error page. Otherwise, the default one will be served.
 
-Alternatively you can create your own erro logic with [route handlers](/docs/basics/controllers-and-routes#error-handler-routes).
+Alternatively you can create your own erro logic with [route handlers](/docs/essentials/controllers-and-routes#error-handler-routes).

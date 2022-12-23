@@ -16,14 +16,14 @@ Northle provides a strong **architecture** which makes it easier to create highl
 
 The framework uses [TypeScript](https://www.typescriptlang.org) to provide best developer experience. We believe that this language is the best option for secure Node.js app development. Northle provides:
 
-- [Modular](/docs/basics/modules) HTTP architecture
-- [Dependency Injection](/docs/basics/dependency-injection)
+- [Modular](/docs/essentials/modules) HTTP architecture
+- [Dependency Injection](/docs/essentials/dependency-injection)
 - Type-safety
-- [View templates](/docs/basics/views) engine
-- [Database client](/docs/basics/database/schema)
-- [Validation](/docs/basics/validation) and [session](/docs/basics/session) services
-- [Authentication](/docs/basics/authentication) system
-- Real-time [WebSocket](/docs/basics/websockets) integration
+- [View templates](/docs/essentials/views) engine
+- [Database client](/docs/essentials/database/schema)
+- [Validation](/docs/essentials/validation) and [session](/docs/essentials/session) services
+- [Authentication](/docs/essentials/authentication) system
+- Real-time [WebSocket](/docs/essentials/websockets) integration
 - Dependency-free [installation](/docs/introduction/getting-started#creating-project) process
 
 ## Prerequisites

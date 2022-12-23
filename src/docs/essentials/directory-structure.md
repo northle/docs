@@ -23,7 +23,7 @@ The default Northle application structure consists of several directories and fi
 
 | File                | Contains                                                                                                                                                                                         |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `.env`              | Environment [configuration](/docs/basics/configuration#environment-settings). Note that you should ignore this file in version control systems because it stores sensitive data.                 |
+| `.env`              | Environment [configuration](/docs/essentials/configuration#environment-settings). Note that you should ignore this file in version control systems because it stores sensitive data.                 |
 | `.env.example`      | Example version of `.env` file that can be stored in version control system repositories                                                                                                         |
 | `.eslintrc.json`    | Configuration for [ESLint](https://eslint.org)                                                                                                                                                   |
 | `.gitignore`        | Files list that Git [should not track](https://git-scm.com/docs/gitignore)                                                                                                                       |
