@@ -14,9 +14,11 @@ Routing system in Northle is based on **controller** classes.
 
 Basically, a controller is just a class with methods assigned to URLs. Each route handles incoming requests. Controllers contain methods decorated with appropriate HTTP verbs.
 
+### Controller structure
+
 Northle comes with one controller in `src/app/app.controller.ts` file by default.
 
-This controller has one registered route: `GET /`. When the user requests for that route, the request will be passed to the `index` method which renders a view.
+The app controller defines an `index` method which is decorated with `@Route.Get` decorator. This decorator tells Northle that the `index` method should be called when the user requests for the `/` route.
 
 ::: code src/app/app.controller.ts
 ```ts
@@ -41,7 +43,11 @@ export class AppController {
 ```
 :::
 
+The controller defines a `notFound` method which is decorated with `@Route.Error(404)` decorator. This method is a custom [handler](/docs/essentials/controllers-and-routes#error-handler-routes) which is called when the user requests for the non-existing route.
+
+::: info
 Controller methods should always return some value. Northle automatically sends proper headers based on returned data. In case of object or array, the response has the JSON type. When returned value is text or a view object, it will be rendered as HTML.
+:::
 
 ### Registering controllers
 
