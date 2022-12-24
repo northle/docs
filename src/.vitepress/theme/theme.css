@@ -87,12 +87,12 @@
   display: flex;
   align-items: center;
   border-radius: 8px 8px 0 0;
+  background: var(--vp-c-bg-soft) !important;
   padding: 9px 24px;
   color: #99a0b3;
   font-size: 13px;
   font-family: var(--vp-font-family-mono);
   user-select: none;
-  background: var(--vp-c-bg-soft) !important;
 }
 
 .snippet-file + [class*='language-'] {
@@ -231,14 +231,14 @@
 }
 
 .vp-code-group input:checked + label::after {
-  height: 3px;
   border-radius: 5px;
+  height: 3px;
 }
 
 .VPNavBarMenuLink {
   align-self: center;
-  height: 38px;
   border-radius: 8px;
+  height: 38px;
 }
 
 .VPNavBarMenuLink,
@@ -248,8 +248,8 @@
 }
 
 .VPNavBarMenuLink:hover {
-  color: inherit !important;
   background: var(--vp-c-bg-soft) !important;
+  color: inherit !important;
 }
 
 .VPNavBarMenuLink.active {
@@ -259,9 +259,9 @@
 }
 
 .VPSocialLink {
-  color: var(--vp-c-text-1) !important;
   width: 40px !important;
   height: 40px !important;
+  color: var(--vp-c-text-1) !important;
 }
 
 .VPSocialLink:hover {
@@ -414,10 +414,10 @@
 }
 
 .edit-link-button {
+  transition: all 0.1s ease !important;
   border: 1px solid var(--vp-c-divider-light) !important;
   border-radius: 8px;
   padding: 3px 14px;
-  transition: all .1s ease !important;
 }
 
 .edit-link-button:hover {
