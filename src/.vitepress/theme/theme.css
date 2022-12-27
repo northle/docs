@@ -23,12 +23,11 @@
   --vp-button-brand-border: transparent;
   --vp-code-block-bg: #141418;
   --vp-code-line-highlight-color: #1d232c;
-  --vp-custom-block-info-bg: rgba(87, 109, 134, 0.089);
+  --vp-custom-block-info-bg: transparent;
   --vp-custom-block-info-border: rgba(114, 131, 151, 0.137);
   --vp-custom-block-tip-code-bg: rgba(0, 11, 112, 0.25);
-  --vp-custom-block-tip-border: #3f47969d;
-  --vp-custom-block-tip-bg: rgba(79, 86, 187, 0.171);
-  --vp-custom-block-tip-text: #9dacff;
+  --vp-custom-block-tip-bg: transparent;
+  --vp-custom-block-warning-bg: transparent;
   --vp-font-family-base: 'DM Sans', sans-serif;
   --vp-font-family-mono: 'Roboto Mono', monospace;
 }
@@ -59,6 +58,10 @@
 
 ::-webkit-scrollbar-track {
   background: transparent;
+}
+
+.custom-block {
+  border-width: 2px;
 }
 
 .VPNav,
