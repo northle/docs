@@ -109,6 +109,7 @@ model Post {
 
 When you edit the schema and want to generate tables based on it, run the `db:migrate` command:
 
+::: terminal
 ::: code-group
 ```shell [npm]
 $ npm run db:migrate

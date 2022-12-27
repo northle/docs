@@ -32,6 +32,7 @@ For more examples read the [Vitest docs](https://vitest.dev).
 
 Run `npm test` command to run tests and see results:
 
+::: terminal
 ```shell
 $ npm test
 
@@ -40,3 +41,4 @@ Test Files  2 failed | 8 passed (10)
   Start at  22:00:00
   Duration  8.42s (transform 816ms, setup 1ms, collect 6.42s, tests 2.02s)
 ```
+:::

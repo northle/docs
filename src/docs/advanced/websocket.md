@@ -119,9 +119,11 @@ Open the browser's console and write something. Incoming messages should be logg
 
 If you're using NPM, you can install `socket.io` package:
 
+::: terminal
 ```shell
 $ npm install socket.io-client
 ```
+:::
 
 ```ts
 import { io } from 'socket.io-client';

@@ -21,9 +21,9 @@ The framework uses [TypeScript](https://www.typescriptlang.org) to provide best 
 - Type-safety
 - [View templates](/docs/essentials/views) engine
 - [Database client](/docs/essentials/database/schema)
-- [Validation](/docs/essentials/validation) and [session](/docs/essentials/session) services
-- [Authentication](/docs/essentials/authentication) system
-- Real-time [WebSocket](/docs/essentials/websockets) integration
+- [Validation](/docs/advanced/validation) and [session](/docs/essentials/session) services
+- [Authentication](/docs/advanced/authentication) system
+- Real-time [WebSocket](/docs/advanced/websocket) integration
 - Dependency-free [installation](/docs/introduction/getting-started#creating-project) process
 
 ## Prerequisites

@@ -9,7 +9,7 @@ const { Layout } = DefaultTheme;
     <template #home-features-before>
       <div class="intro">
         <div class="container">
-          <h2>Focused on developer <span class="text-gradient">experience</span></h2>
+          <h2>Focused on developer <span class="text-brand">experience</span></h2>
         </div>
       </div>
     </template>
@@ -35,15 +35,8 @@ h2 {
   line-height: 1.2;
 }
 
-.text-gradient {
-  background: linear-gradient(
-    90deg,
-    var(--vp-c-brand) 0%,
-    var(--vp-c-brand-dark) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.text-brand {
+  color: var(--vp-c-brand);
 }
 
 @media (min-width: 960px) {
