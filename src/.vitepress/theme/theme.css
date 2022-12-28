@@ -1,6 +1,6 @@
 :root {
-  --vp-c-bg: #161d25;
-  --vp-c-bg-code: #141822;
+  --vp-c-bg: #161a25;
+  --vp-c-bg-code: #141720;
   --vp-c-bg-soft: #1c2430;
   --vp-c-bg-mute: #1c2430;
   --vp-c-bg-alt: #fcfcfd;
@@ -25,7 +25,6 @@
   --vp-code-line-highlight-color: #1d232c;
   --vp-custom-block-info-bg: transparent;
   --vp-custom-block-info-border: rgba(114, 131, 151, 0.137);
-  --vp-custom-block-tip-code-bg: rgba(0, 11, 112, 0.25);
   --vp-custom-block-tip-bg: transparent;
   --vp-custom-block-warning-bg: transparent;
   --vp-font-family-base: 'DM Sans', sans-serif;
@@ -84,10 +83,6 @@
 .vp-doc [class*='language-'] > button.copy {
   border-radius: 8px;
   background-color: transparent;
-}
-
-.tip code {
-  background: var(--vp-custom-block-tip-code-bg) !important;
 }
 
 .snippet-file {
@@ -234,11 +229,16 @@
   padding-left: 18px;
 }
 
+.aside-container {
+  overflow-y: visible !important;
+}
+
 .outline-marker {
   left: -3px !important;
   margin-top: 4px !important;
-  width: 3px !important;
+  width: 4px !important;
   height: 22px !important;
+  border-radius: 8px;
 }
 
 .outline-title {
