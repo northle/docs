@@ -18,6 +18,7 @@ To run Northle, your environment has to meet below requirements:
 
 To create new Northle project you can use the `NPM` command:
 
+::: terminal
 ::: code-group
 ```shell [npm]
 $ npm create @northle <app-name>
@@ -36,6 +37,7 @@ The installator will ask you few things at the beginning. You may choose to add 
 
 When your project is ready you can lauch your app using the following commands:
 
+::: terminal
 ::: code-group
 ```shell [npm]
 $ cd <app-name>

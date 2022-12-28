@@ -10,6 +10,7 @@ Northle comes with an additional CLI tool that helps you to create new projects 
 
 To get started, install the CLI tool globally:
 
+::: terminal
 ::: code-group
 ```shell [npm]
 $ npm install -g @northle/cli
@@ -28,10 +29,12 @@ $ yarn global add @northle/cli
 
 To generate new file, run the `make` command followed by type and name of the file:
 
+::: terminal
 ```shell
 # Create `src/posts/post.controller.ts` file
 $ northle make controller post
 ```
+:::
 
 Available file types are:
 
@@ -48,7 +51,7 @@ Available file types are:
 To create a new project, run the `new` command:
 
 ```shell
-$ northle new my-app
+$ northle new <app-name>
 ```
 
 ## Updating framework

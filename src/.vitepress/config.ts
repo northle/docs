@@ -243,12 +243,10 @@ export default {
   markdown: {
     theme: 'one-dark-pro',
     config: (markdown: any) => {
-      const pattern = /^code\s+(.*)$/;
-
       markdown.use(Container, 'code', {
-        validate: (params: string) => params.trim().match(pattern),
+        validate: (params: string) => params.trim().match(/^code\s+(.*)$/),
         render: (tokens: unknown[], id: string) => {
-          const match = tokens[id].info.trim().match(pattern);
+          const match = tokens[id].info.trim().match(/^code\s+(.*)$/);
 
           return tokens[id]?.nesting === 1
             ? `<div class="snippet-wrapper">
@@ -267,6 +265,19 @@ export default {
                   </svg>
 
                   ${match[1]}
+                </div>`
+            : '</div>\n';
+        },
+      });
+
+      markdown.use(Container, 'terminal', {
+        render: (tokens: unknown[], id: string) => {
+          return tokens[id]?.nesting === 1
+            ? `<div class="terminal-wrapper">
+                <div class="terminal-header">
+                  <div></div>
+                  <div></div>
+                  <div></div>
                 </div>`
             : '</div>\n';
         },
