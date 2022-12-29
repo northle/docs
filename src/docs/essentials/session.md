@@ -4,13 +4,15 @@ title: Session
 
 # Session
 
-Since HTTP protocol is stateless, we cannot simply share data between requests. Using Northle we have a mechanism of **session**. Using session you are able to store user information that we can access and share with multiple requests.
+Since the HTTP protocol is stateless, you cannot simply share data between requests using it. Fortunately, there is a mechanism of **session**.
+
+In Northle you are able to store user information that we can access and share with multiple requests using session client.
 
 ![Session Scheme](./assets/session.png)
 
 ## Getting started
 
-To start using session just import the `Session` service and inject it to the controller or service:
+To start using session just import the `Session` service and inject it to a controller or a service:
 
 ::: code src/users/user.controller.ts
 ```ts
@@ -23,14 +25,18 @@ export class UserController {
 ```
 :::
 
-Then you'll be able to use the session object in your controller.
+Then you'll be able to use the session data in your controller.
 
 ## Storing data
 
 To save a variable to the session, use the `set` method. You only have to provide name for your piece of data and its value:
 
 ```ts
-const user = await this.db.user.findUnique(id);
+const user = await this.db.user.findUnique({
+  where: {
+    id: userId,
+  },
+});
 
 this.session.set('email', user.email);
 ```
@@ -88,9 +94,11 @@ const error = flash('error');
 
 ## Increment and decrement data
 
-Session system in Northle provides a simple way to increment and decrement session value:
+Session system in Northle provides a simple way to increment a session value:
 
-```ts
+```ts{5}
+this.session.set('pageViews', 0);
+
 const { pageViews } = this.session.data;  // 0
 
 this.session.increment('pageViews');
@@ -98,8 +106,10 @@ this.session.increment('pageViews');
 const incremented = this.session.data.pageViews;  // 1
 ```
 
+You can also decrement a session value:
+
 ```ts
-this.session.decrement('pageViews');
+this.session.decrement('timeRemaining');
 ```
 
 ## Destroying session

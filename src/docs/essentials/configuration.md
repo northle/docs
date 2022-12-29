@@ -38,18 +38,12 @@ The `.env` file should always be ignored by version control systems due security
 
 You can read environment variables using `env` generic function:
 
-::: code src/main.ts
 ```ts
 import { env } from '@northle/core';
 
-const port = env<boolean>('PORT');  // 8000
+const port = env<number>('PORT');  // 8000
 const host = env<string | null>('HOST');  // 'localhost' or null
 ```
-:::
-
-::: tip
-The `env` function automatically casts values to numbers, booleans and other types. If you read variables using `process.env` object, data will always have the string type.
-:::
 
 ### Example `.env` file
 
@@ -117,7 +111,7 @@ const server = await createServer({
 ```
 :::
 
-### Env file name
+### Env file path
 
 Backend apps are environment-dependent, so you can split your `.env` file into `.env.production` etc. You can specify env config file name using the `env` option:
 

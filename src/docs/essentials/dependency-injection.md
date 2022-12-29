@@ -38,7 +38,7 @@ export class UserService {
 Northle automatically resolves type-hinted dependencies and passes them to your class.
 
 ::: tip NOTE
-Controllers with the `Controller` decorator are automatically injectable.
+Controllers with the `Controller` decorator are automatically treated as injectable services.
 :::
 
 ## `inject` function
@@ -61,6 +61,6 @@ export class UserService {
 
 The result is the same but this way you don't need to specify types in the constructor.
 
-## Circular dependencies
-
-Northle's dependency injection system does **not** support circular dependencies (services dependent on each other). Situation like this is a very bad practice so the framework should not resolve circular dependencies.
+::: danger CAUTION
+Dependency injection system in Northle does **not** support circular dependencies (services dependent on each other). It is a very bad practice so the framework should not resolve circular dependencies (and you should avoid them!).
+:::

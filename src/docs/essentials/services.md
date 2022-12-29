@@ -4,7 +4,9 @@ title: Services
 
 # Services
 
-We strongly encourage developers to maintain clean code structure divided into small parts (modules, controllers, and services). We believe that controllers should only be responsible for handling requests and responses. All business logic should be placed in **service classes**.
+We strongly encourage developers to maintain clean code structure divided into small parts (modules, controllers, services etc.).
+
+We believe that controllers should only be responsible for handling requests and returning a response. All remaining business logic should be placed in **services**.
 
 ## Creating services
 
@@ -25,7 +27,7 @@ export class UserService {
 
 ## Using services
 
-Since the class has been declared as injectable `Service`, you can inject it into other controller constructor:
+Since the class has been marked with `Service` decorator, you can inject it into other controller constructor:
 
 ::: code src/users/user.controller.ts
 ```ts{9}

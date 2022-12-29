@@ -46,7 +46,7 @@ export class AppController {
 The controller defines a `notFound` method which is decorated with `@Route.Error(404)` decorator. This method is a custom [handler](/docs/essentials/controllers-and-routes#error-handler-routes) which is called when the user requests for the non-existing route.
 
 ::: info
-Controller methods should always return some value. Northle automatically sends proper headers based on returned data. In case of object or array, the response has the JSON type. When returned value is text or a view object, it will be rendered as HTML.
+Controller methods should always return some value. Northle automatically sends proper headers based on [returned data](#response-types). In case of object or array, the response has the JSON type. When returned value is text or a view object, it will be rendered as HTML.
 :::
 
 ### Registering controllers
@@ -115,15 +115,15 @@ class AppController {
 :::
 
 ::: tip NOTE
-Controller methods should be as short as possible - they are only responsible for handling web requests and returning a response. For more logic you can familiarize yourself with service classes.
+Controller methods should be as short as possible - they are only responsible for handling web requests and returning a response. To add more business logic you can familiarize yourself with the concept of [services](/docs/essentials/services).
 :::
 
 ### URL patterns
 
-Routes in Northle are dynamic. That means you can use the `:param` syntax to declare a variable URL that accepts multiple values:
+Routes in Northle can be dynamic. This means that you can use the `:param` syntax to declare a dynamic route URL that accepts multiple values:
 
 ```ts
-// Match paths like `/users/james_bond` or `/users/andrei_sator`
+// Match paths like `/users/james_bond` or `/users/56328`
 @Route.Get('/users/:name')
 ```
 
@@ -137,7 +137,7 @@ To make a paramater optional, use the question mark. The following route will ma
 
 ### Regular expressions
 
-You can also define a `RegExp` pattern for route parameters:
+You can also define `RegExp` patterns for route parameters:
 
 ```ts
 // This route will accept only numeric params
@@ -149,7 +149,7 @@ You can also define a `RegExp` pattern for route parameters:
 
 ## Error handler routes
 
-A typical Northle application often returns errors like `404 Not Found` or `500 Internal Server Error`. The framework exposes a simple API for custom error handling logic.
+A typical web app often returns errors like `404 Not Found` or `500 Internal Server Error`. The framework exposes a simple API for custom error handling logic.
 
 You can customize the `404` page by adding a special `Error` route:
 
@@ -171,27 +171,35 @@ class AppController {
 
 Northle automatically discovers response type based on the returned value from the controller.
 
+The following data will set the response type to JSON:
+
 ```ts
-// JSON response (text/json) MIME type
+// text/json MIME type
 return {
   name: 'Bond. James Bond',
 };
 ```
 
 ```ts
-// JSON response (text/json) MIME type
+// text/json MIME type
 return [1, 2, 3];
 ```
 
+But this will return an HTML page:
+
 ```ts
-// HTML response (text/html) MIME type
+// text/html MIME type
 return '<h1>Hello World</h1>';
 ```
 
+This will return a rendered [view template](/docs/essentials/views):
+
 ```ts
-// HTML response
+// HTML response (text/html MIME type)
 return view('./views/profile');
 ```
+
+And this will redirect the user to the `/login` page:
 
 ```ts
 // Redirect response

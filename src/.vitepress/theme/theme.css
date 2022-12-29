@@ -23,6 +23,7 @@
   --vp-button-brand-border: transparent;
   --vp-code-block-bg: #141418;
   --vp-code-line-highlight-color: #1d232c;
+  --vp-custom-block-danger-bg: transparent;
   --vp-custom-block-info-bg: transparent;
   --vp-custom-block-info-border: rgba(114, 131, 151, 0.137);
   --vp-custom-block-tip-bg: transparent;
@@ -230,7 +231,7 @@
 }
 
 .aside-container {
-  overflow-y: visible !important;
+  overflow: visible !important;
 }
 
 .outline-marker {
@@ -358,6 +359,19 @@
 
 .VPButton:hover {
   opacity: 0.9;
+}
+
+.vp-doc .custom-block div[class*='language-'] {
+  font-size: 15px !important;
+}
+
+.vp-doc .custom-block a {
+  text-decoration: none;
+}
+
+.vp-doc .custom-block a:hover {
+  color: var(--vp-custom-block-tip-text) !important;
+  border-color: var(--vp-custom-block-tip-text);
 }
 
 .VPFeature,
