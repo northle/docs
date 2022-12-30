@@ -13,15 +13,15 @@ To get started, install the CLI tool globally:
 ::: terminal
 ::: code-group
 ```shell [npm]
-$ npm install -g @northle/cli
+npm install -g @northle/cli
 ```
 
 ```shell [pnpm]
-$ pnpm install -g @northle/cli
+pnpm install -g @northle/cli
 ```
 
 ```shell [yarn]
-$ yarn global add @northle/cli
+yarn global add @northle/cli
 ```
 :::
 
@@ -32,7 +32,7 @@ To generate new file, run the `make` command followed by type and name of the fi
 ::: terminal
 ```shell
 # Create `src/posts/post.controller.ts` file
-$ northle make controller post
+northle make controller post
 ```
 :::
 
@@ -51,7 +51,7 @@ Available file types are:
 To create a new project, run the `new` command:
 
 ```shell
-$ northle new <app-name>
+northle new <app-name>
 ```
 
 ## Updating framework
@@ -59,5 +59,5 @@ $ northle new <app-name>
 To easly update the framework, run the `update` command:
 
 ```shell
-$ northle update
+northle update
 ```

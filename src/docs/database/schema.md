@@ -112,15 +112,15 @@ When you edit the schema and want to generate tables based on it, run the `db:mi
 ::: terminal
 ::: code-group
 ```shell [npm]
-$ npm run db:migrate
+npm run db:migrate
 ```
 
 ```shell [pnpm]
-$ pnpm run db:migrate
+pnpm run db:migrate
 ```
 
 ```shell [yarn]
-$ yarn db:migrate
+yarn db:migrate
 ```
 :::
 

@@ -21,15 +21,15 @@ To create new Northle project you can use the `NPM` command:
 ::: terminal
 ::: code-group
 ```shell [npm]
-$ npm create @northle <app-name>
+npm create @northle <app-name>
 ```
 
 ```shell [pnpm]
-$ pnpm create @northle <app-name>
+pnpm create @northle <app-name>
 ```
 
 ```shell [yarn]
-$ yarn create @northle <app-name>
+yarn create @northle <app-name>
 ```
 :::
 
@@ -40,23 +40,42 @@ When your project is ready you can lauch your app using the following commands:
 ::: terminal
 ::: code-group
 ```shell [npm]
-$ cd <app-name>
-$ npm start
+cd <app-name>
+npm start
 ```
 
 ```shell [pnpm]
-$ cd <app-name>
-$ pnpm start
+cd <app-name>
+pnpm start
 ```
 
 ```shell [yarn]
-$ cd <app-name>
-$ yarn start
+cd <app-name>
+yarn start
 ```
 :::
 
 ::: warning
 The development server may slow down when you have bad internet connection speed.
+:::
+
+## CLI
+
+Northle [CLI](/docs/essentials/cli) is a tool that helps you to create and manage your apps. You can use it to create new app, add new features, generate files and more.
+
+::: terminal
+::: code-group
+```shell [npm]
+npm install -g @northle/cli
+```
+
+```shell [pnpm]
+pnpm install -g @northle/cli
+```
+
+```shell [yarn]
+yarn global add @northle/cli
+```
 :::
 
 ## Opening browser

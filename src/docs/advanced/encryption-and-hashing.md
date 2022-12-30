@@ -13,15 +13,15 @@ To provide best security, your app should have unique key for encrypting data. T
 ::: terminal
 ::: code-group
 ```shell [npm]
-$ npm run key:generate
+npm run key:generate
 ```
 
 ```shell [pnpm]
-$ pnpm run key:generate
+pnpm run key:generate
 ```
 
 ```shell [yarn]
-$ yarn key:generate
+yarn key:generate
 ```
 :::
 

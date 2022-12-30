@@ -121,7 +121,7 @@ If you're using NPM, you can install `socket.io` package:
 
 ::: terminal
 ```shell
-$ npm install socket.io-client
+npm install socket.io-client
 ```
 :::
 

@@ -31,15 +31,15 @@ After changing the configuration, run the following command to generate new encr
 ::: terminal
 ::: code-group
 ```shell [npm]
-$ npm run key:generate
+npm run key:generate
 ```
 
 ```shell [pnpm]
-$ pnpm run key:generate
+pnpm run key:generate
 ```
 
 ```shell [yarn]
-$ yarn key:generate
+yarn key:generate
 ```
 :::
 

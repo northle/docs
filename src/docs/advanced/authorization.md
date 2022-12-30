@@ -8,11 +8,11 @@ Along with authentication, Northle ships with additional security API for author
 
 ## Creating gates
 
-To create new gate, the best option is to use CLI:
+To create new gate, the best option is to use [CLI](/docs/essentials/cli):
 
 ::: terminal
 ```shell
-$ northle make gate post
+northle make gate post
 ```
 :::
 

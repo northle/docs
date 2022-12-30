@@ -12,24 +12,24 @@ First, create a brand new project using command line tool:
 
 ::: code-group
 ```shell [npm]
-$ npm create @northle todo-app
+npm create @northle todo-app
 
-$ cd todo-app
-$ npm start
+cd todo-app
+npm start
 ```
 
 ```shell [pnpm]
-$ pnpm create @northle todo-app
+pnpm create @northle todo-app
 
-$ cd todo-app
-$ pnpm start
+cd todo-app
+pnpm start
 ```
 
 ```shell [yarn]
-$ yarn create @northle todo-app
+yarn create @northle todo-app
 
-$ cd todo-app
-$ yarn start
+cd todo-app
+yarn start
 ```
 :::
 
@@ -69,8 +69,8 @@ We're going to define serveral routes following the REST API naming convention:
 Let's begin with creating `TodoModule` along with `TodoController`:
 
 ```shell
-$ northle make module todos
-$ northle make controller todo
+northle make module todos
+northle make controller todo
 ```
 
 ::: code src/todos/todo.controller.ts
@@ -148,14 +148,14 @@ After that, run command:
 
 ::: code-group
 ```shell [npm]
-$ npm run db:migrate
+npm run db:migrate
 ```
 
 ```shell [pnpm]
-$ pnpm run db:migrate
+pnpm run db:migrate
 ```
 
 ```shell [yarn]
-$ yarn db:migrate
+yarn db:migrate
 ```
 :::

@@ -51,7 +51,15 @@ Controller methods should always return some value. Northle automatically sends 
 
 ### Registering controllers
 
-The place where every controller is registered is a [module](/docs/essentials/modules). Every time you create a new controller manually, you need to import it into a module:
+It is recommended to use the [CLI](/docs/essentials/cli) to create new controllers:
+
+::: terminal
+```shell
+northle make controller post
+```
+:::
+
+The place where every controller should be registered are [modules](/docs/essentials/modules). Every time you create a new controller, you need to import it into a module:
 
 ::: code src/posts/post.module.ts
 ```ts

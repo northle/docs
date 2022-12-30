@@ -34,7 +34,7 @@ Run `npm test` command to run tests and see results:
 
 ::: terminal
 ```shell
-$ npm test
+npm test
 
 Test Files  2 failed | 8 passed (10)
      Tests  2 failed | 12 passed (14)

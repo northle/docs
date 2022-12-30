@@ -8,11 +8,11 @@ HTTP middleware is an useful mechanism in web apps. It is responsible for filter
 
 ## Basic middleware
 
-To create a middleware, you can leverage the CLI:
+To create a middleware, you can leverage the [CLI](/docs/essentials/cli):
 
 ::: terminal
 ```shell
-$ northle make middleware auth
+northle make middleware auth
 ```
 :::
 

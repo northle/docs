@@ -10,6 +10,14 @@ We believe that controllers should only be responsible for handling requests and
 
 ## Creating services
 
+It is recommended to use the [CLI](/docs/essentials/cli) to create services:
+
+::: terminal
+```shell
+northle make service user
+```
+:::
+
 Service is just an injectable class with methods responsible for processing data. A basic service may look like this:
 
 ::: code src/users/user.service.ts
