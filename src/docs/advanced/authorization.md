@@ -12,21 +12,21 @@ To create new gate, the best option is to use [CLI](/docs/essentials/cli):
 
 ::: terminal
 ```shell
-northle make gate post
+northle make gate user
 ```
 :::
 
-This command will generate a brand new gate in `src/posts/post.gate.ts` file.
+This command will generate a user gate in `src/users/user.gate.ts` file. It will be responsible for defining permissions for user profile editing.
 
 ## Using gates
 
 Each gate should inherit from `Gate` class that defines the `allows` method. Gate classes define set of methods determining if user is allowed to access the resource.
 
-::: code src/posts/post.gate.ts
+::: code src/users/user.gate.ts
 ```ts
 import { Gate } from '@northle/core';
 
-export class PostGate extends Gate {
+export class UserGate extends Gate {
   // ...
 
   public edit(id: string): boolean {
@@ -38,18 +38,19 @@ export class PostGate extends Gate {
 
 To check gate permissions, invoke the `allows` method:
 
-::: code src/posts/post.controller.gate.ts
+::: code src/users/user.controller.gate.ts
 ```ts
-import { Controller } from '@northle/core';
-import { PostGate } from './post.gate';// [!code ++]
+import { Controller, Route } from '@northle/core';
+import { UserGate } from './user.gate';// [!code ++]
 
 @Controller()
-export class PostController {
-  constructor(private postGate: PostGate) {}// [!code ++]
+export class UserController {
+  constructor(private userGate: UserGate) {}// [!code ++]
 
+  @Route.Get('/users/:id/edit')
   public edit(id: string) {
-    if (!this.postGate.allows('edit', id)) {// [!code ++]
-      return 'You are not allowed to edit this post!';// [!code ++]
+    if (!this.userGate.allows('edit', id)) {// [!code ++]
+      return 'You are not allowed to edit this user!';// [!code ++]
     }// [!code ++]
 
     // ...

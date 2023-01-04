@@ -57,7 +57,7 @@ The `src/todos/views/edit.html` view will render the edit form:
 
 <form action="/todos/{{ $request.params.id }}" method="post">
   [method('PATCH')]
-  [token]
+  [csrfToken]
 
   <input
     type="text"

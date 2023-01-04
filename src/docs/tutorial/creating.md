@@ -73,7 +73,7 @@ The form in `src/todos/views/create.html` will be very simple for now:
 ...
 
 <form action="/todos" method="post">
-  [token]
+  [csrfToken]
 
   <input type="text" name="title" placeholder="Title">
   <input type="text" name="content" placeholder="Content">

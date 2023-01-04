@@ -48,7 +48,7 @@ const userLocale = this.request.locale();
 
 // Set locale from list
 if (['de', 'en', 'fr', 'pl'].includes(userLocale)) {
-  await this.translator.setLocale(userLocale);
+  await this.translator.setRequestLocale(userLocale);
 }
 ```
 :::

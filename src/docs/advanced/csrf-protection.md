@@ -26,12 +26,12 @@ To prevent CSRF attacks, Northle generates a unique token for every user session
 
 Anytime you define forms with method other than `GET` and `HEAD`, you have to add a hidden `_csrf` field containing generated token. Otherwise, you won't be able to pass the form and you will get `419 Invalid Token` error.
 
-To add the token field to your template, just use the `[token]` directive:
+To add the CSRF token field to your template, just use the `[csrfToken]` directive:
 
 ::: code src/posts/views/upload.html
 ```html
 <form action="..." method="post">
-  [token]// [!code ++]
+  [csrfToken]// [!code ++]
 
   ...
 </form>

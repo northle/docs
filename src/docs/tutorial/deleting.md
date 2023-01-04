@@ -55,7 +55,7 @@ The view `src/todos/views/delete.html` will be responsible for rendering the del
 
 <form action="/todos/{{ $request.params.id }}" method="post">
   [method('DELETE')]
-  [token]
+  [csrfToken]
 
   <button>Delete todo</button>
 </form>
