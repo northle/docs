@@ -49,12 +49,10 @@ import { ChatChannel } from './chat.channel';// [!code ++]
 
 @Module({
   imports: [],
-  controllers: [
-    ChatController,// [!code ++]
-  ],
-  socketChannels: [
-    ChatChannel,// [!code ++]
-  ],
+  controllers: [],// [!code --]
+  controllers: [ChatController],// [!code ++]
+  socketChannels: [],// [!code --]
+  socketChannels: [ChatChannel],// [!code ++]
 })
 export class ChatModule {}
 ```
@@ -70,12 +68,10 @@ import { AppModule } from './app/app.module';// [!code ++]
 import { ChatModule } from './chat/chat.module';// [!code ++]
 
 const server = await createServer({
-  // ...
+  modules: [AppModule],// [!code --]
+  modules: [AppModule, ChatModule],// [!code ++]
 
-  modules: [
-    AppModule,// [!code ++]
-    ChatModule,// [!code ++]
-  ],
+  // ...
 });
 ```
 :::

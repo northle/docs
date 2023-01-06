@@ -59,9 +59,7 @@ import { createServer } from '@northle/core';
 import { AppModule } from './app/app.module';
 
 const server = await createServer({
-  modules: [
-    AppModule,
-  ],
+  modules: [AppModule],
   config: {
     env: '.env',
   },

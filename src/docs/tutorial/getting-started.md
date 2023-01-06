@@ -92,9 +92,8 @@ import { Module } from '@northle/core';
 import { TodoController } from './todo.controller';// [!code ++]
 
 @Module({
-  controllers: [
-    TodoController,// [!code ++]
-  ],
+  controllers: [],// [!code --]
+  controllers: [TodoController],// [!code ++]
   channels: [],
 })
 export class TodoModule {
@@ -111,10 +110,10 @@ Then we should import `TodoModule` into `src/main.ts` file:
 import { TodoModule } from './todos/todo.module';// [!code ++]
 
 const server = await createServer({
+  modules: [],// [!code --]
+  modules: [TodoModule],// [!code ++]
+
   // ...
-  modules: [
-    TodoModule,// [!code ++]
-  ],
 });
 ```
 :::

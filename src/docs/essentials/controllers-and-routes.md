@@ -67,9 +67,8 @@ import { Module } from '@northle/core';
 import { PostController } from './post.controller';// [!code ++]
 
 @Module({
-  controllers: [
-    PostController,// [!code ++]
-  ],
+  controllers: [],// [!code --]
+  controllers: [PostController],// [!code ++]
 })
 export class PostModule {}
 ```
@@ -82,12 +81,10 @@ Then register it in `src/main.ts` file:
 import { PostModule } from './posts/post.module';// [!code ++]
 
 const server = await createServer({
-  // ...
+  modules: [AppModule],// [!code --]
+  modules: [AppModule, PostModule],// [!code ++]
 
-  modules: [
-    AppModule,
-    PostModule,// [!code ++]
-  ],
+  // ...
 });
 ```
 :::
